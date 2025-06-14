@@ -1,0 +1,9 @@
+requests
+beautifulsoup4
+openai
+markdown2
+jinja2
+weasyprint
+scikit-learn
+streamlit
+pandas
