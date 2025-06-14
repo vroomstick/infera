@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from infera_config import SEC_API_KEY, SEC_USER_AGENT
 import requests
 import os
