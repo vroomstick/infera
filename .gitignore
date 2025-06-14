@@ -1,4 +1,24 @@
-venv/
+# 🐍 Python + virtual env
 __pycache__/
-.env
-*.pdf
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+venv/
+
+# 📁 Data & output files
+data/
+reports/
+
+# 📝 Logs & temp files
+*.log
+*.tmp
+
+# 🧠 Editor junk
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# 📓 Jupyter notebooks (if used)
+*.ipynb_checkpoints

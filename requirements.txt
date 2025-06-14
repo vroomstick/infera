@@ -1,9 +1,24 @@
+# --- Core Web & HTML Tools ---
 requests
 beautifulsoup4
-openai
-markdown2
-jinja2
-weasyprint
+lxml
+html5lib
+
+# --- NLP & Scoring ---
 scikit-learn
-streamlit
+numpy
 pandas
+
+# --- LLM Integration (GPT-4o) ---
+openai
+
+# --- Markdown & Report Generation ---
+markdown2
+Jinja2
+weasyprint  # preferred over pdfkit (no external binary needed)
+
+# --- Streamlit UI (Optional but safe to include) ---
+streamlit
+
+# --- Misc Tools ---
+tqdm  # progress bars (optional but useful)

@@ -1,7 +1,4 @@
-from pathlib import Path
-
-# Create the content for build_checklist.md
-checklist_content = """# 🧠 INFERA — Full Build Checklist
+# 🧠 INFERA — Full Build Checklist
 
 This document tracks the complete build process of the Infera project, organized chronologically by file, folder, and task. Use this to manage progress and show clear project structure to reviewers, collaborators, or future employers.
 
@@ -13,75 +10,81 @@ This document tracks the complete build process of the Infera project, organized
 - [x] Initialize `git` and push scaffold
 - [x] Create and activate `venv`
 - [x] Set Python interpreter in VS Code
-- [x] Create `.gitignore` and exclude `venv/`, `infera_config.py`, etc.
+- [x] Create `.gitignore` and exclude `venv/`, `__pycache__/`, `data/`, `reports/`, etc.
+- [x] Keep `infera_config.py` in version control (no longer hidden)
+- [x] Add SEC headers config for scraping
 
 ---
 
 ## 🟨 PHASE 1 — INGEST
 
 **`infera_config.py`**
-- [ ] Store your `sec-api.io` API key securely as a constant
+- [x] Store `SEC_HEADERS` dictionary with proper User-Agent (SEC-compliant)
+- [ ] (Optional) Add ticker → CIK lookup cache
 
 **`ingest/sec_fetcher.py`**
-- [ ] Import API key from `infera_config.py`
-- [ ] Use `requests` to query and fetch a full 10-K filing
-- [ ] Save raw HTML into `data/raw/`
+- [x] Fetch CIK from SEC's public JSON mapping
+- [x] Fetch latest 10-K metadata from EDGAR submissions
+- [x] Construct URL to raw HTML (using accession number + primary document)
+- [x] Download HTML with browser headers
+- [x] Save raw HTML into `data/{ticker}_10k.html`
 
 ---
 
 ## 🟨 PHASE 2 — CLEANING AND SECTIONING
 
 **`analyze/cleaner.py`**
-- [ ] Clean raw HTML using `BeautifulSoup`
-- [ ] Remove boilerplate, whitespace, tables, etc.
-- [ ] Output cleaned text into `data/clean/`
+- [ ] Parse HTML with `BeautifulSoup`
+- [ ] Strip script/style/boilerplate/tables
+- [ ] Normalize and clean up text
+- [ ] Output cleaned text as `data/{ticker}_cleaned.html` or string
 
 **`analyze/segmenter.py`**
-- [ ] Regex-based detection of Risk Factors / MD&A
-- [ ] Split text into dictionary of sections
-- [ ] Save segmented sections as JSON or text blobs
+- [ ] Regex-based detection of "Item 1A", "Item 7", etc.
+- [ ] Extract Risk Factors / MD&A / Business sections
+- [ ] Return section text as dictionary object
+- [ ] (Optional) Save to segmented text file for debugging
 
 ---
 
 ## 🟨 PHASE 3 — RELEVANCE SCORING (ML)
 
 **`analyze/scorer.py`**
-- [ ] Run TF-IDF vectorization over Risk section
-- [ ] Score relevance of each paragraph/sentence
-- [ ] Rank based on similarity to risk keywords or prior filings
-- [ ] Output top-N highest scoring chunks
+- [ ] Use `TfidfVectorizer` and `cosine_similarity`
+- [ ] Compare section/paragraph vectors to prompt text (e.g. "emerging risks")
+- [ ] Return top-N chunks ranked by relevance
 
 ---
 
 ## 🟨 PHASE 4 — SUMMARIZATION WITH GPT-4o
 
 **`analyze/summarizer.py`**
-- [ ] Use OpenAI’s GPT-4o API
-- [ ] Feed it top-ranked risk chunks
-- [ ] Prompt it to extract red flags, summarize trends
-- [ ] Return structured plain-English output
+- [ ] Feed relevant chunks into GPT-4o via `openai` API
+- [ ] Use prompt templates to extract summaries or red flags
+- [ ] Return structured dictionary of summarized sections
 
 ---
 
 ## 🟨 PHASE 5 — OUTPUT GENERATION
 
 **`output/formatter.py`**
-- [ ] Format GPT output into structured Markdown
-- [ ] Add headers, timestamps, and context info
+- [ ] Load summaries into a Markdown template (via Jinja2)
+- [ ] Include headings, bullet points, and timestamp
+- [ ] Output Markdown report string or save to file
 
 **`output/exporter.py`**
-- [ ] Convert Markdown → PDF
-- [ ] Save final report into `/reports/`
+- [ ] Convert Markdown → HTML → PDF using `weasyprint` (or `pdfkit`)
+- [ ] Save final PDF to `reports/{ticker}_report.pdf`
 
 ---
 
 ## 🟨 PHASE 6 — INTERFACE (OPTIONAL)
 
 **`interface/dashboard.py`**
-- [ ] Build basic Streamlit dashboard
-- [ ] Allow user to enter company name or CIK
-- [ ] Display results, summaries, and downloadable PDF
+- [ ] Build basic Streamlit dashboard with input field
+- [ ] Run `run_pipeline(ticker)` on button click
+- [ ] Display Markdown preview
+- [ ] Offer PDF download link
 
 ---
-
 
