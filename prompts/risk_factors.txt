@@ -1,0 +1,5 @@
+Summarize the following risk factors from a company's 10-K filing into a clear, concise executive-level overview (3–5 bullet points max). Focus on the most serious risks to the business:
+
+{{SECTION_TEXT}}
+
+Summary:

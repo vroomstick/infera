@@ -6,9 +6,21 @@ __pycache__/
 *.egg-info/
 venv/
 
-# 📁 Data & output files
-data/
+# 📁 Data & output files (keep samples, ignore generated)
+data/clean/
+data/scored/
+data/segments/
+data/summarized/
 reports/
+
+# 🔐 Environment & secrets
+.env
+infera_config.py
+
+# 💾 Database
+*.db
+*.sqlite
+*.sqlite3
 
 # 📝 Logs & temp files
 *.log
@@ -22,3 +34,8 @@ reports/
 
 # 📓 Jupyter notebooks (if used)
 *.ipynb_checkpoints
+
+# 📦 Package distribution
+
+# Cursor project metadata
+.cursor/

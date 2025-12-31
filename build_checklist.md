@@ -1,90 +1,48 @@
-# 🧠 INFERA — Full Build Checklist
+# 🧠 INFERA — Build Checklist (2-Day MVP)
 
-This document tracks the complete build process of the Infera project, organized chronologically by file, folder, and task. Use this to manage progress and show clear project structure to reviewers, collaborators, or future employers.
+## ✅ Phase 0 — Setup
+- [x] Create repo, venv, `.gitignore`, `requirements.txt`
+- [x] Add `.env` (OPENAI_API_KEY, DATABASE_URL, LOG_LEVEL)
+- [x] Install deps (BeautifulSoup, sentence-transformers, FastAPI, SQLAlchemy, OpenAI, etc.)
 
----
+## ✅ Phase 1 — Core Pipeline
+- [x] `analyze/cleaner.py`: clean HTML with BeautifulSoup (strip scripts/styles/nav)
+- [x] `analyze/segmenter.py`: regex extract Item 1A Risk Factors (primary + fallback)
+- [x] `services/pipeline_service.py`: orchestrate clean → segment → paragraphs → (optional) summarize → report
 
-## ✅ PHASE 0 — ENV SETUP (Completed)
-- [x] Create GitHub repo
-- [x] Scaffold folder and file structure
-- [x] Initialize `git` and push scaffold
-- [x] Create and activate `venv`
-- [x] Set Python interpreter in VS Code
-- [x] Create `.gitignore` and exclude `venv/`, `__pycache__/`, `data/`, `reports/`, etc.
-- [x] Keep `infera_config.py` in version control (no longer hidden)
-- [x] Add SEC headers config for scraping
+## ✅ Phase 2 — Persistence Layer
+- [x] `config/settings.py`: env-driven config + logging
+- [x] `data/database.py`: SQLAlchemy engine/session (SQLite by default; Postgres-ready)
+- [x] `data/models.py`: Company, Filing, Section, Paragraph, Score, Summary
+- [x] `data/repository.py`: CRUD helpers
 
----
+## ✅ Phase 3 — Scoring (ML)
+- [x] `services/scoring_service.py`: sentence-transformers (all-MiniLM-L6-v2), cosine similarity to risk prompt, store scores (+ embeddings optional)
+- [x] Store top scored paragraphs for reporting/API
 
-## 🟨 PHASE 1 — INGEST
+## ✅ Phase 4 — Summarization (LLM)
+- [x] GPT-4o summary over top paragraphs (optional via `--skip-summary`)
+- [x] Store summary text + token counts in DB
 
-**`infera_config.py`**
-- [x] Store `SEC_HEADERS` dictionary with proper User-Agent (SEC-compliant)
-- [ ] (Optional) Add ticker → CIK lookup cache
+## ✅ Phase 5 — Reporting
+- [x] `services/report_service.py`: generate Markdown report (summary + top risks + metadata)
+- [x] Reports saved under `reports/` (PDF optional via wkhtmltopdf/pdfkit)
 
-**`ingest/sec_fetcher.py`**
-- [x] Fetch CIK from SEC's public JSON mapping
-- [x] Fetch latest 10-K metadata from EDGAR submissions
-- [x] Construct URL to raw HTML (using accession number + primary document)
-- [x] Download HTML with browser headers
-- [x] Save raw HTML into `data/{ticker}_10k.html`
+## ✅ Phase 6 — API
+- [x] `api/main.py` (FastAPI)
+  - `GET /health`
+  - `POST /analyze` (run pipeline on provided file)
+  - `GET /filings` (list)
+  - `GET /filings/{id}` (details + top risks)
+  - `GET /filings/{id}/report` (Markdown)
 
----
+## ✅ Phase 7 — Docs & Demo
+- [x] README with Quick Start, API usage, architecture, sample output
+- [x] Example run on `data/AAPL_10K.html` (stored in DB, report generated)
 
-## 🟨 PHASE 2 — CLEANING AND SECTIONING
-
-**`analyze/cleaner.py`**
-- [ ] Parse HTML with `BeautifulSoup`
-- [ ] Strip script/style/boilerplate/tables
-- [ ] Normalize and clean up text
-- [ ] Output cleaned text as `data/{ticker}_cleaned.html` or string
-
-**`analyze/segmenter.py`**
-- [ ] Regex-based detection of "Item 1A", "Item 7", etc.
-- [ ] Extract Risk Factors / MD&A / Business sections
-- [ ] Return section text as dictionary object
-- [ ] (Optional) Save to segmented text file for debugging
-
----
-
-## 🟨 PHASE 3 — RELEVANCE SCORING (ML)
-
-**`analyze/scorer.py`**
-- [ ] Use `TfidfVectorizer` and `cosine_similarity`
-- [ ] Compare section/paragraph vectors to prompt text (e.g. "emerging risks")
-- [ ] Return top-N chunks ranked by relevance
-
----
-
-## 🟨 PHASE 4 — SUMMARIZATION WITH GPT-4o
-
-**`analyze/summarizer.py`**
-- [ ] Feed relevant chunks into GPT-4o via `openai` API
-- [ ] Use prompt templates to extract summaries or red flags
-- [ ] Return structured dictionary of summarized sections
-
----
-
-## 🟨 PHASE 5 — OUTPUT GENERATION
-
-**`output/formatter.py`**
-- [ ] Load summaries into a Markdown template (via Jinja2)
-- [ ] Include headings, bullet points, and timestamp
-- [ ] Output Markdown report string or save to file
-
-**`output/exporter.py`**
-- [ ] Convert Markdown → HTML → PDF using `weasyprint` (or `pdfkit`)
-- [ ] Save final PDF to `reports/{ticker}_report.pdf`
-
----
-
-## 🟨 PHASE 6 — INTERFACE (OPTIONAL)
-
-**`interface/dashboard.py`**
-- [ ] Build basic Streamlit dashboard with input field
-- [ ] Run `run_pipeline(ticker)` on button click
-- [ ] Display Markdown preview
-- [ ] Offer PDF download link
-
----
-
+## 🧠 Next Steps (Post-MVP)
+- [ ] Postgres + Docker Compose (optionally pgvector for semantic search)
+- [ ] SEC fetcher (EDGAR) for auto-ingest
+- [ ] Tests (unit/integration; mock OpenAI)
+- [ ] Second filing + basic compare (YOY/peer-lite)
+- [ ] Optional Streamlit/dashboard

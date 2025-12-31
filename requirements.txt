@@ -8,14 +8,25 @@ html5lib
 scikit-learn
 numpy
 pandas
+sentence-transformers  # For embeddings
 
 # --- LLM Integration (GPT-4o) ---
 openai
 
+# --- Database ---
+sqlalchemy
+python-dotenv
+
+# --- API ---
+fastapi
+uvicorn[standard]
+pydantic
+
 # --- Markdown & Report Generation ---
 markdown2
 Jinja2
-weasyprint  # preferred over pdfkit (no external binary needed)
+pdfkit  # switched from weasyprint
+# wkhtmltopdf must be installed separately (binary dependency)
 
 # --- Streamlit UI (Optional but safe to include) ---
 streamlit
