@@ -91,7 +91,7 @@ DATABASE_URL=sqlite:///./infera.db
 LOG_LEVEL=INFO
 ```
 
-### 3. Run the Pipeline
+### 3. Run the Pipeline (local CLI)
 
 ```bash
 # Analyze a 10-K filing
@@ -109,6 +109,31 @@ python -m api.main
 
 API available at `http://localhost:8000`
 - Swagger docs: `http://localhost:8000/docs`
+
+### 5. Quick API checks
+
+```bash
+# Health
+curl -s http://localhost:8000/health
+
+# List filings (after running the pipeline once)
+curl -s http://localhost:8000/filings | python -m json.tool
+
+# Filing details (replace 1 with your filing_id)
+curl -s http://localhost:8000/filings/1 | python -m json.tool
+
+# Report (Markdown text)
+curl -s http://localhost:8000/filings/1/report
+```
+
+### 6. Outputs
+- Database: `infera.db` (ignored by git) stores companies, filings, sections, paragraphs, scores, summaries.
+- Reports: Markdown files under `reports/` (ignored by git).
+
+### 7. Notes / Options
+- To avoid OpenAI costs, add `--skip-summary` when running the pipeline.
+- Default DB is SQLite; set `DATABASE_URL` to Postgres if desired.
+- First run downloads the sentence-transformer model (requires internet).
 
 ## 📡 API Endpoints
 
