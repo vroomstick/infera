@@ -1,0 +1,930 @@
+{
+  "embedding": {
+    "accuracy": 0.5555555555555556,
+    "confusion_matrix": [
+      [
+        16,
+        3,
+        4
+      ],
+      [
+        8,
+        3,
+        3
+      ],
+      [
+        1,
+        1,
+        6
+      ]
+    ],
+    "classification_report": {
+      "low": {
+        "precision": 0.64,
+        "recall": 0.6956521739130435,
+        "f1-score": 0.6666666666666666,
+        "support": 23.0
+      },
+      "medium": {
+        "precision": 0.42857142857142855,
+        "recall": 0.21428571428571427,
+        "f1-score": 0.2857142857142857,
+        "support": 14.0
+      },
+      "high": {
+        "precision": 0.46153846153846156,
+        "recall": 0.75,
+        "f1-score": 0.5714285714285714,
+        "support": 8.0
+      },
+      "accuracy": 0.5555555555555556,
+      "macro avg": {
+        "precision": 0.51003663003663,
+        "recall": 0.5533126293995859,
+        "f1-score": 0.5079365079365079,
+        "support": 45.0
+      },
+      "weighted avg": {
+        "precision": 0.5424957264957265,
+        "recall": 0.5555555555555556,
+        "f1-score": 0.5312169312169313,
+        "support": 45.0
+      }
+    },
+    "spearman_correlation": 0.3991533077621042,
+    "spearman_p_value": 0.0066042622150361205,
+    "precision_at_5": 0.2,
+    "precision_at_10": 0.4,
+    "predictions": [
+      {
+        "id": 1,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "high",
+        "score": 0.7418,
+        "correct": false,
+        "text_preview": "The Company\u2019s business, reputation, results of operations, financial condition and stock price can b..."
+      },
+      {
+        "id": 2,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.4415,
+        "correct": true,
+        "text_preview": "Because of the following factors, as well as other factors affecting the Company\u2019s results of operat..."
+      },
+      {
+        "id": 3,
+        "source": "AAPL",
+        "true_label": "high",
+        "pred_label": "high",
+        "score": 0.6543,
+        "correct": true,
+        "text_preview": "Adverse economic conditions can also lead to increased credit and collectibility risk on the Company..."
+      },
+      {
+        "id": 4,
+        "source": "AAPL",
+        "true_label": "high",
+        "pred_label": "high",
+        "score": 0.6656,
+        "correct": true,
+        "text_preview": "Therefore, the Company remains subject to significant risks of supply shortages and price increases ..."
+      },
+      {
+        "id": 5,
+        "source": "AAPL",
+        "true_label": "medium",
+        "pred_label": "high",
+        "score": 0.5645,
+        "correct": false,
+        "text_preview": "The Company is exposed to the risk of write-downs on the value of its inventory and other assets, in..."
+      },
+      {
+        "id": 6,
+        "source": "AAPL",
+        "true_label": "high",
+        "pred_label": "high",
+        "score": 0.5529,
+        "correct": true,
+        "text_preview": "Although malicious attacks perpetrated to gain access to confidential information, including persona..."
+      },
+      {
+        "id": 7,
+        "source": "AAPL",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.3917,
+        "correct": false,
+        "text_preview": "While the Company maintains insurance coverage that is intended to address certain aspects of data s..."
+      },
+      {
+        "id": 8,
+        "source": "AAPL",
+        "true_label": "high",
+        "pred_label": "high",
+        "score": 0.6574,
+        "correct": true,
+        "text_preview": "Investment in new business strategies and acquisitions could disrupt the Company\u2019s ongoing business,..."
+      },
+      {
+        "id": 9,
+        "source": "AAPL",
+        "true_label": "medium",
+        "pred_label": "medium",
+        "score": 0.4878,
+        "correct": true,
+        "text_preview": "The Company\u2019s financial performance is subject to risks associated with changes in the value of the ..."
+      },
+      {
+        "id": 10,
+        "source": "AAPL",
+        "true_label": "medium",
+        "pred_label": "high",
+        "score": 0.5787,
+        "correct": false,
+        "text_preview": "The Company is exposed to credit risk on its trade accounts receivable, vendor non-trade receivables..."
+      },
+      {
+        "id": 11,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "medium",
+        "score": 0.4869,
+        "correct": false,
+        "text_preview": "The Company\u2019s future gross margins can be impacted by a variety of factors, as discussed in Part I, ..."
+      },
+      {
+        "id": 12,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "medium",
+        "score": 0.5434,
+        "correct": false,
+        "text_preview": "The Company is exposed to economic risk from interest rates and foreign exchange rates. The Company ..."
+      },
+      {
+        "id": 13,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.4054,
+        "correct": true,
+        "text_preview": "The Company may use derivative instruments to partially offset its business exposure to foreign exch..."
+      },
+      {
+        "id": 14,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.3126,
+        "correct": true,
+        "text_preview": "% of total trade receivables as of September\u00a030, 2023 and September\u00a024, 2022, respectively. The Comp..."
+      },
+      {
+        "id": 15,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.1351,
+        "correct": true,
+        "text_preview": "To manage interest rate risk on certain of its U.S. dollar\u2013denominated fixed-rate notes, the Company..."
+      },
+      {
+        "id": 16,
+        "source": "TSLA",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.3141,
+        "correct": false,
+        "text_preview": "As is the case for some automotive companies, some of our procured components and systems are source..."
+      },
+      {
+        "id": 17,
+        "source": "TSLA",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.3039,
+        "correct": false,
+        "text_preview": "Our battery packs are subject to various U.S. and international regulations that govern transport of..."
+      },
+      {
+        "id": 18,
+        "source": "TSLA",
+        "true_label": "low",
+        "pred_label": "high",
+        "score": 0.7258,
+        "correct": false,
+        "text_preview": "You should carefully consider the risks described below together with the other information set fort..."
+      },
+      {
+        "id": 19,
+        "source": "TSLA",
+        "true_label": "high",
+        "pred_label": "high",
+        "score": 0.628,
+        "correct": true,
+        "text_preview": "We face risks associated with maintaining and expanding our international operations, including unfa..."
+      },
+      {
+        "id": 20,
+        "source": "TSLA",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.4129,
+        "correct": false,
+        "text_preview": "We may be unable to effectively grow, or manage the compliance, residual value, financing and credit..."
+      },
+      {
+        "id": 21,
+        "source": "TSLA",
+        "true_label": "high",
+        "pred_label": "low",
+        "score": 0.4108,
+        "correct": false,
+        "text_preview": "Finally, our vehicle and solar energy system financing programs and our energy storage sales program..."
+      },
+      {
+        "id": 22,
+        "source": "TSLA",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.4258,
+        "correct": true,
+        "text_preview": "Increased scrutiny and changing expectations from stakeholders with respect to the Company\u2019s ESG pra..."
+      },
+      {
+        "id": 23,
+        "source": "TSLA",
+        "true_label": "high",
+        "pred_label": "medium",
+        "score": 0.5247,
+        "correct": false,
+        "text_preview": "In addition to the risks related to general privacy regulation, we may also be subject to specific v..."
+      },
+      {
+        "id": 24,
+        "source": "TSLA",
+        "true_label": "high",
+        "pred_label": "high",
+        "score": 0.5572,
+        "correct": true,
+        "text_preview": "We recognize the importance of assessing, identifying, and managing material risks associated with c..."
+      },
+      {
+        "id": 25,
+        "source": "TSLA",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.2792,
+        "correct": true,
+        "text_preview": "We also conduct tabletop exercises to simulate responses to cybersecurity incidents. Our team of cyb..."
+      },
+      {
+        "id": 26,
+        "source": "TSLA",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.3275,
+        "correct": true,
+        "text_preview": "We continue adapting our strategy to meet our liquidity and risk objectives, such as investing in U...."
+      },
+      {
+        "id": 27,
+        "source": "TSLA",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.4103,
+        "correct": false,
+        "text_preview": "Because of its inherent limitations, internal control over financial reporting may not prevent or de..."
+      },
+      {
+        "id": 28,
+        "source": "TSLA",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.337,
+        "correct": false,
+        "text_preview": "Financial instruments that potentially subject us to a concentration of credit risk consist of cash,..."
+      },
+      {
+        "id": 29,
+        "source": "TSLA",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.2179,
+        "correct": true,
+        "text_preview": "We estimate the fair value of the 2024 Notes using commonly accepted valuation methodologies and mar..."
+      },
+      {
+        "id": 30,
+        "source": "TSLA",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.402,
+        "correct": false,
+        "text_preview": "Because of inherent limitations, internal control over financial reporting may not prevent or detect..."
+      },
+      {
+        "id": 31,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.4134,
+        "correct": true,
+        "text_preview": "For a description of the risks we face related to regulatory matters, refer to Risk Factors (Part I,..."
+      },
+      {
+        "id": 32,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "high",
+        "score": 0.6909,
+        "correct": false,
+        "text_preview": "Our operations and financial results are subject to various risks and uncertainties, including those..."
+      },
+      {
+        "id": 33,
+        "source": "MSFT",
+        "true_label": "medium",
+        "pred_label": "medium",
+        "score": 0.5151,
+        "correct": true,
+        "text_preview": "Our products and services, how they are used by customers, and how third-party products and services..."
+      },
+      {
+        "id": 34,
+        "source": "MSFT",
+        "true_label": "medium",
+        "pred_label": "high",
+        "score": 0.6745,
+        "correct": false,
+        "text_preview": "We face risks related to the protection and utilization of our intellectual property that may result..."
+      },
+      {
+        "id": 35,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.26,
+        "correct": true,
+        "text_preview": "ERM is structured using a framework based on the Committee of Sponsoring Organization (\u201cCOSO\u201d) guida..."
+      },
+      {
+        "id": 36,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.353,
+        "correct": true,
+        "text_preview": "We maintain a systematic approach to assessing and controlling the cybersecurity risks presented by ..."
+      },
+      {
+        "id": 37,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "high",
+        "score": 0.5595,
+        "correct": false,
+        "text_preview": "We describe the risks from cybersecurity threats, including previous cybersecurity incidents, in sec..."
+      },
+      {
+        "id": 38,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.4093,
+        "correct": true,
+        "text_preview": "The presentations address topics such as cybersecurity threats, incidents, top risks and related rem..."
+      },
+      {
+        "id": 39,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.2108,
+        "correct": true,
+        "text_preview": "Our CISO has extensive experience assessing and managing cybersecurity programs and cybersecurity ri..."
+      },
+      {
+        "id": 40,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.2331,
+        "correct": true,
+        "text_preview": "In addition to the Board\u2019s oversight of cybersecurity risk, to support the CISO, we have established..."
+      },
+      {
+        "id": 41,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "medium",
+        "score": 0.4572,
+        "correct": false,
+        "text_preview": "Refer to Risk Factors (Part I, Item 1A of this Form 10-K) for a discussion of these factors and othe..."
+      },
+      {
+        "id": 42,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.3287,
+        "correct": true,
+        "text_preview": "We use derivative instruments to manage risks related to foreign currencies, interest rates, equity ..."
+      },
+      {
+        "id": 43,
+        "source": "MSFT",
+        "true_label": "medium",
+        "pred_label": "medium",
+        "score": 0.4897,
+        "correct": true,
+        "text_preview": "We are exposed to economic risk from foreign exchange rates, interest rates, credit risk, and equity..."
+      },
+      {
+        "id": 44,
+        "source": "MSFT",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.3951,
+        "correct": false,
+        "text_preview": "Certain forecasted transactions, assets, and liabilities are exposed to foreign currency risk. We mo..."
+      },
+      {
+        "id": 45,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.1382,
+        "correct": true,
+        "text_preview": "Securities held in our fixed-income portfolio are subject to different interest rate risks based on ..."
+      }
+    ]
+  },
+  "tfidf": {
+    "accuracy": 0.5111111111111111,
+    "confusion_matrix": [
+      [
+        23,
+        0,
+        0
+      ],
+      [
+        14,
+        0,
+        0
+      ],
+      [
+        5,
+        3,
+        0
+      ]
+    ],
+    "classification_report": {
+      "low": {
+        "precision": 0.5476190476190477,
+        "recall": 1.0,
+        "f1-score": 0.7076923076923077,
+        "support": 23.0
+      },
+      "medium": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 14.0
+      },
+      "high": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 8.0
+      },
+      "accuracy": 0.5111111111111111,
+      "macro avg": {
+        "precision": 0.18253968253968256,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.23589743589743592,
+        "support": 45.0
+      },
+      "weighted avg": {
+        "precision": 0.2798941798941799,
+        "recall": 0.5111111111111111,
+        "f1-score": 0.36170940170940175,
+        "support": 45.0
+      }
+    },
+    "spearman_correlation": 0.3004466097083261,
+    "spearman_p_value": 0.04492691555256479,
+    "precision_at_5": 0.6,
+    "precision_at_10": 0.4,
+    "predictions": [
+      {
+        "id": 1,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": true,
+        "text_preview": "The Company\u2019s business, reputation, results of operations, financial condition and stock price can b..."
+      },
+      {
+        "id": 2,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": true,
+        "text_preview": "Because of the following factors, as well as other factors affecting the Company\u2019s results of operat..."
+      },
+      {
+        "id": 3,
+        "source": "AAPL",
+        "true_label": "high",
+        "pred_label": "low",
+        "score": 0.0149,
+        "correct": false,
+        "text_preview": "Adverse economic conditions can also lead to increased credit and collectibility risk on the Company..."
+      },
+      {
+        "id": 4,
+        "source": "AAPL",
+        "true_label": "high",
+        "pred_label": "low",
+        "score": 0.0474,
+        "correct": false,
+        "text_preview": "Therefore, the Company remains subject to significant risks of supply shortages and price increases ..."
+      },
+      {
+        "id": 5,
+        "source": "AAPL",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": false,
+        "text_preview": "The Company is exposed to the risk of write-downs on the value of its inventory and other assets, in..."
+      },
+      {
+        "id": 6,
+        "source": "AAPL",
+        "true_label": "high",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": false,
+        "text_preview": "Although malicious attacks perpetrated to gain access to confidential information, including persona..."
+      },
+      {
+        "id": 7,
+        "source": "AAPL",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.032,
+        "correct": false,
+        "text_preview": "While the Company maintains insurance coverage that is intended to address certain aspects of data s..."
+      },
+      {
+        "id": 8,
+        "source": "AAPL",
+        "true_label": "high",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": false,
+        "text_preview": "Investment in new business strategies and acquisitions could disrupt the Company\u2019s ongoing business,..."
+      },
+      {
+        "id": 9,
+        "source": "AAPL",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": false,
+        "text_preview": "The Company\u2019s financial performance is subject to risks associated with changes in the value of the ..."
+      },
+      {
+        "id": 10,
+        "source": "AAPL",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.054,
+        "correct": false,
+        "text_preview": "The Company is exposed to credit risk on its trade accounts receivable, vendor non-trade receivables..."
+      },
+      {
+        "id": 11,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": true,
+        "text_preview": "The Company\u2019s future gross margins can be impacted by a variety of factors, as discussed in Part I, ..."
+      },
+      {
+        "id": 12,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0241,
+        "correct": true,
+        "text_preview": "The Company is exposed to economic risk from interest rates and foreign exchange rates. The Company ..."
+      },
+      {
+        "id": 13,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0138,
+        "correct": true,
+        "text_preview": "The Company may use derivative instruments to partially offset its business exposure to foreign exch..."
+      },
+      {
+        "id": 14,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": true,
+        "text_preview": "% of total trade receivables as of September\u00a030, 2023 and September\u00a024, 2022, respectively. The Comp..."
+      },
+      {
+        "id": 15,
+        "source": "AAPL",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": true,
+        "text_preview": "To manage interest rate risk on certain of its U.S. dollar\u2013denominated fixed-rate notes, the Company..."
+      },
+      {
+        "id": 16,
+        "source": "TSLA",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.0199,
+        "correct": false,
+        "text_preview": "As is the case for some automotive companies, some of our procured components and systems are source..."
+      },
+      {
+        "id": 17,
+        "source": "TSLA",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.0275,
+        "correct": false,
+        "text_preview": "Our battery packs are subject to various U.S. and international regulations that govern transport of..."
+      },
+      {
+        "id": 18,
+        "source": "TSLA",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": true,
+        "text_preview": "You should carefully consider the risks described below together with the other information set fort..."
+      },
+      {
+        "id": 19,
+        "source": "TSLA",
+        "true_label": "high",
+        "pred_label": "medium",
+        "score": 0.081,
+        "correct": false,
+        "text_preview": "We face risks associated with maintaining and expanding our international operations, including unfa..."
+      },
+      {
+        "id": 20,
+        "source": "TSLA",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.0396,
+        "correct": false,
+        "text_preview": "We may be unable to effectively grow, or manage the compliance, residual value, financing and credit..."
+      },
+      {
+        "id": 21,
+        "source": "TSLA",
+        "true_label": "high",
+        "pred_label": "low",
+        "score": 0.0421,
+        "correct": false,
+        "text_preview": "Finally, our vehicle and solar energy system financing programs and our energy storage sales program..."
+      },
+      {
+        "id": 22,
+        "source": "TSLA",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": true,
+        "text_preview": "Increased scrutiny and changing expectations from stakeholders with respect to the Company\u2019s ESG pra..."
+      },
+      {
+        "id": 23,
+        "source": "TSLA",
+        "true_label": "high",
+        "pred_label": "medium",
+        "score": 0.1257,
+        "correct": false,
+        "text_preview": "In addition to the risks related to general privacy regulation, we may also be subject to specific v..."
+      },
+      {
+        "id": 24,
+        "source": "TSLA",
+        "true_label": "high",
+        "pred_label": "medium",
+        "score": 0.1139,
+        "correct": false,
+        "text_preview": "We recognize the importance of assessing, identifying, and managing material risks associated with c..."
+      },
+      {
+        "id": 25,
+        "source": "TSLA",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0398,
+        "correct": true,
+        "text_preview": "We also conduct tabletop exercises to simulate responses to cybersecurity incidents. Our team of cyb..."
+      },
+      {
+        "id": 26,
+        "source": "TSLA",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0456,
+        "correct": true,
+        "text_preview": "We continue adapting our strategy to meet our liquidity and risk objectives, such as investing in U...."
+      },
+      {
+        "id": 27,
+        "source": "TSLA",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.0305,
+        "correct": false,
+        "text_preview": "Because of its inherent limitations, internal control over financial reporting may not prevent or de..."
+      },
+      {
+        "id": 28,
+        "source": "TSLA",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": false,
+        "text_preview": "Financial instruments that potentially subject us to a concentration of credit risk consist of cash,..."
+      },
+      {
+        "id": 29,
+        "source": "TSLA",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": true,
+        "text_preview": "We estimate the fair value of the 2024 Notes using commonly accepted valuation methodologies and mar..."
+      },
+      {
+        "id": 30,
+        "source": "TSLA",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.0305,
+        "correct": false,
+        "text_preview": "Because of inherent limitations, internal control over financial reporting may not prevent or detect..."
+      },
+      {
+        "id": 31,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": true,
+        "text_preview": "For a description of the risks we face related to regulatory matters, refer to Risk Factors (Part I,..."
+      },
+      {
+        "id": 32,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": true,
+        "text_preview": "Our operations and financial results are subject to various risks and uncertainties, including those..."
+      },
+      {
+        "id": 33,
+        "source": "MSFT",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": false,
+        "text_preview": "Our products and services, how they are used by customers, and how third-party products and services..."
+      },
+      {
+        "id": 34,
+        "source": "MSFT",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": false,
+        "text_preview": "We face risks related to the protection and utilization of our intellectual property that may result..."
+      },
+      {
+        "id": 35,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": true,
+        "text_preview": "ERM is structured using a framework based on the Committee of Sponsoring Organization (\u201cCOSO\u201d) guida..."
+      },
+      {
+        "id": 36,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0467,
+        "correct": true,
+        "text_preview": "We maintain a systematic approach to assessing and controlling the cybersecurity risks presented by ..."
+      },
+      {
+        "id": 37,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0515,
+        "correct": true,
+        "text_preview": "We describe the risks from cybersecurity threats, including previous cybersecurity incidents, in sec..."
+      },
+      {
+        "id": 38,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0182,
+        "correct": true,
+        "text_preview": "The presentations address topics such as cybersecurity threats, incidents, top risks and related rem..."
+      },
+      {
+        "id": 39,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0679,
+        "correct": true,
+        "text_preview": "Our CISO has extensive experience assessing and managing cybersecurity programs and cybersecurity ri..."
+      },
+      {
+        "id": 40,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0457,
+        "correct": true,
+        "text_preview": "In addition to the Board\u2019s oversight of cybersecurity risk, to support the CISO, we have established..."
+      },
+      {
+        "id": 41,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": true,
+        "text_preview": "Refer to Risk Factors (Part I, Item 1A of this Form 10-K) for a discussion of these factors and othe..."
+      },
+      {
+        "id": 42,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0,
+        "correct": true,
+        "text_preview": "We use derivative instruments to manage risks related to foreign currencies, interest rates, equity ..."
+      },
+      {
+        "id": 43,
+        "source": "MSFT",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.0238,
+        "correct": false,
+        "text_preview": "We are exposed to economic risk from foreign exchange rates, interest rates, credit risk, and equity..."
+      },
+      {
+        "id": 44,
+        "source": "MSFT",
+        "true_label": "medium",
+        "pred_label": "low",
+        "score": 0.0123,
+        "correct": false,
+        "text_preview": "Certain forecasted transactions, assets, and liabilities are exposed to foreign currency risk. We mo..."
+      },
+      {
+        "id": 45,
+        "source": "MSFT",
+        "true_label": "low",
+        "pred_label": "low",
+        "score": 0.0144,
+        "correct": true,
+        "text_preview": "Securities held in our fixed-income portfolio are subject to different interest rate risks based on ..."
+      }
+    ]
+  }
+}

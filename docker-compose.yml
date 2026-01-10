@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  infera:
+    build: .
+    container_name: infera-api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount data directory for filings
+      - ./data:/app/data
+      # Mount reports directory for output
+      - ./reports:/app/reports
+      # Mount database (optional - can use volume instead)
+      - ./infera.db:/app/infera.db
+    environment:
+      - DATABASE_URL=sqlite:///./infera.db
+      - LOG_LEVEL=INFO
+      # OpenAI key (set in .env or pass directly)
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    env_file:
+      - .env
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: Run tests in container
+  test:
+    build: .
+    container_name: infera-test
+    command: python -m pytest tests/ -v
+    volumes:
+      - ./data:/app/data
+    profiles:
+      - testing
+
+  # Optional: Run evaluation
+  eval:
+    build: .
+    container_name: infera-eval
+    command: python evaluation/eval_scorer.py
+    volumes:
+      - ./data:/app/data
+      - ./evaluation:/app/evaluation
+    profiles:
+      - evaluation
+

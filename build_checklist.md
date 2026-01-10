@@ -40,9 +40,55 @@
 - [x] README with Quick Start, API usage, architecture, sample output
 - [x] Example run on `data/AAPL_10K.html` (stored in DB, report generated)
 
-## 🧠 Next Steps (Post-MVP)
-- [ ] Postgres + Docker Compose (optionally pgvector for semantic search)
-- [ ] SEC fetcher (EDGAR) for auto-ingest
-- [ ] Tests (unit/integration; mock OpenAI)
-- [ ] Second filing + basic compare (YOY/peer-lite)
-- [ ] Optional Streamlit/dashboard
+---
+
+# 🚀 Post-MVP Enhancements (Completed)
+
+## ✅ Phase 8 — DS Rigor & Evaluation
+- [x] `evaluation/labeled_risks.json`: 45 hand-labeled paragraphs (AAPL, TSLA, MSFT)
+- [x] `evaluation/eval_scorer.py`: accuracy, Spearman ρ, Precision@k
+- [x] `evaluation/compare_methods.py`: TF-IDF vs embeddings comparison
+- [x] `evaluation/plots/`: score distributions, confusion matrix, method comparison
+- [x] `docs/results.md`, `docs/error_analysis.md`, `docs/methodology.md`
+
+## ✅ Phase 9 — Testing & CI/CD
+- [x] `tests/test_cleaner.py`: 11 tests for HTML cleaning
+- [x] `tests/test_segmenter.py`: 11 tests for section extraction  
+- [x] `tests/test_scoring.py`: 13 tests for embedding scoring
+- [x] All 35 tests passing
+- [x] `Dockerfile`: multi-stage build with model pre-download
+- [x] `docker-compose.yml`: API + test + eval services
+- [x] `Makefile`: 15+ commands
+- [x] `.github/workflows/ci.yml`: GitHub Actions CI pipeline
+
+## ✅ Phase 10 — Analytics Layer
+- [x] `services/trend_service.py`: YoY trend analysis (new/removed risks, narrative drift)
+- [x] `services/benchmark_service.py`: peer comparison across companies
+- [x] `GET /search?q=`: semantic search across all filings
+- [x] `GET /benchmark?tickers=`: peer risk benchmarking
+- [x] `GET /filings/{id}/trends`: YoY risk evolution
+
+## ✅ Phase 11 — SEC EDGAR Fetcher
+- [x] `ingest/sec_fetcher.py`: auto-fetch 10-K filings by ticker
+- [x] Rate limiting, retries, caching
+- [x] CIK normalization (ticker → CIK lookup)
+- [x] `POST /fetch`: API endpoint for fetching filings
+
+## ✅ Phase 12 — Security Hardening
+- [x] Path traversal protection in `/analyze` endpoint
+- [x] Optional API key authentication (`INFERA_API_KEY`)
+- [x] CORS middleware configuration
+- [x] Rate limiting with slowapi
+- [x] Docker runs as non-root user
+- [x] Error sanitization in production mode
+- [x] Dependency audit (all vulnerabilities patched)
+- [x] Credential masking in logs
+
+---
+
+# 🔮 Future Enhancements
+- [ ] PostgreSQL + pgvector for production vector similarity search
+- [ ] Streamlit dashboard for interactive exploration
+- [ ] Fine-tuned embeddings on SEC filings
+- [ ] MLflow experiment tracking
+- [ ] Statistical significance testing

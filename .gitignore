@@ -36,6 +36,27 @@ infera_config.py
 *.ipynb_checkpoints
 
 # 📦 Package distribution
+dist/
+build/
+*.egg-info/
 
-# Cursor project metadata
+# 🧪 Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 🐳 Docker
+*.log
+
+# Cursor project metadata & plans
 .cursor/
+
+# SEC cache (downloaded filings cache)
+.sec_cache/
+
+# Security notes (if any)
+security*.md
+*security*.plan.md
+
+# Internal dev notes (not for public)
+dev_notes.md

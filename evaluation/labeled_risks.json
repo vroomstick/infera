@@ -1,0 +1,351 @@
+{
+  "description": "Hand-labeled risk paragraphs for evaluation. Labels assigned by Claude Opus 4.5 using LLM-as-judge methodology.",
+  "labeling_methodology": "Each paragraph evaluated for material adverse impact potential. High = could significantly harm revenue/reputation/operations. Medium = concerning but manageable. Low = boilerplate, routine disclosure, or risk mitigation description.",
+  "labels": {
+    "high": "Critical business risk with potential for material adverse impact",
+    "medium": "Moderate risk requiring monitoring but unlikely to cause material harm alone",
+    "low": "Standard disclosure with minimal risk signal"
+  },
+  "samples": [
+    {
+      "id": 1,
+      "source": "AAPL",
+      "text": "The Company’s business, reputation, results of operations, financial condition and stock price can be affected by a number of factors, whether currently known or unknown, including those described below. When any one or more of these risks materialize from time to time, the Company’s business, reputation, results of operations, financial condition and stock price can be materially and adversely affected.",
+      "label": "low",
+      "notes": "Boilerplate introductory language that appears at the start of every risk section."
+    },
+    {
+      "id": 2,
+      "source": "AAPL",
+      "text": "Because of the following factors, as well as other factors affecting the Company’s results of operations and financial condition, past financial performance should not be considered to be a reliable indicator of future performance, and investors should not use historical trends to anticipate results or trends in future periods. This discussion of risk factors contains forward-looking statements.",
+      "label": "low",
+      "notes": "Standard legal disclaimer about forward-looking statements."
+    },
+    {
+      "id": 3,
+      "source": "AAPL",
+      "text": "Adverse economic conditions can also lead to increased credit and collectibility risk on the Company’s trade receivables; the failure of derivative counterparties and other financial institutions; limitations on the Company’s ability to issue new debt; reduced liquidity; and declines in the fair values of the Company’s financial instruments. These and other impacts can materially adversely affect the Company’s business, results of operations, financial condition and stock price.",
+      "label": "high",
+      "notes": "Multiple specific financial risks: credit, counterparty failure, debt limitations, liquidity."
+    },
+    {
+      "id": 4,
+      "source": "AAPL",
+      "text": "Therefore, the Company remains subject to significant risks of supply shortages and price increases that can materially adversely affect its business, results of operations and financial condition.",
+      "label": "high",
+      "notes": "Supply chain risk with material adverse impact language."
+    },
+    {
+      "id": 5,
+      "source": "AAPL",
+      "text": "The Company is exposed to the risk of write-downs on the value of its inventory and other assets, in addition to purchase commitment cancellation risk.",
+      "label": "medium",
+      "notes": "Inventory write-down and purchase commitment risks - standard operational."
+    },
+    {
+      "id": 6,
+      "source": "AAPL",
+      "text": "Although malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across various industries, the Company is at a relatively greater risk of being targeted because of its high profile and the value of the confidential information it creates, owns, manages, stores and processes.",
+      "label": "high",
+      "notes": "Cybersecurity with explicit heightened targeting acknowledgment."
+    },
+    {
+      "id": 7,
+      "source": "AAPL",
+      "text": "While the Company maintains insurance coverage that is intended to address certain aspects of data security risks, such insurance coverage may be insufficient to cover all losses or all types of claims that may arise.",
+      "label": "medium",
+      "notes": "Insurance limitation caveat - secondary to primary risk."
+    },
+    {
+      "id": 8,
+      "source": "AAPL",
+      "text": "Investment in new business strategies and acquisitions could disrupt the Company’s ongoing business, present risks not originally contemplated and materially adversely affect the Company’s business, reputation, results of operations and financial condition.",
+      "label": "high",
+      "notes": "M&A and strategic disruption risk with material adverse impact."
+    },
+    {
+      "id": 9,
+      "source": "AAPL",
+      "text": "The Company’s financial performance is subject to risks associated with changes in the value of the U.S. dollar relative to local currencies.",
+      "label": "medium",
+      "notes": "Standard foreign exchange exposure - typically hedged."
+    },
+    {
+      "id": 10,
+      "source": "AAPL",
+      "text": "The Company is exposed to credit risk on its trade accounts receivable, vendor non-trade receivables and prepayments related to long-term supply agreements, and this risk is heightened during periods when economic conditions worsen.",
+      "label": "medium",
+      "notes": "Credit risk exposure with cyclical sensitivity."
+    },
+    {
+      "id": 11,
+      "source": "AAPL",
+      "text": "The Company’s future gross margins can be impacted by a variety of factors, as discussed in Part I, Item 1A of this Form 10-K under the heading “Risk Factors.” As a result, the Company believes, in general, gross margins will be subject to volatility and downward pressure.",
+      "label": "low",
+      "notes": "Cross-reference with general margin pressure statement."
+    },
+    {
+      "id": 12,
+      "source": "AAPL",
+      "text": "The Company is exposed to economic risk from interest rates and foreign exchange rates. The Company uses various strategies to manage these risks; however, they may still impact the Company’s consolidated financial statements.",
+      "label": "low",
+      "notes": "Standard market risk with hedging mentioned."
+    },
+    {
+      "id": 13,
+      "source": "AAPL",
+      "text": "The Company may use derivative instruments to partially offset its business exposure to foreign exchange and interest rate risk. However, the Company may choose not to hedge certain exposures for a variety of reasons including accounting considerations or the prohibitive economic cost of hedging particular exposures. There can be no assurance the hedges will offset more than a portion of the financial impact resulting from movements in foreign exchange or interest rates.",
+      "label": "low",
+      "notes": "Hedging strategy description and limitations."
+    },
+    {
+      "id": 14,
+      "source": "AAPL",
+      "text": "% of total trade receivables as of September 30, 2023 and September 24, 2022, respectively. The Company requires third-party credit support or collateral from certain customers to limit credit risk.",
+      "label": "low",
+      "notes": "Incomplete fragment describing credit risk mitigation."
+    },
+    {
+      "id": 15,
+      "source": "AAPL",
+      "text": "To manage interest rate risk on certain of its U.S. dollar–denominated fixed-rate notes, the Company uses interest rate swaps to effectively convert the fixed interest rates to floating interest rates on a portion of these notes. Additionally, to manage foreign exchange rate risk on certain of its foreign currency–denominated notes, the Company uses cross-currency swaps to effectively convert these notes to U.S. dollar–denominated notes.",
+      "label": "low",
+      "notes": "Risk management instruments description - mitigation not risk."
+    },
+    {
+      "id": 16,
+      "source": "TSLA",
+      "text": "As is the case for some automotive companies, some of our procured components and systems are sourced from single suppliers. Where multiple sources are available for certain key components, we work to qualify multiple suppliers for them where it is sensible to do so in order to minimize potential production risks due to disruptions in their supply. We also mitigate risk by maintaining safety stock for key parts and assemblies and die banks for components with lengthy procurement lead times.",
+      "label": "medium",
+      "notes": "Single supplier dependency with mitigation measures described."
+    },
+    {
+      "id": 17,
+      "source": "TSLA",
+      "text": "Our battery packs are subject to various U.S. and international regulations that govern transport of “dangerous goods,” defined to include lithium-ion batteries, which may present a risk in transportation. We conduct testing to demonstrate our compliance with such regulations.",
+      "label": "medium",
+      "notes": "Regulatory compliance for dangerous goods transport."
+    },
+    {
+      "id": 18,
+      "source": "TSLA",
+      "text": "You should carefully consider the risks described below together with the other information set forth in this report, which could materially affect our business, financial condition and future results. The risks described below are not the only risks facing our company. Risks and uncertainties not currently known to us or that we currently deem to be immaterial also may materially adversely affect our business, financial condition and operating results.",
+      "label": "low",
+      "notes": "Boilerplate introductory language for risk factors section."
+    },
+    {
+      "id": 19,
+      "source": "TSLA",
+      "text": "We face risks associated with maintaining and expanding our international operations, including unfavorable and uncertain regulatory, political, economic, tax and labor conditions.",
+      "label": "high",
+      "notes": "International expansion risks - regulatory, political, economic, tax, labor."
+    },
+    {
+      "id": 20,
+      "source": "TSLA",
+      "text": "We may be unable to effectively grow, or manage the compliance, residual value, financing and credit risks related to, our various financing programs.",
+      "label": "medium",
+      "notes": "Financing program risks - important but not existential."
+    },
+    {
+      "id": 21,
+      "source": "TSLA",
+      "text": "Finally, our vehicle and solar energy system financing programs and our energy storage sales programs also expose us to customer credit risk. In the event of a widespread economic downturn or other catastrophic event, our customers may be unable or unwilling to satisfy their payment obligations to us on a timely basis or at all. If a significant number of our customers default, we may incur substantial credit losses and/or impairment charges with respect to the underlying assets.",
+      "label": "high",
+      "notes": "Customer credit risk with substantial credit losses potential."
+    },
+    {
+      "id": 22,
+      "source": "TSLA",
+      "text": "Increased scrutiny and changing expectations from stakeholders with respect to the Company’s ESG practices may result in additional costs or risks.",
+      "label": "low",
+      "notes": "Vague ESG scrutiny risk with weak language."
+    },
+    {
+      "id": 23,
+      "source": "TSLA",
+      "text": "In addition to the risks related to general privacy regulation, we may also be subject to specific vehicle manufacturer obligations relating to cybersecurity, data privacy and data localization requirements which place additional risks to our international operations. Risks and penalties could include ongoing audit requirements, data protection",
+      "label": "high",
+      "notes": "Cybersecurity and data privacy regulatory obligations with penalties."
+    },
+    {
+      "id": 24,
+      "source": "TSLA",
+      "text": "We recognize the importance of assessing, identifying, and managing material risks associated with cybersecurity threats, as such term is defined in Item 106(a) of Regulation S-K. These risks include, among other things: operational risks, intellectual property theft, fraud, extortion, harm to employees or customers and violation of data privacy or security laws.",
+      "label": "high",
+      "notes": "Comprehensive cybersecurity risk enumeration - IP theft, fraud, extortion."
+    },
+    {
+      "id": 25,
+      "source": "TSLA",
+      "text": "We also conduct tabletop exercises to simulate responses to cybersecurity incidents. Our team of cybersecurity professionals then collaborate with technical and business stakeholders across our business units to further analyze the risk to the company, and form detection, mitigation and remediation strategies.",
+      "label": "low",
+      "notes": "Cybersecurity preparedness activities - mitigation not risk."
+    },
+    {
+      "id": 26,
+      "source": "TSLA",
+      "text": "We continue adapting our strategy to meet our liquidity and risk objectives, such as investing in U.S. government securities and other investments, to do more vertical integration, expand our product roadmap and provide financing options to our customers.",
+      "label": "low",
+      "notes": "Strategic planning statement - not a risk disclosure."
+    },
+    {
+      "id": 27,
+      "source": "TSLA",
+      "text": "Because of its inherent limitations, internal control over financial reporting may not prevent or detect misstatements. Also, projections of any evaluation of effectiveness to future periods are subject to the risk that controls may become inadequate because of changes in conditions, or that the degree of compliance with the policies or procedures may deteriorate.",
+      "label": "medium",
+      "notes": "Standard internal control limitations disclosure."
+    },
+    {
+      "id": 28,
+      "source": "TSLA",
+      "text": "Financial instruments that potentially subject us to a concentration of credit risk consist of cash, cash equivalents, investments, restricted cash, accounts receivable and other finance receivables. Our cash and investments balances are primarily on deposit at high credit quality financial institutions or invested in money market funds. These deposits are typically in excess of insured limits. As of December 31, 2023 and 2022, no entity represented 10% or more of our total receivables balance.",
+      "label": "medium",
+      "notes": "Credit concentration risk with mitigation noted."
+    },
+    {
+      "id": 29,
+      "source": "TSLA",
+      "text": "We estimate the fair value of the 2024 Notes using commonly accepted valuation methodologies and market-based risk measurements that are indirectly observable, such as credit risk (Level II). In addition, we estimate the fair values of our digital assets based on quoted prices in active markets (Level I).",
+      "label": "low",
+      "notes": "Accounting methodology description - not a risk."
+    },
+    {
+      "id": 30,
+      "source": "TSLA",
+      "text": "Because of inherent limitations, internal control over financial reporting may not prevent or detect misstatements and projections of any evaluation of effectiveness to future periods are subject to the risk that controls may become inadequate because of changes in conditions, or that the degree of compliance with the policies or procedures may deteriorate.",
+      "label": "medium",
+      "notes": "Standard internal control limitations disclosure."
+    },
+    {
+      "id": 31,
+      "source": "MSFT",
+      "text": "For a description of the risks we face related to regulatory matters, refer to Risk Factors (Part I, Item 1A of this Form 10-K).",
+      "label": "low",
+      "notes": "Pure cross-reference with no substantive content."
+    },
+    {
+      "id": 32,
+      "source": "MSFT",
+      "text": "Our operations and financial results are subject to various risks and uncertainties, including those described below, that could adversely affect our business, operations, financial condition, results of operations, liquidity, and the trading price of our common stock.",
+      "label": "low",
+      "notes": "Boilerplate introductory statement for risk factors section."
+    },
+    {
+      "id": 33,
+      "source": "MSFT",
+      "text": "Our products and services, how they are used by customers, and how third-party products and services interact with them, may present security, privacy, and execution risks.",
+      "label": "medium",
+      "notes": "Product security and privacy risks - stated broadly."
+    },
+    {
+      "id": 34,
+      "source": "MSFT",
+      "text": "We face risks related to the protection and utilization of our intellectual property that may result in our business and operating results being harmed.",
+      "label": "medium",
+      "notes": "Intellectual property protection risk - standard for tech."
+    },
+    {
+      "id": 35,
+      "source": "MSFT",
+      "text": "ERM is structured using a framework based on the Committee of Sponsoring Organization (“COSO”) guidance on Enterprise Risk Management Integrating Strategy with Performance and it also aligns with the International Organization for Standardization 31000:2018 Risk Management Standard.",
+      "label": "low",
+      "notes": "Risk management framework description - governance not risk."
+    },
+    {
+      "id": 36,
+      "source": "MSFT",
+      "text": "We maintain a systematic approach to assessing and controlling the cybersecurity risks presented by third-party service providers. We require third-party service providers to manage their cybersecurity risks in defined ways, undergo cybersecurity reviews, notify us of cyber events, and satisfy additional contractual requirements.",
+      "label": "low",
+      "notes": "Third-party risk management process - mitigation activities."
+    },
+    {
+      "id": 37,
+      "source": "MSFT",
+      "text": "We describe the risks from cybersecurity threats, including previous cybersecurity incidents, in section “Risk Factors” (Part I, Item 1A of this Form 10-K). As of the date of this Form 10-K, we do not believe any risks from cybersecurity threats have materially affected or are reasonably likely to materially affect us, including our results of operations or financial condition.",
+      "label": "low",
+      "notes": "Explicit statement that cyber risks have NOT materially affected."
+    },
+    {
+      "id": 38,
+      "source": "MSFT",
+      "text": "The presentations address topics such as cybersecurity threats, incidents, top risks and related remediation efforts, results from internal and third-party assessments, progress towards risk-mitigation goals, the functioning of our incident response program, regulatory developments, and digital diplomacy efforts.",
+      "label": "low",
+      "notes": "Board presentation topics description - governance process."
+    },
+    {
+      "id": 39,
+      "source": "MSFT",
+      "text": "Our CISO has extensive experience assessing and managing cybersecurity programs and cybersecurity risk.",
+      "label": "low",
+      "notes": "Personnel qualification statement - not a risk."
+    },
+    {
+      "id": 40,
+      "source": "MSFT",
+      "text": "In addition to the Board’s oversight of cybersecurity risk, to support the CISO, we have established a Cybersecurity Governance Council (“CGC”) charged with overseeing initiatives that safeguard Microsoft’s computing environments, products, and services. The CGC is comprised of an executive-level team of Deputy CISOs with cybersecurity backgrounds and expertise relevant to their roles.",
+      "label": "low",
+      "notes": "Governance structure description - organizational disclosure."
+    },
+    {
+      "id": 41,
+      "source": "MSFT",
+      "text": "Refer to Risk Factors (Part I, Item 1A of this Form 10-K) for a discussion of these factors and other risks.",
+      "label": "low",
+      "notes": "Pure cross-reference - no substantive content."
+    },
+    {
+      "id": 42,
+      "source": "MSFT",
+      "text": "We use derivative instruments to manage risks related to foreign currencies, interest rates, equity prices, and credit; to enhance investment returns; and to facilitate portfolio diversification. Gains and losses from changes in fair values of derivatives that are not designated as hedging instruments are primarily recognized in other income (expense), net.",
+      "label": "low",
+      "notes": "Risk management instrument description - mitigation not risk."
+    },
+    {
+      "id": 43,
+      "source": "MSFT",
+      "text": "We are exposed to economic risk from foreign exchange rates, interest rates, credit risk, and equity prices. We use derivatives instruments to manage these risks, however, they may still impact our consolidated financial statements.",
+      "label": "medium",
+      "notes": "Market risk exposure with hedging mentioned but residual acknowledged."
+    },
+    {
+      "id": 44,
+      "source": "MSFT",
+      "text": "Certain forecasted transactions, assets, and liabilities are exposed to foreign currency risk. We monitor our foreign currency exposures daily to maximize the economic effectiveness of our foreign currency positions, including hedges. Principal currency exposures include the Euro, Japanese yen, British pound, Canadian dollar, and Australian dollar.",
+      "label": "medium",
+      "notes": "Foreign currency exposure with specific currencies and monitoring."
+    },
+    {
+      "id": 45,
+      "source": "MSFT",
+      "text": "Securities held in our fixed-income portfolio are subject to different interest rate risks based on their maturities. We manage the average maturity of the fixed-income portfolio to achieve economic returns that correlate to certain global fixed-income indices.",
+      "label": "low",
+      "notes": "Investment portfolio interest rate risk with active management."
+    }
+  ],
+  "summary": {
+    "total_samples": 45,
+    "distribution": {
+      "high": 8,
+      "medium": 14,
+      "low": 23
+    },
+    "by_source": {
+      "AAPL": {
+        "high": 4,
+        "medium": 4,
+        "low": 7
+      },
+      "TSLA": {
+        "high": 4,
+        "medium": 6,
+        "low": 5
+      },
+      "MSFT": {
+        "high": 0,
+        "medium": 4,
+        "low": 11
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@
 Database engine, session management, and initialization.
 """
 
+import re
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
 from typing import Generator
@@ -14,6 +15,17 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config.settings import settings, get_logger
 
 logger = get_logger(__name__)
+
+
+def mask_db_url(url: str) -> str:
+    """
+    Mask credentials in database URL for safe logging.
+    
+    Example:
+        postgresql://user:secret123@host/db → postgresql://user:***@host/db
+    """
+    # Match password in URL pattern: ://user:password@
+    return re.sub(r'(://[^:]+:)[^@]+(@)', r'\1***\2', url)
 
 # Create engine with appropriate settings
 connect_args = {}
@@ -50,7 +62,8 @@ def init_db() -> None:
     """
     from .models import Base
     
-    logger.info(f"Initializing database: {settings.DATABASE_URL}")
+    # Log masked URL to prevent credential leakage
+    logger.info(f"Initializing database: {mask_db_url(settings.DATABASE_URL)}")
     Base.metadata.create_all(bind=engine)
     logger.info("Database tables created successfully")
 

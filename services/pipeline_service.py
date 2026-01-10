@@ -37,12 +37,26 @@ def extract_ticker_from_filename(filepath: str) -> str:
 
 
 def split_into_paragraphs(text: str, min_words: int = 30) -> list:
-    """Split section text into paragraphs."""
+    """
+    Split section text into paragraphs.
+    
+    Tries double newlines first, falls back to single newlines.
+    Filters out short paragraphs (less than min_words).
+    """
     paragraphs = []
-    for para in text.split("\n\n"):
+    
+    # Try splitting on double newlines first
+    splits = text.split("\n\n")
+    
+    # If we only got 1 chunk, try single newlines instead
+    if len(splits) <= 1:
+        splits = text.split("\n")
+    
+    for para in splits:
         para = para.strip()
         if para and len(para.split()) >= min_words:
             paragraphs.append(para)
+    
     return paragraphs
 
 

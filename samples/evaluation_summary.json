@@ -1,0 +1,54 @@
+{
+  "description": "Summary of evaluation results for Infera risk scoring",
+  "evaluation_date": "2026-01-10",
+  "dataset": {
+    "total_samples": 45,
+    "sources": ["AAPL", "TSLA", "MSFT"],
+    "samples_per_source": 15,
+    "label_distribution": {
+      "high": 8,
+      "medium": 14,
+      "low": 23
+    }
+  },
+  "methods_compared": ["TF-IDF", "Embeddings"],
+  "results": {
+    "embedding": {
+      "accuracy": 0.556,
+      "spearman_correlation": 0.399,
+      "precision_at_5": 0.20,
+      "precision_at_10": 0.40,
+      "high_risk_recall": 0.75,
+      "per_class": {
+        "low": {"precision": 0.64, "recall": 0.70, "f1": 0.67},
+        "medium": {"precision": 0.43, "recall": 0.21, "f1": 0.29},
+        "high": {"precision": 0.46, "recall": 0.75, "f1": 0.57}
+      }
+    },
+    "tfidf": {
+      "accuracy": 0.511,
+      "spearman_correlation": 0.300,
+      "precision_at_5": 0.60,
+      "precision_at_10": 0.40,
+      "high_risk_recall": 0.00,
+      "per_class": {
+        "low": {"precision": 0.55, "recall": 1.00, "f1": 0.71},
+        "medium": {"precision": 0.00, "recall": 0.00, "f1": 0.00},
+        "high": {"precision": 0.00, "recall": 0.00, "f1": 0.00}
+      }
+    }
+  },
+  "key_findings": [
+    "Embeddings outperform TF-IDF by 4.5 percentage points on accuracy",
+    "Embeddings correctly identify 75% of high-risk paragraphs vs 0% for TF-IDF",
+    "Spearman correlation of 0.40 indicates scores track human severity judgments",
+    "Medium class is hardest to predict for both methods"
+  ],
+  "limitations": [
+    "Boilerplate SEC language scores high (false positives)",
+    "Negation not handled ('no material impact' flagged as risky)",
+    "General-purpose embeddings, not finance-tuned",
+    "Static risk prompt may miss industry-specific risks"
+  ]
+}
+

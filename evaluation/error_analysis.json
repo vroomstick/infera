@@ -1,0 +1,98 @@
+{
+  "embedding": {
+    "false_positives": [
+      {
+        "id": 1,
+        "source": "AAPL",
+        "true": "low",
+        "pred": "high",
+        "score": 0.7418,
+        "text": "The Company\u2019s business, reputation, results of operations, financial condition and stock price can be affected by a number of factors, whether currently known or unknown, including those described bel...",
+        "notes": "Boilerplate introductory language that appears at the start of every risk section."
+      },
+      {
+        "id": 18,
+        "source": "TSLA",
+        "true": "low",
+        "pred": "high",
+        "score": 0.7258,
+        "text": "You should carefully consider the risks described below together with the other information set forth in this report, which could materially affect our business, financial condition and future results...",
+        "notes": "Boilerplate introductory language for risk factors section."
+      },
+      {
+        "id": 32,
+        "source": "MSFT",
+        "true": "low",
+        "pred": "high",
+        "score": 0.6909,
+        "text": "Our operations and financial results are subject to various risks and uncertainties, including those described below, that could adversely affect our business, operations, financial condition, results...",
+        "notes": "Boilerplate introductory statement for risk factors section."
+      },
+      {
+        "id": 37,
+        "source": "MSFT",
+        "true": "low",
+        "pred": "high",
+        "score": 0.5595,
+        "text": "We describe the risks from cybersecurity threats, including previous cybersecurity incidents, in section \u201cRisk Factors\u201d (Part I, Item 1A of this Form 10-K). As of the date of this Form 10-K, we do not...",
+        "notes": "Explicit statement that cyber risks have NOT materially affected."
+      }
+    ],
+    "false_negatives": [
+      {
+        "id": 21,
+        "source": "TSLA",
+        "true": "high",
+        "pred": "low",
+        "score": 0.4108,
+        "text": "Finally, our vehicle and solar energy system financing programs and our energy storage sales programs also expose us to customer credit risk. In the event of a widespread economic downturn or other ca...",
+        "notes": "Customer credit risk with substantial credit losses potential."
+      }
+    ]
+  },
+  "tfidf": {
+    "false_positives": [],
+    "false_negatives": [
+      {
+        "id": 3,
+        "source": "AAPL",
+        "true": "high",
+        "pred": "low",
+        "score": 0.0149,
+        "text": "Adverse economic conditions can also lead to increased credit and collectibility risk on the Company\u2019s trade receivables; the failure of derivative counterparties and other financial institutions; lim..."
+      },
+      {
+        "id": 4,
+        "source": "AAPL",
+        "true": "high",
+        "pred": "low",
+        "score": 0.0474,
+        "text": "Therefore, the Company remains subject to significant risks of supply shortages and price increases that can materially adversely affect its business, results of operations and financial condition...."
+      },
+      {
+        "id": 6,
+        "source": "AAPL",
+        "true": "high",
+        "pred": "low",
+        "score": 0.0,
+        "text": "Although malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across various industries, the Company is at a relatively great..."
+      },
+      {
+        "id": 8,
+        "source": "AAPL",
+        "true": "high",
+        "pred": "low",
+        "score": 0.0,
+        "text": "Investment in new business strategies and acquisitions could disrupt the Company\u2019s ongoing business, present risks not originally contemplated and materially adversely affect the Company\u2019s business, r..."
+      },
+      {
+        "id": 21,
+        "source": "TSLA",
+        "true": "high",
+        "pred": "low",
+        "score": 0.0421,
+        "text": "Finally, our vehicle and solar energy system financing programs and our energy storage sales programs also expose us to customer credit risk. In the event of a widespread economic downturn or other ca..."
+      }
+    ]
+  }
+}

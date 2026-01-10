@@ -22,9 +22,25 @@ class Settings:
         self.DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./infera.db")
         self.LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")
         
+        # Security settings
+        self.API_KEY: str = os.getenv("INFERA_API_KEY", "")  # Optional API auth
+        self.CORS_ORIGINS: list = os.getenv("CORS_ORIGINS", "*").split(",")
+        self.RATE_LIMIT: str = os.getenv("RATE_LIMIT", "60/minute")
+        self.ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
+        
         # Validate required settings
         if not self.OPENAI_API_KEY:
             raise ValueError("OPENAI_API_KEY environment variable is required")
+    
+    @property
+    def is_production(self) -> bool:
+        """Check if running in production mode."""
+        return self.ENVIRONMENT.lower() == "production"
+    
+    @property
+    def require_api_key(self) -> bool:
+        """Check if API key authentication is enabled."""
+        return bool(self.API_KEY)
     
     @property
     def is_sqlite(self) -> bool:

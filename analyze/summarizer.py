@@ -4,12 +4,12 @@ import os
 import sys
 from openai import OpenAI
 
-# Add root path so we can import infera_config
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from infera_config import OPENAI_API_KEY
+# Add root path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from config.settings import settings
 
-# Set up OpenAI client
-client = OpenAI(api_key=OPENAI_API_KEY)
+# Set up OpenAI client (uses OPENAI_API_KEY from environment)
+client = OpenAI(api_key=settings.OPENAI_API_KEY)
 
 
 def load_prompt_template(prompt_path):

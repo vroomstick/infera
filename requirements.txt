@@ -21,6 +21,7 @@ python-dotenv
 fastapi
 uvicorn[standard]
 pydantic
+slowapi  # Rate limiting
 
 # --- Markdown & Report Generation ---
 markdown2
@@ -30,6 +31,14 @@ pdfkit  # switched from weasyprint
 
 # --- Streamlit UI (Optional but safe to include) ---
 streamlit
+
+# --- Visualization ---
+matplotlib
+seaborn
+
+# --- Testing ---
+pytest
+pytest-cov
 
 # --- Misc Tools ---
 tqdm  # progress bars (optional but useful)
