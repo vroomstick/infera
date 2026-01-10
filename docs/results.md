@@ -156,5 +156,5 @@ Results are saved to `evaluation/eval_results.json`.
 
 ---
 
-*Evaluation conducted January 2026 using Infera v1.0*
+*Evaluation conducted January 2026 using Infera v3.0*
 

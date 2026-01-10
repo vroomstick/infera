@@ -233,7 +233,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="Infera API",
     description="AI-powered SEC 10-K Filing Risk Analysis",
-    version="1.0.0",
+    version="3.0.0",
     lifespan=lifespan
 )
 

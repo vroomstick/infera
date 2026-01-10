@@ -295,5 +295,5 @@ Future work should focus on domain adaptation, multi-class taxonomy, and ensembl
 
 ---
 
-*Document prepared for Infera v1.0 — January 2026*
+*Document prepared for Infera v3.0 — January 2026*
 
