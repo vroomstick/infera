@@ -1,4 +1,4 @@
-# 🧠 Infera
+# Infera
 
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
 [![Tests](https://img.shields.io/badge/tests-35%20passing-brightgreen.svg)](tests/)
@@ -6,7 +6,7 @@
 
 **Infera** is an AI-powered ETL pipeline that analyzes SEC 10-K filings to identify, score, and summarize corporate risk factors. It combines traditional NLP with modern embeddings and LLMs to deliver actionable insights.
 
-## ✨ Features
+## Features
 
 - **HTML Cleaning**: Extracts clean text from raw SEC HTML filings using BeautifulSoup
 - **Section Segmentation**: Isolates Item 1A (Risk Factors) using regex pattern matching
@@ -21,7 +21,7 @@
 - **Production Security**: API key auth, rate limiting, CORS, path traversal protection
 - **Markdown Reports**: Auto-generated analysis reports
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -57,7 +57,7 @@
 └─────────────────────┴─────────────────────┴─────────────────────────────────┘
 ```
 
-## 🔧 Tech Stack
+## Tech Stack
 
 | Component | Technology |
 |-----------|------------|
@@ -70,7 +70,7 @@
 | Testing | pytest (35 tests) |
 | Containerization | Docker + Docker Compose |
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 infera/
@@ -119,7 +119,7 @@ infera/
 └── requirements-lock.txt # Pinned dependencies (125 packages)
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Option 1: Using Make (Recommended)
 
@@ -174,7 +174,7 @@ make docker
 docker-compose up --build
 ```
 
-## 📡 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -208,7 +208,7 @@ curl "http://localhost:8000/benchmark?tickers=AAPL,TSLA,MSFT"
 curl "http://localhost:8000/filings/1/trends?prior_filing_id=2"
 ```
 
-## 📊 Evaluation Results
+## Evaluation Results
 
 We evaluated the scoring pipeline on 45 hand-labeled risk paragraphs across 3 filings (AAPL, TSLA, MSFT).
 
@@ -228,7 +228,7 @@ We evaluated the scoring pipeline on 45 hand-labeled risk paragraphs across 3 fi
 
 See [`docs/results.md`](docs/results.md) for full evaluation details.
 
-## 📊 Sample Output
+## Sample Output
 
 ### Peer Benchmark Results
 
@@ -258,7 +258,7 @@ See [`docs/results.md`](docs/results.md) for full evaluation details.
 The Company's business, reputation, results of operations...
 ```
 
-## ⚠️ Limitations
+## Limitations
 
 1. **Boilerplate sensitivity**: Standard SEC intro language scores high due to risk vocabulary
 2. **No negation handling**: "No material impact" statements incorrectly flagged
@@ -267,7 +267,7 @@ The Company's business, reputation, results of operations...
 
 See [`docs/error_analysis.md`](docs/error_analysis.md) for detailed failure analysis.
 
-## 📚 Documentation
+## Documentation
 
 | Document | Description |
 |----------|-------------|
@@ -276,7 +276,7 @@ See [`docs/error_analysis.md`](docs/error_analysis.md) for detailed failure anal
 | [`docs/error_analysis.md`](docs/error_analysis.md) | Failure modes and examples |
 | [`docs/methodology.md`](docs/methodology.md) | Technical approach and theory |
 
-## 🔐 Security
+## Security
 
 Production-ready security features:
 
@@ -299,7 +299,7 @@ RATE_LIMIT=100/minute      # Adjust rate limits
 ENVIRONMENT=production     # Enable error sanitization
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run all tests
@@ -318,27 +318,27 @@ pytest tests/test_scoring.py -v
 - Embedding score computation
 - Score ranking consistency
 
-## 🎯 Use Cases
+## Use Cases
 
 - **Financial Analysts**: Quick risk assessment of potential investments
 - **Compliance Teams**: Monitor regulatory risk disclosures
 - **Researchers**: Analyze risk trends across companies/sectors
 - **Due Diligence**: M&A target risk evaluation
 
-## 📈 Future Enhancements
+## Future Enhancements
 
-- [x] ~~Year-over-year risk comparison~~ ✅ Implemented
-- [x] ~~Semantic search~~ ✅ Implemented
-- [x] ~~Peer benchmarking~~ ✅ Implemented
-- [x] ~~SEC EDGAR API integration~~ ✅ Implemented (`POST /fetch`)
+- [x] ~~Year-over-year risk comparison~~ (Implemented)
+- [x] ~~Semantic search~~ (Implemented)
+- [x] ~~Peer benchmarking~~ (Implemented)
+- [x] ~~SEC EDGAR API integration~~ (Implemented via `POST /fetch`)
 - [ ] PostgreSQL + pgvector for production deployment
 - [ ] Streamlit dashboard for interactive exploration
 - [ ] Fine-tuned embeddings on SEC filings (FinBERT)
 
-## 📄 License
+## License
 
 MIT
 
 ---
 
-*Built with ❤️ using Python, FastAPI, and AI*
+*Built with Python, FastAPI, and AI*
