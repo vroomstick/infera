@@ -50,6 +50,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
+    - name: Free disk space
+      run: |
+        sudo rm -rf /usr/share/dotnet
+        sudo rm -rf /opt/ghc
+        docker system prune -af
+    
     - name: Build Docker image
       run: |
         docker build -t infera:ci ./backend
