@@ -10,44 +10,57 @@ help:
 	@echo "Usage: make [target]"
 	@echo ""
 	@echo "Development:"
-	@echo "  install      Install dependencies"
-	@echo "  run          Run pipeline on AAPL (skip GPT summary)"
-	@echo "  run-full     Run pipeline with GPT summary"
-	@echo "  api          Start the FastAPI server"
+	@echo "  install         Install all dependencies"
+	@echo "  install-backend Install backend dependencies"
+	@echo "  run             Run pipeline on AAPL (skip GPT summary)"
+	@echo "  run-full        Run pipeline with GPT summary"
+	@echo "  api             Start the FastAPI server"
+	@echo ""
+	@echo "Frontend:"
+	@echo "  frontend        Start frontend dev server"
 	@echo ""
 	@echo "SEC EDGAR Fetch:"
 	@echo "  fetch TICKER=AAPL [YEAR=2023]     Fetch & analyze a 10-K"
 	@echo "  fetch-only TICKER=AAPL [YEAR=2023] Download only (no analysis)"
 	@echo ""
 	@echo "Testing:"
-	@echo "  test         Run pytest test suite"
-	@echo "  eval         Run evaluation harness"
-	@echo "  lint         Run linter (ruff)"
+	@echo "  test            Run pytest test suite"
+	@echo "  eval            Run evaluation harness"
+	@echo "  lint            Run linter (ruff)"
 	@echo ""
 	@echo "Docker:"
-	@echo "  docker       Build Docker image"
-	@echo "  docker-up    Start containers"
-	@echo "  docker-down  Stop containers"
+	@echo "  docker          Build Docker image"
+	@echo "  docker-up       Start containers"
+	@echo "  docker-down     Stop containers"
 	@echo ""
 	@echo "Cleanup:"
-	@echo "  clean        Remove generated files"
+	@echo "  clean           Remove generated files"
 
 # Development
-install:
-	pip install -r requirements.txt
+install: install-backend install-frontend
+
+install-backend:
+	cd backend && pip install -r requirements.txt
 	pip install pytest ruff
 
+install-frontend:
+	@if [ -d "frontend/package.json" ]; then \
+		cd frontend && npm install; \
+	else \
+		echo "Frontend not yet installed. Add Lovable export to frontend/ first."; \
+	fi
+
 run:
-	python services/pipeline_service.py --file data/AAPL_10K.html --skip-summary
+	cd backend && python services/pipeline_service.py --file data/AAPL_10K.html --skip-summary
 
 run-full:
-	python services/pipeline_service.py --file data/AAPL_10K.html
+	cd backend && python services/pipeline_service.py --file data/AAPL_10K.html
 
 run-tsla:
-	python services/pipeline_service.py --file data/TSLA_10K.html --skip-summary
+	cd backend && python services/pipeline_service.py --file data/TSLA_10K.html --skip-summary
 
 run-msft:
-	python services/pipeline_service.py --file data/MSFT_10K.html --skip-summary
+	cd backend && python services/pipeline_service.py --file data/MSFT_10K.html --skip-summary
 
 # Fetch from SEC EDGAR (usage: make fetch TICKER=NVDA YEAR=2023)
 fetch:
@@ -55,40 +68,48 @@ fetch:
 		echo "Usage: make fetch TICKER=AAPL [YEAR=2023]"; \
 		exit 1; \
 	fi
-	python ingest/sec_fetcher.py --ticker $(TICKER) $(if $(YEAR),--year $(YEAR),) --analyze
+	cd backend && python ingest/sec_fetcher.py --ticker $(TICKER) $(if $(YEAR),--year $(YEAR),) --analyze
 
 fetch-only:
 	@if [ -z "$(TICKER)" ]; then \
 		echo "Usage: make fetch-only TICKER=AAPL [YEAR=2023]"; \
 		exit 1; \
 	fi
-	python ingest/sec_fetcher.py --ticker $(TICKER) $(if $(YEAR),--year $(YEAR),)
+	cd backend && python ingest/sec_fetcher.py --ticker $(TICKER) $(if $(YEAR),--year $(YEAR),)
 
 api:
-	python -m api.main
+	cd backend && python -m api.main
+
+frontend:
+	cd frontend && npm run dev
+
+# Run both backend and frontend
+dev:
+	@echo "Starting backend and frontend..."
+	@echo "Run 'make api' in one terminal and 'make frontend' in another"
 
 # Testing
 test:
-	python -m pytest tests/ -v
+	cd backend && python -m pytest tests/ -v
 
 test-cov:
-	python -m pytest tests/ -v --cov=analyze --cov=services --cov-report=term-missing
+	cd backend && python -m pytest tests/ -v --cov=analyze --cov=services --cov-report=term-missing
 
 eval:
-	python evaluation/eval_scorer.py
+	cd backend && python evaluation/eval_scorer.py
 
 compare:
-	python evaluation/compare_methods.py
+	cd backend && python evaluation/compare_methods.py
 
 lint:
-	ruff check . --ignore E501
+	cd backend && ruff check . --ignore E501
 
 format:
-	ruff format .
+	cd backend && ruff format .
 
 # Docker
 docker:
-	docker build -t infera:latest .
+	docker build -t infera:latest ./backend
 
 docker-up:
 	docker-compose up -d
@@ -104,16 +125,15 @@ docker-test:
 
 # Cleanup
 clean:
-	rm -rf __pycache__ **/__pycache__ .pytest_cache .ruff_cache
+	rm -rf backend/__pycache__ backend/**/__pycache__ .pytest_cache .ruff_cache
 	rm -f infera.db
 	rm -rf reports/*.md
-	rm -rf data/clean/* data/scored/* data/segments/* data/summarized/*
+	rm -rf backend/data/clean/* backend/data/scored/* backend/data/segments/* backend/data/summarized/*
 
 clean-all: clean
-	rm -rf evaluation/plots/*.png
-	rm -f evaluation/eval_results.json evaluation/error_analysis.json
+	rm -rf backend/evaluation/plots/*.png
+	rm -f backend/evaluation/eval_results.json backend/evaluation/error_analysis.json
 
 # Dependencies
 freeze:
-	pip freeze > requirements-lock.txt
-
+	cd backend && pip freeze > requirements-lock.txt

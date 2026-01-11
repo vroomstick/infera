@@ -9,9 +9,15 @@ import logging
 from pathlib import Path
 from dotenv import load_dotenv
 
-# Load .env file from project root
-env_path = Path(__file__).parent.parent / ".env"
+# Load .env file from project root (monorepo structure)
+# backend/config/settings.py -> go up 3 levels to find .env at root
+env_path = Path(__file__).parent.parent.parent / ".env"
 load_dotenv(dotenv_path=env_path)
+
+# Also try loading from backend/ folder if running from there
+backend_env = Path(__file__).parent.parent / ".env"
+if backend_env.exists():
+    load_dotenv(dotenv_path=backend_env, override=True)
 
 
 class Settings:
