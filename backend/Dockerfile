@@ -1,7 +1,7 @@
 # Infera - SEC 10-K Risk Analysis Pipeline
 # Multi-stage build for smaller image size
 
-FROM python:3.12-slim as builder
+FROM python:3.12-slim AS builder
 
 WORKDIR /app
 
@@ -41,7 +41,8 @@ COPY --chown=infera:infera . .
 
 # Create directories for outputs with proper permissions
 RUN mkdir -p reports data/clean data/scored data/segments data/summarized .sec_cache \
-    && chown -R infera:infera /app
+    && mkdir -p /home/infera/.cache \
+    && chown -R infera:infera /app /home/infera
 
 # Switch to non-root user
 USER infera
