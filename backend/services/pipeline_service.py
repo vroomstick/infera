@@ -19,12 +19,24 @@ from data.models import Filing, Section, Paragraph, Summary
 from analyze.cleaner import clean_html
 from analyze.segmenter import get_risk_section
 
-from openai import OpenAI
-
 logger = get_logger(__name__)
 
-# Initialize OpenAI client
-client = OpenAI(api_key=settings.OPENAI_API_KEY)
+# Lazy OpenAI client initialization
+_openai_client = None
+
+
+def _get_openai_client():
+    """Get OpenAI client, creating it lazily on first use."""
+    global _openai_client
+    if _openai_client is None:
+        if not settings.OPENAI_API_KEY:
+            raise ValueError(
+                "OPENAI_API_KEY is required for summarization. "
+                "Set it in your .env file or environment."
+            )
+        from openai import OpenAI
+        _openai_client = OpenAI(api_key=settings.OPENAI_API_KEY)
+    return _openai_client
 
 
 def extract_ticker_from_filename(filepath: str) -> str:
@@ -73,6 +85,7 @@ def summarize_text(text: str, model: str = "gpt-4o") -> Dict[str, Any]:
 
 Summary:"""
     
+    client = _get_openai_client()
     response = client.chat.completions.create(
         model=model,
         messages=[

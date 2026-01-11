@@ -34,9 +34,8 @@ class Settings:
         self.RATE_LIMIT: str = os.getenv("RATE_LIMIT", "60/minute")
         self.ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
         
-        # Validate required settings
-        if not self.OPENAI_API_KEY:
-            raise ValueError("OPENAI_API_KEY environment variable is required")
+        # Note: OPENAI_API_KEY is optional at load time
+        # Only required when actually using GPT summarization
     
     @property
     def is_production(self) -> bool:

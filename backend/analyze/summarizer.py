@@ -2,14 +2,27 @@
 
 import os
 import sys
-from openai import OpenAI
 
 # Add root path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config.settings import settings
 
-# Set up OpenAI client (uses OPENAI_API_KEY from environment)
-client = OpenAI(api_key=settings.OPENAI_API_KEY)
+# Lazy client initialization - only create when needed
+_client = None
+
+
+def _get_client():
+    """Get OpenAI client, creating it lazily on first use."""
+    global _client
+    if _client is None:
+        if not settings.OPENAI_API_KEY:
+            raise ValueError(
+                "OPENAI_API_KEY is required for summarization. "
+                "Set it in your .env file or environment."
+            )
+        from openai import OpenAI
+        _client = OpenAI(api_key=settings.OPENAI_API_KEY)
+    return _client
 
 
 def load_prompt_template(prompt_path):
@@ -37,6 +50,7 @@ def summarize_section(section_name, section_text, prompt_path, model="gpt-4o"):
     prompt_template = load_prompt_template(prompt_path)
     full_prompt = prompt_template.replace("{{SECTION_TEXT}}", section_text)
 
+    client = _get_client()
     response = client.chat.completions.create(
         model=model,
         messages=[
