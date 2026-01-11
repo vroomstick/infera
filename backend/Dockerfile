@@ -47,8 +47,12 @@ RUN mkdir -p reports data/clean data/scored data/segments data/summarized .sec_c
 # Switch to non-root user
 USER infera
 
-# Pre-download the sentence-transformer model (as non-root)
-RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"
+# Pre-download the sentence-transformer model (optional, skip in CI to save space)
+# Set PRELOAD_MODEL=true when building for production
+ARG PRELOAD_MODEL=false
+RUN if [ "$PRELOAD_MODEL" = "true" ]; then \
+    python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"; \
+    fi
 
 # Expose API port
 EXPOSE 8000
