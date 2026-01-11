@@ -1,4 +1,4 @@
 # GitHub Linguist overrides
 # Mark SEC filings as vendored data (excluded from language stats)
-data/*.html linguist-vendored
+backend/data/*.html linguist-vendored
 
