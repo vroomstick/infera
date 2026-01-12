@@ -270,7 +270,7 @@ class TestPipelineIntegration:
         # First run
         result1 = run_analysis_pipeline(
             filepath=str(fixture_path),
-            ticker="UPDATE",
+            ticker="UPD",
             filing_date=datetime(2023, 12, 31),
             accession_number=accession,
             skip_summary=True,
@@ -293,7 +293,7 @@ class TestPipelineIntegration:
         # Second run with --update
         result2 = run_analysis_pipeline(
             filepath=str(fixture_path),
-            ticker="UPDATE",
+            ticker="UPD",
             filing_date=datetime(2023, 12, 31),
             accession_number=accession,
             skip_summary=True,
@@ -329,7 +329,7 @@ class TestDatabaseState:
         
         run_analysis_pipeline(
             filepath=str(fixture_path),
-            ticker="ORPHAN",
+            ticker="ORP",
             filing_date=datetime(2023, 12, 31),
             skip_summary=True,
             skip_scoring=False
@@ -365,7 +365,7 @@ class TestDatabaseState:
         
         result = run_analysis_pipeline(
             filepath=str(fixture_path),
-            ticker="COUNTS",
+            ticker="CNT",
             filing_date=datetime(2023, 12, 31),
             skip_summary=True,
             skip_scoring=False
@@ -406,7 +406,7 @@ class TestAPISchema:
         
         result = run_analysis_pipeline(
             filepath=str(fixture_path),
-            ticker="SCHEMA",
+            ticker="SCH",
             filing_date=datetime(2023, 12, 31),
             skip_summary=True,
             skip_scoring=False
@@ -425,7 +425,7 @@ class TestAPISchema:
         assert isinstance(result["paragraph_count"], int)
         
         # Value checks
-        assert result["ticker"] == "SCHEMA"
+        assert result["ticker"] == "SCH"
         assert result["filing_id"] > 0
         assert result["section_id"] > 0
         assert result["paragraph_count"] > 0
