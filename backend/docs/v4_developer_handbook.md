@@ -978,6 +978,39 @@ If all retries fail, return:
 
 **Decision:** FinBERT wins on all quality metrics. 3x speed penalty is acceptable for batch processing.
 
+### Production Model Update: MiniLM → FinBERT
+
+**Date:** January 2026
+
+**Issue discovered:** The evaluation scripts used FinBERT, but `scoring_service.py` was still using MiniLM (384-dim). Documentation claimed FinBERT (768-dim) was in use.
+
+**Root cause:** Model comparison (Phase 1.2) recommended FinBERT, but the production code was never updated to match.
+
+**Fix applied:**
+
+| File | Before | After |
+|------|--------|-------|
+| `services/scoring_service.py` | `all-MiniLM-L6-v2` | `ProsusAI/finbert` |
+| `data/models.py` | `VECTOR_DIM = 384` | `VECTOR_DIM = 768` |
+| `tests/test_scoring.py` | Expects 384-dim | Expects 768-dim |
+
+**Impact:**
+
+| Metric | MiniLM (old) | FinBERT (new) | Improvement |
+|--------|--------------|---------------|-------------|
+| Accuracy | 44.8% | 54.5% | **+9.7 pts** |
+| Spearman ρ | 0.232 | 0.590 | **+0.358** |
+| P@10 | 10% | 80% | **+70 pts** |
+| Embedding dim | 384 | 768 | 2x |
+| Latency | 12ms/text | 38ms/text | 3x slower |
+
+**Trade-off accepted:** 3x latency increase is acceptable because:
+1. Batch processing amortizes the cost
+2. Accuracy gains (+10 pts) justify the slowdown
+3. Financial domain pre-training captures nuances that general-purpose models miss
+
+**Migration note:** Existing embeddings in SQLite (stored as pickled blobs) will need to be re-embedded if using pgvector, since dimensions changed from 384 → 768.
+
 ### Why perturbation attribution over gradients?
 
 | Factor | Gradients | Perturbation |
