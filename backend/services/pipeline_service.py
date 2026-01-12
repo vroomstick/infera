@@ -198,7 +198,7 @@ def run_analysis_pipeline(
             elif update:
                 logger.info("--update flag: will recompute scores/embeddings...")
                 # Delete existing scores and score vectors to allow recomputation
-                from data.models import Section, Paragraph, Score, ScoreVector
+                from data.models import Section, Paragraph, Score, ScoreVector, Summary as SummaryModel
                 sections = repo.get_sections_by_filing(db, existing_filing.id)
                 for section in sections:
                     paragraphs = repo.get_paragraphs_by_section(db, section.id)
@@ -207,7 +207,7 @@ def run_analysis_pipeline(
                         db.query(Score).filter(Score.paragraph_id == para.id).delete()
                         db.query(ScoreVector).filter(ScoreVector.paragraph_id == para.id).delete()
                 # Also delete summaries (will be recomputed if not skipped)
-                db.query(Summary).filter(Summary.filing_id == existing_filing.id).delete()
+                db.query(SummaryModel).filter(SummaryModel.filing_id == existing_filing.id).delete()
                 db.commit()
                 logger.info("Deleted existing scores/vectors/summaries, will recompute...")
                 filing = existing_filing
