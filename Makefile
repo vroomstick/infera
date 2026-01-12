@@ -29,9 +29,12 @@ help:
 	@echo "  lint            Run linter (ruff)"
 	@echo ""
 	@echo "Docker:"
-	@echo "  docker          Build Docker image"
-	@echo "  docker-up       Start containers"
+	@echo "  docker          Build API Docker image"
+	@echo "  docker-db       Build PostgreSQL image (pgvector + TimescaleDB)"
+	@echo "  docker-up       Start all containers"
+	@echo "  docker-up-db    Start only PostgreSQL"
 	@echo "  docker-down     Stop containers"
+	@echo "  docker-logs     View container logs"
 	@echo ""
 	@echo "Cleanup:"
 	@echo "  clean           Remove generated files"
@@ -111,8 +114,14 @@ format:
 docker:
 	docker build -t infera:latest ./backend
 
+docker-db:
+	docker build -t infera-postgres:latest ./docker/postgres
+
 docker-up:
 	docker-compose up -d
+
+docker-up-db:
+	docker-compose up -d db
 
 docker-down:
 	docker-compose down

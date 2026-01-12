@@ -34,6 +34,7 @@ ENV PATH=/home/infera/.local/bin:$PATH
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libxml2 \
     libxslt1.1 \
+    wkhtmltopdf \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy application code
@@ -51,7 +52,7 @@ USER infera
 # Set PRELOAD_MODEL=true when building for production
 ARG PRELOAD_MODEL=false
 RUN if [ "$PRELOAD_MODEL" = "true" ]; then \
-    python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"; \
+    python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('ProsusAI/finbert')"; \
     fi
 
 # Expose API port

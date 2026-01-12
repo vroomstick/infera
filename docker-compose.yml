@@ -1,12 +1,15 @@
 # Infera Production Stack
-# PostgreSQL with pgvector for vector search
+# PostgreSQL with pgvector + TimescaleDB for vector search and time-series
 
 version: '3.8'
 
 services:
-  # PostgreSQL with pgvector extension
+  # PostgreSQL with pgvector + TimescaleDB extensions
   db:
-    image: pgvector/pgvector:pg16
+    build:
+      context: ./docker/postgres
+      dockerfile: Dockerfile
+    image: infera-postgres:latest
     container_name: infera-db
     environment:
       POSTGRES_USER: infera
@@ -16,7 +19,6 @@ services:
       - "5432:5432"
     volumes:
       - infera_pgdata:/var/lib/postgresql/data
-      - ./backend/scripts/init_db.sql:/docker-entrypoint-initdb.d/init.sql:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U infera -d infera"]
       interval: 5s

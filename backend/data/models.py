@@ -5,15 +5,19 @@ SQLAlchemy ORM models for Infera.
 Supports both SQLite (development) and PostgreSQL + pgvector (production).
 """
 
+import sys
 import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from datetime import datetime
 from sqlalchemy import Column, Integer, String, Text, Float, DateTime, ForeignKey, LargeBinary
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
+from config.settings import settings
+
 # Check if we're using PostgreSQL (enables pgvector)
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./infera.db")
-USE_PGVECTOR = DATABASE_URL.startswith("postgresql")
+USE_PGVECTOR = settings.is_postgres
 
 if USE_PGVECTOR:
     try:
