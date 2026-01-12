@@ -6,13 +6,13 @@
 [![Accuracy](https://img.shields.io/badge/accuracy-56.6%25-blue.svg)](backend/docs/v4_developer_handbook.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Infera** is an AI-powered ETL pipeline that analyzes SEC 10-K filings to identify, score, and summarize corporate risk factors. It combines domain-specific embeddings (FinBERT) with LLMs (GPT-4o) to deliver explainable, actionable insights.
+**Infera** is an AI-powered ETL pipeline that analyzes SEC 10-K filings to identify and score corporate risk factors. It uses domain-specific embeddings (FinBERT) for deterministic analysis, with optional GPT-4o summarization for human-readable reports.
 
 ## Key Features
 
 | Category | Features |
 |----------|----------|
-| **Analysis** | HTML cleaning, Item 1A extraction, paragraph scoring, GPT summarization |
+| **Analysis** | HTML cleaning, Item 1A extraction, paragraph scoring (FinBERT), optional GPT summarization |
 | **Explainability** | Token attribution, risk taxonomy (8 categories), confidence scores |
 | **Search** | Semantic search across all filings, peer benchmarking, YoY trends |
 | **Agent-Ready** | Python SDK, LangGraph tools, OpenAI function calling |
@@ -33,6 +33,28 @@ Evaluated on **286 hand-labeled paragraphs** across 6 companies (AAPL, TSLA, MSF
 **Scale tested on 55 S&P 500 companies with 100% success rate.**
 
 See [v4 Developer Handbook](backend/docs/v4_developer_handbook.md) for full methodology.
+
+## Philosophy: Deterministic Core, Optional LLM Layer
+
+Infera is built on a **two-layer architecture**:
+
+### Core Analysis Layer (Always Available)
+- **FinBERT embeddings** → Deterministic, local, fast (~38ms/paragraph)
+- **No GPT dependency** → Always works, even without API keys
+- **Agent-optimized** → Structured JSON, stable schema, batch-friendly
+- **Explainable** → Token-level attribution for every score
+
+### Human Presentation Layer (Optional)
+- **GPT-4o summarization** → Prose for human consumption
+- **When to use:** Executive reports, dashboards, client deliverables
+- **When to skip:** Agent integrations (agents synthesize their own summaries)
+
+**Key principle:** *Summarization is a view, not a feature.* The core analysis is always deterministic. GPT summarization is a human-friendly rendering layer on top.
+
+**Why this matters:**
+- Agents don't need pre-summarized prose (they're LLMs themselves)
+- Core analysis is always fast, reliable, and explainable
+- GPT is only used when humans need narrative synthesis
 
 ## Architecture
 
@@ -69,7 +91,7 @@ See [Architecture Diagram](backend/docs/architecture.md) for detailed Mermaid di
 |-----------|------------|
 | Language | Python 3.12 |
 | Embeddings | **FinBERT** (ProsusAI/finbert) |
-| LLM | OpenAI GPT-4o |
+| LLM | OpenAI GPT-4o (optional, for summarization only) |
 | API | FastAPI + Uvicorn |
 | Database | SQLAlchemy + SQLite / PostgreSQL + pgvector |
 | Agent Framework | LangGraph, langchain-core |
@@ -280,4 +302,4 @@ MIT
 
 ---
 
-*Built with Python, FinBERT, FastAPI, and GPT-4o*
+*Built with Python, FinBERT, and FastAPI (GPT-4o optional)*
