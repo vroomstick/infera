@@ -60,6 +60,3 @@ htmlcov/
 # Security notes (if any)
 security*.md
 *security*.plan.md
-
-# Internal dev notes (not for public)
-dev_notes.md
