@@ -1,0 +1,269 @@
+{
+  "phase": "2.2",
+  "task": "Faithfulness Evaluation",
+  "aggregate_metrics": {
+    "overall_faithfulness": 1.0,
+    "keyword_overlap": 0.9386140791954747,
+    "entity_overlap": 0.8730952380952381
+  },
+  "methodology": {
+    "nli_enabled": false,
+    "llm_enabled": false,
+    "claim_extraction": "sentence-based"
+  },
+  "results": [
+    {
+      "source": "AAPL",
+      "summary": "Key risks identified:\n\u2022 Adverse economic conditions can also lead to increased credit and collectibility risk on the Company's trade receivables; the failure of derivative co...\n\u2022 Therefore, the Company remains subject to significant risks of supply shortages and price increases that can materially adversely affect its business,...\n\u2022 Although malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across variou...\n",
+      "source_text": "The Company's business, reputation, results of operations, financial condition and stock price can be affected by a number of factors, whether currently known or unknown, including those described below. When any one or more of these risks materialize from time to time, the Company's business, reputation, results of operations, financial condition and stock price can be materially and adversely affected.\n\nBecause of the following factors, as well as other factors affecting the Company's results ...",
+      "overall_score": 1.0,
+      "verified_claims": 6,
+      "total_claims": 6,
+      "keyword_overlap": 0.9302325581395349,
+      "entity_overlap": 0.875,
+      "nli_score": null,
+      "claim_details": [
+        {
+          "claim": "Key risks identified:\n\u2022 Adverse economic conditions can also lead to increased credit and collectibility risk on the Company's trade receivables; the failure of derivative co..",
+          "verified": true,
+          "confidence": 0.9375,
+          "evidence": "93.8% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "\u2022 Therefore, the Company remains subject to significant risks of supply shortages and price increases that can materially adversely affect its business,..",
+          "verified": true,
+          "confidence": 1.0,
+          "evidence": "100.0% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "\u2022 Although malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across variou..",
+          "verified": true,
+          "confidence": 0.9333333333333333,
+          "evidence": "93.3% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "Adverse economic conditions can also lead to increased credit and collectibility risk on the Company's trade receivables; the failure of derivative co...",
+          "verified": true,
+          "confidence": 1.0,
+          "evidence": "100.0% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "Therefore, the Company remains subject to significant risks of supply shortages and price increases that can materially adversely affect its business,...",
+          "verified": true,
+          "confidence": 1.0,
+          "evidence": "100.0% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "Although malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across variou...",
+          "verified": true,
+          "confidence": 0.9333333333333333,
+          "evidence": "93.3% keyword overlap",
+          "method": "keyword"
+        }
+      ],
+      "interpretation": "Excellent faithfulness - nearly all claims verifiable in source"
+    },
+    {
+      "source": "TSLA",
+      "summary": "Key risks identified:\n\u2022 We face risks associated with maintaining and expanding our international operations, including unfavorable and uncertain regulatory, political, econo...\n\u2022 Finally, our vehicle and solar energy system financing programs and our energy storage sales programs also expose us to customer credit risk. In the e...\n\u2022 In addition to the risks related to general privacy regulation, we may also be subject to specific vehicle manufacturer obligations relating to cybers...\n",
+      "source_text": "As is the case for some automotive companies, some of our procured components and systems are sourced from single suppliers. Where multiple sources are available for certain key components, we work to qualify multiple suppliers for them where it is sensible to do so in order to minimize potential production risks due to disruptions in their supply. We also mitigate risk by maintaining safety stock for key parts and assemblies and die banks for components with lengthy procurement lead times.\n\nOur...",
+      "overall_score": 1.0,
+      "verified_claims": 6,
+      "total_claims": 6,
+      "keyword_overlap": 0.925,
+      "entity_overlap": 0.8571428571428571,
+      "nli_score": null,
+      "claim_details": [
+        {
+          "claim": "Key risks identified:\n\u2022 We face risks associated with maintaining and expanding our international operations, including unfavorable and uncertain regulatory, political, econo..",
+          "verified": true,
+          "confidence": 0.8666666666666667,
+          "evidence": "86.7% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "\u2022 Finally, our vehicle and solar energy system financing programs and our energy storage sales programs also expose us to customer credit risk",
+          "verified": true,
+          "confidence": 1.0,
+          "evidence": "100.0% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "\u2022 In addition to the risks related to general privacy regulation, we may also be subject to specific vehicle manufacturer obligations relating to cybers..",
+          "verified": true,
+          "confidence": 0.9285714285714286,
+          "evidence": "92.9% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "We face risks associated with maintaining and expanding our international operations, including unfavorable and uncertain regulatory, political, econo...",
+          "verified": true,
+          "confidence": 0.9285714285714286,
+          "evidence": "92.9% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "Finally, our vehicle and solar energy system financing programs and our energy storage sales programs also expose us to customer credit risk. In the e...",
+          "verified": true,
+          "confidence": 1.0,
+          "evidence": "100.0% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "In addition to the risks related to general privacy regulation, we may also be subject to specific vehicle manufacturer obligations relating to cybers...",
+          "verified": true,
+          "confidence": 0.9285714285714286,
+          "evidence": "92.9% keyword overlap",
+          "method": "keyword"
+        }
+      ],
+      "interpretation": "Excellent faithfulness - nearly all claims verifiable in source"
+    },
+    {
+      "source": "MSFT",
+      "summary": "For a description of the risks we face related to regulatory matters, refer to Risk Factors (Part I, Item 1A of this Form 10-K)....",
+      "source_text": "For a description of the risks we face related to regulatory matters, refer to Risk Factors (Part I, Item 1A of this Form 10-K).\n\nOur operations and financial results are subject to various risks and uncertainties, including those described below, that could adversely affect our business, operations, financial condition, results of operations, liquidity, and the trading price of our common stock.\n\nOur products and services, how they are used by customers, and how third-party products and service...",
+      "overall_score": 1.0,
+      "verified_claims": 1,
+      "total_claims": 1,
+      "keyword_overlap": 1.0,
+      "entity_overlap": 1.0,
+      "nli_score": null,
+      "claim_details": [
+        {
+          "claim": "For a description of the risks we face related to regulatory matters, refer to Risk Factors (Part I, Item 1A of this Form 10-K)....",
+          "verified": true,
+          "confidence": 1.0,
+          "evidence": "100.0% keyword overlap",
+          "method": "keyword"
+        }
+      ],
+      "interpretation": "Excellent faithfulness - nearly all claims verifiable in source"
+    },
+    {
+      "source": "NVDA",
+      "summary": "Key risks identified:\n\u2022 Failure to estimate customer demand accurately has led and could lead to mismatches between supply and demand....\n\u2022 Dependency on third-party suppliers and their technology to manufacture, assemble, test, or package our products reduces our control over product quan...\n\u2022 Defects in our products have caused and could cause us to incur significant expenses to remediate and could damage our business....\n",
+      "source_text": "The following risk factors should be considered in addition to the other information in this Annual Report on Form 10-K. The following risks could harm our business, financial condition, results of operations or reputation, which could cause our stock price to decline. Additional risks, trends and uncertainties not presently known to us or that we currently believe are immaterial may also harm our business, financial condition, results of operations or reputation.\n\nFailure to meet the evolving n...",
+      "overall_score": 1.0,
+      "verified_claims": 6,
+      "total_claims": 6,
+      "keyword_overlap": 0.918918918918919,
+      "entity_overlap": 0.8,
+      "nli_score": null,
+      "claim_details": [
+        {
+          "claim": "Key risks identified:\n\u2022 Failure to estimate customer demand accurately has led and could lead to mismatches between supply and demand...",
+          "verified": true,
+          "confidence": 0.9166666666666666,
+          "evidence": "91.7% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "\u2022 Dependency on third-party suppliers and their technology to manufacture, assemble, test, or package our products reduces our control over product quan..",
+          "verified": true,
+          "confidence": 0.9375,
+          "evidence": "93.8% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "\u2022 Defects in our products have caused and could cause us to incur significant expenses to remediate and could damage our business...",
+          "verified": true,
+          "confidence": 1.0,
+          "evidence": "100.0% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "Failure to estimate customer demand accurately has led and could lead to mismatches between supply and demand....",
+          "verified": true,
+          "confidence": 1.0,
+          "evidence": "100.0% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "Dependency on third-party suppliers and their technology to manufacture, assemble, test, or package our products reduces our control over product quan...",
+          "verified": true,
+          "confidence": 0.9375,
+          "evidence": "93.8% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "Defects in our products have caused and could cause us to incur significant expenses to remediate and could damage our business....",
+          "verified": true,
+          "confidence": 1.0,
+          "evidence": "100.0% keyword overlap",
+          "method": "keyword"
+        }
+      ],
+      "interpretation": "Excellent faithfulness - nearly all claims verifiable in source"
+    },
+    {
+      "source": "AMZN",
+      "summary": "Key risks identified:\n\u2022 Our international activities are significant to our revenues and profits, and we plan to further expand internationally. In certain international mark...\n\u2022 As international physical, e-commerce, and omnichannel retail, cloud services, and other services grow, competition will intensify, including through ...\n\u2022 In addition, because China-based sellers account for significant portions of our third-party seller services and advertising revenues, and China-based...\n",
+      "source_text": "We Face Intense Competition\n\nOur Expansion into New Products, Services, Technologies, and Geographic Regions Subjects Us to Additional Risks\n\nvalue of those investments being written down or written off. In addition, our sustainability initiatives may be unsuccessful for a variety of reasons, including if we are unable to realize the expected benefits of new technologies or if we do not successfully plan or execute new strategies, which could harm our business or damage our reputation.\n\nOur inte...",
+      "overall_score": 1.0,
+      "verified_claims": 7,
+      "total_claims": 7,
+      "keyword_overlap": 0.918918918918919,
+      "entity_overlap": 0.8333333333333334,
+      "nli_score": null,
+      "claim_details": [
+        {
+          "claim": "Key risks identified:\n\u2022 Our international activities are significant to our revenues and profits, and we plan to further expand internationally",
+          "verified": true,
+          "confidence": 0.9090909090909091,
+          "evidence": "90.9% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "In certain international mark..",
+          "verified": true,
+          "confidence": 0.6666666666666666,
+          "evidence": "66.7% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "\u2022 As international physical, e-commerce, and omnichannel retail, cloud services, and other services grow, competition will intensify, including through ..",
+          "verified": true,
+          "confidence": 1.0,
+          "evidence": "100.0% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "\u2022 In addition, because China-based sellers account for significant portions of our third-party seller services and advertising revenues, and China-based..",
+          "verified": true,
+          "confidence": 1.0,
+          "evidence": "100.0% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "Our international activities are significant to our revenues and profits, and we plan to further expand internationally. In certain international mark...",
+          "verified": true,
+          "confidence": 0.9090909090909091,
+          "evidence": "90.9% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "As international physical, e-commerce, and omnichannel retail, cloud services, and other services grow, competition will intensify, including through ...",
+          "verified": true,
+          "confidence": 1.0,
+          "evidence": "100.0% keyword overlap",
+          "method": "keyword"
+        },
+        {
+          "claim": "In addition, because China-based sellers account for significant portions of our third-party seller services and advertising revenues, and China-based...",
+          "verified": true,
+          "confidence": 1.0,
+          "evidence": "100.0% keyword overlap",
+          "method": "keyword"
+        }
+      ],
+      "interpretation": "Excellent faithfulness - nearly all claims verifiable in source"
+    }
+  ],
+  "interpretation": "100.0% of summary claims verifiable in source"
+}

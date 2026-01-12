@@ -1,0 +1,4876 @@
+{
+  "category_distribution": {
+    "Cybersecurity": 17,
+    "Regulatory": 122,
+    "Supply Chain": 7,
+    "Financial": 51,
+    "Competitive": 59,
+    "Operational": 11,
+    "Macroeconomic": 3,
+    "Litigation": 16
+  },
+  "detailed_results": [
+    {
+      "id": 1,
+      "source": "AAPL",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.02373558282852173,
+      "all_category_scores": {
+        "Cybersecurity": 0.7430955171585083,
+        "Regulatory": 0.7491549849510193,
+        "Supply Chain": 0.6356799006462097,
+        "Financial": 0.7570668458938599,
+        "Competitive": 0.73546302318573,
+        "Operational": 0.5772221088409424,
+        "Macroeconomic": 0.6741265058517456,
+        "Litigation": 0.7409988045692444
+      }
+    },
+    {
+      "id": 2,
+      "source": "AAPL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.03963196277618408,
+      "all_category_scores": {
+        "Cybersecurity": 0.6466199159622192,
+        "Regulatory": 0.742682933807373,
+        "Supply Chain": 0.557349443435669,
+        "Financial": 0.729472279548645,
+        "Competitive": 0.6528967618942261,
+        "Operational": 0.5113391876220703,
+        "Macroeconomic": 0.6202985048294067,
+        "Litigation": 0.6569905281066895
+      }
+    },
+    {
+      "id": 3,
+      "source": "AAPL",
+      "severity_label": "high",
+      "category": "Financial",
+      "category_confidence": 0.15123939514160156,
+      "all_category_scores": {
+        "Cybersecurity": 0.7355704307556152,
+        "Regulatory": 0.6731343269348145,
+        "Supply Chain": 0.7965582609176636,
+        "Financial": 0.8692718744277954,
+        "Competitive": 0.8188587427139282,
+        "Operational": 0.7781888246536255,
+        "Macroeconomic": 0.7865341901779175,
+        "Litigation": 0.7172276973724365
+      }
+    },
+    {
+      "id": 4,
+      "source": "AAPL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.011224687099456787,
+      "all_category_scores": {
+        "Cybersecurity": 0.7186151742935181,
+        "Regulatory": 0.6436367034912109,
+        "Supply Chain": 0.7958990335464478,
+        "Financial": 0.8304359912872314,
+        "Competitive": 0.834177553653717,
+        "Operational": 0.7786813974380493,
+        "Macroeconomic": 0.7830839157104492,
+        "Litigation": 0.6900877952575684
+      }
+    },
+    {
+      "id": 5,
+      "source": "AAPL",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.19910860061645508,
+      "all_category_scores": {
+        "Cybersecurity": 0.7110186219215393,
+        "Regulatory": 0.629489541053772,
+        "Supply Chain": 0.7403666973114014,
+        "Financial": 0.8281939029693604,
+        "Competitive": 0.761824369430542,
+        "Operational": 0.7023744583129883,
+        "Macroeconomic": 0.7325170636177063,
+        "Litigation": 0.6964759826660156
+      }
+    },
+    {
+      "id": 6,
+      "source": "AAPL",
+      "severity_label": "high",
+      "category": "Cybersecurity",
+      "category_confidence": 0.08965766429901123,
+      "all_category_scores": {
+        "Cybersecurity": 0.8021343946456909,
+        "Regulatory": 0.7722485065460205,
+        "Supply Chain": 0.549098014831543,
+        "Financial": 0.6963834762573242,
+        "Competitive": 0.6604414582252502,
+        "Operational": 0.5130500793457031,
+        "Macroeconomic": 0.5998456478118896,
+        "Litigation": 0.7465768456459045
+      }
+    },
+    {
+      "id": 7,
+      "source": "AAPL",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.14362263679504395,
+      "all_category_scores": {
+        "Cybersecurity": 0.6743237972259521,
+        "Regulatory": 0.7793428897857666,
+        "Supply Chain": 0.5526461005210876,
+        "Financial": 0.7214982509613037,
+        "Competitive": 0.6383112668991089,
+        "Operational": 0.4830324351787567,
+        "Macroeconomic": 0.5719403624534607,
+        "Litigation": 0.731468677520752
+      }
+    },
+    {
+      "id": 8,
+      "source": "AAPL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.05020326375961304,
+      "all_category_scores": {
+        "Cybersecurity": 0.7214323282241821,
+        "Regulatory": 0.6620720624923706,
+        "Supply Chain": 0.7355083227157593,
+        "Financial": 0.7971934080123901,
+        "Competitive": 0.8139278292655945,
+        "Operational": 0.7404342889785767,
+        "Macroeconomic": 0.7342869639396667,
+        "Litigation": 0.727794885635376
+      }
+    },
+    {
+      "id": 9,
+      "source": "AAPL",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.34146809577941895,
+      "all_category_scores": {
+        "Cybersecurity": 0.579081654548645,
+        "Regulatory": 0.597032368183136,
+        "Supply Chain": 0.5257436037063599,
+        "Financial": 0.770423173904419,
+        "Competitive": 0.6566004753112793,
+        "Operational": 0.5040172338485718,
+        "Macroeconomic": 0.629403829574585,
+        "Litigation": 0.567602276802063
+      }
+    },
+    {
+      "id": 10,
+      "source": "AAPL",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.33288949728012085,
+      "all_category_scores": {
+        "Cybersecurity": 0.7096194624900818,
+        "Regulatory": 0.7282775640487671,
+        "Supply Chain": 0.6491966247558594,
+        "Financial": 0.8392407298088074,
+        "Competitive": 0.715070366859436,
+        "Operational": 0.5841965675354004,
+        "Macroeconomic": 0.6729260683059692,
+        "Litigation": 0.7060071229934692
+      }
+    },
+    {
+      "id": 11,
+      "source": "AAPL",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.1381627321243286,
+      "all_category_scores": {
+        "Cybersecurity": 0.6066728234291077,
+        "Regulatory": 0.7271299362182617,
+        "Supply Chain": 0.5951207280158997,
+        "Financial": 0.7731841802597046,
+        "Competitive": 0.7005680799484253,
+        "Operational": 0.5647677183151245,
+        "Macroeconomic": 0.6637758016586304,
+        "Litigation": 0.6692327260971069
+      }
+    },
+    {
+      "id": 12,
+      "source": "AAPL",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.2915421724319458,
+      "all_category_scores": {
+        "Cybersecurity": 0.6555780172348022,
+        "Regulatory": 0.7180881500244141,
+        "Supply Chain": 0.5953018069267273,
+        "Financial": 0.815268874168396,
+        "Competitive": 0.7033681869506836,
+        "Operational": 0.5602394342422485,
+        "Macroeconomic": 0.663748025894165,
+        "Litigation": 0.6867493391036987
+      }
+    },
+    {
+      "id": 13,
+      "source": "AAPL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.00809401273727417,
+      "all_category_scores": {
+        "Cybersecurity": 0.6507323980331421,
+        "Regulatory": 0.7621157765388489,
+        "Supply Chain": 0.5435320734977722,
+        "Financial": 0.7594177722930908,
+        "Competitive": 0.6757982969284058,
+        "Operational": 0.4715020954608917,
+        "Macroeconomic": 0.6036320924758911,
+        "Litigation": 0.691864013671875
+      }
+    },
+    {
+      "id": 14,
+      "source": "AAPL",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.01216953992843628,
+      "all_category_scores": {
+        "Cybersecurity": 0.6006619930267334,
+        "Regulatory": 0.7049856185913086,
+        "Supply Chain": 0.4636954069137573,
+        "Financial": 0.7090421319007874,
+        "Competitive": 0.6106723546981812,
+        "Operational": 0.3738463222980499,
+        "Macroeconomic": 0.49949711561203003,
+        "Litigation": 0.6257787942886353
+      }
+    },
+    {
+      "id": 15,
+      "source": "AAPL",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.017493367195129395,
+      "all_category_scores": {
+        "Cybersecurity": 0.5352921485900879,
+        "Regulatory": 0.6396374702453613,
+        "Supply Chain": 0.34671300649642944,
+        "Financial": 0.6454685926437378,
+        "Competitive": 0.519148051738739,
+        "Operational": 0.2661074697971344,
+        "Macroeconomic": 0.4541098475456238,
+        "Litigation": 0.5536565780639648
+      }
+    },
+    {
+      "id": 16,
+      "source": "TSLA",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.32629698514938354,
+      "all_category_scores": {
+        "Cybersecurity": 0.6093096137046814,
+        "Regulatory": 0.7422196865081787,
+        "Supply Chain": 0.5175321698188782,
+        "Financial": 0.6188592910766602,
+        "Competitive": 0.6334540247917175,
+        "Operational": 0.4328892230987549,
+        "Macroeconomic": 0.49205654859542847,
+        "Litigation": 0.6085588335990906
+      }
+    },
+    {
+      "id": 17,
+      "source": "TSLA",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.35052770376205444,
+      "all_category_scores": {
+        "Cybersecurity": 0.7008699774742126,
+        "Regulatory": 0.8177125453948975,
+        "Supply Chain": 0.5600000619888306,
+        "Financial": 0.6695232391357422,
+        "Competitive": 0.6313139200210571,
+        "Operational": 0.4789502024650574,
+        "Macroeconomic": 0.5756131410598755,
+        "Litigation": 0.6991903781890869
+      }
+    },
+    {
+      "id": 18,
+      "source": "TSLA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.015759050846099854,
+      "all_category_scores": {
+        "Cybersecurity": 0.7087764739990234,
+        "Regulatory": 0.760064959526062,
+        "Supply Chain": 0.6332769393920898,
+        "Financial": 0.7548119425773621,
+        "Competitive": 0.7137404680252075,
+        "Operational": 0.5798577070236206,
+        "Macroeconomic": 0.6878869533538818,
+        "Litigation": 0.7082407474517822
+      }
+    },
+    {
+      "id": 19,
+      "source": "TSLA",
+      "severity_label": "high",
+      "category": "Financial",
+      "category_confidence": 0.09002315998077393,
+      "all_category_scores": {
+        "Cybersecurity": 0.6873103380203247,
+        "Regulatory": 0.7206423282623291,
+        "Supply Chain": 0.7365497350692749,
+        "Financial": 0.8320432901382446,
+        "Competitive": 0.8020355701446533,
+        "Operational": 0.7299791574478149,
+        "Macroeconomic": 0.7826941013336182,
+        "Litigation": 0.6941509246826172
+      }
+    },
+    {
+      "id": 20,
+      "source": "TSLA",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.18645930290222168,
+      "all_category_scores": {
+        "Cybersecurity": 0.6873182058334351,
+        "Regulatory": 0.7045022249221802,
+        "Supply Chain": 0.7366334795951843,
+        "Financial": 0.8255475759506226,
+        "Competitive": 0.7633944749832153,
+        "Operational": 0.7125110626220703,
+        "Macroeconomic": 0.7189120054244995,
+        "Litigation": 0.730879008769989
+      }
+    },
+    {
+      "id": 21,
+      "source": "TSLA",
+      "severity_label": "high",
+      "category": "Financial",
+      "category_confidence": 0.035418033599853516,
+      "all_category_scores": {
+        "Cybersecurity": 0.7833409905433655,
+        "Regulatory": 0.686876654624939,
+        "Supply Chain": 0.8000814914703369,
+        "Financial": 0.8332501649856567,
+        "Competitive": 0.8214441537857056,
+        "Operational": 0.7549556493759155,
+        "Macroeconomic": 0.7679957151412964,
+        "Litigation": 0.7607455253601074
+      }
+    },
+    {
+      "id": 22,
+      "source": "TSLA",
+      "severity_label": "low",
+      "category": "Competitive",
+      "category_confidence": 0.029314756393432617,
+      "all_category_scores": {
+        "Cybersecurity": 0.6746175289154053,
+        "Regulatory": 0.6945858001708984,
+        "Supply Chain": 0.7345659732818604,
+        "Financial": 0.8065025806427002,
+        "Competitive": 0.8162741661071777,
+        "Operational": 0.71742844581604,
+        "Macroeconomic": 0.7245455384254456,
+        "Litigation": 0.7035754919052124
+      }
+    },
+    {
+      "id": 23,
+      "source": "TSLA",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.04051530361175537,
+      "all_category_scores": {
+        "Cybersecurity": 0.7779960632324219,
+        "Regulatory": 0.8313193321228027,
+        "Supply Chain": 0.7327237725257874,
+        "Financial": 0.7834548950195312,
+        "Competitive": 0.7486997842788696,
+        "Operational": 0.6838264465332031,
+        "Macroeconomic": 0.6932719349861145,
+        "Litigation": 0.8178142309188843
+      }
+    },
+    {
+      "id": 24,
+      "source": "TSLA",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.08713889122009277,
+      "all_category_scores": {
+        "Cybersecurity": 0.8226191997528076,
+        "Regulatory": 0.8516654968261719,
+        "Supply Chain": 0.6072067022323608,
+        "Financial": 0.7545578479766846,
+        "Competitive": 0.6827397346496582,
+        "Operational": 0.5678231716156006,
+        "Macroeconomic": 0.6435785293579102,
+        "Litigation": 0.8108648061752319
+      }
+    },
+    {
+      "id": 25,
+      "source": "TSLA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.20448482036590576,
+      "all_category_scores": {
+        "Cybersecurity": 0.6313661336898804,
+        "Regulatory": 0.6995277404785156,
+        "Supply Chain": 0.4153311252593994,
+        "Financial": 0.5920702219009399,
+        "Competitive": 0.5637146234512329,
+        "Operational": 0.3846921920776367,
+        "Macroeconomic": 0.4538879096508026,
+        "Litigation": 0.6284884214401245
+      }
+    },
+    {
+      "id": 26,
+      "source": "TSLA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.16273105144500732,
+      "all_category_scores": {
+        "Cybersecurity": 0.35065722465515137,
+        "Regulatory": 0.5269706845283508,
+        "Supply Chain": 0.21014434099197388,
+        "Financial": 0.4727270007133484,
+        "Competitive": 0.42710763216018677,
+        "Operational": 0.162517249584198,
+        "Macroeconomic": 0.29270726442337036,
+        "Litigation": 0.3946300148963928
+      }
+    },
+    {
+      "id": 27,
+      "source": "TSLA",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.07684940099716187,
+      "all_category_scores": {
+        "Cybersecurity": 0.728603720664978,
+        "Regulatory": 0.7414387464523315,
+        "Supply Chain": 0.7146671414375305,
+        "Financial": 0.7761563062667847,
+        "Competitive": 0.7505398392677307,
+        "Operational": 0.716545820236206,
+        "Macroeconomic": 0.7157620191574097,
+        "Litigation": 0.6990648508071899
+      }
+    },
+    {
+      "id": 28,
+      "source": "TSLA",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.0034605860710144043,
+      "all_category_scores": {
+        "Cybersecurity": 0.6366217136383057,
+        "Regulatory": 0.7286863923072815,
+        "Supply Chain": 0.48098549246788025,
+        "Financial": 0.7275328636169434,
+        "Competitive": 0.5973672866821289,
+        "Operational": 0.39861077070236206,
+        "Macroeconomic": 0.5374253988265991,
+        "Litigation": 0.6717780828475952
+      }
+    },
+    {
+      "id": 29,
+      "source": "TSLA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.23915952444076538,
+      "all_category_scores": {
+        "Cybersecurity": 0.5378872156143188,
+        "Regulatory": 0.6961371302604675,
+        "Supply Chain": 0.3581024706363678,
+        "Financial": 0.6164172887802124,
+        "Competitive": 0.5219231843948364,
+        "Operational": 0.2942894399166107,
+        "Macroeconomic": 0.4416158199310303,
+        "Litigation": 0.5684088468551636
+      }
+    },
+    {
+      "id": 30,
+      "source": "TSLA",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.06869816780090332,
+      "all_category_scores": {
+        "Cybersecurity": 0.7296158075332642,
+        "Regulatory": 0.7286792993545532,
+        "Supply Chain": 0.730150043964386,
+        "Financial": 0.7745183706283569,
+        "Competitive": 0.7516189813613892,
+        "Operational": 0.7335604429244995,
+        "Macroeconomic": 0.7260788679122925,
+        "Litigation": 0.6965558528900146
+      }
+    },
+    {
+      "id": 31,
+      "source": "MSFT",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.2837791442871094,
+      "all_category_scores": {
+        "Cybersecurity": 0.5424065589904785,
+        "Regulatory": 0.7181695699691772,
+        "Supply Chain": 0.40150612592697144,
+        "Financial": 0.6235765218734741,
+        "Competitive": 0.5135133266448975,
+        "Operational": 0.3150255084037781,
+        "Macroeconomic": 0.4721524119377136,
+        "Litigation": 0.6213605403900146
+      }
+    },
+    {
+      "id": 32,
+      "source": "MSFT",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.22729718685150146,
+      "all_category_scores": {
+        "Cybersecurity": 0.7270119190216064,
+        "Regulatory": 0.7232685685157776,
+        "Supply Chain": 0.7123823165893555,
+        "Financial": 0.8379496335983276,
+        "Competitive": 0.7621839046478271,
+        "Operational": 0.6782456636428833,
+        "Macroeconomic": 0.7319954633712769,
+        "Litigation": 0.7476170659065247
+      }
+    },
+    {
+      "id": 33,
+      "source": "MSFT",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.13784462213516235,
+      "all_category_scores": {
+        "Cybersecurity": 0.7537673115730286,
+        "Regulatory": 0.799715518951416,
+        "Supply Chain": 0.5990087985992432,
+        "Financial": 0.725420355796814,
+        "Competitive": 0.6923426389694214,
+        "Operational": 0.5394125580787659,
+        "Macroeconomic": 0.6149025559425354,
+        "Litigation": 0.7280561923980713
+      }
+    },
+    {
+      "id": 34,
+      "source": "MSFT",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.03053051233291626,
+      "all_category_scores": {
+        "Cybersecurity": 0.7179234623908997,
+        "Regulatory": 0.6173985004425049,
+        "Supply Chain": 0.7641009092330933,
+        "Financial": 0.7675994038581848,
+        "Competitive": 0.7944723963737488,
+        "Operational": 0.7842955589294434,
+        "Macroeconomic": 0.7378641366958618,
+        "Litigation": 0.7189723253250122
+      }
+    },
+    {
+      "id": 35,
+      "source": "MSFT",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.5149707198143005,
+      "all_category_scores": {
+        "Cybersecurity": 0.4863709509372711,
+        "Regulatory": 0.6924685835838318,
+        "Supply Chain": 0.3122645914554596,
+        "Financial": 0.5199234485626221,
+        "Competitive": 0.46105170249938965,
+        "Operational": 0.2588247060775757,
+        "Macroeconomic": 0.37273553013801575,
+        "Litigation": 0.5208116769790649
+      }
+    },
+    {
+      "id": 36,
+      "source": "MSFT",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.23087221384048462,
+      "all_category_scores": {
+        "Cybersecurity": 0.687487006187439,
+        "Regulatory": 0.7644444108009338,
+        "Supply Chain": 0.49581658840179443,
+        "Financial": 0.6644189357757568,
+        "Competitive": 0.605506420135498,
+        "Operational": 0.43828248977661133,
+        "Macroeconomic": 0.5105680227279663,
+        "Litigation": 0.6648242473602295
+      }
+    },
+    {
+      "id": 37,
+      "source": "MSFT",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.07799702882766724,
+      "all_category_scores": {
+        "Cybersecurity": 0.7111708521842957,
+        "Regulatory": 0.7489156723022461,
+        "Supply Chain": 0.5501759052276611,
+        "Financial": 0.7201305627822876,
+        "Competitive": 0.6544451117515564,
+        "Operational": 0.4938226044178009,
+        "Macroeconomic": 0.6038658618927002,
+        "Litigation": 0.7229166626930237
+      }
+    },
+    {
+      "id": 38,
+      "source": "MSFT",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.3218357563018799,
+      "all_category_scores": {
+        "Cybersecurity": 0.6206202507019043,
+        "Regulatory": 0.7499314546585083,
+        "Supply Chain": 0.43982619047164917,
+        "Financial": 0.6368514895439148,
+        "Competitive": 0.5845590829849243,
+        "Operational": 0.40836507081985474,
+        "Macroeconomic": 0.5021809339523315,
+        "Litigation": 0.6426528692245483
+      }
+    },
+    {
+      "id": 39,
+      "source": "MSFT",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.2147369384765625,
+      "all_category_scores": {
+        "Cybersecurity": 0.6502385139465332,
+        "Regulatory": 0.7218174934387207,
+        "Supply Chain": 0.4376181364059448,
+        "Financial": 0.6396831274032593,
+        "Competitive": 0.5639246106147766,
+        "Operational": 0.39208799600601196,
+        "Macroeconomic": 0.4779509902000427,
+        "Litigation": 0.6258098483085632
+      }
+    },
+    {
+      "id": 40,
+      "source": "MSFT",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.3302709460258484,
+      "all_category_scores": {
+        "Cybersecurity": 0.6126970052719116,
+        "Regulatory": 0.7446197271347046,
+        "Supply Chain": 0.3907535672187805,
+        "Financial": 0.5760681629180908,
+        "Competitive": 0.5306748151779175,
+        "Operational": 0.3558817505836487,
+        "Macroeconomic": 0.4347184896469116,
+        "Litigation": 0.6345294117927551
+      }
+    },
+    {
+      "id": 41,
+      "source": "MSFT",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.2963767647743225,
+      "all_category_scores": {
+        "Cybersecurity": 0.5040601491928101,
+        "Regulatory": 0.6890655755996704,
+        "Supply Chain": 0.37152427434921265,
+        "Financial": 0.5881372094154358,
+        "Competitive": 0.489020437002182,
+        "Operational": 0.280555784702301,
+        "Macroeconomic": 0.4370456039905548,
+        "Litigation": 0.5902733206748962
+      }
+    },
+    {
+      "id": 42,
+      "source": "MSFT",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.09600555896759033,
+      "all_category_scores": {
+        "Cybersecurity": 0.5688055753707886,
+        "Regulatory": 0.7237536907196045,
+        "Supply Chain": 0.42526775598526,
+        "Financial": 0.6917518377304077,
+        "Competitive": 0.5712082386016846,
+        "Operational": 0.3620825409889221,
+        "Macroeconomic": 0.5245628356933594,
+        "Litigation": 0.6354893445968628
+      }
+    },
+    {
+      "id": 43,
+      "source": "MSFT",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.28670668601989746,
+      "all_category_scores": {
+        "Cybersecurity": 0.7125113010406494,
+        "Regulatory": 0.7722858190536499,
+        "Supply Chain": 0.6604606509208679,
+        "Financial": 0.8678547143936157,
+        "Competitive": 0.7422119379043579,
+        "Operational": 0.6069917678833008,
+        "Macroeconomic": 0.7464969754219055,
+        "Litigation": 0.7329457998275757
+      }
+    },
+    {
+      "id": 44,
+      "source": "MSFT",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.07266193628311157,
+      "all_category_scores": {
+        "Cybersecurity": 0.5950385332107544,
+        "Regulatory": 0.6960286498069763,
+        "Supply Chain": 0.4188942313194275,
+        "Financial": 0.7202492952346802,
+        "Competitive": 0.5568564534187317,
+        "Operational": 0.383139967918396,
+        "Macroeconomic": 0.5763638019561768,
+        "Litigation": 0.6157989501953125
+      }
+    },
+    {
+      "id": 45,
+      "source": "MSFT",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.01690042018890381,
+      "all_category_scores": {
+        "Cybersecurity": 0.49721890687942505,
+        "Regulatory": 0.6620198488235474,
+        "Supply Chain": 0.38544389605522156,
+        "Financial": 0.6563863754272461,
+        "Competitive": 0.5183055996894836,
+        "Operational": 0.3047056198120117,
+        "Macroeconomic": 0.4856235384941101,
+        "Litigation": 0.5400692224502563
+      }
+    },
+    {
+      "id": 46,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.05276244878768921,
+      "all_category_scores": {
+        "Cybersecurity": 0.7511638402938843,
+        "Regulatory": 0.7494157552719116,
+        "Supply Chain": 0.6968460083007812,
+        "Financial": 0.7834101915359497,
+        "Competitive": 0.76582270860672,
+        "Operational": 0.6497560739517212,
+        "Macroeconomic": 0.7276731729507446,
+        "Litigation": 0.7559549808502197
+      }
+    },
+    {
+      "id": 47,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.07072573900222778,
+      "all_category_scores": {
+        "Cybersecurity": 0.6597716212272644,
+        "Regulatory": 0.6302677392959595,
+        "Supply Chain": 0.7508000731468201,
+        "Financial": 0.7562400698661804,
+        "Competitive": 0.7867158055305481,
+        "Operational": 0.7631405591964722,
+        "Macroeconomic": 0.7445402145385742,
+        "Litigation": 0.6453646421432495
+      }
+    },
+    {
+      "id": 48,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.1768484115600586,
+      "all_category_scores": {
+        "Cybersecurity": 0.6710535287857056,
+        "Regulatory": 0.6260948181152344,
+        "Supply Chain": 0.7350442409515381,
+        "Financial": 0.7629016637802124,
+        "Competitive": 0.8218511343002319,
+        "Operational": 0.7258774042129517,
+        "Macroeconomic": 0.7353602647781372,
+        "Litigation": 0.6564749479293823
+      }
+    },
+    {
+      "id": 49,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Supply Chain",
+      "category_confidence": 0.05900448560714722,
+      "all_category_scores": {
+        "Cybersecurity": 0.698585033416748,
+        "Regulatory": 0.5447905659675598,
+        "Supply Chain": 0.8188390731811523,
+        "Financial": 0.6949251890182495,
+        "Competitive": 0.7991709113121033,
+        "Operational": 0.7927515506744385,
+        "Macroeconomic": 0.7191023826599121,
+        "Litigation": 0.5845496654510498
+      }
+    },
+    {
+      "id": 50,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.11599820852279663,
+      "all_category_scores": {
+        "Cybersecurity": 0.7715944051742554,
+        "Regulatory": 0.7613139748573303,
+        "Supply Chain": 0.7851641178131104,
+        "Financial": 0.7594430446624756,
+        "Competitive": 0.8238301873207092,
+        "Operational": 0.7297540903091431,
+        "Macroeconomic": 0.7468158006668091,
+        "Litigation": 0.7205398678779602
+      }
+    },
+    {
+      "id": 51,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Operational",
+      "category_confidence": 0.006668686866760254,
+      "all_category_scores": {
+        "Cybersecurity": 0.7265503406524658,
+        "Regulatory": 0.554252028465271,
+        "Supply Chain": 0.8146959543228149,
+        "Financial": 0.684166669845581,
+        "Competitive": 0.7854335308074951,
+        "Operational": 0.8169188499450684,
+        "Macroeconomic": 0.7178097367286682,
+        "Litigation": 0.6811665296554565
+      }
+    },
+    {
+      "id": 52,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.028654038906097412,
+      "all_category_scores": {
+        "Cybersecurity": 0.6625381708145142,
+        "Regulatory": 0.5731709003448486,
+        "Supply Chain": 0.7353973388671875,
+        "Financial": 0.7163773775100708,
+        "Competitive": 0.7538429498672485,
+        "Operational": 0.7260662913322449,
+        "Macroeconomic": 0.7442916035652161,
+        "Litigation": 0.6302744746208191
+      }
+    },
+    {
+      "id": 53,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.0389256477355957,
+      "all_category_scores": {
+        "Cybersecurity": 0.6986129283905029,
+        "Regulatory": 0.7143369913101196,
+        "Supply Chain": 0.629001796245575,
+        "Financial": 0.7530564069747925,
+        "Competitive": 0.7400811910629272,
+        "Operational": 0.5977988243103027,
+        "Macroeconomic": 0.6459476947784424,
+        "Litigation": 0.705146074295044
+      }
+    },
+    {
+      "id": 54,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Cybersecurity",
+      "category_confidence": 0.07321840524673462,
+      "all_category_scores": {
+        "Cybersecurity": 0.8257161974906921,
+        "Regulatory": 0.6225813627243042,
+        "Supply Chain": 0.8013100624084473,
+        "Financial": 0.7526546716690063,
+        "Competitive": 0.7846633791923523,
+        "Operational": 0.7921554446220398,
+        "Macroeconomic": 0.7742980718612671,
+        "Litigation": 0.7019336223602295
+      }
+    },
+    {
+      "id": 55,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Operational",
+      "category_confidence": 0.07334554195404053,
+      "all_category_scores": {
+        "Cybersecurity": 0.6309908032417297,
+        "Regulatory": 0.4714997708797455,
+        "Supply Chain": 0.7767304182052612,
+        "Financial": 0.65500807762146,
+        "Competitive": 0.7068707346916199,
+        "Operational": 0.8011789321899414,
+        "Macroeconomic": 0.7032327055931091,
+        "Litigation": 0.5790300965309143
+      }
+    },
+    {
+      "id": 56,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Competitive",
+      "category_confidence": 0.17568504810333252,
+      "all_category_scores": {
+        "Cybersecurity": 0.6376127004623413,
+        "Regulatory": 0.641819953918457,
+        "Supply Chain": 0.6105282306671143,
+        "Financial": 0.6749870777130127,
+        "Competitive": 0.7335487604141235,
+        "Operational": 0.5654532313346863,
+        "Macroeconomic": 0.6585703492164612,
+        "Litigation": 0.6153879165649414
+      }
+    },
+    {
+      "id": 57,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.07228356599807739,
+      "all_category_scores": {
+        "Cybersecurity": 0.5228380560874939,
+        "Regulatory": 0.6058747172355652,
+        "Supply Chain": 0.4365665018558502,
+        "Financial": 0.5948140621185303,
+        "Competitive": 0.6299692392349243,
+        "Operational": 0.4007366895675659,
+        "Macroeconomic": 0.4854543209075928,
+        "Litigation": 0.5795131921768188
+      }
+    },
+    {
+      "id": 58,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.11724203824996948,
+      "all_category_scores": {
+        "Cybersecurity": 0.7053475379943848,
+        "Regulatory": 0.7140742540359497,
+        "Supply Chain": 0.6667495369911194,
+        "Financial": 0.7493300437927246,
+        "Competitive": 0.7884107232093811,
+        "Operational": 0.6098570227622986,
+        "Macroeconomic": 0.6578433513641357,
+        "Litigation": 0.7142689228057861
+      }
+    },
+    {
+      "id": 59,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.15827107429504395,
+      "all_category_scores": {
+        "Cybersecurity": 0.6022105813026428,
+        "Regulatory": 0.6071386933326721,
+        "Supply Chain": 0.5831987857818604,
+        "Financial": 0.6566780805587769,
+        "Competitive": 0.7094351053237915,
+        "Operational": 0.6076734066009521,
+        "Macroeconomic": 0.6030737161636353,
+        "Litigation": 0.6051120758056641
+      }
+    },
+    {
+      "id": 60,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Cybersecurity",
+      "category_confidence": 0.08836966753005981,
+      "all_category_scores": {
+        "Cybersecurity": 0.7888230681419373,
+        "Regulatory": 0.7184785008430481,
+        "Supply Chain": 0.759366512298584,
+        "Financial": 0.7060335874557495,
+        "Competitive": 0.7459607124328613,
+        "Operational": 0.7360020875930786,
+        "Macroeconomic": 0.6963158845901489,
+        "Litigation": 0.7454291582107544
+      }
+    },
+    {
+      "id": 61,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Macroeconomic",
+      "category_confidence": 0.08909851312637329,
+      "all_category_scores": {
+        "Cybersecurity": 0.6398497819900513,
+        "Regulatory": 0.5741239786148071,
+        "Supply Chain": 0.7262665033340454,
+        "Financial": 0.7373266816139221,
+        "Competitive": 0.755711019039154,
+        "Operational": 0.7449755668640137,
+        "Macroeconomic": 0.7854105234146118,
+        "Litigation": 0.5919733643531799
+      }
+    },
+    {
+      "id": 62,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.06861233711242676,
+      "all_category_scores": {
+        "Cybersecurity": 0.7647674083709717,
+        "Regulatory": 0.7876381874084473,
+        "Supply Chain": 0.7177650928497314,
+        "Financial": 0.7449787855148315,
+        "Competitive": 0.7364221811294556,
+        "Operational": 0.6807467937469482,
+        "Macroeconomic": 0.7231122255325317,
+        "Litigation": 0.7570400834083557
+      }
+    },
+    {
+      "id": 63,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.012366950511932373,
+      "all_category_scores": {
+        "Cybersecurity": 0.7864322066307068,
+        "Regulatory": 0.7218543291091919,
+        "Supply Chain": 0.7504406571388245,
+        "Financial": 0.7905545234680176,
+        "Competitive": 0.7843776941299438,
+        "Operational": 0.746488094329834,
+        "Macroeconomic": 0.7577400207519531,
+        "Litigation": 0.7860568761825562
+      }
+    },
+    {
+      "id": 64,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Litigation",
+      "category_confidence": 0.11586230993270874,
+      "all_category_scores": {
+        "Cybersecurity": 0.7854724526405334,
+        "Regulatory": 0.7206968069076538,
+        "Supply Chain": 0.6816214323043823,
+        "Financial": 0.7217414379119873,
+        "Competitive": 0.7092121839523315,
+        "Operational": 0.6595940589904785,
+        "Macroeconomic": 0.666634202003479,
+        "Litigation": 0.824093222618103
+      }
+    },
+    {
+      "id": 65,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Cybersecurity",
+      "category_confidence": 0.03632265329360962,
+      "all_category_scores": {
+        "Cybersecurity": 0.790625810623169,
+        "Regulatory": 0.7178375720977783,
+        "Supply Chain": 0.7054123878479004,
+        "Financial": 0.7269232273101807,
+        "Competitive": 0.7785182595252991,
+        "Operational": 0.697232723236084,
+        "Macroeconomic": 0.6858514547348022,
+        "Litigation": 0.7701845169067383
+      }
+    },
+    {
+      "id": 66,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Cybersecurity",
+      "category_confidence": 0.024480164051055908,
+      "all_category_scores": {
+        "Cybersecurity": 0.8075937628746033,
+        "Regulatory": 0.7774397730827332,
+        "Supply Chain": 0.7708109617233276,
+        "Financial": 0.7327926754951477,
+        "Competitive": 0.762032151222229,
+        "Operational": 0.7569933533668518,
+        "Macroeconomic": 0.7385416030883789,
+        "Litigation": 0.799433708190918
+      }
+    },
+    {
+      "id": 67,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.057915329933166504,
+      "all_category_scores": {
+        "Cybersecurity": 0.6850260496139526,
+        "Regulatory": 0.6429698467254639,
+        "Supply Chain": 0.7763328552246094,
+        "Financial": 0.7876687049865723,
+        "Competitive": 0.8127379417419434,
+        "Operational": 0.7764657735824585,
+        "Macroeconomic": 0.7934328317642212,
+        "Litigation": 0.6846308708190918
+      }
+    },
+    {
+      "id": 68,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Litigation",
+      "category_confidence": 0.08405452966690063,
+      "all_category_scores": {
+        "Cybersecurity": 0.747408390045166,
+        "Regulatory": 0.7997823357582092,
+        "Supply Chain": 0.6469571590423584,
+        "Financial": 0.7869503498077393,
+        "Competitive": 0.7336986064910889,
+        "Operational": 0.5959029793739319,
+        "Macroeconomic": 0.6530557870864868,
+        "Litigation": 0.8278005123138428
+      }
+    },
+    {
+      "id": 69,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Financial",
+      "category_confidence": 0.013642966747283936,
+      "all_category_scores": {
+        "Cybersecurity": 0.6876589059829712,
+        "Regulatory": 0.6203157901763916,
+        "Supply Chain": 0.7608020901679993,
+        "Financial": 0.7998229265213013,
+        "Competitive": 0.7952752709388733,
+        "Operational": 0.7745692729949951,
+        "Macroeconomic": 0.7346974611282349,
+        "Litigation": 0.6721428632736206
+      }
+    },
+    {
+      "id": 70,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Litigation",
+      "category_confidence": 0.01627492904663086,
+      "all_category_scores": {
+        "Cybersecurity": 0.7004845142364502,
+        "Regulatory": 0.745957612991333,
+        "Supply Chain": 0.666003942489624,
+        "Financial": 0.6881271600723267,
+        "Competitive": 0.7083329558372498,
+        "Operational": 0.6071326732635498,
+        "Macroeconomic": 0.6285702586174011,
+        "Litigation": 0.75138258934021
+      }
+    },
+    {
+      "id": 71,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.04587310552597046,
+      "all_category_scores": {
+        "Cybersecurity": 0.4953594207763672,
+        "Regulatory": 0.6411982178688049,
+        "Supply Chain": 0.41310590505599976,
+        "Financial": 0.5758140087127686,
+        "Competitive": 0.6259071826934814,
+        "Operational": 0.3685416579246521,
+        "Macroeconomic": 0.471541166305542,
+        "Litigation": 0.5054186582565308
+      }
+    },
+    {
+      "id": 72,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.05256146192550659,
+      "all_category_scores": {
+        "Cybersecurity": 0.5126993656158447,
+        "Regulatory": 0.6161634922027588,
+        "Supply Chain": 0.5381945371627808,
+        "Financial": 0.6572626233100891,
+        "Competitive": 0.6397421360015869,
+        "Operational": 0.4684027433395386,
+        "Macroeconomic": 0.5497575998306274,
+        "Litigation": 0.5262811183929443
+      }
+    },
+    {
+      "id": 73,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.2742140293121338,
+      "all_category_scores": {
+        "Cybersecurity": 0.6752983331680298,
+        "Regulatory": 0.7058411240577698,
+        "Supply Chain": 0.6393531560897827,
+        "Financial": 0.7064008712768555,
+        "Competitive": 0.7978055477142334,
+        "Operational": 0.5711838603019714,
+        "Macroeconomic": 0.627295732498169,
+        "Litigation": 0.6641205549240112
+      }
+    },
+    {
+      "id": 74,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Cybersecurity",
+      "category_confidence": 0.49940603971481323,
+      "all_category_scores": {
+        "Cybersecurity": 0.9311105608940125,
+        "Regulatory": 0.7413480281829834,
+        "Supply Chain": 0.7254809141159058,
+        "Financial": 0.7340803742408752,
+        "Competitive": 0.7646418809890747,
+        "Operational": 0.6831856966018677,
+        "Macroeconomic": 0.7200984954833984,
+        "Litigation": 0.7302109003067017
+      }
+    },
+    {
+      "id": 75,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Cybersecurity",
+      "category_confidence": 0.30390000343322754,
+      "all_category_scores": {
+        "Cybersecurity": 0.8665899038314819,
+        "Regulatory": 0.7392340898513794,
+        "Supply Chain": 0.7273129224777222,
+        "Financial": 0.7484523057937622,
+        "Competitive": 0.7652899026870728,
+        "Operational": 0.6694680452346802,
+        "Macroeconomic": 0.7265219688415527,
+        "Litigation": 0.7220077514648438
+      }
+    },
+    {
+      "id": 76,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Operational",
+      "category_confidence": 0.01020580530166626,
+      "all_category_scores": {
+        "Cybersecurity": 0.7349048852920532,
+        "Regulatory": 0.6326725482940674,
+        "Supply Chain": 0.8209957480430603,
+        "Financial": 0.7621668577194214,
+        "Competitive": 0.8180235624313354,
+        "Operational": 0.8243976831436157,
+        "Macroeconomic": 0.7558040618896484,
+        "Litigation": 0.7603820562362671
+      }
+    },
+    {
+      "id": 77,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.07611501216888428,
+      "all_category_scores": {
+        "Cybersecurity": 0.6684983968734741,
+        "Regulatory": 0.7013577222824097,
+        "Supply Chain": 0.6765545606613159,
+        "Financial": 0.7656865119934082,
+        "Competitive": 0.7910581827163696,
+        "Operational": 0.6521062850952148,
+        "Macroeconomic": 0.6958966255187988,
+        "Litigation": 0.6598042845726013
+      }
+    },
+    {
+      "id": 78,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Financial",
+      "category_confidence": 0.006321430206298828,
+      "all_category_scores": {
+        "Cybersecurity": 0.8141509294509888,
+        "Regulatory": 0.7263227701187134,
+        "Supply Chain": 0.8319240808486938,
+        "Financial": 0.8340312242507935,
+        "Competitive": 0.818727433681488,
+        "Operational": 0.7912028431892395,
+        "Macroeconomic": 0.7999147772789001,
+        "Litigation": 0.7346025705337524
+      }
+    },
+    {
+      "id": 79,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.09864038228988647,
+      "all_category_scores": {
+        "Cybersecurity": 0.7234230041503906,
+        "Regulatory": 0.7693551182746887,
+        "Supply Chain": 0.6932471394538879,
+        "Financial": 0.7514188885688782,
+        "Competitive": 0.8022352457046509,
+        "Operational": 0.6505751609802246,
+        "Macroeconomic": 0.6938527822494507,
+        "Litigation": 0.7539523839950562
+      }
+    },
+    {
+      "id": 80,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.20932245254516602,
+      "all_category_scores": {
+        "Cybersecurity": 0.7279157638549805,
+        "Regulatory": 0.8147368431091309,
+        "Supply Chain": 0.6075263619422913,
+        "Financial": 0.7038087844848633,
+        "Competitive": 0.7083625793457031,
+        "Operational": 0.5390357971191406,
+        "Macroeconomic": 0.6547963619232178,
+        "Litigation": 0.7449626922607422
+      }
+    },
+    {
+      "id": 81,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.016076982021331787,
+      "all_category_scores": {
+        "Cybersecurity": 0.6923474073410034,
+        "Regulatory": 0.7337496876716614,
+        "Supply Chain": 0.6684629321098328,
+        "Financial": 0.750678300857544,
+        "Competitive": 0.7560372948646545,
+        "Operational": 0.6259800791740417,
+        "Macroeconomic": 0.6693075895309448,
+        "Litigation": 0.6766589283943176
+      }
+    },
+    {
+      "id": 82,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.08915895223617554,
+      "all_category_scores": {
+        "Cybersecurity": 0.6864577531814575,
+        "Regulatory": 0.6848382949829102,
+        "Supply Chain": 0.6817505359649658,
+        "Financial": 0.6476640105247498,
+        "Competitive": 0.7165229320526123,
+        "Operational": 0.6564317941665649,
+        "Macroeconomic": 0.6868032813072205,
+        "Litigation": 0.6681756377220154
+      }
+    },
+    {
+      "id": 83,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.0791938304901123,
+      "all_category_scores": {
+        "Cybersecurity": 0.7972781658172607,
+        "Regulatory": 0.8274003267288208,
+        "Supply Chain": 0.6370161771774292,
+        "Financial": 0.7285038828849792,
+        "Competitive": 0.6764748096466064,
+        "Operational": 0.6034059524536133,
+        "Macroeconomic": 0.6695476174354553,
+        "Litigation": 0.8010023832321167
+      }
+    },
+    {
+      "id": 84,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.08009684085845947,
+      "all_category_scores": {
+        "Cybersecurity": 0.6884505748748779,
+        "Regulatory": 0.6803807020187378,
+        "Supply Chain": 0.6350618004798889,
+        "Financial": 0.7756321430206299,
+        "Competitive": 0.7489331960678101,
+        "Operational": 0.5817059874534607,
+        "Macroeconomic": 0.6623931527137756,
+        "Litigation": 0.719023585319519
+      }
+    },
+    {
+      "id": 85,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Financial",
+      "category_confidence": 0.18952131271362305,
+      "all_category_scores": {
+        "Cybersecurity": 0.7424569129943848,
+        "Regulatory": 0.7123610377311707,
+        "Supply Chain": 0.6998917460441589,
+        "Financial": 0.8098318576812744,
+        "Competitive": 0.7466580867767334,
+        "Operational": 0.651287317276001,
+        "Macroeconomic": 0.7033184766769409,
+        "Litigation": 0.7454230785369873
+      }
+    },
+    {
+      "id": 86,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Competitive",
+      "category_confidence": 0.04705291986465454,
+      "all_category_scores": {
+        "Cybersecurity": 0.4698043465614319,
+        "Regulatory": 0.5486257672309875,
+        "Supply Chain": 0.4602850079536438,
+        "Financial": 0.5313102006912231,
+        "Competitive": 0.5643100738525391,
+        "Operational": 0.43219947814941406,
+        "Macroeconomic": 0.49619260430336,
+        "Litigation": 0.49620234966278076
+      }
+    },
+    {
+      "id": 87,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.17430514097213745,
+      "all_category_scores": {
+        "Cybersecurity": 0.5512457489967346,
+        "Regulatory": 0.6952717900276184,
+        "Supply Chain": 0.4286603629589081,
+        "Financial": 0.6316253542900085,
+        "Competitive": 0.6371700763702393,
+        "Operational": 0.37938451766967773,
+        "Macroeconomic": 0.4923192858695984,
+        "Litigation": 0.6172624230384827
+      }
+    },
+    {
+      "id": 88,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.0921068787574768,
+      "all_category_scores": {
+        "Cybersecurity": 0.7089411020278931,
+        "Regulatory": 0.5910009145736694,
+        "Supply Chain": 0.7659289836883545,
+        "Financial": 0.7202958464622498,
+        "Competitive": 0.8130430579185486,
+        "Operational": 0.7823407649993896,
+        "Macroeconomic": 0.7275725603103638,
+        "Litigation": 0.6929528713226318
+      }
+    },
+    {
+      "id": 89,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.07250028848648071,
+      "all_category_scores": {
+        "Cybersecurity": 0.6103678941726685,
+        "Regulatory": 0.6716614365577698,
+        "Supply Chain": 0.5239213705062866,
+        "Financial": 0.6887204647064209,
+        "Competitive": 0.7128872275352478,
+        "Operational": 0.5054552555084229,
+        "Macroeconomic": 0.5736820697784424,
+        "Litigation": 0.6357342004776001
+      }
+    },
+    {
+      "id": 90,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.12397027015686035,
+      "all_category_scores": {
+        "Cybersecurity": 0.5699542164802551,
+        "Regulatory": 0.6479649543762207,
+        "Supply Chain": 0.49437403678894043,
+        "Financial": 0.645382821559906,
+        "Competitive": 0.6892883777618408,
+        "Operational": 0.47560209035873413,
+        "Macroeconomic": 0.5226634740829468,
+        "Litigation": 0.5885781049728394
+      }
+    },
+    {
+      "id": 91,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.03887343406677246,
+      "all_category_scores": {
+        "Cybersecurity": 0.7901450395584106,
+        "Regulatory": 0.8232825994491577,
+        "Supply Chain": 0.7386000752449036,
+        "Financial": 0.8064203262329102,
+        "Competitive": 0.8103247880935669,
+        "Operational": 0.6801542639732361,
+        "Macroeconomic": 0.7530306577682495,
+        "Litigation": 0.7631662487983704
+      }
+    },
+    {
+      "id": 92,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Competitive",
+      "category_confidence": 0.058174967765808105,
+      "all_category_scores": {
+        "Cybersecurity": 0.5566298961639404,
+        "Regulatory": 0.4931644797325134,
+        "Supply Chain": 0.7301541566848755,
+        "Financial": 0.671530544757843,
+        "Competitive": 0.7555669546127319,
+        "Operational": 0.7361752986907959,
+        "Macroeconomic": 0.7098039388656616,
+        "Litigation": 0.5217908620834351
+      }
+    },
+    {
+      "id": 93,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Cybersecurity",
+      "category_confidence": 0.060813188552856445,
+      "all_category_scores": {
+        "Cybersecurity": 0.7740227580070496,
+        "Regulatory": 0.6724919080734253,
+        "Supply Chain": 0.6365432739257812,
+        "Financial": 0.6692587733268738,
+        "Competitive": 0.638636589050293,
+        "Operational": 0.6013131141662598,
+        "Macroeconomic": 0.6194450855255127,
+        "Litigation": 0.7537516951560974
+      }
+    },
+    {
+      "id": 94,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Litigation",
+      "category_confidence": 0.016422629356384277,
+      "all_category_scores": {
+        "Cybersecurity": 0.7512667775154114,
+        "Regulatory": 0.7288821935653687,
+        "Supply Chain": 0.60610032081604,
+        "Financial": 0.7222756743431091,
+        "Competitive": 0.6656145453453064,
+        "Operational": 0.5949021577835083,
+        "Macroeconomic": 0.6207262277603149,
+        "Litigation": 0.7567409873008728
+      }
+    },
+    {
+      "id": 95,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Cybersecurity",
+      "category_confidence": 0.06156778335571289,
+      "all_category_scores": {
+        "Cybersecurity": 0.8058195114135742,
+        "Regulatory": 0.7427353858947754,
+        "Supply Chain": 0.6869221925735474,
+        "Financial": 0.7339720726013184,
+        "Competitive": 0.7852969169616699,
+        "Operational": 0.6413698196411133,
+        "Macroeconomic": 0.651908278465271,
+        "Litigation": 0.7335644364356995
+      }
+    },
+    {
+      "id": 96,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.21434944868087769,
+      "all_category_scores": {
+        "Cybersecurity": 0.40687280893325806,
+        "Regulatory": 0.5412304401397705,
+        "Supply Chain": 0.21977484226226807,
+        "Financial": 0.4697806239128113,
+        "Competitive": 0.3678564429283142,
+        "Operational": 0.13155341148376465,
+        "Macroeconomic": 0.30266767740249634,
+        "Litigation": 0.40869373083114624
+      }
+    },
+    {
+      "id": 97,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.026616454124450684,
+      "all_category_scores": {
+        "Cybersecurity": 0.6286680698394775,
+        "Regulatory": 0.6886402368545532,
+        "Supply Chain": 0.5834140777587891,
+        "Financial": 0.6793620586395264,
+        "Competitive": 0.6797680854797363,
+        "Operational": 0.5531191229820251,
+        "Macroeconomic": 0.6261844635009766,
+        "Litigation": 0.6119260787963867
+      }
+    },
+    {
+      "id": 98,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Cybersecurity",
+      "category_confidence": 0.1233748197555542,
+      "all_category_scores": {
+        "Cybersecurity": 0.7464940547943115,
+        "Regulatory": 0.5823658108711243,
+        "Supply Chain": 0.7053691148757935,
+        "Financial": 0.6598354578018188,
+        "Competitive": 0.7009724974632263,
+        "Operational": 0.6820819973945618,
+        "Macroeconomic": 0.671592116355896,
+        "Litigation": 0.6775423288345337
+      }
+    },
+    {
+      "id": 99,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Supply Chain",
+      "category_confidence": 0.030843257904052734,
+      "all_category_scores": {
+        "Cybersecurity": 0.7036990523338318,
+        "Regulatory": 0.5888742208480835,
+        "Supply Chain": 0.8093723058700562,
+        "Financial": 0.7990912199020386,
+        "Competitive": 0.7914676666259766,
+        "Operational": 0.7910995483398438,
+        "Macroeconomic": 0.7226628065109253,
+        "Litigation": 0.6647558808326721
+      }
+    },
+    {
+      "id": 100,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.23877578973770142,
+      "all_category_scores": {
+        "Cybersecurity": 0.5987018346786499,
+        "Regulatory": 0.7269716858863831,
+        "Supply Chain": 0.4774042069911957,
+        "Financial": 0.6473797559738159,
+        "Competitive": 0.6394360065460205,
+        "Operational": 0.4628644585609436,
+        "Macroeconomic": 0.5216823816299438,
+        "Litigation": 0.6402475833892822
+      }
+    },
+    {
+      "id": 101,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Operational",
+      "category_confidence": 0.0947878360748291,
+      "all_category_scores": {
+        "Cybersecurity": 0.6941676139831543,
+        "Regulatory": 0.6172616481781006,
+        "Supply Chain": 0.7722843885421753,
+        "Financial": 0.7293050289154053,
+        "Competitive": 0.7974487543106079,
+        "Operational": 0.8290446996688843,
+        "Macroeconomic": 0.7558156251907349,
+        "Litigation": 0.6861544251441956
+      }
+    },
+    {
+      "id": 102,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.1144641637802124,
+      "all_category_scores": {
+        "Cybersecurity": 0.5960537791252136,
+        "Regulatory": 0.7160722017288208,
+        "Supply Chain": 0.5271052122116089,
+        "Financial": 0.67791748046875,
+        "Competitive": 0.644148051738739,
+        "Operational": 0.45258191227912903,
+        "Macroeconomic": 0.5366097688674927,
+        "Litigation": 0.6631916761398315
+      }
+    },
+    {
+      "id": 103,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.07909011840820312,
+      "all_category_scores": {
+        "Cybersecurity": 0.7006013989448547,
+        "Regulatory": 0.6577494144439697,
+        "Supply Chain": 0.7606312036514282,
+        "Financial": 0.7560548782348633,
+        "Competitive": 0.7869945764541626,
+        "Operational": 0.7256877422332764,
+        "Macroeconomic": 0.703481912612915,
+        "Litigation": 0.7218433022499084
+      }
+    },
+    {
+      "id": 104,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.1332448124885559,
+      "all_category_scores": {
+        "Cybersecurity": 0.716060996055603,
+        "Regulatory": 0.6606267690658569,
+        "Supply Chain": 0.7496790885925293,
+        "Financial": 0.7735786437988281,
+        "Competitive": 0.8179935812950134,
+        "Operational": 0.731685996055603,
+        "Macroeconomic": 0.7049245834350586,
+        "Litigation": 0.7629156112670898
+      }
+    },
+    {
+      "id": 105,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Financial",
+      "category_confidence": 0.009317457675933838,
+      "all_category_scores": {
+        "Cybersecurity": 0.7096698880195618,
+        "Regulatory": 0.7081539630889893,
+        "Supply Chain": 0.6349258422851562,
+        "Financial": 0.7724491357803345,
+        "Competitive": 0.7376258969306946,
+        "Operational": 0.5894091129302979,
+        "Macroeconomic": 0.6380244493484497,
+        "Litigation": 0.7693433165550232
+      }
+    },
+    {
+      "id": 106,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.08581960201263428,
+      "all_category_scores": {
+        "Cybersecurity": 0.5554937124252319,
+        "Regulatory": 0.6724108457565308,
+        "Supply Chain": 0.5392633676528931,
+        "Financial": 0.6438043117523193,
+        "Competitive": 0.6246752738952637,
+        "Operational": 0.46848827600479126,
+        "Macroeconomic": 0.5134308338165283,
+        "Litigation": 0.6083824634552002
+      }
+    },
+    {
+      "id": 107,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.08510023355484009,
+      "all_category_scores": {
+        "Cybersecurity": 0.7113741636276245,
+        "Regulatory": 0.7784118056297302,
+        "Supply Chain": 0.6699511408805847,
+        "Financial": 0.7308128476142883,
+        "Competitive": 0.7500450611114502,
+        "Operational": 0.6517731547355652,
+        "Macroeconomic": 0.6326442956924438,
+        "Litigation": 0.7145788669586182
+      }
+    },
+    {
+      "id": 108,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Supply Chain",
+      "category_confidence": 0.008466124534606934,
+      "all_category_scores": {
+        "Cybersecurity": 0.4851711392402649,
+        "Regulatory": 0.39145132899284363,
+        "Supply Chain": 0.7489783763885498,
+        "Financial": 0.6206592321395874,
+        "Competitive": 0.6630609035491943,
+        "Operational": 0.7461563348770142,
+        "Macroeconomic": 0.6620585322380066,
+        "Litigation": 0.45492643117904663
+      }
+    },
+    {
+      "id": 109,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.1413668990135193,
+      "all_category_scores": {
+        "Cybersecurity": 0.5979152917861938,
+        "Regulatory": 0.7286745309829712,
+        "Supply Chain": 0.5282140970230103,
+        "Financial": 0.6612563133239746,
+        "Competitive": 0.565156102180481,
+        "Operational": 0.4519081711769104,
+        "Macroeconomic": 0.5264842510223389,
+        "Litigation": 0.6815522313117981
+      }
+    },
+    {
+      "id": 110,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.08823502063751221,
+      "all_category_scores": {
+        "Cybersecurity": 0.6808825731277466,
+        "Regulatory": 0.7353269457817078,
+        "Supply Chain": 0.6620945930480957,
+        "Financial": 0.8026283979415894,
+        "Competitive": 0.773216724395752,
+        "Operational": 0.6296439170837402,
+        "Macroeconomic": 0.7226375341415405,
+        "Litigation": 0.6961469650268555
+      }
+    },
+    {
+      "id": 111,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.04718971252441406,
+      "all_category_scores": {
+        "Cybersecurity": 0.640457034111023,
+        "Regulatory": 0.5656630992889404,
+        "Supply Chain": 0.7386988401412964,
+        "Financial": 0.7228742837905884,
+        "Competitive": 0.7846951484680176,
+        "Operational": 0.7689652442932129,
+        "Macroeconomic": 0.7472312450408936,
+        "Litigation": 0.6354027390480042
+      }
+    },
+    {
+      "id": 112,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Macroeconomic",
+      "category_confidence": 0.048135995864868164,
+      "all_category_scores": {
+        "Cybersecurity": 0.6921101212501526,
+        "Regulatory": 0.6190064549446106,
+        "Supply Chain": 0.7455705404281616,
+        "Financial": 0.6861453056335449,
+        "Competitive": 0.7435404062271118,
+        "Operational": 0.7465994954109192,
+        "Macroeconomic": 0.7626448273658752,
+        "Litigation": 0.6022372245788574
+      }
+    },
+    {
+      "id": 113,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Litigation",
+      "category_confidence": 0.2891281843185425,
+      "all_category_scores": {
+        "Cybersecurity": 0.762095034122467,
+        "Regulatory": 0.7409226894378662,
+        "Supply Chain": 0.7142089605331421,
+        "Financial": 0.7604531049728394,
+        "Competitive": 0.7622096538543701,
+        "Operational": 0.6888184547424316,
+        "Macroeconomic": 0.712592363357544,
+        "Litigation": 0.8585857152938843
+      }
+    },
+    {
+      "id": 114,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Litigation",
+      "category_confidence": 0.042164146900177,
+      "all_category_scores": {
+        "Cybersecurity": 0.8164473176002502,
+        "Regulatory": 0.7792892456054688,
+        "Supply Chain": 0.6987373232841492,
+        "Financial": 0.7065244913101196,
+        "Competitive": 0.7543013095855713,
+        "Operational": 0.6462791562080383,
+        "Macroeconomic": 0.6833574771881104,
+        "Litigation": 0.8305020332336426
+      }
+    },
+    {
+      "id": 115,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.009363770484924316,
+      "all_category_scores": {
+        "Cybersecurity": 0.6431891918182373,
+        "Regulatory": 0.6032834649085999,
+        "Supply Chain": 0.7410846948623657,
+        "Financial": 0.7442059516906738,
+        "Competitive": 0.7081788182258606,
+        "Operational": 0.7033690214157104,
+        "Macroeconomic": 0.6719745397567749,
+        "Litigation": 0.6881256103515625
+      }
+    },
+    {
+      "id": 116,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.24301350116729736,
+      "all_category_scores": {
+        "Cybersecurity": 0.6327862739562988,
+        "Regulatory": 0.7910343408584595,
+        "Supply Chain": 0.58148193359375,
+        "Financial": 0.7098230123519897,
+        "Competitive": 0.6178039908409119,
+        "Operational": 0.519609808921814,
+        "Macroeconomic": 0.5899509787559509,
+        "Litigation": 0.7100298404693604
+      }
+    },
+    {
+      "id": 117,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.15222465991973877,
+      "all_category_scores": {
+        "Cybersecurity": 0.7257453203201294,
+        "Regulatory": 0.7123184204101562,
+        "Supply Chain": 0.7116024494171143,
+        "Financial": 0.8189395666122437,
+        "Competitive": 0.7681980133056641,
+        "Operational": 0.6896029114723206,
+        "Macroeconomic": 0.7415399551391602,
+        "Litigation": 0.7526530027389526
+      }
+    },
+    {
+      "id": 118,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.25230324268341064,
+      "all_category_scores": {
+        "Cybersecurity": 0.7560275197029114,
+        "Regulatory": 0.6722398996353149,
+        "Supply Chain": 0.7454087734222412,
+        "Financial": 0.7366151213645935,
+        "Competitive": 0.8401286005973816,
+        "Operational": 0.7335556745529175,
+        "Macroeconomic": 0.7316625118255615,
+        "Litigation": 0.6996581554412842
+      }
+    },
+    {
+      "id": 119,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.06858497858047485,
+      "all_category_scores": {
+        "Cybersecurity": 0.6893941164016724,
+        "Regulatory": 0.6559137105941772,
+        "Supply Chain": 0.7575873136520386,
+        "Financial": 0.7746887803077698,
+        "Competitive": 0.8139408826828003,
+        "Operational": 0.7566107511520386,
+        "Macroeconomic": 0.7910792231559753,
+        "Litigation": 0.6556179523468018
+      }
+    },
+    {
+      "id": 120,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.17652243375778198,
+      "all_category_scores": {
+        "Cybersecurity": 0.6541332006454468,
+        "Regulatory": 0.6570567488670349,
+        "Supply Chain": 0.591788649559021,
+        "Financial": 0.7012885808944702,
+        "Competitive": 0.7601293921470642,
+        "Operational": 0.597244143486023,
+        "Macroeconomic": 0.6274095773696899,
+        "Litigation": 0.6397699117660522
+      }
+    },
+    {
+      "id": 121,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.24224674701690674,
+      "all_category_scores": {
+        "Cybersecurity": 0.68904048204422,
+        "Regulatory": 0.7015169858932495,
+        "Supply Chain": 0.6168426275253296,
+        "Financial": 0.6946446299552917,
+        "Competitive": 0.7822659015655518,
+        "Operational": 0.6232231259346008,
+        "Macroeconomic": 0.6385909914970398,
+        "Litigation": 0.6814719438552856
+      }
+    },
+    {
+      "id": 122,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.11481356620788574,
+      "all_category_scores": {
+        "Cybersecurity": 0.7508985996246338,
+        "Regulatory": 0.6651374101638794,
+        "Supply Chain": 0.7631086111068726,
+        "Financial": 0.7723963856697083,
+        "Competitive": 0.8213096857070923,
+        "Operational": 0.7830384969711304,
+        "Macroeconomic": 0.7619147300720215,
+        "Litigation": 0.7172359228134155
+      }
+    },
+    {
+      "id": 123,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.06133425235748291,
+      "all_category_scores": {
+        "Cybersecurity": 0.5727574825286865,
+        "Regulatory": 0.672107458114624,
+        "Supply Chain": 0.4602412283420563,
+        "Financial": 0.6342145204544067,
+        "Competitive": 0.6516627073287964,
+        "Operational": 0.4351489841938019,
+        "Macroeconomic": 0.5128746032714844,
+        "Litigation": 0.6102596521377563
+      }
+    },
+    {
+      "id": 124,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.08637374639511108,
+      "all_category_scores": {
+        "Cybersecurity": 0.6827043890953064,
+        "Regulatory": 0.7617369890213013,
+        "Supply Chain": 0.5822319984436035,
+        "Financial": 0.7277593016624451,
+        "Competitive": 0.7329457402229309,
+        "Operational": 0.5799817442893982,
+        "Macroeconomic": 0.6495653390884399,
+        "Litigation": 0.70902419090271
+      }
+    },
+    {
+      "id": 125,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.14097601175308228,
+      "all_category_scores": {
+        "Cybersecurity": 0.5269279479980469,
+        "Regulatory": 0.47060877084732056,
+        "Supply Chain": 0.6913000345230103,
+        "Financial": 0.7043484449386597,
+        "Competitive": 0.7728289365768433,
+        "Operational": 0.7255687713623047,
+        "Macroeconomic": 0.7258369326591492,
+        "Litigation": 0.5331810712814331
+      }
+    },
+    {
+      "id": 126,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.21919620037078857,
+      "all_category_scores": {
+        "Cybersecurity": 0.666296660900116,
+        "Regulatory": 0.6887761950492859,
+        "Supply Chain": 0.7081124782562256,
+        "Financial": 0.7737115621566772,
+        "Competitive": 0.8467769622802734,
+        "Operational": 0.6886130571365356,
+        "Macroeconomic": 0.7338242530822754,
+        "Litigation": 0.6711863279342651
+      }
+    },
+    {
+      "id": 127,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.13212883472442627,
+      "all_category_scores": {
+        "Cybersecurity": 0.7372449636459351,
+        "Regulatory": 0.7030259370803833,
+        "Supply Chain": 0.6687643527984619,
+        "Financial": 0.7405847311019897,
+        "Competitive": 0.7846276760101318,
+        "Operational": 0.6627561450004578,
+        "Macroeconomic": 0.7137576341629028,
+        "Litigation": 0.7279583215713501
+      }
+    },
+    {
+      "id": 128,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.08367419242858887,
+      "all_category_scores": {
+        "Cybersecurity": 0.7824921607971191,
+        "Regulatory": 0.6778010129928589,
+        "Supply Chain": 0.750732958316803,
+        "Financial": 0.7608634233474731,
+        "Competitive": 0.8103835582733154,
+        "Operational": 0.7572436332702637,
+        "Macroeconomic": 0.7326146364212036,
+        "Litigation": 0.7431961297988892
+      }
+    },
+    {
+      "id": 129,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.06197136640548706,
+      "all_category_scores": {
+        "Cybersecurity": 0.5854690670967102,
+        "Regulatory": 0.6492676138877869,
+        "Supply Chain": 0.441192626953125,
+        "Financial": 0.6224133968353271,
+        "Competitive": 0.6699247360229492,
+        "Operational": 0.4298073351383209,
+        "Macroeconomic": 0.5192188620567322,
+        "Litigation": 0.5798214077949524
+      }
+    },
+    {
+      "id": 130,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.04491645097732544,
+      "all_category_scores": {
+        "Cybersecurity": 0.4968099594116211,
+        "Regulatory": 0.5742948651313782,
+        "Supply Chain": 0.35440683364868164,
+        "Financial": 0.559322714805603,
+        "Competitive": 0.5513998866081238,
+        "Operational": 0.3737911581993103,
+        "Macroeconomic": 0.4362073540687561,
+        "Litigation": 0.5075759887695312
+      }
+    },
+    {
+      "id": 131,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Operational",
+      "category_confidence": 0.01018381118774414,
+      "all_category_scores": {
+        "Cybersecurity": 0.6953588128089905,
+        "Regulatory": 0.6258697509765625,
+        "Supply Chain": 0.8142107725143433,
+        "Financial": 0.7848420739173889,
+        "Competitive": 0.8056797981262207,
+        "Operational": 0.8176053762435913,
+        "Macroeconomic": 0.7886512279510498,
+        "Litigation": 0.6689423322677612
+      }
+    },
+    {
+      "id": 132,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.0008726119995117188,
+      "all_category_scores": {
+        "Cybersecurity": 0.694176435470581,
+        "Regulatory": 0.6963808536529541,
+        "Supply Chain": 0.7619168758392334,
+        "Financial": 0.7909233570098877,
+        "Competitive": 0.7912142276763916,
+        "Operational": 0.7335437536239624,
+        "Macroeconomic": 0.7398504018783569,
+        "Litigation": 0.6659330129623413
+      }
+    },
+    {
+      "id": 133,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Supply Chain",
+      "category_confidence": 0.04186105728149414,
+      "all_category_scores": {
+        "Cybersecurity": 0.8113707304000854,
+        "Regulatory": 0.7128065228462219,
+        "Supply Chain": 0.8333359956741333,
+        "Financial": 0.7610586881637573,
+        "Competitive": 0.8193823099136353,
+        "Operational": 0.8105975389480591,
+        "Macroeconomic": 0.7636312246322632,
+        "Litigation": 0.7646617293357849
+      }
+    },
+    {
+      "id": 134,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Cybersecurity",
+      "category_confidence": 0.022312045097351074,
+      "all_category_scores": {
+        "Cybersecurity": 0.7873164415359497,
+        "Regulatory": 0.6641393899917603,
+        "Supply Chain": 0.7682567834854126,
+        "Financial": 0.7614127397537231,
+        "Competitive": 0.779879093170166,
+        "Operational": 0.7793787717819214,
+        "Macroeconomic": 0.7470729351043701,
+        "Litigation": 0.7160446643829346
+      }
+    },
+    {
+      "id": 135,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.00037211179733276367,
+      "all_category_scores": {
+        "Cybersecurity": 0.6993535757064819,
+        "Regulatory": 0.6100568771362305,
+        "Supply Chain": 0.7633911371231079,
+        "Financial": 0.7957544326782227,
+        "Competitive": 0.7956303954124451,
+        "Operational": 0.7754225730895996,
+        "Macroeconomic": 0.7552191019058228,
+        "Litigation": 0.6840020418167114
+      }
+    },
+    {
+      "id": 136,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.037068843841552734,
+      "all_category_scores": {
+        "Cybersecurity": 0.46274957060813904,
+        "Regulatory": 0.5698325634002686,
+        "Supply Chain": 0.3039843738079071,
+        "Financial": 0.557476282119751,
+        "Competitive": 0.49773091077804565,
+        "Operational": 0.2684697210788727,
+        "Macroeconomic": 0.3835761547088623,
+        "Litigation": 0.48871368169784546
+      }
+    },
+    {
+      "id": 137,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.03488820791244507,
+      "all_category_scores": {
+        "Cybersecurity": 0.665431022644043,
+        "Regulatory": 0.7355927228927612,
+        "Supply Chain": 0.5826982259750366,
+        "Financial": 0.7472221255302429,
+        "Competitive": 0.6654039621353149,
+        "Operational": 0.5575953722000122,
+        "Macroeconomic": 0.6353695392608643,
+        "Litigation": 0.6879088878631592
+      }
+    },
+    {
+      "id": 138,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Financial",
+      "category_confidence": 0.16405248641967773,
+      "all_category_scores": {
+        "Cybersecurity": 0.7003904581069946,
+        "Regulatory": 0.7584522366523743,
+        "Supply Chain": 0.7150242328643799,
+        "Financial": 0.8396471738815308,
+        "Competitive": 0.7803258895874023,
+        "Operational": 0.6706176996231079,
+        "Macroeconomic": 0.7849630117416382,
+        "Litigation": 0.728656530380249
+      }
+    },
+    {
+      "id": 139,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.054946303367614746,
+      "all_category_scores": {
+        "Cybersecurity": 0.6339272260665894,
+        "Regulatory": 0.5365657806396484,
+        "Supply Chain": 0.7266306281089783,
+        "Financial": 0.745192289352417,
+        "Competitive": 0.7680505514144897,
+        "Operational": 0.7408256530761719,
+        "Macroeconomic": 0.7497351169586182,
+        "Litigation": 0.6182881593704224
+      }
+    },
+    {
+      "id": 140,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.08534842729568481,
+      "all_category_scores": {
+        "Cybersecurity": 0.6474236249923706,
+        "Regulatory": 0.7125725746154785,
+        "Supply Chain": 0.49075889587402344,
+        "Financial": 0.6099350452423096,
+        "Competitive": 0.6841230988502502,
+        "Operational": 0.4496258497238159,
+        "Macroeconomic": 0.5371702313423157,
+        "Litigation": 0.6252872943878174
+      }
+    },
+    {
+      "id": 141,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.012711167335510254,
+      "all_category_scores": {
+        "Cybersecurity": 0.7363407015800476,
+        "Regulatory": 0.6355489492416382,
+        "Supply Chain": 0.7171003818511963,
+        "Financial": 0.7517238855361938,
+        "Competitive": 0.762336254119873,
+        "Operational": 0.7077235579490662,
+        "Macroeconomic": 0.6952716112136841,
+        "Litigation": 0.7580991983413696
+      }
+    },
+    {
+      "id": 142,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.007889091968536377,
+      "all_category_scores": {
+        "Cybersecurity": 0.8016626834869385,
+        "Regulatory": 0.8042923808097839,
+        "Supply Chain": 0.688644528388977,
+        "Financial": 0.772351861000061,
+        "Competitive": 0.7329908609390259,
+        "Operational": 0.6762592792510986,
+        "Macroeconomic": 0.7357913255691528,
+        "Litigation": 0.783113956451416
+      }
+    },
+    {
+      "id": 143,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Cybersecurity",
+      "category_confidence": 0.1635187268257141,
+      "all_category_scores": {
+        "Cybersecurity": 0.846756100654602,
+        "Regulatory": 0.6558834314346313,
+        "Supply Chain": 0.792249858379364,
+        "Financial": 0.7463610172271729,
+        "Competitive": 0.7612373232841492,
+        "Operational": 0.7836440205574036,
+        "Macroeconomic": 0.7184333205223083,
+        "Litigation": 0.7379285097122192
+      }
+    },
+    {
+      "id": 144,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Cybersecurity",
+      "category_confidence": 0.08277010917663574,
+      "all_category_scores": {
+        "Cybersecurity": 0.7603267431259155,
+        "Regulatory": 0.7188773155212402,
+        "Supply Chain": 0.5995051860809326,
+        "Financial": 0.6787526607513428,
+        "Competitive": 0.694232702255249,
+        "Operational": 0.5953353643417358,
+        "Macroeconomic": 0.6006471514701843,
+        "Litigation": 0.7327367067337036
+      }
+    },
+    {
+      "id": 145,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Cybersecurity",
+      "category_confidence": 0.08042800426483154,
+      "all_category_scores": {
+        "Cybersecurity": 0.811639666557312,
+        "Regulatory": 0.6580109596252441,
+        "Supply Chain": 0.7667917013168335,
+        "Financial": 0.7210248708724976,
+        "Competitive": 0.7848303318023682,
+        "Operational": 0.7683481574058533,
+        "Macroeconomic": 0.7356855869293213,
+        "Litigation": 0.7133908271789551
+      }
+    },
+    {
+      "id": 146,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Operational",
+      "category_confidence": 0.037338316440582275,
+      "all_category_scores": {
+        "Cybersecurity": 0.7566808462142944,
+        "Regulatory": 0.6088813543319702,
+        "Supply Chain": 0.7575889825820923,
+        "Financial": 0.7084290981292725,
+        "Competitive": 0.7767620086669922,
+        "Operational": 0.7892081141471863,
+        "Macroeconomic": 0.712928056716919,
+        "Litigation": 0.7248855829238892
+      }
+    },
+    {
+      "id": 147,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.11295497417449951,
+      "all_category_scores": {
+        "Cybersecurity": 0.798373818397522,
+        "Regulatory": 0.7096211910247803,
+        "Supply Chain": 0.7490831613540649,
+        "Financial": 0.761208713054657,
+        "Competitive": 0.8360254764556885,
+        "Operational": 0.7172300815582275,
+        "Macroeconomic": 0.7261529564857483,
+        "Litigation": 0.7420170307159424
+      }
+    },
+    {
+      "id": 148,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.03629225492477417,
+      "all_category_scores": {
+        "Cybersecurity": 0.71353679895401,
+        "Regulatory": 0.7777599692344666,
+        "Supply Chain": 0.6475735902786255,
+        "Financial": 0.7163561582565308,
+        "Competitive": 0.7656625509262085,
+        "Operational": 0.6121775507926941,
+        "Macroeconomic": 0.6919538974761963,
+        "Litigation": 0.7269729971885681
+      }
+    },
+    {
+      "id": 149,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.05579942464828491,
+      "all_category_scores": {
+        "Cybersecurity": 0.74311363697052,
+        "Regulatory": 0.6959649324417114,
+        "Supply Chain": 0.7599970102310181,
+        "Financial": 0.7082793116569519,
+        "Competitive": 0.7790334224700928,
+        "Operational": 0.7604336142539978,
+        "Macroeconomic": 0.7146742343902588,
+        "Litigation": 0.7443801760673523
+      }
+    },
+    {
+      "id": 150,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.24339938163757324,
+      "all_category_scores": {
+        "Cybersecurity": 0.6672484874725342,
+        "Regulatory": 0.8616235256195068,
+        "Supply Chain": 0.5450403094291687,
+        "Financial": 0.6898905634880066,
+        "Competitive": 0.6800408959388733,
+        "Operational": 0.4915544390678406,
+        "Macroeconomic": 0.5942656993865967,
+        "Litigation": 0.7804903984069824
+      }
+    },
+    {
+      "id": 151,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.2419295310974121,
+      "all_category_scores": {
+        "Cybersecurity": 0.7299522161483765,
+        "Regulatory": 0.8343195915222168,
+        "Supply Chain": 0.5574947595596313,
+        "Financial": 0.654270589351654,
+        "Competitive": 0.6186244487762451,
+        "Operational": 0.48385846614837646,
+        "Macroeconomic": 0.5801413655281067,
+        "Litigation": 0.7536764144897461
+      }
+    },
+    {
+      "id": 152,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.23796343803405762,
+      "all_category_scores": {
+        "Cybersecurity": 0.7147954702377319,
+        "Regulatory": 0.8242206573486328,
+        "Supply Chain": 0.5562487244606018,
+        "Financial": 0.6286628246307373,
+        "Competitive": 0.669445812702179,
+        "Operational": 0.49602705240249634,
+        "Macroeconomic": 0.5975342988967896,
+        "Litigation": 0.7448995113372803
+      }
+    },
+    {
+      "id": 153,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.14869898557662964,
+      "all_category_scores": {
+        "Cybersecurity": 0.6131062507629395,
+        "Regulatory": 0.6844905614852905,
+        "Supply Chain": 0.5699642896652222,
+        "Financial": 0.593063235282898,
+        "Competitive": 0.6295825242996216,
+        "Operational": 0.5555403232574463,
+        "Macroeconomic": 0.6349242329597473,
+        "Litigation": 0.6337919235229492
+      }
+    },
+    {
+      "id": 154,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Litigation",
+      "category_confidence": 0.1501990556716919,
+      "all_category_scores": {
+        "Cybersecurity": 0.8039003014564514,
+        "Regulatory": 0.7808308601379395,
+        "Supply Chain": 0.7530968189239502,
+        "Financial": 0.7863647937774658,
+        "Competitive": 0.7840932011604309,
+        "Operational": 0.7611610293388367,
+        "Macroeconomic": 0.7604857683181763,
+        "Litigation": 0.8539666533470154
+      }
+    },
+    {
+      "id": 155,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Cybersecurity",
+      "category_confidence": 0.07040011882781982,
+      "all_category_scores": {
+        "Cybersecurity": 0.8198165893554688,
+        "Regulatory": 0.7912808060646057,
+        "Supply Chain": 0.7432912588119507,
+        "Financial": 0.7677745819091797,
+        "Competitive": 0.7763180136680603,
+        "Operational": 0.7478546500205994,
+        "Macroeconomic": 0.745290219783783,
+        "Litigation": 0.7963498830795288
+      }
+    },
+    {
+      "id": 156,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.37334346771240234,
+      "all_category_scores": {
+        "Cybersecurity": 0.5971485376358032,
+        "Regulatory": 0.7719157934188843,
+        "Supply Chain": 0.3989928960800171,
+        "Financial": 0.5714675784111023,
+        "Competitive": 0.518302321434021,
+        "Operational": 0.32210659980773926,
+        "Macroeconomic": 0.4635191857814789,
+        "Litigation": 0.6474679708480835
+      }
+    },
+    {
+      "id": 157,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.21724873781204224,
+      "all_category_scores": {
+        "Cybersecurity": 0.7256425619125366,
+        "Regulatory": 0.8212215304374695,
+        "Supply Chain": 0.543503999710083,
+        "Financial": 0.6662779450416565,
+        "Competitive": 0.6172952651977539,
+        "Operational": 0.509443998336792,
+        "Macroeconomic": 0.5759977102279663,
+        "Litigation": 0.7488052845001221
+      }
+    },
+    {
+      "id": 158,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.30864232778549194,
+      "all_category_scores": {
+        "Cybersecurity": 0.7164812088012695,
+        "Regulatory": 0.8193619847297668,
+        "Supply Chain": 0.5017597079277039,
+        "Financial": 0.6333267688751221,
+        "Competitive": 0.588535487651825,
+        "Operational": 0.42143547534942627,
+        "Macroeconomic": 0.547521710395813,
+        "Litigation": 0.7005764245986938
+      }
+    },
+    {
+      "id": 159,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.3771944046020508,
+      "all_category_scores": {
+        "Cybersecurity": 0.61365807056427,
+        "Regulatory": 0.7393895387649536,
+        "Supply Chain": 0.38287389278411865,
+        "Financial": 0.5081652402877808,
+        "Competitive": 0.5564759373664856,
+        "Operational": 0.3064391613006592,
+        "Macroeconomic": 0.4256433844566345,
+        "Litigation": 0.5945340394973755
+      }
+    },
+    {
+      "id": 160,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.04588329792022705,
+      "all_category_scores": {
+        "Cybersecurity": 0.7643477916717529,
+        "Regulatory": 0.6984226703643799,
+        "Supply Chain": 0.7572994828224182,
+        "Financial": 0.7609004974365234,
+        "Competitive": 0.8120317459106445,
+        "Operational": 0.7480728030204773,
+        "Macroeconomic": 0.738892674446106,
+        "Litigation": 0.7967373132705688
+      }
+    },
+    {
+      "id": 161,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.010357975959777832,
+      "all_category_scores": {
+        "Cybersecurity": 0.6961666345596313,
+        "Regulatory": 0.631550669670105,
+        "Supply Chain": 0.7587628960609436,
+        "Financial": 0.8148871660232544,
+        "Competitive": 0.8183398246765137,
+        "Operational": 0.7443927526473999,
+        "Macroeconomic": 0.7723828554153442,
+        "Litigation": 0.7102487087249756
+      }
+    },
+    {
+      "id": 162,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.16163045167922974,
+      "all_category_scores": {
+        "Cybersecurity": 0.6840028762817383,
+        "Regulatory": 0.7958343625068665,
+        "Supply Chain": 0.6179081201553345,
+        "Financial": 0.7419575452804565,
+        "Competitive": 0.7366142272949219,
+        "Operational": 0.5526707768440247,
+        "Macroeconomic": 0.6842372417449951,
+        "Litigation": 0.733574628829956
+      }
+    },
+    {
+      "id": 163,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.07386660575866699,
+      "all_category_scores": {
+        "Cybersecurity": 0.6731646060943604,
+        "Regulatory": 0.6465471386909485,
+        "Supply Chain": 0.5992308855056763,
+        "Financial": 0.7686201333999634,
+        "Competitive": 0.7439979314804077,
+        "Operational": 0.5654038190841675,
+        "Macroeconomic": 0.6788501143455505,
+        "Litigation": 0.6467877626419067
+      }
+    },
+    {
+      "id": 164,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.2925751805305481,
+      "all_category_scores": {
+        "Cybersecurity": 0.5734589099884033,
+        "Regulatory": 0.736522912979126,
+        "Supply Chain": 0.428080290555954,
+        "Financial": 0.611843466758728,
+        "Competitive": 0.5771012306213379,
+        "Operational": 0.3570026159286499,
+        "Macroeconomic": 0.4869418144226074,
+        "Litigation": 0.6389978528022766
+      }
+    },
+    {
+      "id": 165,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.1771135926246643,
+      "all_category_scores": {
+        "Cybersecurity": 0.5314523577690125,
+        "Regulatory": 0.6675313115119934,
+        "Supply Chain": 0.3513656258583069,
+        "Financial": 0.5690341591835022,
+        "Competitive": 0.5374089479446411,
+        "Operational": 0.28509610891342163,
+        "Macroeconomic": 0.41823771595954895,
+        "Litigation": 0.608493447303772
+      }
+    },
+    {
+      "id": 166,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.08721041679382324,
+      "all_category_scores": {
+        "Cybersecurity": 0.6723642349243164,
+        "Regulatory": 0.7547158002853394,
+        "Supply Chain": 0.5542166233062744,
+        "Financial": 0.6817721128463745,
+        "Competitive": 0.6656485795974731,
+        "Operational": 0.49375981092453003,
+        "Macroeconomic": 0.5577288866043091,
+        "Litigation": 0.7256456613540649
+      }
+    },
+    {
+      "id": 167,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.1292855143547058,
+      "all_category_scores": {
+        "Cybersecurity": 0.6396957635879517,
+        "Regulatory": 0.754604697227478,
+        "Supply Chain": 0.4717392325401306,
+        "Financial": 0.6361794471740723,
+        "Competitive": 0.5994688272476196,
+        "Operational": 0.3818517029285431,
+        "Macroeconomic": 0.48754313588142395,
+        "Litigation": 0.7115095257759094
+      }
+    },
+    {
+      "id": 168,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.18993347883224487,
+      "all_category_scores": {
+        "Cybersecurity": 0.5851603746414185,
+        "Regulatory": 0.6355218291282654,
+        "Supply Chain": 0.5789269208908081,
+        "Financial": 0.7415483593940735,
+        "Competitive": 0.6782371997833252,
+        "Operational": 0.4951223134994507,
+        "Macroeconomic": 0.605902910232544,
+        "Litigation": 0.6296738386154175
+      }
+    },
+    {
+      "id": 169,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Operational",
+      "category_confidence": 0.11450958251953125,
+      "all_category_scores": {
+        "Cybersecurity": 0.6125885248184204,
+        "Regulatory": 0.45718029141426086,
+        "Supply Chain": 0.7762483954429626,
+        "Financial": 0.6674944162368774,
+        "Competitive": 0.7422008514404297,
+        "Operational": 0.8144182562828064,
+        "Macroeconomic": 0.7358701229095459,
+        "Litigation": 0.5309780240058899
+      }
+    },
+    {
+      "id": 170,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.11225759983062744,
+      "all_category_scores": {
+        "Cybersecurity": 0.7741329669952393,
+        "Regulatory": 0.6670305132865906,
+        "Supply Chain": 0.7846869826316833,
+        "Financial": 0.790590763092041,
+        "Competitive": 0.8280099630355835,
+        "Operational": 0.7784485220909119,
+        "Macroeconomic": 0.7731980085372925,
+        "Litigation": 0.7737330794334412
+      }
+    },
+    {
+      "id": 171,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.10262507200241089,
+      "all_category_scores": {
+        "Cybersecurity": 0.6755890846252441,
+        "Regulatory": 0.7271406054496765,
+        "Supply Chain": 0.6172255277633667,
+        "Financial": 0.7773639559745789,
+        "Competitive": 0.7431555986404419,
+        "Operational": 0.6018698215484619,
+        "Macroeconomic": 0.6544238328933716,
+        "Litigation": 0.7263873815536499
+      }
+    },
+    {
+      "id": 172,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Financial",
+      "category_confidence": 0.014928281307220459,
+      "all_category_scores": {
+        "Cybersecurity": 0.729989767074585,
+        "Regulatory": 0.7583739757537842,
+        "Supply Chain": 0.7205716371536255,
+        "Financial": 0.7786911129951477,
+        "Competitive": 0.7737150192260742,
+        "Operational": 0.6656215190887451,
+        "Macroeconomic": 0.6950283646583557,
+        "Litigation": 0.7713550329208374
+      }
+    },
+    {
+      "id": 173,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Litigation",
+      "category_confidence": 0.04932832717895508,
+      "all_category_scores": {
+        "Cybersecurity": 0.6949248313903809,
+        "Regulatory": 0.7428617477416992,
+        "Supply Chain": 0.6256410479545593,
+        "Financial": 0.7074072360992432,
+        "Competitive": 0.703865647315979,
+        "Operational": 0.6243340969085693,
+        "Macroeconomic": 0.5875619053840637,
+        "Litigation": 0.7593045234680176
+      }
+    },
+    {
+      "id": 174,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.04835236072540283,
+      "all_category_scores": {
+        "Cybersecurity": 0.6745693683624268,
+        "Regulatory": 0.7756098508834839,
+        "Supply Chain": 0.597302258014679,
+        "Financial": 0.7594923973083496,
+        "Competitive": 0.7106814384460449,
+        "Operational": 0.5486884117126465,
+        "Macroeconomic": 0.6219673156738281,
+        "Litigation": 0.7452799081802368
+      }
+    },
+    {
+      "id": 175,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Litigation",
+      "category_confidence": 0.2382960319519043,
+      "all_category_scores": {
+        "Cybersecurity": 0.8315659761428833,
+        "Regulatory": 0.8048233985900879,
+        "Supply Chain": 0.710755467414856,
+        "Financial": 0.7770894169807434,
+        "Competitive": 0.7386650443077087,
+        "Operational": 0.6812548637390137,
+        "Macroeconomic": 0.6928619146347046,
+        "Litigation": 0.9109979867935181
+      }
+    },
+    {
+      "id": 176,
+      "source": "GOOGL",
+      "severity_label": "medium",
+      "category": "Litigation",
+      "category_confidence": 0.3846893906593323,
+      "all_category_scores": {
+        "Cybersecurity": 0.7472050786018372,
+        "Regulatory": 0.7099127769470215,
+        "Supply Chain": 0.6652275323867798,
+        "Financial": 0.7040069103240967,
+        "Competitive": 0.715920090675354,
+        "Operational": 0.6161008477210999,
+        "Macroeconomic": 0.6217058897018433,
+        "Litigation": 0.8754348754882812
+      }
+    },
+    {
+      "id": 177,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.06372392177581787,
+      "all_category_scores": {
+        "Cybersecurity": 0.7473556399345398,
+        "Regulatory": 0.6398751735687256,
+        "Supply Chain": 0.7740926742553711,
+        "Financial": 0.7976138591766357,
+        "Competitive": 0.8188551664352417,
+        "Operational": 0.7767133712768555,
+        "Macroeconomic": 0.7560104131698608,
+        "Litigation": 0.7408962249755859
+      }
+    },
+    {
+      "id": 178,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.1214296817779541,
+      "all_category_scores": {
+        "Cybersecurity": 0.5761877298355103,
+        "Regulatory": 0.6099339723587036,
+        "Supply Chain": 0.5006921291351318,
+        "Financial": 0.6179888248443604,
+        "Competitive": 0.6584653854370117,
+        "Operational": 0.5279572010040283,
+        "Macroeconomic": 0.5266085863113403,
+        "Litigation": 0.5665140151977539
+      }
+    },
+    {
+      "id": 179,
+      "source": "GOOGL",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.21543806791305542,
+      "all_category_scores": {
+        "Cybersecurity": 0.462437242269516,
+        "Regulatory": 0.6132676601409912,
+        "Supply Chain": 0.32133448123931885,
+        "Financial": 0.5414549708366394,
+        "Competitive": 0.48426109552383423,
+        "Operational": 0.31120723485946655,
+        "Macroeconomic": 0.3824254870414734,
+        "Litigation": 0.5131359100341797
+      }
+    },
+    {
+      "id": 180,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Supply Chain",
+      "category_confidence": 0.11010396480560303,
+      "all_category_scores": {
+        "Cybersecurity": 0.7115153074264526,
+        "Regulatory": 0.704586386680603,
+        "Supply Chain": 0.8057810068130493,
+        "Financial": 0.7661129236221313,
+        "Competitive": 0.7690796852111816,
+        "Operational": 0.7094560861587524,
+        "Macroeconomic": 0.7083549499511719,
+        "Litigation": 0.650058388710022
+      }
+    },
+    {
+      "id": 181,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.168023943901062,
+      "all_category_scores": {
+        "Cybersecurity": 0.6684635877609253,
+        "Regulatory": 0.7307490110397339,
+        "Supply Chain": 0.6483783721923828,
+        "Financial": 0.6521270871162415,
+        "Competitive": 0.6706365346908569,
+        "Operational": 0.5857222676277161,
+        "Macroeconomic": 0.5883293151855469,
+        "Litigation": 0.6747410297393799
+      }
+    },
+    {
+      "id": 182,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.08830064535140991,
+      "all_category_scores": {
+        "Cybersecurity": 0.6425520181655884,
+        "Regulatory": 0.7131396532058716,
+        "Supply Chain": 0.5608630180358887,
+        "Financial": 0.6385075449943542,
+        "Competitive": 0.6837061047554016,
+        "Operational": 0.5193996429443359,
+        "Macroeconomic": 0.5397549867630005,
+        "Litigation": 0.6658936738967896
+      }
+    },
+    {
+      "id": 183,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.08105331659317017,
+      "all_category_scores": {
+        "Cybersecurity": 0.6322818994522095,
+        "Regulatory": 0.7503202557563782,
+        "Supply Chain": 0.615303635597229,
+        "Financial": 0.7032691836357117,
+        "Competitive": 0.7233024835586548,
+        "Operational": 0.5254729986190796,
+        "Macroeconomic": 0.5995000600814819,
+        "Litigation": 0.6700053215026855
+      }
+    },
+    {
+      "id": 184,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.06532752513885498,
+      "all_category_scores": {
+        "Cybersecurity": 0.6889321804046631,
+        "Regulatory": 0.6573094129562378,
+        "Supply Chain": 0.7589849233627319,
+        "Financial": 0.7136096954345703,
+        "Competitive": 0.7807607650756836,
+        "Operational": 0.6635052561759949,
+        "Macroeconomic": 0.6545199155807495,
+        "Litigation": 0.7201411128044128
+      }
+    },
+    {
+      "id": 185,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.03591710329055786,
+      "all_category_scores": {
+        "Cybersecurity": 0.7236901521682739,
+        "Regulatory": 0.6636330485343933,
+        "Supply Chain": 0.8526178002357483,
+        "Financial": 0.7553274631500244,
+        "Competitive": 0.8645901679992676,
+        "Operational": 0.8203332424163818,
+        "Macroeconomic": 0.7574934959411621,
+        "Litigation": 0.7053315043449402
+      }
+    },
+    {
+      "id": 186,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.14096957445144653,
+      "all_category_scores": {
+        "Cybersecurity": 0.6340728998184204,
+        "Regulatory": 0.7317569255828857,
+        "Supply Chain": 0.6400651931762695,
+        "Financial": 0.6847670674324036,
+        "Competitive": 0.6768051385879517,
+        "Operational": 0.5320324897766113,
+        "Macroeconomic": 0.605453610420227,
+        "Litigation": 0.6480649709701538
+      }
+    },
+    {
+      "id": 187,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.07950103282928467,
+      "all_category_scores": {
+        "Cybersecurity": 0.7118507027626038,
+        "Regulatory": 0.6391154527664185,
+        "Supply Chain": 0.8154882192611694,
+        "Financial": 0.7415651082992554,
+        "Competitive": 0.8419885635375977,
+        "Operational": 0.776689887046814,
+        "Macroeconomic": 0.731617271900177,
+        "Litigation": 0.6857419013977051
+      }
+    },
+    {
+      "id": 188,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Supply Chain",
+      "category_confidence": 0.18996816873550415,
+      "all_category_scores": {
+        "Cybersecurity": 0.7712934017181396,
+        "Regulatory": 0.7005439400672913,
+        "Supply Chain": 0.8435840606689453,
+        "Financial": 0.7080316543579102,
+        "Competitive": 0.7732526659965515,
+        "Operational": 0.7802613377571106,
+        "Macroeconomic": 0.757575511932373,
+        "Litigation": 0.7289034724235535
+      }
+    },
+    {
+      "id": 189,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.1397191286087036,
+      "all_category_scores": {
+        "Cybersecurity": 0.6506119966506958,
+        "Regulatory": 0.6588809490203857,
+        "Supply Chain": 0.7742108106613159,
+        "Financial": 0.7779232263565063,
+        "Competitive": 0.8244962692260742,
+        "Operational": 0.7505228519439697,
+        "Macroeconomic": 0.7600288987159729,
+        "Litigation": 0.6585638523101807
+      }
+    },
+    {
+      "id": 190,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Macroeconomic",
+      "category_confidence": 0.001191258430480957,
+      "all_category_scores": {
+        "Cybersecurity": 0.6146295070648193,
+        "Regulatory": 0.5564480423927307,
+        "Supply Chain": 0.8033558130264282,
+        "Financial": 0.7829028964042664,
+        "Competitive": 0.8138799667358398,
+        "Operational": 0.8028644919395447,
+        "Macroeconomic": 0.8142770528793335,
+        "Litigation": 0.5851538181304932
+      }
+    },
+    {
+      "id": 191,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Competitive",
+      "category_confidence": 0.06288886070251465,
+      "all_category_scores": {
+        "Cybersecurity": 0.6287164688110352,
+        "Regulatory": 0.7160829305648804,
+        "Supply Chain": 0.5867558717727661,
+        "Financial": 0.6938635110855103,
+        "Competitive": 0.7370458841323853,
+        "Operational": 0.5537893772125244,
+        "Macroeconomic": 0.645817756652832,
+        "Litigation": 0.6490161418914795
+      }
+    },
+    {
+      "id": 192,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.01759260892868042,
+      "all_category_scores": {
+        "Cybersecurity": 0.7576876282691956,
+        "Regulatory": 0.7851117253303528,
+        "Supply Chain": 0.6619001030921936,
+        "Financial": 0.7497953176498413,
+        "Competitive": 0.753745973110199,
+        "Operational": 0.5600178241729736,
+        "Macroeconomic": 0.6508618593215942,
+        "Litigation": 0.779247522354126
+      }
+    },
+    {
+      "id": 193,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Competitive",
+      "category_confidence": 0.1381271481513977,
+      "all_category_scores": {
+        "Cybersecurity": 0.7266155481338501,
+        "Regulatory": 0.5875279903411865,
+        "Supply Chain": 0.8135340213775635,
+        "Financial": 0.7524064779281616,
+        "Competitive": 0.859576404094696,
+        "Operational": 0.8116936683654785,
+        "Macroeconomic": 0.7654350996017456,
+        "Litigation": 0.708907961845398
+      }
+    },
+    {
+      "id": 194,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Financial",
+      "category_confidence": 0.03803551197052002,
+      "all_category_scores": {
+        "Cybersecurity": 0.7147976160049438,
+        "Regulatory": 0.6235716342926025,
+        "Supply Chain": 0.8354620337486267,
+        "Financial": 0.8589291572570801,
+        "Competitive": 0.8387530446052551,
+        "Operational": 0.8298016786575317,
+        "Macroeconomic": 0.8462506532669067,
+        "Litigation": 0.64467453956604
+      }
+    },
+    {
+      "id": 195,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.005194902420043945,
+      "all_category_scores": {
+        "Cybersecurity": 0.6929647922515869,
+        "Regulatory": 0.7587903738021851,
+        "Supply Chain": 0.6644667387008667,
+        "Financial": 0.7320898771286011,
+        "Competitive": 0.7427884340286255,
+        "Operational": 0.6436443328857422,
+        "Macroeconomic": 0.6334422826766968,
+        "Litigation": 0.7570587396621704
+      }
+    },
+    {
+      "id": 196,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Litigation",
+      "category_confidence": 0.0037497282028198242,
+      "all_category_scores": {
+        "Cybersecurity": 0.7035773396492004,
+        "Regulatory": 0.6910969018936157,
+        "Supply Chain": 0.6785084009170532,
+        "Financial": 0.7857493162155151,
+        "Competitive": 0.7205040454864502,
+        "Operational": 0.6327564716339111,
+        "Macroeconomic": 0.674140453338623,
+        "Litigation": 0.7869992256164551
+      }
+    },
+    {
+      "id": 197,
+      "source": "NVDA",
+      "severity_label": "high",
+      "category": "Litigation",
+      "category_confidence": 0.013227224349975586,
+      "all_category_scores": {
+        "Cybersecurity": 0.7320719957351685,
+        "Regulatory": 0.7044734954833984,
+        "Supply Chain": 0.7649106383323669,
+        "Financial": 0.7554798126220703,
+        "Competitive": 0.7884422540664673,
+        "Operational": 0.7161827683448792,
+        "Macroeconomic": 0.700576663017273,
+        "Litigation": 0.7928513288497925
+      }
+    },
+    {
+      "id": 198,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.19022709131240845,
+      "all_category_scores": {
+        "Cybersecurity": 0.5914202332496643,
+        "Regulatory": 0.6832174062728882,
+        "Supply Chain": 0.5908945202827454,
+        "Financial": 0.7737414836883545,
+        "Competitive": 0.710332453250885,
+        "Operational": 0.5394940972328186,
+        "Macroeconomic": 0.6199703216552734,
+        "Litigation": 0.6579585075378418
+      }
+    },
+    {
+      "id": 199,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Financial",
+      "category_confidence": 0.12323766946792603,
+      "all_category_scores": {
+        "Cybersecurity": 0.5732380151748657,
+        "Regulatory": 0.6198790073394775,
+        "Supply Chain": 0.49424299597740173,
+        "Financial": 0.711281418800354,
+        "Competitive": 0.6702021956443787,
+        "Operational": 0.4398921728134155,
+        "Macroeconomic": 0.576301097869873,
+        "Litigation": 0.622859001159668
+      }
+    },
+    {
+      "id": 200,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Cybersecurity",
+      "category_confidence": 0.030593812465667725,
+      "all_category_scores": {
+        "Cybersecurity": 0.8313525915145874,
+        "Regulatory": 0.7025464177131653,
+        "Supply Chain": 0.6752030849456787,
+        "Financial": 0.8211546540260315,
+        "Competitive": 0.7530357837677002,
+        "Operational": 0.6352682113647461,
+        "Macroeconomic": 0.6938395500183105,
+        "Litigation": 0.743340253829956
+      }
+    },
+    {
+      "id": 201,
+      "source": "NVDA",
+      "severity_label": "medium",
+      "category": "Litigation",
+      "category_confidence": 0.033396899700164795,
+      "all_category_scores": {
+        "Cybersecurity": 0.7575345039367676,
+        "Regulatory": 0.6861081123352051,
+        "Supply Chain": 0.7425582408905029,
+        "Financial": 0.7516652345657349,
+        "Competitive": 0.7753254175186157,
+        "Operational": 0.7091268301010132,
+        "Macroeconomic": 0.7112117409706116,
+        "Litigation": 0.7864577174186707
+      }
+    },
+    {
+      "id": 202,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.3865177631378174,
+      "all_category_scores": {
+        "Cybersecurity": 0.6624698638916016,
+        "Regulatory": 0.8592395782470703,
+        "Supply Chain": 0.574110746383667,
+        "Financial": 0.6646994352340698,
+        "Competitive": 0.6324571371078491,
+        "Operational": 0.5115385055541992,
+        "Macroeconomic": 0.601810097694397,
+        "Litigation": 0.7304003238677979
+      }
+    },
+    {
+      "id": 203,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.15335726737976074,
+      "all_category_scores": {
+        "Cybersecurity": 0.7712281942367554,
+        "Regulatory": 0.8488442897796631,
+        "Supply Chain": 0.7002211809158325,
+        "Financial": 0.7655295133590698,
+        "Competitive": 0.7477949261665344,
+        "Operational": 0.6567556858062744,
+        "Macroeconomic": 0.6910265684127808,
+        "Litigation": 0.7977252006530762
+      }
+    },
+    {
+      "id": 204,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.397479772567749,
+      "all_category_scores": {
+        "Cybersecurity": 0.7012052536010742,
+        "Regulatory": 0.8490936756134033,
+        "Supply Chain": 0.5118594169616699,
+        "Financial": 0.6498997211456299,
+        "Competitive": 0.5948309898376465,
+        "Operational": 0.4415518045425415,
+        "Macroeconomic": 0.5623299479484558,
+        "Litigation": 0.7166004180908203
+      }
+    },
+    {
+      "id": 205,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.0983816385269165,
+      "all_category_scores": {
+        "Cybersecurity": 0.7472538948059082,
+        "Regulatory": 0.7800477743148804,
+        "Supply Chain": 0.5667845010757446,
+        "Financial": 0.6638215780258179,
+        "Competitive": 0.5990597009658813,
+        "Operational": 0.5321787595748901,
+        "Macroeconomic": 0.5824015140533447,
+        "Litigation": 0.7386925220489502
+      }
+    },
+    {
+      "id": 206,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.16857773065567017,
+      "all_category_scores": {
+        "Cybersecurity": 0.6773958206176758,
+        "Regulatory": 0.7335883975028992,
+        "Supply Chain": 0.5191966891288757,
+        "Financial": 0.6709739565849304,
+        "Competitive": 0.6012245416641235,
+        "Operational": 0.4529016613960266,
+        "Macroeconomic": 0.644823431968689,
+        "Litigation": 0.6670844554901123
+      }
+    },
+    {
+      "id": 207,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Litigation",
+      "category_confidence": 0.05722600221633911,
+      "all_category_scores": {
+        "Cybersecurity": 0.7229960560798645,
+        "Regulatory": 0.6321943402290344,
+        "Supply Chain": 0.7395390272140503,
+        "Financial": 0.7634539604187012,
+        "Competitive": 0.7802965641021729,
+        "Operational": 0.7422851324081421,
+        "Macroeconomic": 0.7318833470344543,
+        "Litigation": 0.7993718981742859
+      }
+    },
+    {
+      "id": 208,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Regulatory",
+      "category_confidence": 0.13797587156295776,
+      "all_category_scores": {
+        "Cybersecurity": 0.7030824422836304,
+        "Regulatory": 0.7871138453483582,
+        "Supply Chain": 0.5891141891479492,
+        "Financial": 0.7182915210723877,
+        "Competitive": 0.7009992599487305,
+        "Operational": 0.5927095413208008,
+        "Macroeconomic": 0.6574941277503967,
+        "Litigation": 0.7411218881607056
+      }
+    },
+    {
+      "id": 209,
+      "source": "AMZN",
+      "severity_label": "medium",
+      "category": "Regulatory",
+      "category_confidence": 0.22592782974243164,
+      "all_category_scores": {
+        "Cybersecurity": 0.541091799736023,
+        "Regulatory": 0.7202440500259399,
+        "Supply Chain": 0.49212825298309326,
+        "Financial": 0.6449347734451294,
+        "Competitive": 0.596189022064209,
+        "Operational": 0.41720348596572876,
+        "Macroeconomic": 0.5869283676147461,
+        "Litigation": 0.5728728771209717
+      }
+    },
+    {
+      "id": 210,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Cybersecurity",
+      "category_confidence": 0.48999059200286865,
+      "all_category_scores": {
+        "Cybersecurity": 0.9333635568618774,
+        "Regulatory": 0.7457369565963745,
+        "Supply Chain": 0.6817502975463867,
+        "Financial": 0.720490574836731,
+        "Competitive": 0.716437816619873,
+        "Operational": 0.6313152313232422,
+        "Macroeconomic": 0.6916990876197815,
+        "Litigation": 0.7700333595275879
+      }
+    },
+    {
+      "id": 211,
+      "source": "AMZN",
+      "severity_label": "high",
+      "category": "Financial",
+      "category_confidence": 0.02973926067352295,
+      "all_category_scores": {
+        "Cybersecurity": 0.5374540686607361,
+        "Regulatory": 0.577122688293457,
+        "Supply Chain": 0.43731024861335754,
+        "Financial": 0.6042282581329346,
+        "Competitive": 0.5943151712417603,
+        "Operational": 0.47253161668777466,
+        "Macroeconomic": 0.49927496910095215,
+        "Litigation": 0.53560471534729
+      }
+    },
+    {
+      "id": 212,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.06688928604125977,
+      "all_category_scores": {
+        "Cybersecurity": 0.5155882835388184,
+        "Regulatory": 0.6653954982757568,
+        "Supply Chain": 0.4402580261230469,
+        "Financial": 0.6430990695953369,
+        "Competitive": 0.5450440049171448,
+        "Operational": 0.3526473343372345,
+        "Macroeconomic": 0.49090105295181274,
+        "Litigation": 0.5691803693771362
+      }
+    },
+    {
+      "id": 213,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.08537578582763672,
+      "all_category_scores": {
+        "Cybersecurity": 0.5991294384002686,
+        "Regulatory": 0.7427461743354797,
+        "Supply Chain": 0.5137942433357239,
+        "Financial": 0.7142875790596008,
+        "Competitive": 0.6115216612815857,
+        "Operational": 0.46081870794296265,
+        "Macroeconomic": 0.5865337252616882,
+        "Litigation": 0.65803062915802
+      }
+    },
+    {
+      "id": 214,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.03981292247772217,
+      "all_category_scores": {
+        "Cybersecurity": 0.660742998123169,
+        "Regulatory": 0.7393170595169067,
+        "Supply Chain": 0.6406647562980652,
+        "Financial": 0.7525880336761475,
+        "Competitive": 0.6849403381347656,
+        "Operational": 0.5447846055030823,
+        "Macroeconomic": 0.669319212436676,
+        "Litigation": 0.680385947227478
+      }
+    },
+    {
+      "id": 215,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.19343698024749756,
+      "all_category_scores": {
+        "Cybersecurity": 0.6119402050971985,
+        "Regulatory": 0.6630659103393555,
+        "Supply Chain": 0.6173800826072693,
+        "Financial": 0.7593085765838623,
+        "Competitive": 0.6948295831680298,
+        "Operational": 0.5854175090789795,
+        "Macroeconomic": 0.6447054743766785,
+        "Litigation": 0.6531244516372681
+      }
+    },
+    {
+      "id": 216,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.13687920570373535,
+      "all_category_scores": {
+        "Cybersecurity": 0.638324499130249,
+        "Regulatory": 0.8096500635147095,
+        "Supply Chain": 0.5450392961502075,
+        "Financial": 0.7219027280807495,
+        "Competitive": 0.606482744216919,
+        "Operational": 0.47956961393356323,
+        "Macroeconomic": 0.6059321165084839,
+        "Litigation": 0.7640236616134644
+      }
+    },
+    {
+      "id": 217,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.2980425953865051,
+      "all_category_scores": {
+        "Cybersecurity": 0.4096702039241791,
+        "Regulatory": 0.5785489082336426,
+        "Supply Chain": 0.26867783069610596,
+        "Financial": 0.47920137643814087,
+        "Competitive": 0.45690950751304626,
+        "Operational": 0.2357538938522339,
+        "Macroeconomic": 0.3308711647987366,
+        "Litigation": 0.4612857699394226
+      }
+    },
+    {
+      "id": 218,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.20129817724227905,
+      "all_category_scores": {
+        "Cybersecurity": 0.5034268498420715,
+        "Regulatory": 0.6283416748046875,
+        "Supply Chain": 0.2980216443538666,
+        "Financial": 0.5146273374557495,
+        "Competitive": 0.4960476756095886,
+        "Operational": 0.226424902677536,
+        "Macroeconomic": 0.3711726665496826,
+        "Litigation": 0.5612422823905945
+      }
+    },
+    {
+      "id": 219,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.3041544556617737,
+      "all_category_scores": {
+        "Cybersecurity": 0.49023932218551636,
+        "Regulatory": 0.6217409372329712,
+        "Supply Chain": 0.2954867482185364,
+        "Financial": 0.47991442680358887,
+        "Competitive": 0.5017720460891724,
+        "Operational": 0.2120409607887268,
+        "Macroeconomic": 0.33680325746536255,
+        "Litigation": 0.5203561186790466
+      }
+    },
+    {
+      "id": 220,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.3545953631401062,
+      "all_category_scores": {
+        "Cybersecurity": 0.39762556552886963,
+        "Regulatory": 0.5617455244064331,
+        "Supply Chain": 0.2119542956352234,
+        "Financial": 0.4242974519729614,
+        "Competitive": 0.4206523001194,
+        "Operational": 0.1671932190656662,
+        "Macroeconomic": 0.29907846450805664,
+        "Litigation": 0.4435470700263977
+      }
+    },
+    {
+      "id": 221,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.08205628395080566,
+      "all_category_scores": {
+        "Cybersecurity": 0.48514682054519653,
+        "Regulatory": 0.586226224899292,
+        "Supply Chain": 0.3791041970252991,
+        "Financial": 0.5588741302490234,
+        "Competitive": 0.5362483859062195,
+        "Operational": 0.35457557439804077,
+        "Macroeconomic": 0.41342172026634216,
+        "Litigation": 0.49186229705810547
+      }
+    },
+    {
+      "id": 222,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.23410016298294067,
+      "all_category_scores": {
+        "Cybersecurity": 0.5530918836593628,
+        "Regulatory": 0.7225484848022461,
+        "Supply Chain": 0.453829824924469,
+        "Financial": 0.6408517360687256,
+        "Competitive": 0.5655903816223145,
+        "Operational": 0.38078051805496216,
+        "Macroeconomic": 0.4918200969696045,
+        "Litigation": 0.6445150971412659
+      }
+    },
+    {
+      "id": 223,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.07525402307510376,
+      "all_category_scores": {
+        "Cybersecurity": 0.5895313024520874,
+        "Regulatory": 0.7293909788131714,
+        "Supply Chain": 0.5745840668678284,
+        "Financial": 0.7001705169677734,
+        "Competitive": 0.7043063044548035,
+        "Operational": 0.4991898238658905,
+        "Macroeconomic": 0.5953269004821777,
+        "Litigation": 0.6392751932144165
+      }
+    },
+    {
+      "id": 224,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.10229837894439697,
+      "all_category_scores": {
+        "Cybersecurity": 0.6787407994270325,
+        "Regulatory": 0.7777392864227295,
+        "Supply Chain": 0.5965938568115234,
+        "Financial": 0.676596999168396,
+        "Competitive": 0.7242141962051392,
+        "Operational": 0.514463484287262,
+        "Macroeconomic": 0.5989585518836975,
+        "Litigation": 0.7436398267745972
+      }
+    },
+    {
+      "id": 225,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Competitive",
+      "category_confidence": 0.20621216297149658,
+      "all_category_scores": {
+        "Cybersecurity": 0.6397922039031982,
+        "Regulatory": 0.6953551769256592,
+        "Supply Chain": 0.6754575967788696,
+        "Financial": 0.7235391139984131,
+        "Competitive": 0.7922765016555786,
+        "Operational": 0.5980019569396973,
+        "Macroeconomic": 0.6581681966781616,
+        "Litigation": 0.6342666149139404
+      }
+    },
+    {
+      "id": 226,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Competitive",
+      "category_confidence": 0.32996678352355957,
+      "all_category_scores": {
+        "Cybersecurity": 0.501020073890686,
+        "Regulatory": 0.5964950323104858,
+        "Supply Chain": 0.5021074414253235,
+        "Financial": 0.5766003131866455,
+        "Competitive": 0.7064839601516724,
+        "Operational": 0.4583725333213806,
+        "Macroeconomic": 0.4991704225540161,
+        "Litigation": 0.5362145900726318
+      }
+    },
+    {
+      "id": 227,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.4134405255317688,
+      "all_category_scores": {
+        "Cybersecurity": 0.4697449803352356,
+        "Regulatory": 0.6612394452095032,
+        "Supply Chain": 0.36913585662841797,
+        "Financial": 0.5211496353149414,
+        "Competitive": 0.5024087429046631,
+        "Operational": 0.30382871627807617,
+        "Macroeconomic": 0.4465887248516083,
+        "Litigation": 0.5234259366989136
+      }
+    },
+    {
+      "id": 228,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.4506527781486511,
+      "all_category_scores": {
+        "Cybersecurity": 0.541449248790741,
+        "Regulatory": 0.7400643229484558,
+        "Supply Chain": 0.43833136558532715,
+        "Financial": 0.5657942295074463,
+        "Competitive": 0.5254524946212769,
+        "Operational": 0.39369213581085205,
+        "Macroeconomic": 0.46523353457450867,
+        "Litigation": 0.5898467302322388
+      }
+    },
+    {
+      "id": 229,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.2453565001487732,
+      "all_category_scores": {
+        "Cybersecurity": 0.5184220671653748,
+        "Regulatory": 0.6590169072151184,
+        "Supply Chain": 0.395851194858551,
+        "Financial": 0.545578122138977,
+        "Competitive": 0.5380125641822815,
+        "Operational": 0.3307597041130066,
+        "Macroeconomic": 0.4014888107776642,
+        "Litigation": 0.5772314071655273
+      }
+    },
+    {
+      "id": 230,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.13036662340164185,
+      "all_category_scores": {
+        "Cybersecurity": 0.6147013306617737,
+        "Regulatory": 0.7205744385719299,
+        "Supply Chain": 0.5841542482376099,
+        "Financial": 0.7640299797058105,
+        "Competitive": 0.6783541440963745,
+        "Operational": 0.5230455994606018,
+        "Macroeconomic": 0.5982719659805298,
+        "Litigation": 0.6975542306900024
+      }
+    },
+    {
+      "id": 231,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.012448668479919434,
+      "all_category_scores": {
+        "Cybersecurity": 0.6353828310966492,
+        "Regulatory": 0.6900476217269897,
+        "Supply Chain": 0.5421903133392334,
+        "Financial": 0.6858980655670166,
+        "Competitive": 0.6655467748641968,
+        "Operational": 0.5011064410209656,
+        "Macroeconomic": 0.5672143697738647,
+        "Litigation": 0.6743584871292114
+      }
+    },
+    {
+      "id": 232,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.1056675910949707,
+      "all_category_scores": {
+        "Cybersecurity": 0.6312205195426941,
+        "Regulatory": 0.7515394687652588,
+        "Supply Chain": 0.5334554314613342,
+        "Financial": 0.7163169384002686,
+        "Competitive": 0.6341345906257629,
+        "Operational": 0.4490000605583191,
+        "Macroeconomic": 0.5727080702781677,
+        "Litigation": 0.7120213508605957
+      }
+    },
+    {
+      "id": 233,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.43335217237472534,
+      "all_category_scores": {
+        "Cybersecurity": 0.6370276212692261,
+        "Regulatory": 0.8206325769424438,
+        "Supply Chain": 0.49192750453948975,
+        "Financial": 0.5871293544769287,
+        "Competitive": 0.5806723833084106,
+        "Operational": 0.399381160736084,
+        "Macroeconomic": 0.4950857162475586,
+        "Litigation": 0.6761818528175354
+      }
+    },
+    {
+      "id": 234,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.06419777870178223,
+      "all_category_scores": {
+        "Cybersecurity": 0.6232668161392212,
+        "Regulatory": 0.7156541347503662,
+        "Supply Chain": 0.515123724937439,
+        "Financial": 0.6942548751831055,
+        "Competitive": 0.5815473794937134,
+        "Operational": 0.41544684767723083,
+        "Macroeconomic": 0.5462924838066101,
+        "Litigation": 0.6487587690353394
+      }
+    },
+    {
+      "id": 235,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Competitive",
+      "category_confidence": 0.04787975549697876,
+      "all_category_scores": {
+        "Cybersecurity": 0.5629814863204956,
+        "Regulatory": 0.6086569428443909,
+        "Supply Chain": 0.6249522566795349,
+        "Financial": 0.6861063838005066,
+        "Competitive": 0.7020663022994995,
+        "Operational": 0.5672867894172668,
+        "Macroeconomic": 0.5729798078536987,
+        "Litigation": 0.566774845123291
+      }
+    },
+    {
+      "id": 236,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.041198909282684326,
+      "all_category_scores": {
+        "Cybersecurity": 0.6243778467178345,
+        "Regulatory": 0.5707942247390747,
+        "Supply Chain": 0.7581154108047485,
+        "Financial": 0.8084639310836792,
+        "Competitive": 0.7947309613227844,
+        "Operational": 0.7567848563194275,
+        "Macroeconomic": 0.7549931406974792,
+        "Litigation": 0.6348549127578735
+      }
+    },
+    {
+      "id": 237,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.02230846881866455,
+      "all_category_scores": {
+        "Cybersecurity": 0.5686574578285217,
+        "Regulatory": 0.5810548663139343,
+        "Supply Chain": 0.44071799516677856,
+        "Financial": 0.5674259662628174,
+        "Competitive": 0.5736187100410461,
+        "Operational": 0.3953510522842407,
+        "Macroeconomic": 0.4883597493171692,
+        "Litigation": 0.5132346153259277
+      }
+    },
+    {
+      "id": 238,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Competitive",
+      "category_confidence": 0.015581488609313965,
+      "all_category_scores": {
+        "Cybersecurity": 0.5236932635307312,
+        "Regulatory": 0.5261315107345581,
+        "Supply Chain": 0.5443016290664673,
+        "Financial": 0.6154947280883789,
+        "Competitive": 0.6729674339294434,
+        "Operational": 0.5623405575752258,
+        "Macroeconomic": 0.6677736043930054,
+        "Litigation": 0.46084341406822205
+      }
+    },
+    {
+      "id": 239,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.13504207134246826,
+      "all_category_scores": {
+        "Cybersecurity": 0.5611985921859741,
+        "Regulatory": 0.5768537521362305,
+        "Supply Chain": 0.6029701828956604,
+        "Financial": 0.7534046173095703,
+        "Competitive": 0.7083905935287476,
+        "Operational": 0.5735346078872681,
+        "Macroeconomic": 0.6287709474563599,
+        "Litigation": 0.5366545915603638
+      }
+    },
+    {
+      "id": 240,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Competitive",
+      "category_confidence": 0.11868792772293091,
+      "all_category_scores": {
+        "Cybersecurity": 0.7115815877914429,
+        "Regulatory": 0.6637742519378662,
+        "Supply Chain": 0.7722526788711548,
+        "Financial": 0.7714607119560242,
+        "Competitive": 0.8118153214454651,
+        "Operational": 0.7687793970108032,
+        "Macroeconomic": 0.7121736407279968,
+        "Litigation": 0.7054451704025269
+      }
+    },
+    {
+      "id": 241,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.19850939512252808,
+      "all_category_scores": {
+        "Cybersecurity": 0.5626331567764282,
+        "Regulatory": 0.7315526604652405,
+        "Supply Chain": 0.5225507020950317,
+        "Financial": 0.5893232822418213,
+        "Competitive": 0.5935230255126953,
+        "Operational": 0.5069416165351868,
+        "Macroeconomic": 0.523971438407898,
+        "Litigation": 0.6653828620910645
+      }
+    },
+    {
+      "id": 242,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.3617438077926636,
+      "all_category_scores": {
+        "Cybersecurity": 0.6385642290115356,
+        "Regulatory": 0.8225607872009277,
+        "Supply Chain": 0.46990495920181274,
+        "Financial": 0.6368973255157471,
+        "Competitive": 0.5440740585327148,
+        "Operational": 0.4054313004016876,
+        "Macroeconomic": 0.5574846267700195,
+        "Litigation": 0.7019795179367065
+      }
+    },
+    {
+      "id": 243,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.08379203081130981,
+      "all_category_scores": {
+        "Cybersecurity": 0.5174752473831177,
+        "Regulatory": 0.5958542227745056,
+        "Supply Chain": 0.46035438776016235,
+        "Financial": 0.6237848997116089,
+        "Competitive": 0.5574942827224731,
+        "Operational": 0.44388347864151,
+        "Macroeconomic": 0.48668405413627625,
+        "Litigation": 0.5775872468948364
+      }
+    },
+    {
+      "id": 244,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Operational",
+      "category_confidence": 0.08188587427139282,
+      "all_category_scores": {
+        "Cybersecurity": 0.6337797045707703,
+        "Regulatory": 0.5387845039367676,
+        "Supply Chain": 0.7956405282020569,
+        "Financial": 0.7562934160232544,
+        "Competitive": 0.79281085729599,
+        "Operational": 0.8229358196258545,
+        "Macroeconomic": 0.74835205078125,
+        "Litigation": 0.6107351183891296
+      }
+    },
+    {
+      "id": 245,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.05308324098587036,
+      "all_category_scores": {
+        "Cybersecurity": 0.37408342957496643,
+        "Regulatory": 0.4846065640449524,
+        "Supply Chain": 0.24765285849571228,
+        "Financial": 0.4480228126049042,
+        "Competitive": 0.4669121503829956,
+        "Operational": 0.22308173775672913,
+        "Macroeconomic": 0.30535393953323364,
+        "Litigation": 0.39997735619544983
+      }
+    },
+    {
+      "id": 246,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.0653911828994751,
+      "all_category_scores": {
+        "Cybersecurity": 0.37719225883483887,
+        "Regulatory": 0.4961133599281311,
+        "Supply Chain": 0.21761998534202576,
+        "Financial": 0.4743162989616394,
+        "Competitive": 0.4262721538543701,
+        "Operational": 0.18067458271980286,
+        "Macroeconomic": 0.2926108241081238,
+        "Litigation": 0.41588881611824036
+      }
+    },
+    {
+      "id": 247,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.145460844039917,
+      "all_category_scores": {
+        "Cybersecurity": 0.40146303176879883,
+        "Regulatory": 0.5525798797607422,
+        "Supply Chain": 0.31227821111679077,
+        "Financial": 0.5040929317474365,
+        "Competitive": 0.44920286536216736,
+        "Operational": 0.29052603244781494,
+        "Macroeconomic": 0.3536760210990906,
+        "Litigation": 0.4370924234390259
+      }
+    },
+    {
+      "id": 248,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.2644116282463074,
+      "all_category_scores": {
+        "Cybersecurity": 0.5347813367843628,
+        "Regulatory": 0.6790115833282471,
+        "Supply Chain": 0.38843321800231934,
+        "Financial": 0.5908743739128113,
+        "Competitive": 0.5347675085067749,
+        "Operational": 0.34588927030563354,
+        "Macroeconomic": 0.45632144808769226,
+        "Litigation": 0.5725581645965576
+      }
+    },
+    {
+      "id": 249,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.006981879472732544,
+      "all_category_scores": {
+        "Cybersecurity": 0.3823111355304718,
+        "Regulatory": 0.4949024021625519,
+        "Supply Chain": 0.2627769112586975,
+        "Financial": 0.49257510900497437,
+        "Competitive": 0.4827631711959839,
+        "Operational": 0.24539616703987122,
+        "Macroeconomic": 0.32866430282592773,
+        "Litigation": 0.4520251154899597
+      }
+    },
+    {
+      "id": 250,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.2921741008758545,
+      "all_category_scores": {
+        "Cybersecurity": 0.585308313369751,
+        "Regulatory": 0.7234514951705933,
+        "Supply Chain": 0.5055333971977234,
+        "Financial": 0.6239117980003357,
+        "Competitive": 0.6260601282119751,
+        "Operational": 0.4191626310348511,
+        "Macroeconomic": 0.541054368019104,
+        "Litigation": 0.6176045536994934
+      }
+    },
+    {
+      "id": 251,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.020815014839172363,
+      "all_category_scores": {
+        "Cybersecurity": 0.5184504985809326,
+        "Regulatory": 0.6043447852134705,
+        "Supply Chain": 0.574623703956604,
+        "Financial": 0.6814031600952148,
+        "Competitive": 0.6744648218154907,
+        "Operational": 0.5559444427490234,
+        "Macroeconomic": 0.6065032482147217,
+        "Litigation": 0.5668270587921143
+      }
+    },
+    {
+      "id": 252,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.15462353825569153,
+      "all_category_scores": {
+        "Cybersecurity": 0.32408806681632996,
+        "Regulatory": 0.4583825469017029,
+        "Supply Chain": 0.19008728861808777,
+        "Financial": 0.40684136748313904,
+        "Competitive": 0.38805967569351196,
+        "Operational": 0.15765100717544556,
+        "Macroeconomic": 0.26348260045051575,
+        "Litigation": 0.34513598680496216
+      }
+    },
+    {
+      "id": 253,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Operational",
+      "category_confidence": 0.0889926552772522,
+      "all_category_scores": {
+        "Cybersecurity": 0.5186039209365845,
+        "Regulatory": 0.4779547452926636,
+        "Supply Chain": 0.7849758267402649,
+        "Financial": 0.6337854862213135,
+        "Competitive": 0.7033577561378479,
+        "Operational": 0.8146400451660156,
+        "Macroeconomic": 0.7405897378921509,
+        "Litigation": 0.500501275062561
+      }
+    },
+    {
+      "id": 254,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.17465507984161377,
+      "all_category_scores": {
+        "Cybersecurity": 0.5781969428062439,
+        "Regulatory": 0.6859428882598877,
+        "Supply Chain": 0.4498404860496521,
+        "Financial": 0.6277245283126831,
+        "Competitive": 0.5363017320632935,
+        "Operational": 0.3821985721588135,
+        "Macroeconomic": 0.49458685517311096,
+        "Litigation": 0.6245599985122681
+      }
+    },
+    {
+      "id": 255,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.09735453128814697,
+      "all_category_scores": {
+        "Cybersecurity": 0.5738440752029419,
+        "Regulatory": 0.6510460376739502,
+        "Supply Chain": 0.5412195324897766,
+        "Financial": 0.6875874996185303,
+        "Competitive": 0.655135989189148,
+        "Operational": 0.5254619121551514,
+        "Macroeconomic": 0.5417355298995972,
+        "Litigation": 0.5692324042320251
+      }
+    },
+    {
+      "id": 256,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.17785441875457764,
+      "all_category_scores": {
+        "Cybersecurity": 0.6028094291687012,
+        "Regulatory": 0.7301396131515503,
+        "Supply Chain": 0.49382656812667847,
+        "Financial": 0.6708548069000244,
+        "Competitive": 0.5754263997077942,
+        "Operational": 0.4278608560562134,
+        "Macroeconomic": 0.550365149974823,
+        "Litigation": 0.6607401371002197
+      }
+    },
+    {
+      "id": 257,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.04148930311203003,
+      "all_category_scores": {
+        "Cybersecurity": 0.5888914465904236,
+        "Regulatory": 0.7007573843002319,
+        "Supply Chain": 0.5028637647628784,
+        "Financial": 0.6869276165962219,
+        "Competitive": 0.5889230966567993,
+        "Operational": 0.452334463596344,
+        "Macroeconomic": 0.5716365575790405,
+        "Litigation": 0.6421715021133423
+      }
+    },
+    {
+      "id": 258,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.36592429876327515,
+      "all_category_scores": {
+        "Cybersecurity": 0.6676862239837646,
+        "Regulatory": 0.8273900747299194,
+        "Supply Chain": 0.5508665442466736,
+        "Financial": 0.7040690779685974,
+        "Competitive": 0.6015424132347107,
+        "Operational": 0.4983351230621338,
+        "Macroeconomic": 0.6165306568145752,
+        "Litigation": 0.7054153084754944
+      }
+    },
+    {
+      "id": 259,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.019413113594055176,
+      "all_category_scores": {
+        "Cybersecurity": 0.6405319571495056,
+        "Regulatory": 0.703716516494751,
+        "Supply Chain": 0.5205270051956177,
+        "Financial": 0.7124621272087097,
+        "Competitive": 0.6237057447433472,
+        "Operational": 0.4563139081001282,
+        "Macroeconomic": 0.5684236288070679,
+        "Litigation": 0.7059910893440247
+      }
+    },
+    {
+      "id": 260,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.28532838821411133,
+      "all_category_scores": {
+        "Cybersecurity": 0.4492731988430023,
+        "Regulatory": 0.6099628210067749,
+        "Supply Chain": 0.32796144485473633,
+        "Financial": 0.5058096051216125,
+        "Competitive": 0.4259365200996399,
+        "Operational": 0.2577279210090637,
+        "Macroeconomic": 0.379713773727417,
+        "Litigation": 0.5148533582687378
+      }
+    },
+    {
+      "id": 261,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.3614099621772766,
+      "all_category_scores": {
+        "Cybersecurity": 0.6243208050727844,
+        "Regulatory": 0.7928884029388428,
+        "Supply Chain": 0.46795445680618286,
+        "Financial": 0.6593154072761536,
+        "Competitive": 0.5689938068389893,
+        "Operational": 0.402494877576828,
+        "Macroeconomic": 0.5477492809295654,
+        "Litigation": 0.6724184155464172
+      }
+    },
+    {
+      "id": 262,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.03599095344543457,
+      "all_category_scores": {
+        "Cybersecurity": 0.56495600938797,
+        "Regulatory": 0.6951556205749512,
+        "Supply Chain": 0.457439661026001,
+        "Financial": 0.6273419857025146,
+        "Competitive": 0.5592881441116333,
+        "Operational": 0.3754383623600006,
+        "Macroeconomic": 0.48596659302711487,
+        "Litigation": 0.6831586360931396
+      }
+    },
+    {
+      "id": 263,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Litigation",
+      "category_confidence": 0.0076253414154052734,
+      "all_category_scores": {
+        "Cybersecurity": 0.6031715869903564,
+        "Regulatory": 0.6348721981048584,
+        "Supply Chain": 0.5205366611480713,
+        "Financial": 0.592070460319519,
+        "Competitive": 0.6228641271591187,
+        "Operational": 0.4581601917743683,
+        "Macroeconomic": 0.5262155532836914,
+        "Litigation": 0.6374139785766602
+      }
+    },
+    {
+      "id": 264,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.19100940227508545,
+      "all_category_scores": {
+        "Cybersecurity": 0.6497109532356262,
+        "Regulatory": 0.7463953495025635,
+        "Supply Chain": 0.5300177335739136,
+        "Financial": 0.6591101884841919,
+        "Competitive": 0.6217007637023926,
+        "Operational": 0.45327699184417725,
+        "Macroeconomic": 0.5172833204269409,
+        "Litigation": 0.6827255487442017
+      }
+    },
+    {
+      "id": 265,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.2312656044960022,
+      "all_category_scores": {
+        "Cybersecurity": 0.5552324652671814,
+        "Regulatory": 0.7063903212547302,
+        "Supply Chain": 0.40848904848098755,
+        "Financial": 0.5567020177841187,
+        "Competitive": 0.5528004169464111,
+        "Operational": 0.34512263536453247,
+        "Macroeconomic": 0.4187436103820801,
+        "Litigation": 0.6293017864227295
+      }
+    },
+    {
+      "id": 266,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.020447909832000732,
+      "all_category_scores": {
+        "Cybersecurity": 0.6770937442779541,
+        "Regulatory": 0.733853280544281,
+        "Supply Chain": 0.5155321955680847,
+        "Financial": 0.6443594694137573,
+        "Competitive": 0.645432710647583,
+        "Operational": 0.44452643394470215,
+        "Macroeconomic": 0.531449556350708,
+        "Litigation": 0.7270373106002808
+      }
+    },
+    {
+      "id": 267,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.1256970763206482,
+      "all_category_scores": {
+        "Cybersecurity": 0.6357845067977905,
+        "Regulatory": 0.7222148180007935,
+        "Supply Chain": 0.48184508085250854,
+        "Financial": 0.6458884477615356,
+        "Competitive": 0.6231578588485718,
+        "Operational": 0.3959850072860718,
+        "Macroeconomic": 0.512920618057251,
+        "Litigation": 0.6803157925605774
+      }
+    },
+    {
+      "id": 268,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.1304503083229065,
+      "all_category_scores": {
+        "Cybersecurity": 0.6618129014968872,
+        "Regulatory": 0.7786195874214172,
+        "Supply Chain": 0.5570322871208191,
+        "Financial": 0.6813409328460693,
+        "Competitive": 0.6345032453536987,
+        "Operational": 0.5305781960487366,
+        "Macroeconomic": 0.5453324913978577,
+        "Litigation": 0.7351361513137817
+      }
+    },
+    {
+      "id": 269,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.22845125198364258,
+      "all_category_scores": {
+        "Cybersecurity": 0.5689101219177246,
+        "Regulatory": 0.7171977758407593,
+        "Supply Chain": 0.45302921533584595,
+        "Financial": 0.6000746488571167,
+        "Competitive": 0.5738656520843506,
+        "Operational": 0.3933902978897095,
+        "Macroeconomic": 0.4605940878391266,
+        "Litigation": 0.6410473585128784
+      }
+    },
+    {
+      "id": 270,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.20800065994262695,
+      "all_category_scores": {
+        "Cybersecurity": 0.4566035866737366,
+        "Regulatory": 0.5939100980758667,
+        "Supply Chain": 0.29923686385154724,
+        "Financial": 0.49943968653678894,
+        "Competitive": 0.5245765447616577,
+        "Operational": 0.2380267232656479,
+        "Macroeconomic": 0.3337782025337219,
+        "Litigation": 0.5072686672210693
+      }
+    },
+    {
+      "id": 271,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.004677772521972656,
+      "all_category_scores": {
+        "Cybersecurity": 0.6950727701187134,
+        "Regulatory": 0.5748264193534851,
+        "Supply Chain": 0.7836706638336182,
+        "Financial": 0.7926861047744751,
+        "Competitive": 0.7911268472671509,
+        "Operational": 0.7673068642616272,
+        "Macroeconomic": 0.738442063331604,
+        "Litigation": 0.6673377752304077
+      }
+    },
+    {
+      "id": 272,
+      "source": "GOOGL",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.2623552680015564,
+      "all_category_scores": {
+        "Cybersecurity": 0.674087643623352,
+        "Regulatory": 0.7615393996238708,
+        "Supply Chain": 0.4159262776374817,
+        "Financial": 0.5498558878898621,
+        "Competitive": 0.5185041427612305,
+        "Operational": 0.3249882161617279,
+        "Macroeconomic": 0.443448930978775,
+        "Litigation": 0.6321263313293457
+      }
+    },
+    {
+      "id": 273,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Competitive",
+      "category_confidence": 0.04026925563812256,
+      "all_category_scores": {
+        "Cybersecurity": 0.6269813776016235,
+        "Regulatory": 0.5241001844406128,
+        "Supply Chain": 0.7834916114807129,
+        "Financial": 0.7154536247253418,
+        "Competitive": 0.80393385887146,
+        "Operational": 0.7905107736587524,
+        "Macroeconomic": 0.6988775134086609,
+        "Litigation": 0.6521584987640381
+      }
+    },
+    {
+      "id": 274,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Supply Chain",
+      "category_confidence": 0.03155028820037842,
+      "all_category_scores": {
+        "Cybersecurity": 0.6822296380996704,
+        "Regulatory": 0.5711085200309753,
+        "Supply Chain": 0.7264670729637146,
+        "Financial": 0.7159503102302551,
+        "Competitive": 0.6995545625686646,
+        "Operational": 0.690887451171875,
+        "Macroeconomic": 0.6520590782165527,
+        "Litigation": 0.6957188844680786
+      }
+    },
+    {
+      "id": 275,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Financial",
+      "category_confidence": 0.008181452751159668,
+      "all_category_scores": {
+        "Cybersecurity": 0.7255804538726807,
+        "Regulatory": 0.7431882619857788,
+        "Supply Chain": 0.6668398380279541,
+        "Financial": 0.7540279626846313,
+        "Competitive": 0.7341096997261047,
+        "Operational": 0.6103612184524536,
+        "Macroeconomic": 0.6476247310638428,
+        "Litigation": 0.7513008117675781
+      }
+    },
+    {
+      "id": 276,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Competitive",
+      "category_confidence": 0.09237384796142578,
+      "all_category_scores": {
+        "Cybersecurity": 0.6190060377120972,
+        "Regulatory": 0.6318435668945312,
+        "Supply Chain": 0.7340131998062134,
+        "Financial": 0.7254385948181152,
+        "Competitive": 0.764804482460022,
+        "Operational": 0.6868002414703369,
+        "Macroeconomic": 0.639737606048584,
+        "Litigation": 0.6707401275634766
+      }
+    },
+    {
+      "id": 277,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Operational",
+      "category_confidence": 0.12181270122528076,
+      "all_category_scores": {
+        "Cybersecurity": 0.4726274609565735,
+        "Regulatory": 0.33518925309181213,
+        "Supply Chain": 0.7607840299606323,
+        "Financial": 0.5225015878677368,
+        "Competitive": 0.6224932074546814,
+        "Operational": 0.8013882637023926,
+        "Macroeconomic": 0.591044545173645,
+        "Litigation": 0.43425458669662476
+      }
+    },
+    {
+      "id": 278,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.4318782091140747,
+      "all_category_scores": {
+        "Cybersecurity": 0.6084694862365723,
+        "Regulatory": 0.804499626159668,
+        "Supply Chain": 0.5152197480201721,
+        "Financial": 0.6471291780471802,
+        "Competitive": 0.6274988055229187,
+        "Operational": 0.4568299949169159,
+        "Macroeconomic": 0.5348923206329346,
+        "Litigation": 0.6605402231216431
+      }
+    },
+    {
+      "id": 279,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.24502623081207275,
+      "all_category_scores": {
+        "Cybersecurity": 0.6377279162406921,
+        "Regulatory": 0.7638225555419922,
+        "Supply Chain": 0.49519526958465576,
+        "Financial": 0.6810545325279236,
+        "Competitive": 0.6351629495620728,
+        "Operational": 0.4298667907714844,
+        "Macroeconomic": 0.5573962330818176,
+        "Litigation": 0.6821471452713013
+      }
+    },
+    {
+      "id": 280,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Litigation",
+      "category_confidence": 0.008173227310180664,
+      "all_category_scores": {
+        "Cybersecurity": 0.7027108669281006,
+        "Regulatory": 0.7103248834609985,
+        "Supply Chain": 0.6165890097618103,
+        "Financial": 0.7482383251190186,
+        "Competitive": 0.6822405457496643,
+        "Operational": 0.5413104295730591,
+        "Macroeconomic": 0.633445143699646,
+        "Litigation": 0.7509627342224121
+      }
+    },
+    {
+      "id": 281,
+      "source": "AMZN",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.017962753772735596,
+      "all_category_scores": {
+        "Cybersecurity": 0.7102137804031372,
+        "Regulatory": 0.8057833909988403,
+        "Supply Chain": 0.647490382194519,
+        "Financial": 0.7997958064079285,
+        "Competitive": 0.7437391877174377,
+        "Operational": 0.5889476537704468,
+        "Macroeconomic": 0.6777464747428894,
+        "Litigation": 0.7579872608184814
+      }
+    },
+    {
+      "id": 282,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.08171617984771729,
+      "all_category_scores": {
+        "Cybersecurity": 0.501832902431488,
+        "Regulatory": 0.6367534399032593,
+        "Supply Chain": 0.4219859838485718,
+        "Financial": 0.6095147132873535,
+        "Competitive": 0.5279079675674438,
+        "Operational": 0.39665621519088745,
+        "Macroeconomic": 0.43947696685791016,
+        "Litigation": 0.5428533554077148
+      }
+    },
+    {
+      "id": 283,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.32129180431365967,
+      "all_category_scores": {
+        "Cybersecurity": 0.5275561809539795,
+        "Regulatory": 0.7252035140991211,
+        "Supply Chain": 0.47184500098228455,
+        "Financial": 0.6181062459945679,
+        "Competitive": 0.56102454662323,
+        "Operational": 0.39213433861732483,
+        "Macroeconomic": 0.468117356300354,
+        "Litigation": 0.5827996730804443
+      }
+    },
+    {
+      "id": 284,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.4731752872467041,
+      "all_category_scores": {
+        "Cybersecurity": 0.6430553197860718,
+        "Regulatory": 0.8007804155349731,
+        "Supply Chain": 0.5148121118545532,
+        "Financial": 0.6265241503715515,
+        "Competitive": 0.6119811534881592,
+        "Operational": 0.4667346477508545,
+        "Macroeconomic": 0.5668033957481384,
+        "Litigation": 0.6386562585830688
+      }
+    },
+    {
+      "id": 285,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Regulatory",
+      "category_confidence": 0.30639320611953735,
+      "all_category_scores": {
+        "Cybersecurity": 0.45513832569122314,
+        "Regulatory": 0.6509883999824524,
+        "Supply Chain": 0.35348546504974365,
+        "Financial": 0.5488573312759399,
+        "Competitive": 0.4760552644729614,
+        "Operational": 0.3323575258255005,
+        "Macroeconomic": 0.40675824880599976,
+        "Litigation": 0.4974372088909149
+      }
+    },
+    {
+      "id": 286,
+      "source": "NVDA",
+      "severity_label": "low",
+      "category": "Operational",
+      "category_confidence": 0.0017595291137695312,
+      "all_category_scores": {
+        "Cybersecurity": 0.6686742305755615,
+        "Regulatory": 0.7145586013793945,
+        "Supply Chain": 0.7558577060699463,
+        "Financial": 0.7210734486579895,
+        "Competitive": 0.7251237630844116,
+        "Operational": 0.7564442157745361,
+        "Macroeconomic": 0.7193230390548706,
+        "Litigation": 0.6576117873191833
+      }
+    }
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "summary": {
+    "n_prompts": 10,
+    "n_samples": 286,
+    "mean_correlation": 0.4124,
+    "min_correlation": -0.6203,
+    "max_correlation": 0.9774,
+    "robust": false,
+    "conclusion": "Rankings are sensitive to prompt choice (mean \u03c1 = 0.412 < 0.7)"
+  },
+  "prompt_stability": {
+    "negative_impact": 0.6113,
+    "material_adverse": 0.5995,
+    "corporate_threat": 0.5962,
+    "operational_concern": 0.5944,
+    "critical_threat": 0.5722,
+    "business_disruption": 0.5123,
+    "baseline": 0.5027,
+    "financial_risk": 0.4911,
+    "risk_exposure": -0.1604,
+    "major_risk_factor": -0.1953
+  },
+  "most_stable_prompt": {
+    "name": "negative_impact",
+    "avg_correlation": 0.6113,
+    "text": "Substantial negative impact on business operations, financial results,\n        competitive position, or stakeholder value creation."
+  },
+  "correlations": [
+    {
+      "prompt_a": "material_adverse",
+      "prompt_b": "negative_impact",
+      "spearman_rho": 0.9774,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "critical_threat",
+      "prompt_b": "business_disruption",
+      "spearman_rho": 0.9713,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "critical_threat",
+      "prompt_b": "material_adverse",
+      "spearman_rho": 0.9516,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "baseline",
+      "prompt_b": "business_disruption",
+      "spearman_rho": 0.9424,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "critical_threat",
+      "prompt_b": "negative_impact",
+      "spearman_rho": 0.9406,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "baseline",
+      "prompt_b": "critical_threat",
+      "spearman_rho": 0.9246,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "material_adverse",
+      "prompt_b": "corporate_threat",
+      "spearman_rho": 0.9209,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "negative_impact",
+      "prompt_b": "corporate_threat",
+      "spearman_rho": 0.9,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "critical_threat",
+      "prompt_b": "corporate_threat",
+      "spearman_rho": 0.8973,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "material_adverse",
+      "prompt_b": "business_disruption",
+      "spearman_rho": 0.8968,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "operational_concern",
+      "prompt_b": "negative_impact",
+      "spearman_rho": 0.8858,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "business_disruption",
+      "prompt_b": "negative_impact",
+      "spearman_rho": 0.8849,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "material_adverse",
+      "prompt_b": "operational_concern",
+      "spearman_rho": 0.8847,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "operational_concern",
+      "prompt_b": "corporate_threat",
+      "spearman_rho": 0.8845,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "major_risk_factor",
+      "prompt_b": "risk_exposure",
+      "spearman_rho": 0.8669,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "baseline",
+      "prompt_b": "material_adverse",
+      "spearman_rho": 0.8633,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "critical_threat",
+      "prompt_b": "operational_concern",
+      "spearman_rho": 0.8491,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "baseline",
+      "prompt_b": "negative_impact",
+      "spearman_rho": 0.8415,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "baseline",
+      "prompt_b": "operational_concern",
+      "spearman_rho": 0.833,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "baseline",
+      "prompt_b": "corporate_threat",
+      "spearman_rho": 0.8318,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "business_disruption",
+      "prompt_b": "corporate_threat",
+      "spearman_rho": 0.8305,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "operational_concern",
+      "prompt_b": "business_disruption",
+      "spearman_rho": 0.8121,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "operational_concern",
+      "prompt_b": "financial_risk",
+      "spearman_rho": 0.6838,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "financial_risk",
+      "prompt_b": "negative_impact",
+      "spearman_rho": 0.6413,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "financial_risk",
+      "prompt_b": "corporate_threat",
+      "spearman_rho": 0.6081,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "material_adverse",
+      "prompt_b": "financial_risk",
+      "spearman_rho": 0.5749,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "critical_threat",
+      "prompt_b": "financial_risk",
+      "spearman_rho": 0.5157,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "baseline",
+      "prompt_b": "financial_risk",
+      "spearman_rho": 0.4408,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "financial_risk",
+      "prompt_b": "business_disruption",
+      "spearman_rho": 0.4384,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "financial_risk",
+      "prompt_b": "risk_exposure",
+      "spearman_rho": 0.2744,
+      "p_value": 2e-06
+    },
+    {
+      "prompt_a": "major_risk_factor",
+      "prompt_b": "financial_risk",
+      "spearman_rho": 0.2424,
+      "p_value": 3.4e-05
+    },
+    {
+      "prompt_a": "operational_concern",
+      "prompt_b": "risk_exposure",
+      "spearman_rho": -0.2202,
+      "p_value": 0.000175
+    },
+    {
+      "prompt_a": "corporate_threat",
+      "prompt_b": "risk_exposure",
+      "spearman_rho": -0.2441,
+      "p_value": 3e-05
+    },
+    {
+      "prompt_a": "major_risk_factor",
+      "prompt_b": "corporate_threat",
+      "spearman_rho": -0.2632,
+      "p_value": 6e-06
+    },
+    {
+      "prompt_a": "operational_concern",
+      "prompt_b": "major_risk_factor",
+      "spearman_rho": -0.2636,
+      "p_value": 6e-06
+    },
+    {
+      "prompt_a": "negative_impact",
+      "prompt_b": "risk_exposure",
+      "spearman_rho": -0.275,
+      "p_value": 2e-06
+    },
+    {
+      "prompt_a": "major_risk_factor",
+      "prompt_b": "negative_impact",
+      "spearman_rho": -0.2942,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "material_adverse",
+      "prompt_b": "major_risk_factor",
+      "spearman_rho": -0.3362,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "material_adverse",
+      "prompt_b": "risk_exposure",
+      "spearman_rho": -0.3375,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "critical_threat",
+      "prompt_b": "risk_exposure",
+      "spearman_rho": -0.4226,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "critical_threat",
+      "prompt_b": "major_risk_factor",
+      "spearman_rho": -0.4774,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "baseline",
+      "prompt_b": "risk_exposure",
+      "spearman_rho": -0.5405,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "business_disruption",
+      "prompt_b": "risk_exposure",
+      "spearman_rho": -0.5451,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "baseline",
+      "prompt_b": "major_risk_factor",
+      "spearman_rho": -0.6124,
+      "p_value": 0.0
+    },
+    {
+      "prompt_a": "major_risk_factor",
+      "prompt_b": "business_disruption",
+      "spearman_rho": -0.6203,
+      "p_value": 0.0
+    }
+  ],
+  "prompts": {
+    "baseline": {
+      "text": "Significant business risks including lawsuits, litigation, regulatory compliance,\n        cybersecurity threats, data breaches, supply chain disruption, economic downturn,\n        inflation, pandemic, natural disasters, product recalls, fraud, labor shortage,\n        competitive pressure, market volatility, and operational failure.",
+      "mean_score": 0.6635,
+      "std_score": 0.1291
+    },
+    "critical_threat": {
+      "text": "Critical business threat that could cause severe damage to the company's \n        operations, reputation, financial performance, or long-term viability.",
+      "mean_score": 0.6757,
+      "std_score": 0.1238
+    },
+    "material_adverse": {
+      "text": "Material adverse condition that could significantly harm the company's \n        revenue, profitability, stock price, or ability to conduct business.",
+      "mean_score": 0.7191,
+      "std_score": 0.0999
+    },
+    "operational_concern": {
+      "text": "Significant operational concern affecting business continuity, \n        supply chain reliability, workforce stability, or process execution.",
+      "mean_score": 0.7053,
+      "std_score": 0.0811
+    },
+    "major_risk_factor": {
+      "text": "Major risk factor disclosed in SEC filings that investors should consider\n        when evaluating the company's future performance and prospects.",
+      "mean_score": 0.6688,
+      "std_score": 0.1022
+    },
+    "financial_risk": {
+      "text": "High-impact financial risk including credit exposure, liquidity constraints,\n        currency fluctuations, interest rate sensitivity, and capital market access.",
+      "mean_score": 0.6992,
+      "std_score": 0.0693
+    },
+    "business_disruption": {
+      "text": "Severe business disruption from external or internal factors that could\n        materially impair the company's ability to operate effectively.",
+      "mean_score": 0.6675,
+      "std_score": 0.152
+    },
+    "negative_impact": {
+      "text": "Substantial negative impact on business operations, financial results,\n        competitive position, or stakeholder value creation.",
+      "mean_score": 0.7215,
+      "std_score": 0.0939
+    },
+    "corporate_threat": {
+      "text": "Serious corporate threat to shareholder value, market position,\n        regulatory standing, or organizational sustainability.",
+      "mean_score": 0.6943,
+      "std_score": 0.0824
+    },
+    "risk_exposure": {
+      "text": "Elevated risk exposure requiring management attention and potential\n        mitigation strategies to protect business interests.",
+      "mean_score": 0.6502,
+      "std_score": 0.095
+    }
+  }
+}

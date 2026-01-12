@@ -1,0 +1,66 @@
+{
+  "dataset": {
+    "total_samples": 286,
+    "distribution": {
+      "high": 86,
+      "medium": 86,
+      "low": 114
+    }
+  },
+  "methods": {
+    "finbert": {
+      "accuracy": 0.5664335664335665,
+      "spearman_rho": 0.5898554263676795,
+      "precision_at_10": 0.8
+    },
+    "tfidf": {
+      "accuracy": 0.3986013986013986,
+      "spearman_rho": 0.21959690240345928,
+      "precision_at_10": 0.4
+    },
+    "keyword": {
+      "accuracy": 0.46153846153846156,
+      "spearman_rho": 0.2911042546885893,
+      "precision_at_10": 0.8
+    }
+  },
+  "significance_tests": [
+    {
+      "method_a": "FinBERT",
+      "method_b": "TF-IDF",
+      "metric": "accuracy",
+      "value_a": 0.5664,
+      "value_b": 0.3986,
+      "difference": 0.1678,
+      "p_value": 0.0,
+      "significant": true,
+      "n_bootstrap": 10000
+    },
+    {
+      "method_a": "FinBERT",
+      "method_b": "TF-IDF",
+      "metric": "spearman",
+      "value_a": 0.5899,
+      "value_b": 0.2196,
+      "difference": 0.3703,
+      "p_value": 0.0,
+      "significant": true,
+      "n_bootstrap": 10000
+    },
+    {
+      "method_a": "FinBERT",
+      "method_b": "TF-IDF",
+      "metric": "precision_at_10",
+      "value_a": 0.8,
+      "value_b": 0.4,
+      "difference": 0.4,
+      "p_value": 0.0622,
+      "significant": false,
+      "n_bootstrap": 10000
+    }
+  ],
+  "quotable": {
+    "accuracy": "FinBERT beats TF-IDF by 16.8 points (p = 0.0000)",
+    "significant": true
+  }
+}

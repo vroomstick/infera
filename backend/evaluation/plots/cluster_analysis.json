@@ -1,0 +1,285 @@
+{
+  "n_samples": 286,
+  "n_clusters": 8,
+  "method": "tsne",
+  "model": "ProsusAI/finbert",
+  "cluster_analysis": {
+    "cluster_0": {
+      "size": 27,
+      "label_distribution": {
+        "low": 14,
+        "medium": 13
+      },
+      "company_distribution": {
+        "AAPL": 9,
+        "TSLA": 2,
+        "MSFT": 6,
+        "NVDA": 5,
+        "AMZN": 2,
+        "GOOGL": 3
+      },
+      "dominant_label": "low",
+      "dominant_company": "AAPL",
+      "common_words": [
+        "financial",
+        "interest",
+        "foreign",
+        "company",
+        "certain",
+        "credit",
+        "manage",
+        "economic",
+        "cybersecurity",
+        "exposed"
+      ],
+      "sample_texts": [
+        "Because of the following factors, as well as other factors affecting the Company's results of operat...",
+        "While the Company maintains insurance coverage that is intended to address certain aspects of data s...",
+        "The Company's financial performance is subject to risks associated with changes in the value of the ..."
+      ]
+    },
+    "cluster_1": {
+      "size": 21,
+      "label_distribution": {
+        "high": 5,
+        "medium": 10,
+        "low": 6
+      },
+      "company_distribution": {
+        "NVDA": 8,
+        "AMZN": 9,
+        "GOOGL": 4
+      },
+      "dominant_label": "medium",
+      "dominant_company": "AMZN",
+      "common_words": [
+        "operating",
+        "results",
+        "financial",
+        "business",
+        "increased",
+        "future",
+        "adversely",
+        "higher",
+        "reduced",
+        "demand"
+      ],
+      "sample_texts": [
+        "Failure to estimate customer demand accurately has led and could lead to mismatches between supply a...",
+        "Business disruptions could harm our operations and financial results....",
+        "Our operating results have in the past fluctuated and may in the future fluctuate, and if our operat..."
+      ]
+    },
+    "cluster_2": {
+      "size": 44,
+      "label_distribution": {
+        "medium": 8,
+        "low": 27,
+        "high": 9
+      },
+      "company_distribution": {
+        "TSLA": 3,
+        "MSFT": 4,
+        "NVDA": 15,
+        "AMZN": 13,
+        "GOOGL": 9
+      },
+      "dominant_label": "low",
+      "dominant_company": "NVDA",
+      "common_words": [
+        "international",
+        "cybersecurity",
+        "business",
+        "products",
+        "maintain",
+        "ability",
+        "continue",
+        "expand",
+        "management",
+        "including"
+      ],
+      "sample_texts": [
+        "As is the case for some automotive companies, some of our procured components and systems are source...",
+        "We also conduct tabletop exercises to simulate responses to cybersecurity incidents. Our team of cyb...",
+        "We continue adapting our strategy to meet our liquidity and risk objectives, such as investing in U...."
+      ]
+    },
+    "cluster_3": {
+      "size": 53,
+      "label_distribution": {
+        "high": 29,
+        "medium": 21,
+        "low": 3
+      },
+      "company_distribution": {
+        "AAPL": 4,
+        "TSLA": 3,
+        "MSFT": 1,
+        "NVDA": 17,
+        "AMZN": 8,
+        "GOOGL": 20
+      },
+      "dominant_label": "high",
+      "dominant_company": "GOOGL",
+      "common_words": [
+        "financial",
+        "operating",
+        "ability",
+        "business",
+        "affect",
+        "result",
+        "failure",
+        "adversely",
+        "products",
+        "significant"
+      ],
+      "sample_texts": [
+        "Adverse economic conditions can also lead to increased credit and collectibility risk on the Company...",
+        "Therefore, the Company remains subject to significant risks of supply shortages and price increases ...",
+        "The Company is exposed to the risk of write-downs on the value of its inventory and other assets, in..."
+      ]
+    },
+    "cluster_4": {
+      "size": 35,
+      "label_distribution": {
+        "medium": 6,
+        "high": 7,
+        "low": 22
+      },
+      "company_distribution": {
+        "TSLA": 2,
+        "GOOGL": 19,
+        "NVDA": 3,
+        "AMZN": 11
+      },
+      "dominant_label": "low",
+      "dominant_company": "GOOGL",
+      "common_words": [
+        "directors",
+        "regulations",
+        "foreign",
+        "privacy",
+        "regulation",
+        "security",
+        "including",
+        "protection",
+        "biometric",
+        "certain"
+      ],
+      "sample_texts": [
+        "Our battery packs are subject to various U.S. and international regulations that govern transport of...",
+        "We recognize the importance of assessing, identifying, and managing material risks associated with c...",
+        "Laws and regulations focused on large technology platforms, including the Digital Markets Act in the..."
+      ]
+    },
+    "cluster_5": {
+      "size": 32,
+      "label_distribution": {
+        "low": 11,
+        "high": 13,
+        "medium": 8
+      },
+      "company_distribution": {
+        "AAPL": 1,
+        "TSLA": 2,
+        "MSFT": 1,
+        "NVDA": 12,
+        "AMZN": 9,
+        "GOOGL": 7
+      },
+      "dominant_label": "high",
+      "dominant_company": "NVDA",
+      "common_words": [
+        "financial",
+        "including",
+        "results",
+        "affect",
+        "adversely",
+        "subject",
+        "described",
+        "operating",
+        "privacy",
+        "additional"
+      ],
+      "sample_texts": [
+        "The Company's business, reputation, results of operations, financial condition and stock price can b...",
+        "You should carefully consider the risks described below together with the other information set fort...",
+        "In addition to the risks related to general privacy regulation, we may also be subject to specific v..."
+      ]
+    },
+    "cluster_6": {
+      "size": 23,
+      "label_distribution": {
+        "low": 20,
+        "medium": 2,
+        "high": 1
+      },
+      "company_distribution": {
+        "MSFT": 2,
+        "AMZN": 8,
+        "NVDA": 7,
+        "GOOGL": 6
+      },
+      "dominant_label": "low",
+      "dominant_company": "AMZN",
+      "common_words": [
+        "related",
+        "factors",
+        "subject",
+        "number",
+        "regulations",
+        "industry",
+        "operating",
+        "international",
+        "operations",
+        "description"
+      ],
+      "sample_texts": [
+        "For a description of the risks we face related to regulatory matters, refer to Risk Factors (Part I,...",
+        "Refer to Risk Factors (Part I, Item 1A of this Form 10-K) for a discussion of these factors and othe...",
+        "We Have Foreign Exchange Risk..."
+      ]
+    },
+    "cluster_7": {
+      "size": 51,
+      "label_distribution": {
+        "high": 22,
+        "medium": 18,
+        "low": 11
+      },
+      "company_distribution": {
+        "AAPL": 1,
+        "TSLA": 3,
+        "MSFT": 1,
+        "NVDA": 19,
+        "AMZN": 15,
+        "GOOGL": 12
+      },
+      "dominant_label": "high",
+      "dominant_company": "NVDA",
+      "common_words": [
+        "products",
+        "including",
+        "services",
+        "control",
+        "financial",
+        "because",
+        "business",
+        "operating",
+        "technology",
+        "significant"
+      ],
+      "sample_texts": [
+        "Although malicious attacks perpetrated to gain access to confidential information, including persona...",
+        "We face risks associated with maintaining and expanding our international operations, including unfa...",
+        "Because of its inherent limitations, internal control over financial reporting may not prevent or de..."
+      ]
+    }
+  },
+  "plots_generated": [
+    "embedding_by_score.png",
+    "embedding_by_company.png",
+    "embedding_by_label.png",
+    "embedding_by_cluster.png"
+  ]
+}

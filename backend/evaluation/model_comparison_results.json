@@ -1,0 +1,119 @@
+{
+  "dataset": {
+    "total_samples": 286,
+    "distribution": {
+      "high": 86,
+      "medium": 86,
+      "low": 114
+    }
+  },
+  "models": [
+    {
+      "name": "all-MiniLM-L6-v2",
+      "description": "Current baseline - fast, general purpose (22M params)",
+      "accuracy": 0.44755244755244755,
+      "spearman_rho": 0.23220481322232359,
+      "spearman_p": 7.368636961190108e-05,
+      "precision_at_5": 0.0,
+      "precision_at_10": 0.1,
+      "precision_at_20": 0.1,
+      "load_time_ms": 1232.9599857330322,
+      "inference_time_ms": 3340.2788639068604,
+      "optimal_thresholds": {
+        "high": 0.4,
+        "medium": 0.3
+      },
+      "confusion_matrix": [
+        [
+          53,
+          21,
+          40
+        ],
+        [
+          14,
+          25,
+          47
+        ],
+        [
+          13,
+          23,
+          50
+        ]
+      ]
+    },
+    {
+      "name": "all-mpnet-base-v2",
+      "description": "Larger, more accurate (110M params)",
+      "accuracy": 0.46853146853146854,
+      "spearman_rho": 0.2668270850784209,
+      "spearman_p": 4.741216248392718e-06,
+      "precision_at_5": 0.2,
+      "precision_at_10": 0.2,
+      "precision_at_20": 0.25,
+      "load_time_ms": 9031.261920928955,
+      "inference_time_ms": 17671.908855438232,
+      "optimal_thresholds": {
+        "high": 0.45,
+        "medium": 0.39999999999999997
+      },
+      "confusion_matrix": [
+        [
+          69,
+          12,
+          33
+        ],
+        [
+          27,
+          11,
+          48
+        ],
+        [
+          23,
+          9,
+          54
+        ]
+      ]
+    },
+    {
+      "name": "FinBERT",
+      "description": "Domain-specific financial model",
+      "accuracy": 0.5454545454545454,
+      "spearman_rho": 0.5898554263676795,
+      "spearman_p": 3.397704687587029e-28,
+      "precision_at_5": 1.0,
+      "precision_at_10": 0.8,
+      "precision_at_20": 0.85,
+      "load_time_ms": 12939.556121826172,
+      "inference_time_ms": 11007.309913635254,
+      "optimal_thresholds": {
+        "high": 0.7,
+        "medium": 0.6499999999999999
+      },
+      "confusion_matrix": [
+        [
+          83,
+          12,
+          19
+        ],
+        [
+          23,
+          11,
+          52
+        ],
+        [
+          16,
+          8,
+          62
+        ]
+      ]
+    }
+  ],
+  "recommendation": {
+    "model": "FinBERT",
+    "reason": "Best overall performance with 54.5% accuracy and 0.590 Spearman correlation",
+    "optimal_thresholds": {
+      "high": 0.7,
+      "medium": 0.6499999999999999
+    }
+  }
+}

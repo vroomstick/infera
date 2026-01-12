@@ -1,0 +1,50 @@
+{
+  "ticker": "AAPL",
+  "risks": [
+    {
+      "title": "Natural Disasters",
+      "severity": "high",
+      "category": "Operational",
+      "description": "Operations are vulnerable to natural disasters like earthquakes and floods.",
+      "potential_impact": "Can disrupt manufacturing and supply chain, leading to significant sales losses.",
+      "source_paragraph": null
+    },
+    {
+      "title": "Supply Chain Disruptions",
+      "severity": "high",
+      "category": "Supply Chain",
+      "description": "Dependence on a few suppliers in Asia increases supply chain risks.",
+      "potential_impact": "Interruptions can cause delays in product availability and increased costs.",
+      "source_paragraph": null
+    },
+    {
+      "title": "Economic Conditions",
+      "severity": "medium",
+      "category": "Macroeconomic",
+      "description": "Adverse economic conditions can affect credit risk and liquidity.",
+      "potential_impact": "May lead to financial instability and affect stock price.",
+      "source_paragraph": null
+    },
+    {
+      "title": "Cybersecurity Threats",
+      "severity": "medium",
+      "category": "Cybersecurity",
+      "description": "Risk of ransomware and other cyber attacks on operations.",
+      "potential_impact": "Can result in operational disruptions and reputational damage.",
+      "source_paragraph": null
+    },
+    {
+      "title": "Product Introduction Risks",
+      "severity": "medium",
+      "category": "Competitive",
+      "description": "Challenges in managing new product launches and transitions.",
+      "potential_impact": "May lead to market share loss if not managed effectively.",
+      "source_paragraph": null
+    }
+  ],
+  "overall_assessment": "The company faces significant risks from natural disasters and supply chain dependencies, which could severely impact operations. Economic conditions and cybersecurity threats also pose substantial risks that need to be managed proactively.",
+  "risk_level": "high",
+  "confidence": 0.85,
+  "generated_at": "2026-01-12T00:12:04.991780",
+  "model": "gpt-4o"
+}

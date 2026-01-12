@@ -1,0 +1,419 @@
+{
+  "label_correlation": {
+    "spearman_rho": 0.5899,
+    "p_value": 3.397704687587029e-28,
+    "significant": true,
+    "monotonic": true,
+    "score_by_label": {
+      "low": {
+        "mean": 0.5719,
+        "std": 0.1189,
+        "min": 0.2876,
+        "max": 0.7983,
+        "count": 114
+      },
+      "high": {
+        "mean": 0.7444,
+        "std": 0.0942,
+        "min": 0.4239,
+        "max": 0.8655,
+        "count": 86
+      },
+      "medium": {
+        "mean": 0.7042,
+        "std": 0.0922,
+        "min": 0.4194,
+        "max": 0.852,
+        "count": 86
+      }
+    },
+    "quotable": "Model scores correlate with human severity at \u03c1 = 0.590 (p < 0.001)"
+  },
+  "score_distribution": {
+    "basic_stats": {
+      "mean": 0.6635,
+      "median": 0.6861,
+      "std": 0.1291,
+      "min": 0.2876,
+      "max": 0.8655
+    },
+    "shape": {
+      "skewness": -0.6172,
+      "kurtosis": -0.3012,
+      "is_normal": false,
+      "normality_p": 0.0002
+    },
+    "percentiles": {
+      "10": 0.4899,
+      "25": 0.5746,
+      "50": 0.6861,
+      "75": 0.7717,
+      "90": 0.8117
+    },
+    "histogram": {
+      "counts": [
+        5,
+        7,
+        9,
+        21,
+        31,
+        36,
+        39,
+        40,
+        66,
+        32
+      ],
+      "bin_edges": [
+        0.2876,
+        0.3454,
+        0.4032,
+        0.461,
+        0.5188,
+        0.5766,
+        0.6343,
+        0.6921,
+        0.7499,
+        0.8077,
+        0.8655
+      ]
+    },
+    "natural_breaks": [
+      0.2936,
+      0.3226,
+      0.3318,
+      0.3394,
+      0.3573
+    ]
+  },
+  "feature_importance": {
+    "high_risk_keywords": [
+      {
+        "keyword": "data",
+        "differential": 0.0392
+      },
+      {
+        "keyword": "harm",
+        "differential": 0.0327
+      },
+      {
+        "keyword": "products",
+        "differential": 0.0318
+      },
+      {
+        "keyword": "including",
+        "differential": 0.0318
+      },
+      {
+        "keyword": "services",
+        "differential": 0.0284
+      },
+      {
+        "keyword": "products services",
+        "differential": 0.0276
+      },
+      {
+        "keyword": "operating results",
+        "differential": 0.0241
+      },
+      {
+        "keyword": "attacks",
+        "differential": 0.0239
+      },
+      {
+        "keyword": "failure",
+        "differential": 0.0238
+      },
+      {
+        "keyword": "significant",
+        "differential": 0.0233
+      },
+      {
+        "keyword": "affect",
+        "differential": 0.0226
+      },
+      {
+        "keyword": "liability",
+        "differential": 0.0225
+      },
+      {
+        "keyword": "issues",
+        "differential": 0.0218
+      },
+      {
+        "keyword": "reputation",
+        "differential": 0.0216
+      },
+      {
+        "keyword": "result",
+        "differential": 0.0212
+      },
+      {
+        "keyword": "privacy",
+        "differential": 0.0211
+      },
+      {
+        "keyword": "ai",
+        "differential": 0.0204
+      },
+      {
+        "keyword": "laws",
+        "differential": 0.0202
+      },
+      {
+        "keyword": "condition operating",
+        "differential": 0.0199
+      },
+      {
+        "keyword": "financial",
+        "differential": 0.0185
+      }
+    ],
+    "low_risk_keywords": [
+      {
+        "keyword": "risks",
+        "differential": -0.0481
+      },
+      {
+        "keyword": "risks related",
+        "differential": -0.0346
+      },
+      {
+        "keyword": "risk",
+        "differential": -0.0335
+      },
+      {
+        "keyword": "directors",
+        "differential": -0.0197
+      },
+      {
+        "keyword": "cybersecurity",
+        "differential": -0.0194
+      },
+      {
+        "keyword": "stockholders",
+        "differential": -0.0187
+      },
+      {
+        "keyword": "related",
+        "differential": -0.0186
+      },
+      {
+        "keyword": "foreign",
+        "differential": -0.018
+      },
+      {
+        "keyword": "integrating",
+        "differential": -0.0175
+      },
+      {
+        "keyword": "stock",
+        "differential": -0.0172
+      },
+      {
+        "keyword": "form",
+        "differential": -0.0165
+      },
+      {
+        "keyword": "relationships",
+        "differential": -0.0159
+      },
+      {
+        "keyword": "company",
+        "differential": -0.0157
+      },
+      {
+        "keyword": "risk factors",
+        "differential": -0.0155
+      },
+      {
+        "keyword": "requirements",
+        "differential": -0.0153
+      },
+      {
+        "keyword": "difficulty",
+        "differential": -0.0143
+      },
+      {
+        "keyword": "board",
+        "differential": -0.014
+      },
+      {
+        "keyword": "cycles",
+        "differential": -0.0136
+      },
+      {
+        "keyword": "expansion",
+        "differential": -0.0133
+      },
+      {
+        "keyword": "infrastructure",
+        "differential": -0.0129
+      }
+    ],
+    "risk_keyword_frequency": {
+      "adverse": {
+        "high_pct": 15.1,
+        "low_pct": 2.6
+      },
+      "material": {
+        "high_pct": 7.0,
+        "low_pct": 4.4
+      },
+      "significant": {
+        "high_pct": 16.3,
+        "low_pct": 1.8
+      },
+      "regulatory": {
+        "high_pct": 10.5,
+        "low_pct": 4.4
+      },
+      "litigation": {
+        "high_pct": 2.3,
+        "low_pct": 0.0
+      },
+      "cybersecurity": {
+        "high_pct": 3.5,
+        "low_pct": 5.3
+      },
+      "breach": {
+        "high_pct": 5.8,
+        "low_pct": 0.0
+      },
+      "failure": {
+        "high_pct": 17.4,
+        "low_pct": 1.8
+      },
+      "impair": {
+        "high_pct": 4.7,
+        "low_pct": 0.9
+      },
+      "harm": {
+        "high_pct": 23.3,
+        "low_pct": 1.8
+      }
+    },
+    "quotable": "High-risk paragraphs over-index on: 'data', 'harm', 'products'"
+  },
+  "calibration": {
+    "calibration_curve": [
+      {
+        "bin_low": 0.288,
+        "bin_high": 0.345,
+        "mean_score": 0.315,
+        "actual_high_rate": 0.0,
+        "count": 5
+      },
+      {
+        "bin_low": 0.345,
+        "bin_high": 0.403,
+        "mean_score": 0.38,
+        "actual_high_rate": 0.0,
+        "count": 7
+      },
+      {
+        "bin_low": 0.403,
+        "bin_high": 0.461,
+        "mean_score": 0.435,
+        "actual_high_rate": 0.111,
+        "count": 9
+      },
+      {
+        "bin_low": 0.461,
+        "bin_high": 0.519,
+        "mean_score": 0.489,
+        "actual_high_rate": 0.095,
+        "count": 21
+      },
+      {
+        "bin_low": 0.519,
+        "bin_high": 0.577,
+        "mean_score": 0.554,
+        "actual_high_rate": 0.097,
+        "count": 31
+      },
+      {
+        "bin_low": 0.577,
+        "bin_high": 0.634,
+        "mean_score": 0.603,
+        "actual_high_rate": 0.111,
+        "count": 36
+      },
+      {
+        "bin_low": 0.634,
+        "bin_high": 0.692,
+        "mean_score": 0.66,
+        "actual_high_rate": 0.333,
+        "count": 39
+      },
+      {
+        "bin_low": 0.692,
+        "bin_high": 0.75,
+        "mean_score": 0.719,
+        "actual_high_rate": 0.275,
+        "count": 40
+      },
+      {
+        "bin_low": 0.75,
+        "bin_high": 0.808,
+        "mean_score": 0.778,
+        "actual_high_rate": 0.409,
+        "count": 66
+      },
+      {
+        "bin_low": 0.808,
+        "bin_high": 0.865,
+        "mean_score": 0.833,
+        "actual_high_rate": 0.781,
+        "count": 32
+      }
+    ],
+    "expected_calibration_error": 0.3631,
+    "quotable": "A score \u2265 0.70 means 49% probability of being truly high-risk"
+  },
+  "baseline_comparison": {
+    "results": {
+      "finbert": {
+        "name": "FinBERT",
+        "accuracy": 0.5664,
+        "spearman_rho": 0.5899,
+        "thresholds": {
+          "high": 0.75,
+          "medium": 0.7
+        }
+      },
+      "tfidf": {
+        "name": "TF-IDF",
+        "accuracy": 0.3986,
+        "spearman_rho": 0.2196,
+        "thresholds": {
+          "high": 0.3,
+          "medium": 0.15
+        }
+      },
+      "keyword": {
+        "name": "Keyword",
+        "accuracy": 0.4615,
+        "spearman_rho": 0.2911,
+        "thresholds": {
+          "high": 0.3,
+          "medium": 0.1
+        }
+      },
+      "regex": {
+        "name": "Regex",
+        "accuracy": 0.4161,
+        "spearman_rho": 0.1242,
+        "thresholds": {
+          "high": 0.3,
+          "medium": 0.1
+        }
+      }
+    },
+    "improvements": {
+      "vs_keyword": 10.5,
+      "vs_regex": 15.0,
+      "vs_tfidf": 16.8
+    },
+    "quotable": "FinBERT beats keyword baseline by 10.5 points, regex by 15.0 points, TF-IDF by 16.8 points"
+  }
+}

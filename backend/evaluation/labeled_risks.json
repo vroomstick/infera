@@ -10,21 +10,21 @@
     {
       "id": 1,
       "source": "AAPL",
-      "text": "The Company’s business, reputation, results of operations, financial condition and stock price can be affected by a number of factors, whether currently known or unknown, including those described below. When any one or more of these risks materialize from time to time, the Company’s business, reputation, results of operations, financial condition and stock price can be materially and adversely affected.",
+      "text": "The Company's business, reputation, results of operations, financial condition and stock price can be affected by a number of factors, whether currently known or unknown, including those described below. When any one or more of these risks materialize from time to time, the Company's business, reputation, results of operations, financial condition and stock price can be materially and adversely affected.",
       "label": "low",
       "notes": "Boilerplate introductory language that appears at the start of every risk section."
     },
     {
       "id": 2,
       "source": "AAPL",
-      "text": "Because of the following factors, as well as other factors affecting the Company’s results of operations and financial condition, past financial performance should not be considered to be a reliable indicator of future performance, and investors should not use historical trends to anticipate results or trends in future periods. This discussion of risk factors contains forward-looking statements.",
+      "text": "Because of the following factors, as well as other factors affecting the Company's results of operations and financial condition, past financial performance should not be considered to be a reliable indicator of future performance, and investors should not use historical trends to anticipate results or trends in future periods. This discussion of risk factors contains forward-looking statements.",
       "label": "low",
       "notes": "Standard legal disclaimer about forward-looking statements."
     },
     {
       "id": 3,
       "source": "AAPL",
-      "text": "Adverse economic conditions can also lead to increased credit and collectibility risk on the Company’s trade receivables; the failure of derivative counterparties and other financial institutions; limitations on the Company’s ability to issue new debt; reduced liquidity; and declines in the fair values of the Company’s financial instruments. These and other impacts can materially adversely affect the Company’s business, results of operations, financial condition and stock price.",
+      "text": "Adverse economic conditions can also lead to increased credit and collectibility risk on the Company's trade receivables; the failure of derivative counterparties and other financial institutions; limitations on the Company's ability to issue new debt; reduced liquidity; and declines in the fair values of the Company's financial instruments. These and other impacts can materially adversely affect the Company's business, results of operations, financial condition and stock price.",
       "label": "high",
       "notes": "Multiple specific financial risks: credit, counterparty failure, debt limitations, liquidity."
     },
@@ -59,14 +59,14 @@
     {
       "id": 8,
       "source": "AAPL",
-      "text": "Investment in new business strategies and acquisitions could disrupt the Company’s ongoing business, present risks not originally contemplated and materially adversely affect the Company’s business, reputation, results of operations and financial condition.",
+      "text": "Investment in new business strategies and acquisitions could disrupt the Company's ongoing business, present risks not originally contemplated and materially adversely affect the Company's business, reputation, results of operations and financial condition.",
       "label": "high",
       "notes": "M&A and strategic disruption risk with material adverse impact."
     },
     {
       "id": 9,
       "source": "AAPL",
-      "text": "The Company’s financial performance is subject to risks associated with changes in the value of the U.S. dollar relative to local currencies.",
+      "text": "The Company's financial performance is subject to risks associated with changes in the value of the U.S. dollar relative to local currencies.",
       "label": "medium",
       "notes": "Standard foreign exchange exposure - typically hedged."
     },
@@ -80,14 +80,14 @@
     {
       "id": 11,
       "source": "AAPL",
-      "text": "The Company’s future gross margins can be impacted by a variety of factors, as discussed in Part I, Item 1A of this Form 10-K under the heading “Risk Factors.” As a result, the Company believes, in general, gross margins will be subject to volatility and downward pressure.",
+      "text": "The Company's future gross margins can be impacted by a variety of factors, as discussed in Part I, Item 1A of this Form 10-K under the heading \"Risk Factors.\" As a result, the Company believes, in general, gross margins will be subject to volatility and downward pressure.",
       "label": "low",
       "notes": "Cross-reference with general margin pressure statement."
     },
     {
       "id": 12,
       "source": "AAPL",
-      "text": "The Company is exposed to economic risk from interest rates and foreign exchange rates. The Company uses various strategies to manage these risks; however, they may still impact the Company’s consolidated financial statements.",
+      "text": "The Company is exposed to economic risk from interest rates and foreign exchange rates. The Company uses various strategies to manage these risks; however, they may still impact the Company's consolidated financial statements.",
       "label": "low",
       "notes": "Standard market risk with hedging mentioned."
     },
@@ -101,14 +101,14 @@
     {
       "id": 14,
       "source": "AAPL",
-      "text": "% of total trade receivables as of September 30, 2023 and September 24, 2022, respectively. The Company requires third-party credit support or collateral from certain customers to limit credit risk.",
+      "text": "% of total trade receivables as of September 30, 2023 and September 24, 2022, respectively. The Company requires third-party credit support or collateral from certain customers to limit credit risk.",
       "label": "low",
       "notes": "Incomplete fragment describing credit risk mitigation."
     },
     {
       "id": 15,
       "source": "AAPL",
-      "text": "To manage interest rate risk on certain of its U.S. dollar–denominated fixed-rate notes, the Company uses interest rate swaps to effectively convert the fixed interest rates to floating interest rates on a portion of these notes. Additionally, to manage foreign exchange rate risk on certain of its foreign currency–denominated notes, the Company uses cross-currency swaps to effectively convert these notes to U.S. dollar–denominated notes.",
+      "text": "To manage interest rate risk on certain of its U.S. dollar\u2013denominated fixed-rate notes, the Company uses interest rate swaps to effectively convert the fixed interest rates to floating interest rates on a portion of these notes. Additionally, to manage foreign exchange rate risk on certain of its foreign currency\u2013denominated notes, the Company uses cross-currency swaps to effectively convert these notes to U.S. dollar\u2013denominated notes.",
       "label": "low",
       "notes": "Risk management instruments description - mitigation not risk."
     },
@@ -122,7 +122,7 @@
     {
       "id": 17,
       "source": "TSLA",
-      "text": "Our battery packs are subject to various U.S. and international regulations that govern transport of “dangerous goods,” defined to include lithium-ion batteries, which may present a risk in transportation. We conduct testing to demonstrate our compliance with such regulations.",
+      "text": "Our battery packs are subject to various U.S. and international regulations that govern transport of \"dangerous goods,\" defined to include lithium-ion batteries, which may present a risk in transportation. We conduct testing to demonstrate our compliance with such regulations.",
       "label": "medium",
       "notes": "Regulatory compliance for dangerous goods transport."
     },
@@ -157,7 +157,7 @@
     {
       "id": 22,
       "source": "TSLA",
-      "text": "Increased scrutiny and changing expectations from stakeholders with respect to the Company’s ESG practices may result in additional costs or risks.",
+      "text": "Increased scrutiny and changing expectations from stakeholders with respect to the Company's ESG practices may result in additional costs or risks.",
       "label": "low",
       "notes": "Vague ESG scrutiny risk with weak language."
     },
@@ -199,7 +199,7 @@
     {
       "id": 28,
       "source": "TSLA",
-      "text": "Financial instruments that potentially subject us to a concentration of credit risk consist of cash, cash equivalents, investments, restricted cash, accounts receivable and other finance receivables. Our cash and investments balances are primarily on deposit at high credit quality financial institutions or invested in money market funds. These deposits are typically in excess of insured limits. As of December 31, 2023 and 2022, no entity represented 10% or more of our total receivables balance.",
+      "text": "Financial instruments that potentially subject us to a concentration of credit risk consist of cash, cash equivalents, investments, restricted cash, accounts receivable and other finance receivables. Our cash and investments balances are primarily on deposit at high credit quality financial institutions or invested in money market funds. These deposits are typically in excess of insured limits. As of December 31, 2023 and 2022, no entity represented 10% or more of our total receivables balance.",
       "label": "medium",
       "notes": "Credit concentration risk with mitigation noted."
     },
@@ -248,7 +248,7 @@
     {
       "id": 35,
       "source": "MSFT",
-      "text": "ERM is structured using a framework based on the Committee of Sponsoring Organization (“COSO”) guidance on Enterprise Risk Management Integrating Strategy with Performance and it also aligns with the International Organization for Standardization 31000:2018 Risk Management Standard.",
+      "text": "ERM is structured using a framework based on the Committee of Sponsoring Organization (\"COSO\") guidance on Enterprise Risk Management Integrating Strategy with Performance and it also aligns with the International Organization for Standardization 31000:2018 Risk Management Standard.",
       "label": "low",
       "notes": "Risk management framework description - governance not risk."
     },
@@ -262,7 +262,7 @@
     {
       "id": 37,
       "source": "MSFT",
-      "text": "We describe the risks from cybersecurity threats, including previous cybersecurity incidents, in section “Risk Factors” (Part I, Item 1A of this Form 10-K). As of the date of this Form 10-K, we do not believe any risks from cybersecurity threats have materially affected or are reasonably likely to materially affect us, including our results of operations or financial condition.",
+      "text": "We describe the risks from cybersecurity threats, including previous cybersecurity incidents, in section \"Risk Factors\" (Part I, Item 1A of this Form 10-K). As of the date of this Form 10-K, we do not believe any risks from cybersecurity threats have materially affected or are reasonably likely to materially affect us, including our results of operations or financial condition.",
       "label": "low",
       "notes": "Explicit statement that cyber risks have NOT materially affected."
     },
@@ -283,7 +283,7 @@
     {
       "id": 40,
       "source": "MSFT",
-      "text": "In addition to the Board’s oversight of cybersecurity risk, to support the CISO, we have established a Cybersecurity Governance Council (“CGC”) charged with overseeing initiatives that safeguard Microsoft’s computing environments, products, and services. The CGC is comprised of an executive-level team of Deputy CISOs with cybersecurity backgrounds and expertise relevant to their roles.",
+      "text": "In addition to the Board's oversight of cybersecurity risk, to support the CISO, we have established a Cybersecurity Governance Council (\"CGC\") charged with overseeing initiatives that safeguard Microsoft's computing environments, products, and services. The CGC is comprised of an executive-level team of Deputy CISOs with cybersecurity backgrounds and expertise relevant to their roles.",
       "label": "low",
       "notes": "Governance structure description - organizational disclosure."
     },
@@ -321,14 +321,1701 @@
       "text": "Securities held in our fixed-income portfolio are subject to different interest rate risks based on their maturities. We manage the average maturity of the fixed-income portfolio to achieve economic returns that correlate to certain global fixed-income indices.",
       "label": "low",
       "notes": "Investment portfolio interest rate risk with active management."
+    },
+    {
+      "id": 46,
+      "source": "NVDA",
+      "text": "The following risk factors should be considered in addition to the other information in this Annual Report on Form 10-K. The following risks could harm our business, financial condition, results of operations or reputation, which could cause our stock price to decline. Additional risks, trends and uncertainties not presently known to us or that we currently believe are immaterial may also harm our business, financial condition, results of operations or reputation.",
+      "label": "low",
+      "notes": "Boilerplate introductory language for risk factors section."
+    },
+    {
+      "id": 47,
+      "source": "NVDA",
+      "text": "Failure to meet the evolving needs of our industry may adversely impact our financial results.",
+      "label": "medium",
+      "notes": "Broad industry risk statement - lacks specificity but acknowledges impact."
+    },
+    {
+      "id": 48,
+      "source": "NVDA",
+      "text": "Competition could adversely impact our market share and financial results.",
+      "label": "medium",
+      "notes": "Standard competitive risk statement."
+    },
+    {
+      "id": 49,
+      "source": "NVDA",
+      "text": "Failure to estimate customer demand accurately has led and could lead to mismatches between supply and demand.",
+      "label": "high",
+      "notes": "Demand estimation failure with past occurrence acknowledged - material operational risk."
+    },
+    {
+      "id": 50,
+      "source": "NVDA",
+      "text": "Dependency on third-party suppliers and their technology to manufacture, assemble, test, or package our products reduces our control over product quantity and quality, manufacturing yields, and product delivery schedules and could harm our business.",
+      "label": "high",
+      "notes": "Critical supply chain dependency - third-party manufacturing risks."
+    },
+    {
+      "id": 51,
+      "source": "NVDA",
+      "text": "Defects in our products have caused and could cause us to incur significant expenses to remediate and could damage our business.",
+      "label": "high",
+      "notes": "Product defect risk with past occurrence and significant expense potential."
+    },
+    {
+      "id": 52,
+      "source": "NVDA",
+      "text": "Adverse economic conditions may harm our business.",
+      "label": "medium",
+      "notes": "General macroeconomic risk statement."
+    },
+    {
+      "id": 53,
+      "source": "NVDA",
+      "text": "International sales and operations are a significant part of our business, which exposes us to risks that could harm our business.",
+      "label": "medium",
+      "notes": "International operations risk - broad category statement."
+    },
+    {
+      "id": 54,
+      "source": "NVDA",
+      "text": "Product, system security and data breaches and cyber-attacks could disrupt our operations and adversely affect our financial condition, stock price and reputation.",
+      "label": "high",
+      "notes": "Cybersecurity risk with explicit financial condition, stock price, and reputation impact."
+    },
+    {
+      "id": 55,
+      "source": "NVDA",
+      "text": "Business disruptions could harm our operations and financial results.",
+      "label": "medium",
+      "notes": "General business disruption risk."
+    },
+    {
+      "id": 56,
+      "source": "NVDA",
+      "text": "Climate change may have a long-term impact on our business.",
+      "label": "low",
+      "notes": "Climate risk with weak 'may have' language and long-term framing."
+    },
+    {
+      "id": 57,
+      "source": "NVDA",
+      "text": "We may not be able to realize the potential benefits of business investments or acquisitions, nor successfully integrate acquisition targets.",
+      "label": "medium",
+      "notes": "M&A integration risk - standard disclosure."
+    },
+    {
+      "id": 58,
+      "source": "NVDA",
+      "text": "A significant amount of our revenue stems from a limited number of partners and distributors and we have a concentration of sales to end customers, and our revenue could be adversely affected if we lose or are prevented from selling to any of these end customers.",
+      "label": "high",
+      "notes": "Customer concentration risk - loss of major customers could materially affect revenue."
+    },
+    {
+      "id": 59,
+      "source": "NVDA",
+      "text": "We may be unable to attract, retain and motivate our executives and key employees.",
+      "label": "medium",
+      "notes": "Talent retention risk - important but common across tech."
+    },
+    {
+      "id": 60,
+      "source": "NVDA",
+      "text": "Modification or interruption of our business processes and information systems may disrupt our business, and internal controls.",
+      "label": "medium",
+      "notes": "IT systems and internal controls risk."
+    },
+    {
+      "id": 61,
+      "source": "NVDA",
+      "text": "Our operating results have in the past fluctuated and may in the future fluctuate, and if our operating results are below the expectations of securities analysts or investors, our stock price could decline.",
+      "label": "medium",
+      "notes": "Earnings volatility and stock price risk."
+    },
+    {
+      "id": 62,
+      "source": "NVDA",
+      "text": "We are subject to complex laws, rules and regulations, and political and other actions, which may adversely impact our business.",
+      "label": "medium",
+      "notes": "Regulatory and political risk - broad statement."
+    },
+    {
+      "id": 63,
+      "source": "NVDA",
+      "text": "Increased scrutiny from shareholders, regulators, and others regarding our corporate sustainability practices could result in financial, reputational, or operational harm and liability.",
+      "label": "medium",
+      "notes": "ESG scrutiny risk with explicit harm categories."
+    },
+    {
+      "id": 64,
+      "source": "NVDA",
+      "text": "Issues relating to the responsible use of our technologies, including AI, may result in reputational or financial harm and liability.",
+      "label": "high",
+      "notes": "AI ethics and responsible use risk - growing regulatory focus area."
+    },
+    {
+      "id": 65,
+      "source": "NVDA",
+      "text": "Adequately protecting our IP rights could be costly, and our ability to compete could be harmed if we are unsuccessful or if we are prohibited from making or selling our products.",
+      "label": "high",
+      "notes": "IP protection risk with potential sales prohibition impact."
+    },
+    {
+      "id": 66,
+      "source": "NVDA",
+      "text": "We are subject to stringent and changing data privacy and security laws, rules, regulations, and other obligations. These areas could damage our reputation, deter customers, affect product design, or result in legal or regulatory proceedings and liability.",
+      "label": "high",
+      "notes": "Data privacy regulatory risk with multiple potential impacts."
+    },
+    {
+      "id": 67,
+      "source": "NVDA",
+      "text": "Our operating results may be adversely impacted by additional tax liabilities, higher than expected tax rates, changes in tax laws, and other tax-related factors.",
+      "label": "medium",
+      "notes": "Tax liability risk - standard disclosure."
+    },
+    {
+      "id": 68,
+      "source": "NVDA",
+      "text": "Our business is exposed to the risks associated with litigation, investigations, and regulatory proceedings.",
+      "label": "medium",
+      "notes": "Legal and regulatory proceedings risk."
+    },
+    {
+      "id": 69,
+      "source": "NVDA",
+      "text": "Our indebtedness could adversely affect our financial position and cash flows from operations and prevent us from implementing our strategy or fulfilling our contractual obligations.",
+      "label": "high",
+      "notes": "Debt risk with strategy and contractual fulfillment impact."
+    },
+    {
+      "id": 70,
+      "source": "NVDA",
+      "text": "Delaware law, provisions in our governing documents and our agreement with Microsoft could delay or prevent a change in control.",
+      "label": "low",
+      "notes": "Anti-takeover provisions - governance disclosure not risk."
+    },
+    {
+      "id": 71,
+      "source": "NVDA",
+      "text": "Our accelerated computing platforms experience rapid changes in technology, customer requirements, competitive products, and industry standards.",
+      "label": "medium",
+      "notes": "Technology and market evolution risk."
+    },
+    {
+      "id": 72,
+      "source": "NVDA",
+      "text": "We build finished products and maintain inventory in advance of anticipated demand. While we have in the past entered and may in the future enter into long-term supply and capacity commitments, we may not be able to secure sufficient",
+      "label": "medium",
+      "notes": "Inventory and supply commitment risk - incomplete but substantive."
+    },
+    {
+      "id": 73,
+      "source": "NVDA",
+      "text": "GPUs, which could negatively impact retail prices for our GPUs and reduce demand for our new GPUs. In general, our new products or previously sold products may be resold online or on the unauthorized \"gray market,\" which also makes demand forecasting difficult. Gray market products and reseller marketplaces compete with our new products and distribution channels.",
+      "label": "medium",
+      "notes": "Gray market and pricing pressure risk."
+    },
+    {
+      "id": 74,
+      "source": "NVDA",
+      "text": "Security breaches, computer malware, social-engineering attacks, denial-of-service attacks, software bugs, server malfunctions, software or hardware failures, loss of data or other information technology assets, and other cyber-attacks are becoming increasingly sophisticated, making it more difficult to successfully detect, defend against them or implement adequate preventative measures.",
+      "label": "high",
+      "notes": "Detailed cybersecurity threat landscape - increasing sophistication acknowledged."
+    },
+    {
+      "id": 75,
+      "source": "NVDA",
+      "text": "Cyber-attacks, including ransomware attacks by organized criminal threat actors, nation-states, and nation-state-supported actors, may become more prevalent and severe. Our ability to recover from ransomware attacks may be limited if our backups have been affected by the attack, or if restoring from backups is delayed or not feasible.",
+      "label": "high",
+      "notes": "Ransomware and nation-state threat with recovery limitations."
+    },
+    {
+      "id": 76,
+      "source": "NVDA",
+      "text": "Stakeholder groups may find us insufficiently responsive to the implications of climate change, and therefore we may face legal action or reputational harm. We may not achieve our stated sustainability-related goals, which could harm our reputation, or we may incur additional, unexpected costs to achieve such goals. We may also experience contractual disputes due to supply chain delays arising from climate change-related disruptions, which could result in increased litigation and costs.",
+      "label": "medium",
+      "notes": "Climate-related stakeholder and supply chain risk with legal exposure."
+    },
+    {
+      "id": 77,
+      "source": "NVDA",
+      "text": "We also face risks related to business trends that may be influenced by climate change concerns. Our business could be negatively impacted by concerns around the high absolute energy requirements of our GPUs, despite their much more energy efficient design and operation relative to alternative computing platforms.",
+      "label": "medium",
+      "notes": "Energy consumption perception risk for GPU products."
+    },
+    {
+      "id": 78,
+      "source": "NVDA",
+      "text": "Adverse developments affecting financial institutions, such as bank failures or instability, or concerns or speculation about similar events or risks, could lead to market-wide liquidity problems and other disruptions, which could impact our customers' ability to fulfill their payment obligations to us, our vendors' ability to fulfill their contractual obligations to us, or our ability to fulfill our own obligations.",
+      "label": "high",
+      "notes": "Financial institution instability risk with cascading payment impacts."
+    },
+    {
+      "id": 79,
+      "source": "NVDA",
+      "text": "The increasing focus on the risks and strategic importance of AI technologies has resulted in regulatory restrictions that target products and services capable of enabling or facilitating AI and may in the future result in additional restrictions impacting some or all of our product and service offerings.",
+      "label": "high",
+      "notes": "AI-specific regulatory restriction risk - core to NVIDIA business."
+    },
+    {
+      "id": 80,
+      "source": "NVDA",
+      "text": "Such restrictions could include additional unilateral or multilateral export controls on certain products or technology, including but not limited to AI technologies. As geopolitical tensions have increased, semiconductors associated with AI, including GPUs and associated products, are increasingly the focus of export control restrictions proposed by stakeholders in the U.S. and its allies.",
+      "label": "high",
+      "notes": "Export control and geopolitical risk affecting AI semiconductors."
+    },
+    {
+      "id": 81,
+      "source": "NVDA",
+      "text": "Finally, our business depends on our ability to receive consistent and reliable supply from our overseas partners, especially in Taiwan. Any new restrictions that negatively impact our ability to receive supply of components, parts, or services from Taiwan, would negatively impact our business and financial results.",
+      "label": "high",
+      "notes": "Taiwan supply chain dependency - geopolitical concentration risk."
+    },
+    {
+      "id": 82,
+      "source": "NVDA",
+      "text": "For example, in response to the war in Ukraine, the United States and other jurisdictions imposed economic sanctions and export control measures which blocked the passage of our products, services and support into Russia, Belarus, and certain regions of Ukraine. In fiscal year 2023, we stopped direct sales to Russia and closed business operations in Russia. Concurrently, the war in Ukraine has impacted sales in EMEA and may continue to do so in the future.",
+      "label": "high",
+      "notes": "Sanctions impact with concrete past revenue loss example."
+    },
+    {
+      "id": 83,
+      "source": "NVDA",
+      "text": "We process sensitive, confidential or personal data or information that is subject to privacy and security laws, regulations, industry standards, external and internal policies, contracts and other obligations that govern the processing of such data by us and on our behalf. Concerns about our practices or the ultimate use of our products and services with regard to the collection, use, retention, security or disclosure of personal information or other privacy-related matters, including for use in AI, even if unfounded, could damage our reputation and adversely affect our operating results.",
+      "label": "high",
+      "notes": "Data privacy concerns with AI-specific implications."
+    },
+    {
+      "id": 84,
+      "source": "NVDA",
+      "text": "As of January 28, 2024, we had net outstanding a total of $9.7 billion in notes due by 2060. As each series of senior notes matures, unless redeemed or repurchased, we must repay or refinance the notes. If we decide to refinance, we may receive less favorable terms, or we may be unable to refinance at all, which may adversely affect our financial condition. We also have a $575 million commercial paper program.",
+      "label": "medium",
+      "notes": "Debt maturity and refinancing risk with specific figures."
+    },
+    {
+      "id": 85,
+      "source": "NVDA",
+      "text": "Our ability to comply with the covenants in our indenture may be affected by events beyond our control. If we breach any of the covenants without a waiver from the note holders or lenders, then any outstanding indebtedness may be declared immediately due and payable. Changes to our credit rating may negatively impact the value and liquidity of our securities, restrict our ability to obtain future financing and affect the terms of any such financing.",
+      "label": "high",
+      "notes": "Debt covenant breach risk with acceleration clause."
+    },
+    {
+      "id": 86,
+      "source": "AMZN",
+      "text": "We Face Intense Competition",
+      "label": "low",
+      "notes": "Section header only - no substantive content."
+    },
+    {
+      "id": 87,
+      "source": "AMZN",
+      "text": "Our Expansion into New Products, Services, Technologies, and Geographic Regions Subjects Us to Additional Risks",
+      "label": "low",
+      "notes": "Section header only - no substantive content."
+    },
+    {
+      "id": 88,
+      "source": "AMZN",
+      "text": "value of those investments being written down or written off. In addition, our sustainability initiatives may be unsuccessful for a variety of reasons, including if we are unable to realize the expected benefits of new technologies or if we do not successfully plan or execute new strategies, which could harm our business or damage our reputation.",
+      "label": "medium",
+      "notes": "Investment write-down and sustainability initiative risk."
+    },
+    {
+      "id": 89,
+      "source": "AMZN",
+      "text": "Our international activities are significant to our revenues and profits, and we plan to further expand internationally. In certain international market segments, we have relatively little operating experience and may not benefit from any first-to-market advantages or otherwise succeed. It is costly to establish, develop, and maintain international operations and stores, and promote our brand internationally. Our international operations may not become profitable on a sustained basis.",
+      "label": "high",
+      "notes": "International expansion profitability risk - significant revenue exposure."
+    },
+    {
+      "id": 90,
+      "source": "AMZN",
+      "text": "As international physical, e-commerce, and omnichannel retail, cloud services, and other services grow, competition will intensify, including through adoption of evolving business models. Local companies may have a substantial competitive advantage because of their greater understanding of, and focus on, the local customer, as well as their more established local brand names. The inability to hire, train, retain, and manage sufficient required personnel may limit our international growth.",
+      "label": "high",
+      "notes": "International competitive disadvantage vs local players."
+    },
+    {
+      "id": 91,
+      "source": "AMZN",
+      "text": "In addition, because China-based sellers account for significant portions of our third-party seller services and advertising revenues, and China-based suppliers provide significant portions of our components and finished goods, regulatory and trade restrictions, data protection and cybersecurity laws, economic factors, geopolitical events, security issues, or other factors negatively impacting China-based sellers and suppliers could adversely affect our operating results.",
+      "label": "high",
+      "notes": "China supply chain and seller dependency - geopolitical and regulatory risk."
+    },
+    {
+      "id": 92,
+      "source": "AMZN",
+      "text": "The Variability in Our Retail Business Places Increased Strain on Our Operations",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 93,
+      "source": "AMZN",
+      "text": "We Are Impacted by Fraudulent or Unlawful Activities of Sellers",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 94,
+      "source": "AMZN",
+      "text": "We Face Risks Related to Adequately Protecting Our Intellectual Property Rights and Being Accused of Infringing Intellectual Property Rights of Third Parties",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 95,
+      "source": "AMZN",
+      "text": "Our digital content offerings depend in part on effective digital rights management technology to control access to digital content. Breach or malfunctioning of the digital rights management technology that we use could subject us to claims, and content providers may be unwilling to include their content in our service.",
+      "label": "medium",
+      "notes": "DRM technology risk affecting content relationships."
+    },
+    {
+      "id": 96,
+      "source": "AMZN",
+      "text": "We Have Foreign Exchange Risk",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 97,
+      "source": "AMZN",
+      "text": "We are not always able to accurately forecast our growth rate. We base our expense levels and investment plans on sales estimates. A significant portion of our expenses and investments is fixed, and we are not always able to adjust our spending quickly enough if our sales are less than expected.",
+      "label": "high",
+      "notes": "Forecasting failure with fixed cost structure creating margin pressure."
+    },
+    {
+      "id": 98,
+      "source": "AMZN",
+      "text": "We Could Be Harmed by Data Loss or Other Security Incidents",
+      "label": "medium",
+      "notes": "Section header with risk indication but no detail."
+    },
+    {
+      "id": 99,
+      "source": "AMZN",
+      "text": "We Face Risks Related to System Interruption and Lack of Redundancy",
+      "label": "medium",
+      "notes": "Section header indicating infrastructure risk."
+    },
+    {
+      "id": 100,
+      "source": "AMZN",
+      "text": "We depend on our senior management and other key personnel, including our President and CEO. We do not have \"key person\" life insurance policies. We also rely on other highly skilled personnel. Competition for qualified personnel in the industries in which we operate, as well as senior management, has historically been intense.",
+      "label": "high",
+      "notes": "Key person dependency without insurance - explicit vulnerability."
+    },
+    {
+      "id": 101,
+      "source": "AMZN",
+      "text": "We are also subject to labor union efforts to organize groups of our employees from time to time. These organizational efforts, if successful, decrease our operational flexibility, which could adversely affect our operating efficiency. In addition, our response to any organizational efforts could be perceived negatively and harm our business and reputation.",
+      "label": "medium",
+      "notes": "Labor union organization risk affecting operational flexibility."
+    },
+    {
+      "id": 102,
+      "source": "AMZN",
+      "text": "Our Supplier Relationships Subject Us to a Number of Risks",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 103,
+      "source": "AMZN",
+      "text": "As our agreements terminate, we may be unable to renew or replace these agreements on comparable terms, or at all. We may in the future enter into amendments on less favorable terms or encounter parties that have difficulty meeting their contractual obligations to us, which could adversely affect our operating results.",
+      "label": "medium",
+      "notes": "Contract renewal and counterparty performance risk."
+    },
+    {
+      "id": 104,
+      "source": "AMZN",
+      "text": "We have acquired and invested in a number of companies, and we may in the future acquire or invest in or enter into joint ventures with additional companies. These transactions involve risks such as: disruption of our ongoing business, including loss of management focus on existing businesses; problems retaining key personnel; additional operating losses and expenses of the businesses we acquired or in which we invested;",
+      "label": "high",
+      "notes": "M&A integration risks with multiple specific challenges enumerated."
+    },
+    {
+      "id": 105,
+      "source": "AMZN",
+      "text": "the potential impairment of tangible and intangible assets and goodwill, including as a result of acquisitions; the potential impairment of customer and other relationships of the company we acquired or in which we invested or our own customers as a result of any integration of operations;",
+      "label": "high",
+      "notes": "Asset impairment and relationship damage risk from acquisitions."
+    },
+    {
+      "id": 106,
+      "source": "AMZN",
+      "text": "the difficulty of completing such transactions, including obtaining regulatory approvals or satisfying other closing conditions, and achieving anticipated benefits within expected timeframes, or at all;",
+      "label": "medium",
+      "notes": "Transaction completion and benefit realization risk."
+    },
+    {
+      "id": 107,
+      "source": "AMZN",
+      "text": "the difficulty of integrating a new company's accounting, financial and sustainability reporting, management, information and data security, human resource, and other administrative systems to permit effective management, and the lack of control if such integration is delayed or not successfully implemented;",
+      "label": "medium",
+      "notes": "Systems integration complexity risk."
+    },
+    {
+      "id": 108,
+      "source": "AMZN",
+      "text": "We Face Significant Inventory Risk",
+      "label": "medium",
+      "notes": "Section header indicating inventory risk category."
+    },
+    {
+      "id": 109,
+      "source": "AMZN",
+      "text": "We Are Subject to Payments-Related Risks",
+      "label": "medium",
+      "notes": "Section header indicating payments risk."
+    },
+    {
+      "id": 110,
+      "source": "AMZN",
+      "text": "We have a rapidly evolving business model. The trading price of our common stock fluctuates significantly in response to, among other risks, the risks described elsewhere in this Item 1A, as well as: changes in interest rates; conditions or trends in the internet and the industry segments we operate in; quarterly variations in operating results;",
+      "label": "medium",
+      "notes": "Stock price volatility with multiple drivers listed."
+    },
+    {
+      "id": 111,
+      "source": "AMZN",
+      "text": "Volatility in our stock price could adversely affect our business and financing opportunities and force us to increase our cash compensation to employees or grant larger stock awards than we have historically, which could hurt our operating results or reduce the percentage ownership of our existing stockholders, or both.",
+      "label": "medium",
+      "notes": "Stock volatility impact on compensation and dilution."
+    },
+    {
+      "id": 112,
+      "source": "AMZN",
+      "text": "Government Regulation Is Evolving and Unfavorable Changes Could Harm Our Business",
+      "label": "medium",
+      "notes": "Section header with regulatory risk indication."
+    },
+    {
+      "id": 113,
+      "source": "AMZN",
+      "text": "Claims, Litigation, Government Investigations, and Other Proceedings May Adversely Affect Our Business and Results of Operations",
+      "label": "medium",
+      "notes": "Section header indicating legal and regulatory proceedings risk."
+    },
+    {
+      "id": 114,
+      "source": "AMZN",
+      "text": "Some of the products we sell or manufacture expose us to product liability or food safety claims relating to personal injury or illness, death, or environmental or property damage, and can require product recalls or other actions. Third parties who sell products using our services and stores also expose us to product liability claims.",
+      "label": "high",
+      "notes": "Product liability for injury, illness, death - serious exposure."
+    },
+    {
+      "id": 115,
+      "source": "AMZN",
+      "text": "We Face Additional Tax Liabilities and Collection Obligations",
+      "label": "medium",
+      "notes": "Section header indicating tax risk."
+    },
+    {
+      "id": 116,
+      "source": "AMZN",
+      "text": "We Are Subject to Risks Related to Government Contracts and Related Procurement Regulations",
+      "label": "medium",
+      "notes": "Section header indicating government contract compliance risk."
+    },
+    {
+      "id": 117,
+      "source": "GOOGL",
+      "text": "Our operations and financial results are subject to various risks and uncertainties, including but not limited to those described below, which could harm our business, reputation, financial condition, and operating results, and affect the trading price of our Class A and Class C stock.",
+      "label": "low",
+      "notes": "Boilerplate introductory statement for risk factors section."
+    },
+    {
+      "id": 118,
+      "source": "GOOGL",
+      "text": "We generate a significant portion of our revenues from advertising. Reduced spending by advertisers, a loss of partners, or new and existing technologies that block ads online and/or affect our ability to customize ads could harm our business.",
+      "label": "high",
+      "notes": "Core advertising revenue dependency with multiple threat vectors."
+    },
+    {
+      "id": 119,
+      "source": "GOOGL",
+      "text": "In addition, expenditures by advertisers tend to correlate with overall economic conditions. Adverse macroeconomic conditions have affected, and may in the future affect, the demand for advertising, resulting in fluctuations in the amounts our advertisers spend on advertising, which could harm our financial condition and operating results.",
+      "label": "high",
+      "notes": "Advertising revenue cyclicality with macro sensitivity."
+    },
+    {
+      "id": 120,
+      "source": "GOOGL",
+      "text": "We face intense competition. If we do not continue to innovate and provide products and services that are useful to users, customers, and other partners, we may not remain competitive, which could harm our business, financial condition, and operating results.",
+      "label": "high",
+      "notes": "Competitive innovation imperative with explicit harm language."
+    },
+    {
+      "id": 121,
+      "source": "GOOGL",
+      "text": "These technologies could reduce usage of our products and services, and force us to compete in different ways and expend significant resources to develop and operate equal or better products and services. Competitors' success in providing compelling products and services or in attracting and retaining users, advertisers, publishers, customers, and content providers could harm our financial condition and operating results.",
+      "label": "high",
+      "notes": "Competitive displacement risk with resource expenditure pressure."
+    },
+    {
+      "id": 122,
+      "source": "GOOGL",
+      "text": "Our ongoing investment in new businesses, products, services, and technologies is inherently risky, and could divert management attention and harm our business, financial condition, and operating results.",
+      "label": "medium",
+      "notes": "New investment risk with management distraction concern."
+    },
+    {
+      "id": 123,
+      "source": "GOOGL",
+      "text": "Within Other Bets, we are investing significantly in the areas of health, life sciences, and transportation, among others. These investment areas face intense competition from large, experienced, and well-funded competitors, and our offerings, many of which involve the development of new and emerging technologies, may not be successful, or be able to compete effectively or operate at sufficient levels of profitability.",
+      "label": "high",
+      "notes": "Other Bets investment risk with success uncertainty in competitive markets."
+    },
+    {
+      "id": 124,
+      "source": "GOOGL",
+      "text": "In addition, new and evolving products and services, including those that use AI, raise ethical, technological, legal, regulatory, and other challenges, which may negatively affect our brands and demand for our products and services. Because all of these investment areas are inherently risky, no assurance can be given that such strategies and offerings will be successful or will not harm our reputation, financial condition, and operating results.",
+      "label": "high",
+      "notes": "AI-related ethical and regulatory challenges affecting brand and demand."
+    },
+    {
+      "id": 125,
+      "source": "GOOGL",
+      "text": "Our revenue growth rate could decline over time, and we may experience downward pressure on our operating margin in the future.",
+      "label": "medium",
+      "notes": "Growth and margin pressure acknowledgment."
+    },
+    {
+      "id": 126,
+      "source": "GOOGL",
+      "text": "Our revenue growth rate could decline over time as a result of a number of factors, including changes in the devices and modalities used to access our products and services; changes in geographic mix; deceleration or declines in advertiser spending; competition; customer usage and demand for our products; decreases in our pricing of our products and services; ongoing product and policy changes; and shifts to lower priced products and services.",
+      "label": "high",
+      "notes": "Multiple revenue headwind factors enumerated."
+    },
+    {
+      "id": 127,
+      "source": "GOOGL",
+      "text": "Our intellectual property rights are valuable, and any inability to protect them could reduce the value of our products, services, and brands as well as affect our ability to compete.",
+      "label": "medium",
+      "notes": "IP protection importance and competitive impact."
+    },
+    {
+      "id": 128,
+      "source": "GOOGL",
+      "text": "Any significant impairment of our intellectual property rights could harm our business and our ability to compete. Also, protecting our intellectual property rights is costly and time consuming. Any increase in the unauthorized use of our intellectual property could make it more expensive to do business and harm our financial condition and operating results.",
+      "label": "high",
+      "notes": "IP impairment with cost and competitive harm."
+    },
+    {
+      "id": 129,
+      "source": "GOOGL",
+      "text": "Our business depends on strong brands, and failing to maintain and enhance our brands would hurt our ability to expand our base of users, advertisers, customers, content providers, and other partners.",
+      "label": "medium",
+      "notes": "Brand dependency for ecosystem expansion."
+    },
+    {
+      "id": 130,
+      "source": "GOOGL",
+      "text": "Furthermore, failure to maintain and enhance our brands could harm our business, reputation, financial condition, and operating results. Our success will depend largely on our ability to remain a technology leader and continue to provide high-quality, trustworthy, innovative products and services that are truly useful and play a valuable role in a range of settings.",
+      "label": "high",
+      "notes": "Brand failure with technology leadership dependency."
+    },
+    {
+      "id": 131,
+      "source": "GOOGL",
+      "text": "We face a number of manufacturing and supply chain risks that could harm our business, financial condition, and operating results.",
+      "label": "medium",
+      "notes": "Supply chain risk category statement."
+    },
+    {
+      "id": 132,
+      "source": "GOOGL",
+      "text": "We face a number of risks related to manufacturing and supply chain management, which could affect our ability to supply both our products and our services.",
+      "label": "medium",
+      "notes": "Manufacturing risk affecting product and service supply."
+    },
+    {
+      "id": 133,
+      "source": "GOOGL",
+      "text": "Our devices have had, and in the future may have, quality issues resulting from design, manufacturing, or operations. Sometimes, these issues may be caused by components we purchase from other manufacturers or suppliers. If the quality of our products and services does not meet expectations or our products or services are defective or require a recall, it could harm our reputation, financial condition, and operating results.",
+      "label": "high",
+      "notes": "Product quality and recall risk with past occurrence."
+    },
+    {
+      "id": 134,
+      "source": "GOOGL",
+      "text": "Interruption to, interference with, or failure of our complex information technology and communications systems could hurt our ability to effectively provide our products and services, which could harm our reputation, financial condition, and operating results.",
+      "label": "high",
+      "notes": "IT systems failure affecting service delivery."
+    },
+    {
+      "id": 135,
+      "source": "GOOGL",
+      "text": "Our international operations expose us to additional risks that could harm our business, financial condition, and operating results.",
+      "label": "medium",
+      "notes": "International operations risk category."
+    },
+    {
+      "id": 136,
+      "source": "GOOGL",
+      "text": "Our international operations are significant to our revenues and net income, and we plan to continue to grow internationally. International revenues accounted for approximately 53% of our consolidated revenues in 2023.",
+      "label": "medium",
+      "notes": "International revenue significance quantified."
+    },
+    {
+      "id": 137,
+      "source": "GOOGL",
+      "text": "We are exposed to fluctuations in the fair values of our investments and, in some instances, our financial statements incorporate inherently subjective valuation methodologies.",
+      "label": "medium",
+      "notes": "Investment valuation risk."
+    },
+    {
+      "id": 138,
+      "source": "GOOGL",
+      "text": "The fair value of our debt and equity investments may in the future be, and certain investments have been in the past, negatively affected by liquidity, credit deterioration or losses, performance and financial results of the underlying entities, foreign exchange rates, changes in interest rates, including changes that may result from the implementation of new benchmark rates, the effect of new or changing regulations, the stock market in general, or other factors.",
+      "label": "high",
+      "notes": "Investment value deterioration with multiple causal factors."
+    },
+    {
+      "id": 139,
+      "source": "GOOGL",
+      "text": "As a result of these factors, the value of our investments could decline, which could harm our financial condition and operating results.",
+      "label": "medium",
+      "notes": "Investment decline impact statement."
+    },
+    {
+      "id": 140,
+      "source": "GOOGL",
+      "text": "People access our products and services through a variety of platforms and devices that continue to evolve with the advancement of technology and user preferences. If manufacturers and users do not widely adopt versions of our products and services developed for these interfaces, our business could be harmed.",
+      "label": "medium",
+      "notes": "Platform and device adoption risk."
+    },
+    {
+      "id": 141,
+      "source": "GOOGL",
+      "text": "Issues in the development and use of AI may result in reputational harm and increased liability exposure.",
+      "label": "high",
+      "notes": "AI development risks with reputation and liability impact."
+    },
+    {
+      "id": 142,
+      "source": "GOOGL",
+      "text": "Concerns about, including the adequacy of, our practices with regard to the collection, use, governance, disclosure, or security of personal data or other data-privacy-related matters, even if unfounded, could harm our business, reputation, financial condition, and operating results. Our policies and practices may change over time as expectations and regulations regarding privacy and data change.",
+      "label": "high",
+      "notes": "Data privacy concerns with explicit harm even if unfounded."
+    },
+    {
+      "id": 143,
+      "source": "GOOGL",
+      "text": "We may experience security issues, whether due to employee or insider error or malfeasance, system errors, or vulnerabilities in our or other parties' systems.",
+      "label": "high",
+      "notes": "Security vulnerability sources including insider threats."
+    },
+    {
+      "id": 144,
+      "source": "GOOGL",
+      "text": "Our ongoing investments in safety, security, and content review will likely continue to identify abuse of our platforms and misuse of user data.",
+      "label": "medium",
+      "notes": "Platform abuse discovery risk."
+    },
+    {
+      "id": 145,
+      "source": "GOOGL",
+      "text": "Problematic content on our platforms, including low-quality user-generated content, web spam, content farms, and other violations of our guidelines could affect the quality of our services, which could harm our reputation and deter our current and potential users from using our products and services.",
+      "label": "medium",
+      "notes": "Content quality risk affecting reputation and user retention."
+    },
+    {
+      "id": 146,
+      "source": "GOOGL",
+      "text": "If we fail to either detect and prevent an increase in problematic content or effectively promote high-quality content, it could hurt our reputation for delivering relevant information or reduce use of our platforms, harming our financial condition and operating results. It may also subject us to litigation and regulatory actions, which could result in monetary penalties and damages and divert management's time and attention.",
+      "label": "high",
+      "notes": "Content moderation failure with litigation and regulatory exposure."
+    },
+    {
+      "id": 147,
+      "source": "GOOGL",
+      "text": "Our business depends on continued and unimpeded access to the Internet by us and our users. Internet access providers may be able to restrict, block, degrade, or charge for access to certain of our products and services, which could lead to additional expenses and the loss of users and advertisers.",
+      "label": "high",
+      "notes": "Net neutrality and internet access dependency risk."
+    },
+    {
+      "id": 148,
+      "source": "GOOGL",
+      "text": "We are subject to a variety of new, existing, and changing laws and regulations worldwide that could harm our business, and will likely be subject to an even broader scope of laws and regulations as we continue to expand our business.",
+      "label": "medium",
+      "notes": "Regulatory landscape expansion risk."
+    },
+    {
+      "id": 149,
+      "source": "GOOGL",
+      "text": "New or changing laws and regulations, or new interpretations or applications of existing laws and regulations in a manner inconsistent with our practices, have resulted in, and may continue to result in, less useful products and services, altered business practices, limited ability to pursue certain business models or offer certain products and services, substantial costs, and civil or criminal liability.",
+      "label": "high",
+      "notes": "Regulatory change with product, practice, and liability impacts."
+    },
+    {
+      "id": 150,
+      "source": "GOOGL",
+      "text": "Laws and regulations focused on large technology platforms, including the Digital Markets Act in the European Union (EU); regulations and legal settlements in the U.S., South Korea, and elsewhere that affect Google Play's billing policies, fees, and business model; as well as litigation and new regulations under consideration in a range of jurisdictions.",
+      "label": "high",
+      "notes": "Platform-specific regulation with DMA and billing model impacts."
+    },
+    {
+      "id": 151,
+      "source": "GOOGL",
+      "text": "Laws and regulations further restricting the collection, processing, and/or sharing of user or advertising-related data, including privacy and data protection laws; laws affecting the processing of children's data (as discussed further below), data breach notification laws, and laws limiting data transfers (including data localization laws).",
+      "label": "high",
+      "notes": "Data collection and transfer restrictions affecting core business."
+    },
+    {
+      "id": 152,
+      "source": "GOOGL",
+      "text": "Copyright and related laws, including the EU Directive on Copyright in the Digital Single Market and European Economic Area transpositions, which may introduce new licensing regimes, increase liability with respect to content uploaded by users or linked to from our platforms, or create property rights in news publications that could require payments to news agencies and publishers, which may result in other regulatory actions.",
+      "label": "high",
+      "notes": "Copyright regulation with licensing and payment obligations."
+    },
+    {
+      "id": 153,
+      "source": "GOOGL",
+      "text": "Consumer protection laws, including the EU's New Deal for Consumers, which could result in monetary penalties and create a range of new compliance obligations.",
+      "label": "medium",
+      "notes": "Consumer protection compliance with penalty risk."
+    },
+    {
+      "id": 154,
+      "source": "GOOGL",
+      "text": "We are and may continue to be subject to claims, lawsuits, regulatory and government investigations, enforcement actions, consent orders, and other forms of regulatory scrutiny and legal liability that could harm our business, reputation, financial condition, and operating results.",
+      "label": "high",
+      "notes": "Broad legal and regulatory exposure statement."
+    },
+    {
+      "id": 155,
+      "source": "GOOGL",
+      "text": "Privacy, data protection, and data usage regulations are complex and rapidly evolving areas. Any failure or alleged failure to comply with these laws could harm our business, reputation, financial condition, and operating results.",
+      "label": "high",
+      "notes": "Privacy regulation complexity with compliance failure risk."
+    },
+    {
+      "id": 156,
+      "source": "GOOGL",
+      "text": "The General Data Protection Regulation and the United Kingdom General Data Protection Regulations, which apply to all of our activities conducted from an establishment in the EU or the United Kingdom, respectively, or related to products and services that we offer to EU or the United Kingdom users or customers, respectively, or the monitoring of their behavior in the EU or the UK, respectively.",
+      "label": "medium",
+      "notes": "GDPR scope and applicability description."
+    },
+    {
+      "id": 157,
+      "source": "GOOGL",
+      "text": "Various comprehensive U.S. state and foreign privacy laws, which give new data privacy rights to their respective residents (including, in California, a private right of action in the event of a data breach resulting from our failure to implement and maintain reasonable security procedures and practices) and impose significant obligations on controllers and processors of consumer data.",
+      "label": "high",
+      "notes": "State privacy laws with private right of action for breaches."
+    },
+    {
+      "id": 158,
+      "source": "GOOGL",
+      "text": "State laws governing the processing of biometric information, such as the Illinois Biometric Information Privacy Act and the Texas Capture or Use of Biometric Identifier Act, which impose obligations on businesses that collect or disclose consumer biometric information.",
+      "label": "medium",
+      "notes": "Biometric data regulation compliance."
+    },
+    {
+      "id": 159,
+      "source": "GOOGL",
+      "text": "The EU's Digital Markets Act, which will require in-scope companies to obtain user consent for combining data across certain products and require search engines to share anonymized data with rival companies, among other changes.",
+      "label": "high",
+      "notes": "DMA data sharing and consent requirements."
+    },
+    {
+      "id": 160,
+      "source": "GOOGL",
+      "text": "We face, and may continue to face, intellectual property and other claims that could be costly to defend, result in significant damage awards or other costs (including indemnification awards), and limit our ability to use certain technologies.",
+      "label": "high",
+      "notes": "IP litigation with damage awards and technology use limitations."
+    },
+    {
+      "id": 161,
+      "source": "GOOGL",
+      "text": "Expectations relating to ESG considerations could expose us to potential liabilities, increased costs, and reputational harm.",
+      "label": "medium",
+      "notes": "ESG expectations with liability and reputation exposure."
+    },
+    {
+      "id": 162,
+      "source": "GOOGL",
+      "text": "We could be subject to changes in tax rates, the adoption of new U.S. or international tax legislation, or exposure to additional tax liabilities.",
+      "label": "medium",
+      "notes": "Tax rate and legislation change risk."
+    },
+    {
+      "id": 163,
+      "source": "GOOGL",
+      "text": "We cannot guarantee that any share repurchase program will be fully consummated or will enhance long-term stockholder value, and share repurchases could increase the volatility of our stock prices and could diminish our cash reserves.",
+      "label": "low",
+      "notes": "Share repurchase program uncertainty - standard disclosure."
+    },
+    {
+      "id": 164,
+      "source": "GOOGL",
+      "text": "The concentration of our stock ownership limits our stockholders' ability to influence corporate matters.",
+      "label": "low",
+      "notes": "Voting structure disclosure - governance not risk."
+    },
+    {
+      "id": 165,
+      "source": "GOOGL",
+      "text": "Our Class B stock has 10 votes per share, our Class A stock has one vote per share, and our Class C stock has no voting rights. As of December 31, 2023, Larry Page and Sergey Brin beneficially owned approximately 86.5% of our outstanding Class B stock, which represented approximately 51.5%",
+      "label": "low",
+      "notes": "Voting structure details - governance disclosure."
+    },
+    {
+      "id": 166,
+      "source": "GOOGL",
+      "text": "Provisions in Alphabet's certificate of incorporation and bylaws may have the effect of delaying or preventing a change of control or changes in our management.",
+      "label": "low",
+      "notes": "Anti-takeover provisions disclosure."
+    },
+    {
+      "id": 167,
+      "source": "GOOGL",
+      "text": "As a Delaware corporation, we are also subject to certain Delaware anti-takeover provisions. Under Delaware law, a corporation may not engage in a business combination with any holder of 15% or more of its outstanding voting stock unless the holder has held the stock for three years or, among other things, the Board of Directors has approved the transaction. Our Board of Directors could rely on Delaware law to prevent or delay an acquisition of us.",
+      "label": "low",
+      "notes": "Delaware anti-takeover law description."
+    },
+    {
+      "id": 168,
+      "source": "GOOGL",
+      "text": "The trading price for our Class A stock and non-voting Class C stock may continue to be volatile.",
+      "label": "medium",
+      "notes": "Stock price volatility acknowledgment."
+    },
+    {
+      "id": 169,
+      "source": "GOOGL",
+      "text": "Our operating results may fluctuate, which makes our results difficult to predict and could cause our results to fall short of expectations.",
+      "label": "medium",
+      "notes": "Earnings volatility and prediction difficulty."
+    },
+    {
+      "id": 170,
+      "source": "GOOGL",
+      "text": "Acquisitions, joint ventures, investments, and divestitures could result in operating difficulties, dilution, and other consequences that could harm our business, financial condition, and operating results.",
+      "label": "medium",
+      "notes": "M&A risk category statement."
+    },
+    {
+      "id": 171,
+      "source": "GOOGL",
+      "text": "Acquisitions, joint ventures, investments, and divestitures are important elements of our overall corporate strategy and use of capital, and these transactions could be material to our financial condition and operating results. We expect to continue to evaluate and enter into discussions regarding a wide array of such potential strategic arrangements, which could create unforeseen operating difficulties and expenditures.",
+      "label": "medium",
+      "notes": "Strategic transaction materiality and unforeseen difficulties."
+    },
+    {
+      "id": 172,
+      "source": "GOOGL",
+      "text": "diversion of management time and focus from operating our business to challenges related to acquisitions and other strategic arrangements; failure to obtain required approvals on a timely basis, if at all, from governmental authorities, or conditions placed upon approval that could, among other things, delay or prevent us from completing a transaction, or otherwise restrict our ability to realize the expected financial or strategic goals of a transaction;",
+      "label": "high",
+      "notes": "Regulatory approval risk for transactions with strategic goal impact."
+    },
+    {
+      "id": 173,
+      "source": "GOOGL",
+      "text": "failure to successfully integrate the acquired operations, technologies, services, and personnel (including cultural integration and retention of employees) and further develop the acquired business or technology; implementation of controls (or remediation of control deficiencies), procedures, and policies at the acquired company;",
+      "label": "high",
+      "notes": "Integration failure risk with control deficiency remediation."
+    },
+    {
+      "id": 174,
+      "source": "GOOGL",
+      "text": "in the case of foreign acquisitions, the need to integrate operations across different cultures and languages and to address the particular economic, currency, political, and regulatory risks associated with specific countries; failure to accomplish commercial, strategic or financial objectives with respect to investments, joint ventures, and other strategic arrangements;",
+      "label": "medium",
+      "notes": "Foreign acquisition integration complexity."
+    },
+    {
+      "id": 175,
+      "source": "GOOGL",
+      "text": "liability for activities of the acquired company before the acquisition, including patent and trademark infringement claims, data privacy and security issues, violations of laws, commercial disputes, tax liabilities, warranty claims, product liabilities, and other known and unknown liabilities;",
+      "label": "high",
+      "notes": "Pre-acquisition liability inheritance with multiple categories."
+    },
+    {
+      "id": 176,
+      "source": "GOOGL",
+      "text": "litigation or other claims in connection with the acquired company, including claims from terminated employees, customers, former stockholders, or other third parties.",
+      "label": "medium",
+      "notes": "Post-acquisition litigation from various stakeholders."
+    },
+    {
+      "id": 177,
+      "source": "GOOGL",
+      "text": "Our failure to address these risks or other problems encountered in connection with our past or future acquisitions and other strategic arrangements could cause us to fail to realize their anticipated benefits, incur unanticipated liabilities, and harm our business generally.",
+      "label": "high",
+      "notes": "M&A failure impact with liability and benefit loss."
+    },
+    {
+      "id": 178,
+      "source": "GOOGL",
+      "text": "We rely on highly skilled personnel and, if we are unable to retain or motivate key personnel, hire qualified personnel, or maintain and continue to adapt our corporate culture, we may not be able to grow or operate effectively.",
+      "label": "high",
+      "notes": "Talent and culture dependency for growth and operations."
+    },
+    {
+      "id": 179,
+      "source": "GOOGL",
+      "text": "Our performance and future success depends in large part upon the continued service of key technical leads as well as members of our senior management team. For instance, Sundar Pichai is critical to the overall management of Alphabet and its subsidiaries and plays an important role in the development of our technology, maintaining our culture, and setting our strategic direction.",
+      "label": "high",
+      "notes": "Key person dependency on CEO with specific name."
+    },
+    {
+      "id": 180,
+      "source": "NVDA",
+      "text": "lack of guaranteed supply of wafer, component and capacity or decommitment and potential higher wafer and component prices, from incorrectly estimating demand and failing to place orders with our suppliers with sufficient quantities or in a timely manner;",
+      "label": "high",
+      "notes": "Supply guarantee absence with pricing risk."
+    },
+    {
+      "id": 181,
+      "source": "NVDA",
+      "text": "failure by our foundries or contract manufacturers to procure raw materials or provide adequate levels of manufacturing or test capacity for our products;",
+      "label": "high",
+      "notes": "Foundry capacity and raw material procurement failure."
+    },
+    {
+      "id": 182,
+      "source": "NVDA",
+      "text": "failure by our foundries to develop, obtain or successfully implement high quality process technologies, including transitions to smaller geometry process technologies such as advanced process node technologies and memory designs needed to manufacture our products;",
+      "label": "high",
+      "notes": "Process technology advancement failure risk."
+    },
+    {
+      "id": 183,
+      "source": "NVDA",
+      "text": "limited number and geographic concentration of global suppliers, foundries, contract manufacturers, assembly and test providers and memory manufacturers;",
+      "label": "high",
+      "notes": "Geographic supplier concentration risk."
+    },
+    {
+      "id": 184,
+      "source": "NVDA",
+      "text": "loss of a supplier and additional expense and/or production delays as a result of qualifying a new foundry or subcontractor and commencing volume production or testing in the event of a loss, addition or change of a supplier;",
+      "label": "high",
+      "notes": "Supplier loss with qualification delay and expense."
+    },
+    {
+      "id": 185,
+      "source": "NVDA",
+      "text": "delays in product shipments, shortages, a decrease in product quality and/or higher expenses in the event our subcontractors or foundries prioritize our competitors' or other customers' orders over ours;",
+      "label": "high",
+      "notes": "Foundry prioritization risk affecting shipments."
+    },
+    {
+      "id": 186,
+      "source": "NVDA",
+      "text": "requirements to place orders that are not cancellable upon changes in demand or requirements to prepay for supply in advance;",
+      "label": "medium",
+      "notes": "Non-cancellable order commitment risk."
+    },
+    {
+      "id": 187,
+      "source": "NVDA",
+      "text": "low manufacturing yields resulting from a failure in our product design or a foundry's proprietary process technology;",
+      "label": "high",
+      "notes": "Manufacturing yield failure from design or process."
+    },
+    {
+      "id": 188,
+      "source": "NVDA",
+      "text": "disruptions in manufacturing, assembly and other processes due to closures related to heat waves, earthquakes, fires, or other natural disasters and electricity conservation efforts.",
+      "label": "high",
+      "notes": "Natural disaster manufacturing disruption."
+    },
+    {
+      "id": 189,
+      "source": "NVDA",
+      "text": "increased costs for wafers, components, logistics, and other supply chain expenses, which have negatively impacted our gross margin in the past and may do so in the future;",
+      "label": "high",
+      "notes": "Cost increases with past margin impact acknowledged."
+    },
+    {
+      "id": 190,
+      "source": "NVDA",
+      "text": "increased supply, employee, facilities and infrastructure costs and volatility in the financial markets, which have reduced and may in the future reduce our margins;",
+      "label": "medium",
+      "notes": "Operating cost increases and margin pressure."
+    },
+    {
+      "id": 191,
+      "source": "NVDA",
+      "text": "decrease in demand for our products, services and technologies and those of our customers, partners or licensees;",
+      "label": "medium",
+      "notes": "Demand decrease affecting ecosystem."
+    },
+    {
+      "id": 192,
+      "source": "NVDA",
+      "text": "the insolvency of key suppliers, distributors, customers, cloud service providers, data center providers, licensing parties or other third parties we rely on;",
+      "label": "high",
+      "notes": "Counterparty insolvency risk across supply chain."
+    },
+    {
+      "id": 193,
+      "source": "NVDA",
+      "text": "reduced profitability of customers, which may cause them to scale back operations, exit businesses, file for bankruptcy protection and potentially cease operations, or lead to mergers, consolidations or strategic alliances among other companies, which could adversely affect our ability to compete effectively;",
+      "label": "high",
+      "notes": "Customer financial distress with competitive consolidation."
+    },
+    {
+      "id": 194,
+      "source": "NVDA",
+      "text": "increased credit and collectability risks, higher borrowing costs or reduced availability of capital markets, reduced liquidity, adverse impacts on our customers and suppliers, failures of counterparties, including financial institutions and insurers, asset impairments, and declines in the value of our financial instruments.",
+      "label": "high",
+      "notes": "Credit and liquidity cascade effects."
+    },
+    {
+      "id": 195,
+      "source": "NVDA",
+      "text": "difficulty in integrating the technology, systems, products, policies, processes, or operations and integrating and retaining the employees, including key personnel, of the acquired business;",
+      "label": "medium",
+      "notes": "M&A integration difficulty."
+    },
+    {
+      "id": 196,
+      "source": "NVDA",
+      "text": "assumption of liabilities and incurring amortization expenses, impairment charges to goodwill or write-downs of acquired assets;",
+      "label": "medium",
+      "notes": "Acquisition liability and impairment risk."
+    },
+    {
+      "id": 197,
+      "source": "NVDA",
+      "text": "stock price impact, fines, fees or reputation harm if we are unable to obtain regulatory approval for an acquisition or are otherwise unable to close an acquisition;",
+      "label": "high",
+      "notes": "Failed acquisition with multiple negative impacts."
+    },
+    {
+      "id": 198,
+      "source": "NVDA",
+      "text": "potential issuances of debt to finance our acquisitions, resulting in increased debt, increased interest expense, and compliance with debt covenants or other restrictions;",
+      "label": "medium",
+      "notes": "Acquisition financing debt and covenant risk."
+    },
+    {
+      "id": 199,
+      "source": "NVDA",
+      "text": "the potential for our acquisitions to result in dilutive issuances of our equity securities;",
+      "label": "medium",
+      "notes": "Equity dilution from acquisitions."
+    },
+    {
+      "id": 200,
+      "source": "NVDA",
+      "text": "exposure to additional cybersecurity risks and vulnerabilities;",
+      "label": "medium",
+      "notes": "Acquired company cybersecurity risk."
+    },
+    {
+      "id": 201,
+      "source": "NVDA",
+      "text": "impairment of relationships with, or loss of our or our target's employees, vendors and customers.",
+      "label": "medium",
+      "notes": "Stakeholder relationship impairment from M&A."
+    },
+    {
+      "id": 202,
+      "source": "AMZN",
+      "text": "local economic and political conditions; government regulation (such as regulation of our product and service offerings and of competition); restrictive governmental actions (such as trade protection measures, including export duties and quotas and custom duties and tariffs, and restrictions around the import and export of certain products, technologies, and components); nationalization; and restrictions on foreign ownership;",
+      "label": "high",
+      "notes": "International regulatory and political risk with trade restrictions."
+    },
+    {
+      "id": 203,
+      "source": "AMZN",
+      "text": "restrictions on sales or distribution of certain products or services and uncertainty regarding liability for products, services, and content, including uncertainty as a result of less internet-friendly legal systems, local laws, lack of legal precedent, and varying rules, regulations, and practices regarding the physical and digital distribution of media products and enforcement of intellectual property rights;",
+      "label": "high",
+      "notes": "Sales restrictions and IP enforcement uncertainty internationally."
+    },
+    {
+      "id": 204,
+      "source": "AMZN",
+      "text": "laws and regulations regarding privacy, data use, data protection, data security, data localization, network security, consumer protection, payments, advertising, and restrictions on pricing or discounts;",
+      "label": "medium",
+      "notes": "Comprehensive regulatory categories affecting operations."
+    },
+    {
+      "id": 205,
+      "source": "AMZN",
+      "text": "compliance with the U.S. Foreign Corrupt Practices Act and other applicable U.S. and foreign laws prohibiting corrupt payments to government officials and other third parties;",
+      "label": "medium",
+      "notes": "Anti-corruption compliance requirement."
+    },
+    {
+      "id": 206,
+      "source": "AMZN",
+      "text": "geopolitical events, including war and terrorism.",
+      "label": "high",
+      "notes": "War and terrorism risk - severe impact potential."
+    },
+    {
+      "id": 207,
+      "source": "AMZN",
+      "text": "the outcomes of legal proceedings and claims, which may include significant monetary damages or injunctive relief and could have a material adverse impact on our operating results;",
+      "label": "high",
+      "notes": "Legal proceedings with significant damages potential."
+    },
+    {
+      "id": 208,
+      "source": "AMZN",
+      "text": "factors affecting our reputation or brand image (including any actual or perceived inability to achieve our goals or commitments, whether related to sustainability, customers, employees, or other topics), and public perceptions regarding our positions on social or ethical issues and our development and use of artificial intelligence, machine learning, and automation technologies, products, and services;",
+      "label": "high",
+      "notes": "Reputation risk from AI, sustainability, and social issue perceptions."
+    },
+    {
+      "id": 209,
+      "source": "AMZN",
+      "text": "availability of and increases in the prices of transportation (including fuel), resources such as land, water, and energy, commodities like paper and packing supplies and hardware products, and technology infrastructure products, including as a result of inflationary pressures;",
+      "label": "medium",
+      "notes": "Input cost inflation across multiple categories."
+    },
+    {
+      "id": 210,
+      "source": "AMZN",
+      "text": "the extent to which use of our services is affected by spyware, viruses, phishing and other spam emails, denial of service attacks, data theft, computer intrusions, outages, and similar events;",
+      "label": "high",
+      "notes": "Cybersecurity threats affecting service usage."
+    },
+    {
+      "id": 211,
+      "source": "AMZN",
+      "text": "the extent to which we fail to maintain our unique culture of innovation, customer obsession, and long-term thinking, which has been critical to our growth and success;",
+      "label": "high",
+      "notes": "Culture preservation risk critical to competitive advantage."
+    },
+    {
+      "id": 212,
+      "source": "NVDA",
+      "text": "Risk Factors Summary",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 213,
+      "source": "NVDA",
+      "text": "Risks Related to Our Industry and Markets",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 214,
+      "source": "NVDA",
+      "text": "Risks Related to Demand, Supply and Manufacturing",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 215,
+      "source": "NVDA",
+      "text": "Risks Related to Our Global Operating Business",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 216,
+      "source": "NVDA",
+      "text": "Risks Related to Regulatory, Legal, Our Stock and Other Matters",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 217,
+      "source": "NVDA",
+      "text": "Our success depends on our ability to:",
+      "label": "low",
+      "notes": "Incomplete introductory phrase."
+    },
+    {
+      "id": 218,
+      "source": "NVDA",
+      "text": "develop or acquire new products and technologies through investments in research and development;",
+      "label": "low",
+      "notes": "Generic R&D investment statement - not a risk."
+    },
+    {
+      "id": 219,
+      "source": "NVDA",
+      "text": "launch new offerings with new business models including software, services, and cloud solutions, as well as software-, infrastructure-, or platform-as-a-service solutions;",
+      "label": "low",
+      "notes": "Business model description - not a risk."
+    },
+    {
+      "id": 220,
+      "source": "NVDA",
+      "text": "expand the ecosystem for our products and technologies;",
+      "label": "low",
+      "notes": "Generic business objective - not a risk."
+    },
+    {
+      "id": 221,
+      "source": "NVDA",
+      "text": "manage product and software lifecycles to maintain customer and end-user satisfaction;",
+      "label": "low",
+      "notes": "Product management description - not a risk."
+    },
+    {
+      "id": 222,
+      "source": "NVDA",
+      "text": "complete technical, financial, operational, compliance, sales and marketing investments for the above activities.",
+      "label": "low",
+      "notes": "Investment category list - not a risk."
+    },
+    {
+      "id": 223,
+      "source": "NVDA",
+      "text": "changes in product development cycles and time to market;",
+      "label": "low",
+      "notes": "Factor list item without risk context."
+    },
+    {
+      "id": 224,
+      "source": "NVDA",
+      "text": "competing technologies and competitor product releases and announcements;",
+      "label": "low",
+      "notes": "Factor list item without risk context."
+    },
+    {
+      "id": 225,
+      "source": "NVDA",
+      "text": "rapidly changing technology or customer requirements;",
+      "label": "low",
+      "notes": "Generic factor - standard industry dynamic."
+    },
+    {
+      "id": 226,
+      "source": "NVDA",
+      "text": "new product introductions and transitions resulting in less demand for existing products;",
+      "label": "low",
+      "notes": "Standard product lifecycle factor."
+    },
+    {
+      "id": 227,
+      "source": "NVDA",
+      "text": "the demand for our products; or",
+      "label": "low",
+      "notes": "Incomplete fragment."
+    },
+    {
+      "id": 228,
+      "source": "NVDA",
+      "text": "integrating accounting, forecasting and controls, procedures and reporting cycles;",
+      "label": "low",
+      "notes": "Integration process description."
+    },
+    {
+      "id": 229,
+      "source": "NVDA",
+      "text": "coordinating and integrating operations, particularly in countries in which we do not currently operate;",
+      "label": "low",
+      "notes": "Operational coordination description."
+    },
+    {
+      "id": 230,
+      "source": "NVDA",
+      "text": "the potential variability of the amount and form of any performance-based consideration;",
+      "label": "low",
+      "notes": "Standard M&A consideration factor."
+    },
+    {
+      "id": 231,
+      "source": "AMZN",
+      "text": "Our International Operations Expose Us to a Number of Risks",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 232,
+      "source": "AMZN",
+      "text": "In addition to risks described elsewhere in this section, our international sales and operations are subject to a number of risks, including:",
+      "label": "low",
+      "notes": "Introductory sentence for list."
+    },
+    {
+      "id": 233,
+      "source": "AMZN",
+      "text": "business licensing or certification requirements, such as for imports, exports, web services, electronic devices, and communications services;",
+      "label": "low",
+      "notes": "Standard compliance requirement list."
+    },
+    {
+      "id": 234,
+      "source": "AMZN",
+      "text": "limitations on the repatriation and investment of funds and foreign currency exchange restrictions;",
+      "label": "low",
+      "notes": "Standard international operations factor."
+    },
+    {
+      "id": 235,
+      "source": "AMZN",
+      "text": "limited fulfillment and technology infrastructure;",
+      "label": "low",
+      "notes": "Infrastructure limitation factor."
+    },
+    {
+      "id": 236,
+      "source": "AMZN",
+      "text": "shorter payable and longer receivable cycles and the resultant negative impact on cash flow;",
+      "label": "low",
+      "notes": "Working capital cycle factor."
+    },
+    {
+      "id": 237,
+      "source": "AMZN",
+      "text": "lower levels of use of the internet;",
+      "label": "low",
+      "notes": "Market characteristic - not a risk itself."
+    },
+    {
+      "id": 238,
+      "source": "AMZN",
+      "text": "lower levels of consumer spending and fewer opportunities for growth compared to the U.S.;",
+      "label": "low",
+      "notes": "Market characteristic."
+    },
+    {
+      "id": 239,
+      "source": "AMZN",
+      "text": "lower levels of credit card usage and increased payment risk;",
+      "label": "low",
+      "notes": "Payment infrastructure factor."
+    },
+    {
+      "id": 240,
+      "source": "AMZN",
+      "text": "difficulty in staffing, developing, and managing foreign operations as a result of distance, language, and cultural differences;",
+      "label": "low",
+      "notes": "Operational challenge - standard disclosure."
+    },
+    {
+      "id": 241,
+      "source": "AMZN",
+      "text": "different employee/employer relationships and the existence of works councils and labor unions;",
+      "label": "low",
+      "notes": "Labor relations factor."
+    },
+    {
+      "id": 242,
+      "source": "AMZN",
+      "text": "laws and policies of the U.S. and other jurisdictions affecting trade, foreign investment, loans, and taxes;",
+      "label": "low",
+      "notes": "Generic regulatory category list."
+    },
+    {
+      "id": 243,
+      "source": "AMZN",
+      "text": "Operating Risks",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 244,
+      "source": "AMZN",
+      "text": "Our Expansion Places a Significant Strain on our Management, Operational, Financial, and Other Resources",
+      "label": "low",
+      "notes": "Section header."
+    },
+    {
+      "id": 245,
+      "source": "AMZN",
+      "text": "our ability to retain and increase sales to existing customers, attract new customers, and satisfy our customers' demands;",
+      "label": "low",
+      "notes": "Standard business objective."
+    },
+    {
+      "id": 246,
+      "source": "AMZN",
+      "text": "our ability to retain and expand our network of sellers;",
+      "label": "low",
+      "notes": "Standard business objective."
+    },
+    {
+      "id": 247,
+      "source": "AMZN",
+      "text": "our ability to offer products on favorable terms, manage inventory, and fulfill orders;",
+      "label": "low",
+      "notes": "Standard operational capability."
+    },
+    {
+      "id": 248,
+      "source": "AMZN",
+      "text": "timing, effectiveness, and costs of expansion and upgrades of our systems and infrastructure;",
+      "label": "low",
+      "notes": "Infrastructure investment factor."
+    },
+    {
+      "id": 249,
+      "source": "AMZN",
+      "text": "the success of our geographic, service, and product line expansions;",
+      "label": "low",
+      "notes": "Expansion outcome factor."
+    },
+    {
+      "id": 250,
+      "source": "AMZN",
+      "text": "variations in the mix of products and services we sell;",
+      "label": "low",
+      "notes": "Standard product mix factor."
+    },
+    {
+      "id": 251,
+      "source": "AMZN",
+      "text": "variations in our level of merchandise and vendor returns;",
+      "label": "low",
+      "notes": "Returns factor."
+    },
+    {
+      "id": 252,
+      "source": "AMZN",
+      "text": "the extent to which we offer fast and free delivery, continue to reduce prices worldwide, and provide additional benefits to our customers;",
+      "label": "low",
+      "notes": "Strategy description - not a risk."
+    },
+    {
+      "id": 253,
+      "source": "AMZN",
+      "text": "constrained labor markets, which increase our payroll costs;",
+      "label": "low",
+      "notes": "Cost factor."
+    },
+    {
+      "id": 254,
+      "source": "AMZN",
+      "text": "our ability to collect amounts owed to us when they become due;",
+      "label": "low",
+      "notes": "Standard receivables factor."
+    },
+    {
+      "id": 255,
+      "source": "AMZN",
+      "text": "We Face Risks Related to Successfully Optimizing and Operating Our Fulfillment Network and Data Centers",
+      "label": "low",
+      "notes": "Section header."
+    },
+    {
+      "id": 256,
+      "source": "GOOGL",
+      "text": "Risks Specific to our Company",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 257,
+      "source": "GOOGL",
+      "text": "Risks Related to our Industry",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 258,
+      "source": "GOOGL",
+      "text": "Risks Related to Laws, Regulations, and Policies",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 259,
+      "source": "GOOGL",
+      "text": "Risks Related to Ownership of our Stock",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 260,
+      "source": "GOOGL",
+      "text": "General Risks",
+      "label": "low",
+      "notes": "Section header only."
+    },
+    {
+      "id": 261,
+      "source": "GOOGL",
+      "text": "For additional information, see also our risk factor on privacy and data protection regulations under 'Risks Related to Laws, Regulations, and Policies' below.",
+      "label": "low",
+      "notes": "Cross-reference - no substantive content."
+    },
+    {
+      "id": 262,
+      "source": "GOOGL",
+      "text": "For additional information about the ongoing material legal proceedings to which we are subject, see Legal Proceedings in Part I, Item 3 of this Annual Report on Form 10-K.",
+      "label": "low",
+      "notes": "Cross-reference - no substantive content."
+    },
+    {
+      "id": 263,
+      "source": "GOOGL",
+      "text": "Our Board of Directors has the right to elect directors to fill a vacancy created by the expansion of the Board of Directors or the resignation, death, or removal of a director.",
+      "label": "low",
+      "notes": "Governance structure disclosure."
+    },
+    {
+      "id": 264,
+      "source": "GOOGL",
+      "text": "Our stockholders may not act by written consent, which makes it difficult to take certain actions without holding a stockholders' meeting.",
+      "label": "low",
+      "notes": "Governance structure disclosure."
+    },
+    {
+      "id": 265,
+      "source": "GOOGL",
+      "text": "Our certificate of incorporation prohibits cumulative voting in the election of directors. This limits the ability of minority stockholders to elect director candidates.",
+      "label": "low",
+      "notes": "Governance structure disclosure."
+    },
+    {
+      "id": 266,
+      "source": "GOOGL",
+      "text": "Stockholders must provide advance notice to nominate individuals for election to the Board of Directors or to propose matters that can be acted upon at a stockholders' meeting. These provisions may discourage or deter a potential acquirer from conducting a solicitation of proxies to elect the acquirer's own slate of directors or otherwise attempting to obtain control of our company.",
+      "label": "low",
+      "notes": "Governance structure disclosure."
+    },
+    {
+      "id": 267,
+      "source": "GOOGL",
+      "text": "Our Board of Directors may issue, without stockholder approval, shares of undesignated preferred stock, which makes it possible for our Board of Directors to issue preferred stock with voting or other rights or preferences that could impede the success of any attempt to acquire us.",
+      "label": "low",
+      "notes": "Governance structure disclosure."
+    },
+    {
+      "id": 268,
+      "source": "GOOGL",
+      "text": "implementation of controls (or remediation of control deficiencies), procedures, and policies at the acquired company;",
+      "label": "low",
+      "notes": "M&A integration process item."
+    },
+    {
+      "id": 269,
+      "source": "GOOGL",
+      "text": "integration of the acquired company's accounting and other administrative systems, and the coordination of product, engineering, and sales and marketing functions;",
+      "label": "low",
+      "notes": "M&A integration process item."
+    },
+    {
+      "id": 270,
+      "source": "GOOGL",
+      "text": "transition of operations, users, and customers onto our existing platforms;",
+      "label": "low",
+      "notes": "M&A integration process item."
+    },
+    {
+      "id": 271,
+      "source": "GOOGL",
+      "text": "failure to realize the value of investments and joint ventures due to a lack of liquidity;",
+      "label": "low",
+      "notes": "Investment factor - standard disclosure."
+    },
+    {
+      "id": 272,
+      "source": "GOOGL",
+      "text": "The California Internet of Things Security Law, which regulates the security of data used in connection with internet-connected devices.",
+      "label": "low",
+      "notes": "Regulatory disclosure - descriptive."
+    },
+    {
+      "id": 273,
+      "source": "AMZN",
+      "text": "disruption of our ongoing business, including loss of management focus on existing businesses;",
+      "label": "low",
+      "notes": "Generic M&A factor."
+    },
+    {
+      "id": 274,
+      "source": "AMZN",
+      "text": "impairment of other relationships;",
+      "label": "low",
+      "notes": "Generic relationship factor."
+    },
+    {
+      "id": 275,
+      "source": "AMZN",
+      "text": "variability in revenue and income from entering into, amending, or terminating such agreements or relationships;",
+      "label": "low",
+      "notes": "Contractual variability factor."
+    },
+    {
+      "id": 276,
+      "source": "AMZN",
+      "text": "difficulty integrating under the commercial agreements.",
+      "label": "low",
+      "notes": "Integration factor."
+    },
+    {
+      "id": 277,
+      "source": "AMZN",
+      "text": "problems retaining key personnel;",
+      "label": "low",
+      "notes": "M&A personnel factor."
+    },
+    {
+      "id": 278,
+      "source": "AMZN",
+      "text": "the difficulty of implementing at companies we acquire the controls, procedures, and policies appropriate for a larger public company;",
+      "label": "low",
+      "notes": "M&A control implementation."
+    },
+    {
+      "id": 279,
+      "source": "AMZN",
+      "text": "the risks associated with businesses we acquire or invest in, which may differ from or be more significant than the risks our other businesses face;",
+      "label": "low",
+      "notes": "Generic M&A risk acknowledgment."
+    },
+    {
+      "id": 280,
+      "source": "AMZN",
+      "text": "potential unknown liabilities associated with a company we acquire or in which we invest;",
+      "label": "low",
+      "notes": "Standard M&A liability disclosure."
+    },
+    {
+      "id": 281,
+      "source": "AMZN",
+      "text": "for foreign transactions, additional risks related to the integration of operations across different cultures and languages, and the economic, political, and regulatory risks associated with specific countries.",
+      "label": "low",
+      "notes": "Foreign M&A consideration - generic."
+    },
+    {
+      "id": 282,
+      "source": "NVDA",
+      "text": "our ability to comply with our contractual obligations to customers;",
+      "label": "low",
+      "notes": "Basic compliance factor."
+    },
+    {
+      "id": 283,
+      "source": "NVDA",
+      "text": "our vendors' payment requirements;",
+      "label": "low",
+      "notes": "Standard operational factor."
+    },
+    {
+      "id": 284,
+      "source": "NVDA",
+      "text": "changes in financial accounting standards or interpretations of existing standards.",
+      "label": "low",
+      "notes": "Accounting standards disclosure."
+    },
+    {
+      "id": 285,
+      "source": "NVDA",
+      "text": "meet evolving and prevailing customer and industry safety, security, reliability expectations, and compliance standards;",
+      "label": "low",
+      "notes": "Standards compliance objective."
+    },
+    {
+      "id": 286,
+      "source": "NVDA",
+      "text": "failure by our suppliers to comply with our policies and expectations and emerging regulatory requirements;",
+      "label": "low",
+      "notes": "Supplier compliance factor - secondary."
     }
   ],
   "summary": {
-    "total_samples": 45,
+    "total_samples": 286,
     "distribution": {
-      "high": 8,
-      "medium": 14,
-      "low": 23
+      "high": 86,
+      "medium": 86,
+      "low": 114
     },
     "by_source": {
       "AAPL": {
@@ -345,6 +2032,21 @@
         "high": 0,
         "medium": 4,
         "low": 11
+      },
+      "NVDA": {
+        "high": 31,
+        "medium": 28,
+        "low": 27
+      },
+      "AMZN": {
+        "high": 15,
+        "medium": 19,
+        "low": 41
+      },
+      "GOOGL": {
+        "high": 32,
+        "medium": 25,
+        "low": 23
       }
     }
   }

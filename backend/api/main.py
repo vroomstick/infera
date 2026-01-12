@@ -651,6 +651,235 @@ async def yoy_trends(
     return result
 
 
+# === Agent Tooling Endpoints (Phase 5) ===
+
+class TokenContribution(BaseModel):
+    """A token and its contribution to the risk score."""
+    token: str
+    contribution: float
+    position: int
+
+
+class ExplanationResponse(BaseModel):
+    """Response from explain endpoint."""
+    paragraph_id: int
+    text: str
+    score: float
+    confidence: float
+    top_tokens: List[TokenContribution]
+    risk_category: Optional[str] = None
+    category_confidence: Optional[float] = None
+
+
+class ScoredParagraphWithConfidence(BaseModel):
+    """A paragraph with score and confidence."""
+    paragraph_id: int
+    position: int
+    score: float
+    confidence: float  # Percentile-based confidence
+    text: str
+    embedding: Optional[List[float]] = None  # Only if include_embedding=true
+
+
+@app.get("/explain/{paragraph_id}", response_model=ExplanationResponse, tags=["Agent Tools"])
+async def explain_paragraph(
+    paragraph_id: int,
+    top_n: int = 10,
+    db: Session = Depends(get_db)
+):
+    """
+    Explain why a paragraph received its risk score.
+    
+    Returns token-level attributions showing which words drive the score.
+    Useful for AI agents that need to understand scoring decisions.
+    
+    Args:
+        paragraph_id: Database ID of the paragraph to explain
+        top_n: Number of top contributing tokens to return (default 10)
+    
+    Returns:
+        ExplanationResponse with top tokens and their contributions
+    """
+    from services.attribution_service import compute_token_attributions
+    from services.classification_service import classify_paragraph as classify_para
+    
+    # Get paragraph
+    paragraph = db.query(Paragraph).filter(Paragraph.id == paragraph_id).first()
+    if not paragraph:
+        raise HTTPException(status_code=404, detail=f"Paragraph not found: {paragraph_id}")
+    
+    # Get score
+    score_obj = db.query(Score).filter(
+        Score.paragraph_id == paragraph_id,
+        Score.method == "embedding"
+    ).first()
+    
+    score_value = score_obj.score if score_obj else 0.0
+    
+    # Compute confidence (percentile-based)
+    all_scores = db.query(Score.score).filter(Score.method == "embedding").all()
+    all_scores = [s[0] for s in all_scores]
+    if all_scores:
+        percentile = sum(1 for s in all_scores if s <= score_value) / len(all_scores)
+        confidence = percentile  # Higher percentile = higher confidence it's truly high-risk
+    else:
+        confidence = 0.5
+    
+    # Get token attributions
+    try:
+        attribution_result = compute_token_attributions(paragraph.text, top_n=top_n)
+        top_tokens = [
+            TokenContribution(
+                token=attr.token,
+                contribution=attr.contribution,
+                position=attr.position
+            )
+            for attr in attribution_result.top_tokens
+        ]
+    except Exception as e:
+        logger.warning(f"Attribution failed: {e}")
+        top_tokens = []
+    
+    # Get risk category
+    try:
+        classification = classify_para(paragraph.text)
+        risk_category = classification.category
+        category_confidence = classification.confidence
+    except Exception as e:
+        logger.warning(f"Classification failed: {e}")
+        risk_category = None
+        category_confidence = None
+    
+    return ExplanationResponse(
+        paragraph_id=paragraph_id,
+        text=paragraph.text,
+        score=score_value,
+        confidence=confidence,
+        top_tokens=top_tokens,
+        risk_category=risk_category,
+        category_confidence=category_confidence
+    )
+
+
+@app.post("/explain", response_model=ExplanationResponse, tags=["Agent Tools"])
+async def explain_text(
+    text: str,
+    top_n: int = 10,
+):
+    """
+    Explain risk score for arbitrary text (not in database).
+    
+    Useful for AI agents analyzing text that hasn't been stored.
+    
+    Args:
+        text: Risk paragraph text to analyze
+        top_n: Number of top contributing tokens to return
+    """
+    from services.attribution_service import compute_token_attributions
+    from services.classification_service import classify_paragraph as classify_para
+    from services.scoring_service import compute_risk_scores
+    
+    if len(text.strip()) < 20:
+        raise HTTPException(status_code=400, detail="Text must be at least 20 characters")
+    
+    # Compute score
+    results = compute_risk_scores([text])
+    if results:
+        score_value = results[0][0]
+    else:
+        score_value = 0.0
+    
+    # Token attributions
+    try:
+        attribution_result = compute_token_attributions(text, top_n=top_n)
+        top_tokens = [
+            TokenContribution(
+                token=attr.token,
+                contribution=attr.contribution,
+                position=attr.position
+            )
+            for attr in attribution_result.top_tokens
+        ]
+        confidence = 0.5  # No percentile context for arbitrary text
+    except Exception as e:
+        logger.warning(f"Attribution failed: {e}")
+        top_tokens = []
+        confidence = 0.5
+    
+    # Classification
+    try:
+        classification = classify_para(text)
+        risk_category = classification.category
+        category_confidence = classification.confidence
+    except Exception as e:
+        logger.warning(f"Classification failed: {e}")
+        risk_category = None
+        category_confidence = None
+    
+    return ExplanationResponse(
+        paragraph_id=0,  # Not in database
+        text=text[:500] + "..." if len(text) > 500 else text,
+        score=score_value,
+        confidence=confidence,
+        top_tokens=top_tokens,
+        risk_category=risk_category,
+        category_confidence=category_confidence
+    )
+
+
+@app.get("/paragraphs/{paragraph_id}", response_model=ScoredParagraphWithConfidence, tags=["Agent Tools"])
+async def get_paragraph(
+    paragraph_id: int,
+    include_embedding: bool = False,
+    db: Session = Depends(get_db)
+):
+    """
+    Get a paragraph with score, confidence, and optional embedding.
+    
+    Args:
+        paragraph_id: Database ID of the paragraph
+        include_embedding: If true, include the raw embedding vector
+    
+    Returns:
+        Paragraph with score and confidence
+    """
+    import pickle
+    
+    paragraph = db.query(Paragraph).filter(Paragraph.id == paragraph_id).first()
+    if not paragraph:
+        raise HTTPException(status_code=404, detail=f"Paragraph not found: {paragraph_id}")
+    
+    score_obj = db.query(Score).filter(
+        Score.paragraph_id == paragraph_id,
+        Score.method == "embedding"
+    ).first()
+    
+    score_value = score_obj.score if score_obj else 0.0
+    
+    # Compute confidence (percentile)
+    all_scores = db.query(Score.score).filter(Score.method == "embedding").all()
+    all_scores = [s[0] for s in all_scores]
+    percentile = sum(1 for s in all_scores if s <= score_value) / len(all_scores) if all_scores else 0.5
+    
+    # Get embedding if requested
+    embedding = None
+    if include_embedding and score_obj and score_obj.embedding:
+        try:
+            embedding_array = pickle.loads(score_obj.embedding)
+            embedding = embedding_array.tolist()
+        except Exception as e:
+            logger.warning(f"Failed to load embedding: {e}")
+    
+    return ScoredParagraphWithConfidence(
+        paragraph_id=paragraph_id,
+        position=paragraph.position,
+        score=score_value,
+        confidence=percentile,
+        text=paragraph.text,
+        embedding=embedding
+    )
+
+
 # === Fetch Endpoint ===
 
 class FetchRequest(BaseModel):

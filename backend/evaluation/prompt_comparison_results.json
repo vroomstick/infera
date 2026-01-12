@@ -1,0 +1,446 @@
+{
+  "phase": "2.1",
+  "task": "Prompt Comparison Evaluation",
+  "best_prompt": "baseline",
+  "prompt_scores": {
+    "baseline": {
+      "mean_overall": 4.8,
+      "mean_latency_ms": 3246.0,
+      "mean_tokens": 605.0
+    },
+    "structured": {
+      "mean_overall": 4.15,
+      "mean_latency_ms": 2296.4,
+      "mean_tokens": 583.2
+    },
+    "executive": {
+      "mean_overall": 4.65,
+      "mean_latency_ms": 3733.6,
+      "mean_tokens": 598.4
+    },
+    "analyst": {
+      "mean_overall": 4.1,
+      "mean_latency_ms": 6376.4,
+      "mean_tokens": 827.2
+    },
+    "concise": {
+      "mean_overall": 4.4,
+      "mean_latency_ms": 2155.0,
+      "mean_tokens": 524.8
+    }
+  },
+  "detailed_results": [
+    {
+      "text_preview": "The Company's business, reputation, results of operations, financial condition and stock price can b...",
+      "evaluations": {
+        "baseline": {
+          "summary": "- **Economic and Financial Risks**: The Company faces significant risks from adverse economic conditions, which can lead to increased credit risk, reduced liquidity, and declines in the fair value of financial instruments, potentially impacting its financial health and stock price.\n\n- **Supply Chain Vulnerabilities**: The Company is at risk of supply shortages and price increases, which could materially affect its operations and financial performance.\n\n- **Cybersecurity Threats**: Due to its high profile and valuable data, the Company is particularly vulnerable to cyberattacks, which could compromise confidential information and exceed insurance coverage limits.\n\n- **Asset and Inventory Risks**: The Company is exposed to potential write-downs in inventory and asset values, as well as risks associated with canceling purchase commitments.\n\n- **Strategic and Acquisition Risks**: Investments in new business strategies and acquisitions may disrupt current operations and introduce unforeseen risks, adversely affecting the Company's business and financial condition.",
+          "tokens": 648,
+          "latency_ms": 3818,
+          "prompt_name": "baseline",
+          "faithfulness": 5,
+          "coverage": 5,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.75,
+          "faithfulness_notes": "All claims in the summary are directly traceable to the original risk factors text.",
+          "coverage_notes": "The summary captures all the key risks mentioned in the original text, including economic, supply chain, cybersecurity, asset, and strategic risks.",
+          "strengths": "The summary is well-structured, capturing all major risks succinctly and accurately. It maintains a high level of faithfulness to the source text.",
+          "weaknesses": "While the summary is actionable, it could provide more specific guidance or implications for decision-making to enhance its utility for executives."
+        },
+        "structured": {
+          "summary": "1. **Risk Name:** Economic Conditions Impact  \n   **Severity:** High  \n   **Description:** Adverse economic conditions can lead to increased credit and collectibility risk, failure of financial institutions, and reduced liquidity, significantly affecting the Company's financial health and stock price.\n\n2. **Risk Name:** Supply Shortages and Price Increases  \n   **Severity:** High  \n   **Description:** The Company faces significant risks from supply shortages and price increases, which can materially and adversely affect its business operations and financial condition.\n\n3. **Risk Name:** Cybersecurity Threats  \n   **Severity:** High  \n   **Description:** Due to its high profile and valuable confidential information, the Company is at a heightened risk of malicious cyberattacks, which could lead to significant data breaches and financial losses.",
+          "tokens": 644,
+          "latency_ms": 3092,
+          "prompt_name": "structured",
+          "faithfulness": 4,
+          "coverage": 3,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.0,
+          "faithfulness_notes": "Most claims in the summary are traceable to the source text, but the summary omits some specific details such as the mention of derivative counterparties and insurance coverage.",
+          "coverage_notes": "The summary captures some key risks but omits others, such as inventory write-downs, purchase commitment cancellation risk, and the impact of new business strategies and acquisitions.",
+          "strengths": "The summary is concise and highlights major risks like economic conditions, supply shortages, and cybersecurity threats, making it actionable for decision-making.",
+          "weaknesses": "The summary could improve by including additional risks mentioned in the original text, such as inventory write-downs and the impact of new business strategies."
+        },
+        "executive": {
+          "summary": "Our company faces several strategic and material risks that could significantly impact our business operations and financial health. Economic downturns may increase credit risks and limit our ability to secure new debt, affecting liquidity and the value of our financial instruments. Supply chain disruptions and price volatility pose threats to our operational stability, potentially leading to inventory write-downs and purchase cancellations.\n\nCybersecurity remains a critical concern due to our high-profile status and the sensitive nature of our data. While we have insurance for data breaches, it may not fully cover all potential losses. Additionally, our pursuit of new business strategies and acquisitions, while essential for growth, could disrupt current operations and introduce unforeseen risks.\n\nThese factors underscore the importance of proactive risk management and strategic planning to safeguard our reputation and financial performance.",
+          "tokens": 637,
+          "latency_ms": 3357,
+          "prompt_name": "executive",
+          "faithfulness": 5,
+          "coverage": 4,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.5,
+          "faithfulness_notes": "All claims in the summary are traceable to the original risk factors text.",
+          "coverage_notes": "The summary captures most key risks but omits some details, such as the specific mention of derivative counterparties and financial institutions.",
+          "strengths": "The summary is concise and captures the essence of the original text, making it easy to understand. It highlights major risks like economic downturns, supply chain issues, and cybersecurity concerns.",
+          "weaknesses": "The summary could improve by including more specific details from the original text, such as the mention of derivative counterparties and the potential insufficiency of insurance coverage."
+        },
+        "analyst": {
+          "summary": "**Investment Risk Summary:**\n\n1. **Economic Sensitivity and Credit Risk:**\n   - **Financial Performance Impact:** Adverse economic conditions pose a significant risk to the Company's financial performance. Increased credit and collectibility risks on trade receivables, potential failures of derivative counterparties, and limitations on debt issuance can lead to liquidity constraints and negatively impact the Company's financial health.\n   - **Differentiation from Peers:** Companies with a high reliance on trade receivables and derivative instruments may face more pronounced risks in economic downturns. This could differentiate the Company from peers with more diversified revenue streams or stronger balance sheets.\n   - **Actionable Insight:** Investors should monitor macroeconomic indicators and credit market conditions closely. Consider diversifying investments to include companies with stronger liquidity positions and less reliance on credit-sensitive instruments.\n\n2. **Supply Chain Vulnerabilities:**\n   - **Financial Performance Impact:** The Company faces significant risks from supply shortages and price increases, which can adversely affect its operations and financial condition. This risk is particularly acute in industries with complex supply chains or reliance on specific suppliers.\n   - **Differentiation from Peers:** Companies with less integrated supply chains or those that have diversified their supplier base may be less vulnerable to these risks.\n   - **Actionable Insight:** Evaluate the Company's supply chain management strategies and consider investing in companies with robust supply chain resilience or those that have demonstrated effective risk mitigation strategies.\n\n3. **Inventory and Asset Write-Down Risks:**\n   - **Financial Performance Impact:** The risk of inventory and asset write-downs can lead to significant financial losses, affecting the Company's profitability and balance sheet strength.\n   - **Differentiation from Peers:** Companies with high inventory levels or those in rapidly changing industries may face greater risks of write-downs compared to peers with more agile inventory management.\n   - **Actionable Insight:** Assess the Company's inventory management practices and consider the potential for write-downs in investment decisions. Look for companies with efficient inventory turnover and strong",
+          "tokens": 878,
+          "latency_ms": 7771,
+          "prompt_name": "analyst",
+          "faithfulness": 4,
+          "coverage": 4,
+          "conciseness": 4,
+          "actionability": 4,
+          "overall": 4.0,
+          "faithfulness_notes": "Most claims in the summary are traceable to the source text, but some differentiation points and actionable insights are inferred rather than directly stated.",
+          "coverage_notes": "The summary captures key risks such as economic sensitivity, supply chain vulnerabilities, and inventory risks, but omits some specific risks like data security and insurance coverage limitations.",
+          "strengths": "The summary effectively distills complex risk factors into clear, actionable insights and provides differentiation points that can guide investment decisions.",
+          "weaknesses": "The summary could improve by explicitly mentioning all risks from the source, such as data security and insurance coverage, to ensure comprehensive coverage."
+        },
+        "concise": {
+          "summary": "The most critical risk facing the Company is adverse economic conditions, which can significantly impact credit risk, liquidity, and the fair value of financial instruments. Secondary risks include supply shortages, cybersecurity threats, inventory write-downs, and challenges from new business strategies and acquisitions. Overall, the risk assessment is high due to the combination of economic vulnerabilities, potential operational disruptions, and the Company's exposure to cybersecurity threats, which could severely impact its financial health and market position.",
+          "tokens": 574,
+          "latency_ms": 2822,
+          "prompt_name": "concise",
+          "faithfulness": 4,
+          "coverage": 4,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.25,
+          "faithfulness_notes": "The summary accurately reflects the risks mentioned in the original text, but it slightly overemphasizes cybersecurity threats as a primary risk.",
+          "coverage_notes": "The summary captures most of the key risks, but it could better emphasize the risk of malicious attacks and insurance coverage limitations.",
+          "strengths": "The summary is concise and highlights the most critical risks, making it easy to understand the primary concerns.",
+          "weaknesses": "The summary could provide a more balanced view by including the risk of insurance coverage insufficiency and the specific mention of malicious attacks."
+        }
+      }
+    },
+    {
+      "text_preview": "As is the case for some automotive companies, some of our procured components and systems are source...",
+      "evaluations": {
+        "baseline": {
+          "summary": "- **Supply Chain Vulnerabilities**: The company relies on single suppliers for certain components, posing a risk of production disruptions. Efforts to qualify multiple suppliers and maintain safety stock are in place to mitigate these risks, but supply chain interruptions could still materially impact operations.\n\n- **Regulatory Compliance and Transportation Risks**: The transportation of lithium-ion batteries is subject to strict U.S. and international regulations. Non-compliance or changes in these regulations could affect the company's ability to transport battery packs, impacting production and distribution.\n\n- **International Operations and Regulatory Challenges**: Expanding international operations exposes the company to regulatory, political, and economic uncertainties. Compliance with diverse global regulations, including cybersecurity and data privacy, adds complexity and potential risks.\n\n- **Financial Exposure and Credit Risks**: The company's financing programs for vehicles and energy systems expose it to customer credit risk. Economic downturns or catastrophic events could lead to significant customer defaults, resulting in substantial credit losses.\n\n- **ESG and Stakeholder Expectations**: Increasing scrutiny on the company's Environmental, Social, and Governance (ESG) practices may lead to additional costs and risks. Failure to meet stakeholder expectations could impact the company's reputation and financial performance.",
+          "tokens": 723,
+          "latency_ms": 3985,
+          "prompt_name": "baseline",
+          "faithfulness": 5,
+          "coverage": 5,
+          "conciseness": 5,
+          "actionability": 5,
+          "overall": 5,
+          "faithfulness_notes": "All claims in the summary are directly traceable to the original risk factors text.",
+          "coverage_notes": "The summary captures all the key risks mentioned in the original text, including supply chain, regulatory, international operations, financial exposure, and ESG concerns.",
+          "strengths": "The summary is well-structured, capturing all major risks succinctly and accurately. It is concise yet comprehensive, making it highly actionable for decision-makers.",
+          "weaknesses": "No significant weaknesses; the summary effectively balances detail and brevity."
+        },
+        "structured": {
+          "summary": "1. **Risk Name: Supply Chain Disruptions**\n   - **Severity: High**\n   - **Description:** Reliance on single suppliers for certain components poses a significant risk to production continuity, potentially leading to operational disruptions if these suppliers face issues.\n\n2. **Risk Name: Customer Credit Risk**\n   - **Severity: High**\n   - **Description:** Economic downturns or catastrophic events could lead to widespread customer defaults, resulting in substantial credit losses and impairment charges for the company.\n\n3. **Risk Name: Regulatory and Compliance Challenges**\n   - **Severity: Medium**\n   - **Description:** Expanding international operations exposes the company to complex regulatory, political, and economic conditions, which could adversely affect compliance and operational efficiency.",
+          "tokens": 655,
+          "latency_ms": 2089,
+          "prompt_name": "structured",
+          "faithfulness": 4,
+          "coverage": 4,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.25,
+          "faithfulness_notes": "Most claims in the summary are traceable to the source text, but the summary omits some specific details such as the mitigation strategies for supply chain risks.",
+          "coverage_notes": "The summary captures key risks but misses some details like ESG practices and specific regulatory challenges related to cybersecurity and data privacy.",
+          "strengths": "The summary is concise and highlights major risks, making it easy to understand and potentially actionable for decision-makers.",
+          "weaknesses": "It lacks some specific details from the original text, such as mitigation strategies and certain regulatory risks, which could provide a more comprehensive view."
+        },
+        "executive": {
+          "summary": "Our strategic and material risks primarily revolve around supply chain dependencies, regulatory compliance, and financial exposure. We rely on single suppliers for critical components, posing a production risk if disruptions occur. While we mitigate this with safety stock and die banks, any significant disruption could impact production timelines and costs.\n\nRegulatory compliance, particularly concerning the transport of lithium-ion batteries, is crucial. Non-compliance could lead to logistical challenges and potential fines, affecting our operational efficiency.\n\nOur international operations face risks from fluctuating regulatory, political, and economic conditions. These uncertainties could hinder our global expansion and operational stability.\n\nFinancially, our vehicle and energy financing programs expose us to customer credit risk. An economic downturn could lead to increased defaults, impacting our financial health.\n\nLastly, evolving ESG expectations and cybersecurity regulations could increase operational costs and compliance burdens, affecting our competitive positioning and reputation.",
+          "tokens": 677,
+          "latency_ms": 5265,
+          "prompt_name": "executive",
+          "faithfulness": 5,
+          "coverage": 5,
+          "conciseness": 5,
+          "actionability": 5,
+          "overall": 5,
+          "faithfulness_notes": "All claims in the summary are directly traceable to the original risk factors text.",
+          "coverage_notes": "The summary captures all the key risks mentioned in the original text, including supply chain, regulatory compliance, financial exposure, and ESG concerns.",
+          "strengths": "The summary is concise, covers all major risks, and is faithful to the original text. It provides a clear and actionable overview for decision-making.",
+          "weaknesses": "The summary could potentially include more specific examples or details for each risk, but this would come at the cost of conciseness."
+        },
+        "analyst": {
+          "summary": "**Investment Risk Summary:**\n\n1. **Supply Chain Vulnerabilities:**\n   - **Financial Performance Impact:** The reliance on single suppliers for certain components presents a significant risk to production continuity. Disruptions could lead to production halts, increased costs, and revenue loss.\n   - **Differentiation from Peers:** Unlike some competitors who may have more diversified supply chains, this company\u2019s dependency on single suppliers for key components is a notable vulnerability.\n   - **Actionable Insight:** Monitor supply chain developments and consider hedging strategies or investments in companies with more robust and diversified supply chains.\n\n2. **Regulatory Compliance for Battery Packs:**\n   - **Financial Performance Impact:** Compliance with U.S. and international regulations on lithium-ion battery transport is critical. Non-compliance could result in fines, increased costs, and reputational damage.\n   - **Differentiation from Peers:** Companies with advanced compliance frameworks and testing capabilities may have a competitive edge.\n   - **Actionable Insight:** Evaluate the company\u2019s track record and investment in compliance infrastructure to assess potential regulatory risks.\n\n3. **International Operations Risks:**\n   - **Financial Performance Impact:** Unfavorable regulatory, political, and economic conditions in international markets could affect profitability and growth.\n   - **Differentiation from Peers:** Companies with a strong international presence may face higher exposure to geopolitical risks.\n   - **Actionable Insight:** Diversify investments across regions to mitigate geopolitical risks and focus on companies with strong local partnerships.\n\n4. **Financing Program Risks:**\n   - **Financial Performance Impact:** Challenges in managing financing programs could lead to credit losses and impairments, especially during economic downturns.\n   - **Differentiation from Peers:** Companies with robust risk management frameworks for financing programs may be better positioned.\n   - **Actionable Insight:** Assess the company\u2019s credit risk management practices and consider exposure to economic cycles when evaluating investment potential.\n\n5. **Customer Credit Risk:**\n   - **Financial Performance Impact",
+          "tokens": 899,
+          "latency_ms": 5629,
+          "prompt_name": "analyst",
+          "faithfulness": 4,
+          "coverage": 4,
+          "conciseness": 4,
+          "actionability": 5,
+          "overall": 4.25,
+          "faithfulness_notes": "Most claims in the summary are traceable to the source text, but some details, like 'differentiation from peers,' are inferred rather than explicitly stated.",
+          "coverage_notes": "The summary captures most key risks, but it omits some specific details such as the mention of ESG practices and specific vehicle manufacturer obligations.",
+          "strengths": "The summary is well-structured, making it easy to understand and actionable for decision-makers. It highlights financial impacts and provides actionable insights.",
+          "weaknesses": "The summary could improve by including all specific risks mentioned in the original text, such as ESG practices and cybersecurity obligations."
+        },
+        "concise": {
+          "summary": "The most critical risk is the reliance on single suppliers for certain components, which could disrupt production if supply chains are interrupted. Secondary risks include regulatory challenges with transporting lithium-ion batteries, international operational risks, customer credit risks, and increased scrutiny on ESG practices. Overall, the risk assessment is medium due to the company's proactive measures such as qualifying multiple suppliers, maintaining safety stock, and compliance testing, which help mitigate some of these risks.",
+          "tokens": 590,
+          "latency_ms": 1673,
+          "prompt_name": "concise",
+          "faithfulness": 4,
+          "coverage": 4,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.25,
+          "faithfulness_notes": "The summary is mostly faithful to the original text, but it slightly overemphasizes the risk of single suppliers as the 'most critical' without explicit prioritization in the source.",
+          "coverage_notes": "The summary captures most key risks but omits some details like specific regulatory, political, economic, tax, and labor conditions, and cybersecurity risks.",
+          "strengths": "The summary is concise and captures a broad range of risks, making it easy to understand. It highlights proactive measures taken by the company, which adds context.",
+          "weaknesses": "The summary could improve by including more specific details on international operational risks and cybersecurity, and by avoiding assumptions about the prioritization of risks."
+        }
+      }
+    },
+    {
+      "text_preview": "For a description of the risks we face related to regulatory matters, refer to Risk Factors (Part I,...",
+      "evaluations": {
+        "baseline": {
+          "summary": "- **Regulatory and Compliance Risks**: The company is subject to various regulatory requirements that could impact its operations and financial results. Adherence to evolving regulations is critical to avoid potential legal and financial repercussions.\n\n- **Cybersecurity and Privacy Risks**: The interaction of the company's products and services with third-party systems poses significant security and privacy risks. While no material impact has been reported, ongoing vigilance and robust cybersecurity measures are essential to mitigate potential threats.\n\n- **Intellectual Property Risks**: Protecting and effectively utilizing intellectual property is crucial for maintaining competitive advantage. Any failure in this area could harm the company's business operations and financial performance.\n\n- **Third-Party Risk Management**: The company relies on third-party service providers, necessitating stringent cybersecurity protocols and assessments to manage associated risks and ensure compliance with contractual obligations.",
+          "tokens": 582,
+          "latency_ms": 2671,
+          "prompt_name": "baseline",
+          "faithfulness": 5,
+          "coverage": 4,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.5,
+          "faithfulness_notes": "All claims in the summary are verifiable from the source text.",
+          "coverage_notes": "The summary captures most key risks but omits specific details about the ERM framework and digital diplomacy efforts.",
+          "strengths": "The summary is concise and faithfully represents the source text, making it easy to understand and actionable for decision-making.",
+          "weaknesses": "The summary could improve by including more details on the ERM framework and digital diplomacy efforts to provide a fuller picture of the company's risk management strategies."
+        },
+        "structured": {
+          "summary": "1. **Risk Name:** Security and Privacy Risks  \n   **Severity:** High  \n   **Description:** The interaction of our products and services with customers and third-party products may present significant security, privacy, and execution risks that could adversely impact our operations and financial results.\n\n2. **Risk Name:** Intellectual Property Protection  \n   **Severity:** High  \n   **Description:** Challenges in protecting and utilizing our intellectual property may harm our business and operating results, posing a critical risk to our competitive advantage and financial performance.\n\n3. **Risk Name:** Third-Party Cybersecurity  \n   **Severity:** Medium  \n   **Description:** Although we have a systematic approach to managing cybersecurity risks from third-party service providers, these risks remain a concern and could potentially impact our operations if not adequately controlled.",
+          "tokens": 598,
+          "latency_ms": 2066,
+          "prompt_name": "structured",
+          "faithfulness": 4,
+          "coverage": 4,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.25,
+          "faithfulness_notes": "Most claims in the summary are traceable to the source text, but the severity levels are not explicitly mentioned in the original text.",
+          "coverage_notes": "The summary captures key risks but omits some details like the ERM framework and digital diplomacy efforts.",
+          "strengths": "The summary is concise and highlights major risks, making it easy to understand and potentially useful for decision-making.",
+          "weaknesses": "The summary could improve by including more details on the ERM framework and other risks mentioned in the original text."
+        },
+        "executive": {
+          "summary": "Our company faces several strategic and material risks that could impact our business and financial performance. Key areas of concern include regulatory compliance, cybersecurity, and intellectual property protection.\n\nRegulatory challenges could affect our operations and market position, potentially leading to financial penalties or restrictions. Cybersecurity remains a critical focus, as threats to our products and third-party interactions could disrupt services and damage customer trust. Although no significant incidents have occurred, ongoing vigilance is essential.\n\nIntellectual property risks could undermine our competitive edge, impacting revenue and market share. We employ a robust Enterprise Risk Management framework, aligning with COSO and ISO standards, to mitigate these risks effectively.\n\nOur proactive measures include stringent cybersecurity protocols for third-party providers and continuous monitoring of regulatory changes. These efforts aim to safeguard our assets and maintain operational resilience, ensuring sustained business success and shareholder value.",
+          "tokens": 605,
+          "latency_ms": 3906,
+          "prompt_name": "executive",
+          "faithfulness": 4,
+          "coverage": 5,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.5,
+          "faithfulness_notes": "Most claims in the summary are traceable to the source text, but the mention of 'no significant incidents' is not explicitly stated in the original text.",
+          "coverage_notes": "The summary captures all key risks mentioned in the original text, including regulatory, cybersecurity, and intellectual property risks.",
+          "strengths": "The summary is concise and covers all major risk areas effectively, making it easy to understand. It aligns well with the original text's focus on regulatory, cybersecurity, and intellectual property risks.",
+          "weaknesses": "The summary could improve by ensuring all claims are directly supported by the source text, particularly regarding the status of cybersecurity incidents."
+        },
+        "analyst": {
+          "summary": "**Investment Risk Summary:**\n\n1. **Security, Privacy, and Execution Risks:**\n   - **Impact on Financial Performance:** The company's products and services, along with their interaction with third-party offerings, present potential security and privacy risks. Any breach or failure in execution could lead to significant financial liabilities, reputational damage, and loss of customer trust, ultimately affecting revenue and profitability.\n   - **Differentiation from Peers:** The company's proactive approach to cybersecurity, including systematic assessments and contractual requirements for third-party providers, may provide a competitive edge in trust and reliability compared to peers who may not have such stringent measures.\n   - **Actionable Insights:** Investors should monitor the company's ongoing investments in cybersecurity and privacy measures, as well as any reported incidents, to gauge the effectiveness of its risk management strategies and potential impacts on financial performance.\n\n2. **Intellectual Property Risks:**\n   - **Impact on Financial Performance:** Risks related to the protection and utilization of intellectual property (IP) could lead to potential litigation costs, loss of competitive advantage, and reduced market share, negatively impacting financial results.\n   - **Differentiation from Peers:** The company's emphasis on IP protection suggests a strong focus on innovation, which could differentiate it from competitors. However, it also indicates a potential vulnerability if IP protection fails.\n   - **Actionable Insights:** Investors should assess the company's IP portfolio strength and any ongoing or potential IP-related legal disputes. A robust IP strategy can be a key driver of long-term growth and competitive positioning.\n\n3. **Cybersecurity and Third-Party Risk Management:**\n   - **Impact on Financial Performance:** While the company reports no material impact from cybersecurity threats to date, the evolving nature of cyber risks means future incidents could have significant financial implications.\n   - **Differentiation from Peers:** The company's structured approach to third-party cybersecurity risk management, aligned with industry standards like COSO and ISO 31000, highlights a mature risk management framework that may not be present in",
+          "tokens": 833,
+          "latency_ms": 4942,
+          "prompt_name": "analyst",
+          "faithfulness": 4,
+          "coverage": 4,
+          "conciseness": 4,
+          "actionability": 4,
+          "overall": 4,
+          "faithfulness_notes": "Most claims in the summary are traceable to the source text, but some interpretations, such as the competitive edge in trust and reliability, are not explicitly stated.",
+          "coverage_notes": "The summary captures key risks related to security, privacy, intellectual property, and cybersecurity, but it does not mention regulatory risks explicitly.",
+          "strengths": "The summary effectively highlights the impact of risks on financial performance and provides actionable insights for investors. It also differentiates the company from its peers, which is useful for decision-making.",
+          "weaknesses": "The summary could improve by explicitly mentioning regulatory risks and ensuring all claims are directly supported by the source text."
+        },
+        "concise": {
+          "summary": "The most critical risk we face is related to regulatory matters, which could significantly impact our business operations and financial outcomes. Secondary risks include security, privacy, and execution issues with our products and services, intellectual property protection challenges, and cybersecurity threats from third-party service providers. Overall, the risk assessment is medium, as we have structured risk management frameworks and controls in place, but the evolving nature of regulatory and cybersecurity landscapes requires continuous vigilance.",
+          "tokens": 525,
+          "latency_ms": 2017,
+          "prompt_name": "concise",
+          "faithfulness": 4,
+          "coverage": 4,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.25,
+          "faithfulness_notes": "The summary is mostly faithful, but it slightly exaggerates the emphasis on regulatory risks as the 'most critical' without explicit support from the source text.",
+          "coverage_notes": "The summary captures key risks such as regulatory, security, privacy, intellectual property, and cybersecurity threats, but it omits some details like the structured approach to risk management and specific frameworks mentioned.",
+          "strengths": "The summary is concise and captures the essence of the risk factors, making it easy to understand and potentially actionable for decision-makers.",
+          "weaknesses": "It could improve by more accurately reflecting the source text's emphasis and including more details on the structured risk management approach."
+        }
+      }
+    },
+    {
+      "text_preview": "The following risk factors should be considered in addition to the other information in this Annual ...",
+      "evaluations": {
+        "baseline": {
+          "summary": "- **Industry Adaptation and Competition**: The company's ability to adapt to the evolving needs of its industry is crucial, as failure to do so could negatively impact financial results. Additionally, intense competition poses a risk to market share and profitability.\n\n- **Supply Chain Vulnerabilities**: Reliance on third-party suppliers for manufacturing and technology introduces risks related to product quality, manufacturing yields, and delivery schedules, which could adversely affect business operations.\n\n- **Demand Estimation and Product Quality**: Inaccurate demand forecasting can lead to supply-demand mismatches, while defects in products may result in significant remediation costs and reputational damage.\n\n- **Economic and International Exposure**: Adverse economic conditions and the complexities of international sales and operations present risks that could negatively impact the company's financial performance and stability.",
+          "tokens": 444,
+          "latency_ms": 2066,
+          "prompt_name": "baseline",
+          "faithfulness": 5,
+          "coverage": 5,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.75,
+          "faithfulness_notes": "All claims in the summary are directly traceable to the original risk factors provided.",
+          "coverage_notes": "The summary captures all the key risks mentioned in the original text, including industry adaptation, competition, supply chain vulnerabilities, demand estimation, product quality, economic conditions, and international exposure.",
+          "strengths": "The summary is faithful to the original text, covers all major risks, and is concise, making it easy to read and understand.",
+          "weaknesses": "While the summary is actionable, it could be improved by providing more specific examples or potential strategies to mitigate the risks, enhancing its utility for decision-making."
+        },
+        "structured": {
+          "summary": "1. Risk Name: Dependency on Third-Party Suppliers  \n   Severity: High  \n   Description: Reliance on third-party suppliers for manufacturing and technology reduces control over product quality and delivery, potentially harming business operations.\n\n2. Risk Name: Competition Impact  \n   Severity: High  \n   Description: Intense competition could erode market share and negatively affect financial results, posing a significant threat to the company's market position.\n\n3. Risk Name: International Sales and Operations  \n   Severity: Medium  \n   Description: Significant international operations expose the company to geopolitical, regulatory, and currency risks that could adversely affect business performance.",
+          "tokens": 431,
+          "latency_ms": 1629,
+          "prompt_name": "structured",
+          "faithfulness": 4,
+          "coverage": 3,
+          "conciseness": 4,
+          "actionability": 4,
+          "overall": 3.75,
+          "faithfulness_notes": "The summary accurately reflects the risks mentioned in the original text, but the severity levels are not explicitly stated in the source.",
+          "coverage_notes": "The summary captures some key risks but omits others such as economic conditions, product defects, and customer demand estimation.",
+          "strengths": "The summary is concise and highlights significant risks like dependency on suppliers and competition, making it actionable for decision-makers.",
+          "weaknesses": "It lacks coverage of all major risks mentioned in the original text, such as economic conditions and product defects, which could provide a more comprehensive view."
+        },
+        "executive": {
+          "summary": "In reviewing our strategic landscape, several key risks demand attention. Firstly, failing to adapt to industry changes could negatively impact our financial performance. Staying ahead of trends is crucial to maintaining our competitive edge. Secondly, intense competition poses a threat to our market share and profitability. We must continuously innovate to differentiate ourselves. Additionally, inaccuracies in forecasting customer demand have led to supply-demand mismatches, affecting our operational efficiency and financial outcomes.\n\nOur reliance on third-party suppliers introduces vulnerabilities in product quality and delivery, potentially disrupting our supply chain. Product defects have historically incurred significant remediation costs, emphasizing the need for stringent quality control.\n\nEconomic downturns could further strain our financial health, while our substantial international operations expose us to geopolitical and currency risks. Addressing these risks proactively is essential to safeguard our business integrity and shareholder value.",
+          "tokens": 468,
+          "latency_ms": 2452,
+          "prompt_name": "executive",
+          "faithfulness": 5,
+          "coverage": 5,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.75,
+          "faithfulness_notes": "All claims in the summary are directly traceable to the original risk factors.",
+          "coverage_notes": "The summary captures all the key risks mentioned in the original text.",
+          "strengths": "The summary is faithful to the original text, covers all major risks, and is concise.",
+          "weaknesses": "While the summary is actionable, it could provide more specific guidance or strategies for addressing the risks."
+        },
+        "analyst": {
+          "summary": "**Investment Risk Summary:**\n\n1. **Evolving Industry Needs:**\n   - **Impact on Financial Performance:** The company's ability to adapt to the rapidly changing demands of its industry is crucial. Failure to innovate or align with industry trends could lead to a loss of market relevance and revenue decline.\n   - **Differentiation from Peers:** Companies that successfully anticipate and meet industry needs often gain a competitive edge. This risk highlights the importance of the company's R&D capabilities and strategic foresight.\n   - **Actionable Insight:** Monitor the company's investment in innovation and strategic partnerships. Consider the company's track record in adapting to industry changes when evaluating its long-term growth potential.\n\n2. **Competition:**\n   - **Impact on Financial Performance:** Intense competition can erode market share and compress margins, affecting profitability.\n   - **Differentiation from Peers:** The company's competitive positioning, brand strength, and pricing strategy are critical differentiators.\n   - **Actionable Insight:** Assess the company's competitive advantages, such as unique technology, brand loyalty, or cost leadership. Compare these factors against peers to gauge its ability to maintain or grow market share.\n\n3. **Demand Estimation:**\n   - **Impact on Financial Performance:** Inaccurate demand forecasting can lead to inventory issues, increased costs, and lost sales opportunities.\n   - **Differentiation from Peers:** Effective demand management and supply chain agility can set a company apart.\n   - **Actionable Insight:** Evaluate the company's historical accuracy in demand forecasting and its supply chain management capabilities. Consider the flexibility of its operations in responding to demand fluctuations.\n\n4. **Dependency on Third-Party Suppliers:**\n   - **Impact on Financial Performance:** Reliance on external suppliers can lead to disruptions in product availability and quality, impacting sales and reputation.\n   - **Differentiation from Peers:** Companies with diversified supplier bases or in-house capabilities may have a competitive advantage.\n   - **Actionable Insight:** Investigate the company's supplier relationships and",
+          "tokens": 700,
+          "latency_ms": 6283,
+          "prompt_name": "analyst",
+          "faithfulness": 4,
+          "coverage": 4,
+          "conciseness": 4,
+          "actionability": 5,
+          "overall": 4.25,
+          "faithfulness_notes": "Most claims are traceable to the source text, but some interpretations, like 'strategic foresight,' are not explicitly mentioned.",
+          "coverage_notes": "The summary captures most key risks but omits some details, such as international sales and economic conditions.",
+          "strengths": "The summary provides actionable insights and highlights key differentiators, making it useful for decision-making.",
+          "weaknesses": "It could improve by including all risks mentioned in the original text, such as international operations and economic conditions."
+        },
+        "concise": {
+          "summary": "The most critical risk is our dependency on third-party suppliers, which limits our control over product quality and delivery, potentially harming our business. Secondary risks include intense competition, failure to meet industry needs, inaccurate demand forecasting, product defects, adverse economic conditions, and challenges related to international operations. Overall, the risk assessment is high due to the combination of external dependencies, market competition, and operational challenges that could significantly impact our financial performance and reputation.",
+          "tokens": 394,
+          "latency_ms": 1706,
+          "prompt_name": "concise",
+          "faithfulness": 5,
+          "coverage": 5,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.75,
+          "faithfulness_notes": "All claims in the summary are directly traceable to the original risk factors.",
+          "coverage_notes": "The summary captures all the key risks mentioned in the original text.",
+          "strengths": "The summary is faithful to the original text, covers all major risks, and is concise.",
+          "weaknesses": "While the summary is actionable, it could provide more specific guidance or context for decision-making."
+        }
+      }
+    },
+    {
+      "text_preview": "We Face Intense Competition\n\nOur Expansion into New Products, Services, Technologies, and Geographic...",
+      "evaluations": {
+        "baseline": {
+          "summary": "- **Intense Competition**: The company faces significant competitive pressure across various sectors, including international and e-commerce markets. Local competitors often have advantages due to better local market understanding and established brand presence, which could impact market share and profitability.\n\n- **Expansion Risks**: Expanding into new products, services, technologies, and geographic regions introduces additional risks, such as potential write-downs of investments and the failure of sustainability initiatives. These expansions require substantial investment and may not yield the expected benefits, potentially harming the company's reputation and financial performance.\n\n- **International Operations Challenges**: The company's significant reliance on international markets for revenue and profit growth exposes it to risks such as high operational costs, lack of local market experience, and challenges in achieving sustained profitability. Additionally, geopolitical and regulatory issues, particularly related to China-based sellers and suppliers, could adversely affect operations.\n\n- **Operational Strain and Fraud Risks**: The variability in the retail business increases operational strain, while the company is also vulnerable to fraudulent or unlawful activities by sellers, which could lead to financial losses and reputational damage.",
+          "tokens": 628,
+          "latency_ms": 3690,
+          "prompt_name": "baseline",
+          "faithfulness": 5,
+          "coverage": 5,
+          "conciseness": 5,
+          "actionability": 5,
+          "overall": 5,
+          "faithfulness_notes": "All claims in the summary are directly traceable to the original risk factors text.",
+          "coverage_notes": "The summary captures all the key risks mentioned in the original text, including competition, expansion risks, international operations challenges, and operational strain.",
+          "strengths": "The summary is well-structured, capturing all major risks succinctly and accurately. It is concise yet comprehensive, making it highly actionable for decision-makers.",
+          "weaknesses": "No significant weaknesses; the summary effectively covers all necessary aspects."
+        },
+        "structured": {
+          "summary": "1. **Risk Name:** Intense Competition  \n   **Severity:** High  \n   **Description:** The company faces significant competitive pressure across various sectors, including international retail, e-commerce, and cloud services, which could impact market share and profitability.\n\n2. **Risk Name:** International Expansion Challenges  \n   **Severity:** High  \n   **Description:** Expanding into international markets presents substantial risks due to high costs, lack of local operating experience, and intense local competition, potentially affecting profitability and brand establishment.\n\n3. **Risk Name:** China-Related Dependencies  \n   **Severity:** High  \n   **Description:** The company's reliance on China-based sellers and suppliers exposes it to risks from regulatory, economic, and geopolitical factors, which could adversely affect its operations and financial results.",
+          "tokens": 588,
+          "latency_ms": 2606,
+          "prompt_name": "structured",
+          "faithfulness": 5,
+          "coverage": 4,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.5,
+          "faithfulness_notes": "All claims in the summary are directly traceable to the source text, with no hallucinations present.",
+          "coverage_notes": "The summary captures the most critical risks but omits some details, such as the sustainability initiatives and the variability in the retail business.",
+          "strengths": "The summary is concise and captures the essence of the major risks, making it easy to understand and refer to.",
+          "weaknesses": "The summary could improve by including additional risks mentioned in the original text, such as sustainability challenges and retail variability, to provide a more comprehensive overview."
+        },
+        "executive": {
+          "summary": "Our company faces strategic and material risks that could significantly impact our business operations and growth. Intense competition, particularly in international markets, challenges our expansion efforts. Local competitors often have better market understanding and brand recognition, which could hinder our ability to establish a strong presence and achieve profitability abroad.\n\nOur expansion into new products, services, and regions introduces additional risks, including potential financial losses if investments do not yield expected returns. Furthermore, our sustainability initiatives may not succeed, potentially harming our reputation.\n\nOur reliance on China-based sellers and suppliers exposes us to geopolitical and regulatory risks that could disrupt our supply chain and revenue streams. Additionally, the variability in our retail business and exposure to fraudulent activities by sellers strain our operations and could lead to financial losses.\n\nAddressing these risks requires strategic planning, robust risk management, and a focus on building strong local partnerships and compliance frameworks.",
+          "tokens": 605,
+          "latency_ms": 3688,
+          "prompt_name": "executive",
+          "faithfulness": 5,
+          "coverage": 4,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.5,
+          "faithfulness_notes": "All claims in the summary are verifiable from the source text, with no hallucinations present.",
+          "coverage_notes": "The summary captures most of the key risks but does not explicitly mention the risk related to the inability to hire, train, retain, and manage personnel for international growth.",
+          "strengths": "The summary is concise and captures the essence of the original risk factors, making it easy to understand. It is faithful to the source text and provides a clear overview of the strategic and material risks.",
+          "weaknesses": "The summary could improve by explicitly mentioning the risk related to personnel management in international growth, which is a significant point in the original text."
+        },
+        "analyst": {
+          "summary": "**Investment Risk Summary**\n\n1. **Intense Competition:**\n   - **Financial Performance Impact:** The company operates in highly competitive markets, which can pressure margins and limit pricing power. This could lead to reduced profitability if the company cannot differentiate its offerings or maintain cost efficiencies.\n   - **Differentiation from Peers:** The company's broad range of products and services may provide some diversification benefits, but also exposes it to competition from specialized firms that may have deeper expertise or more focused strategies.\n   - **Actionable Insight:** Monitor competitive positioning and market share trends. Consider the company's ability to innovate and adapt to competitive pressures as a key factor in investment decisions.\n\n2. **Expansion into New Products, Services, Technologies, and Geographic Regions:**\n   - **Financial Performance Impact:** Expansion efforts involve significant costs and risks of write-downs if investments do not yield expected returns. Unsuccessful sustainability initiatives could also harm financial performance and reputation.\n   - **Differentiation from Peers:** The company's aggressive expansion strategy may offer growth opportunities but also increases exposure to execution risks compared to more regionally or product-focused peers.\n   - **Actionable Insight:** Evaluate the company's track record in successfully launching new products and entering new markets. Assess the scalability of its business model and its ability to manage expansion-related risks.\n\n3. **International Operations and Expansion:**\n   - **Financial Performance Impact:** High costs associated with establishing and maintaining international operations could weigh on profitability, especially if these operations do not achieve sustained profitability.\n   - **Differentiation from Peers:** The company's significant reliance on international markets, particularly China, differentiates it from peers with less international exposure. This increases vulnerability to geopolitical and regulatory risks.\n   - **Actionable Insight:** Pay close attention to geopolitical developments, particularly related to China, and their potential impact on the company's supply chain and revenue streams. Consider geographic diversification within the portfolio to mitigate region-specific risks.\n\n4. **Variability in Retail Business:**\n   - **Financial Performance",
+          "tokens": 826,
+          "latency_ms": 7257,
+          "prompt_name": "analyst",
+          "faithfulness": 4,
+          "coverage": 4,
+          "conciseness": 4,
+          "actionability": 4,
+          "overall": 4.0,
+          "faithfulness_notes": "Most claims in the summary are traceable to the source text, but some details, such as specific financial impacts, are inferred rather than directly stated.",
+          "coverage_notes": "The summary captures the main risks mentioned in the original text, but it omits some specific details like the impact of fraudulent activities and the strain on operations due to retail variability.",
+          "strengths": "The summary effectively distills complex risk factors into actionable insights and highlights key areas of concern, such as competition and international expansion.",
+          "weaknesses": "The summary could improve by including all mentioned risks, such as fraudulent activities and operational strain, and ensuring all claims are directly supported by the source text."
+        },
+        "concise": {
+          "summary": "The single most critical risk is the intense competition we face, particularly as we expand into new markets and product areas, which could undermine our market position and profitability. Secondary risks include challenges associated with international expansion, such as high costs, lack of local market experience, and reliance on China-based sellers and suppliers, as well as the potential failure of sustainability initiatives and exposure to fraudulent activities. Overall, the risk assessment is high due to the combination of competitive pressures, significant international exposure, and operational complexities that could substantially impact our financial performance and strategic objectives.",
+          "tokens": 541,
+          "latency_ms": 2557,
+          "prompt_name": "concise",
+          "faithfulness": 4,
+          "coverage": 5,
+          "conciseness": 5,
+          "actionability": 4,
+          "overall": 4.5,
+          "faithfulness_notes": "Most claims in the summary are traceable to the source text, but the emphasis on sustainability initiatives is slightly overstated compared to the original text.",
+          "coverage_notes": "The summary captures all key risks mentioned in the original text, including competition, international expansion, reliance on China-based sellers, and fraudulent activities.",
+          "strengths": "The summary effectively highlights the primary risks and provides a clear, concise overview of the challenges faced by the company. It is well-structured and easy to understand.",
+          "weaknesses": "The summary could better align the emphasis on sustainability initiatives with the original text, as it is not as prominently featured in the source material."
+        }
+      }
+    }
+  ],
+  "recommendation": "## Recommendation: Use 'baseline' prompt\n\n**Best performer:** baseline (score: 4.80/5.0)\n**Worst performer:** analyst (score: 4.10/5.0)\n\n### Rankings:\n1. **baseline**: 4.80/5.0 (latency: 3246ms, tokens: 605)\n2. **executive**: 4.65/5.0 (latency: 3734ms, tokens: 598)\n3. **concise**: 4.40/5.0 (latency: 2155ms, tokens: 525)\n4. **structured**: 4.15/5.0 (latency: 2296ms, tokens: 583)\n5. **analyst**: 4.10/5.0 (latency: 6376ms, tokens: 827)",
+  "methodology": {
+    "model": "gpt-4o",
+    "evaluation_method": "LLM-as-judge",
+    "metrics": [
+      "faithfulness",
+      "coverage",
+      "conciseness",
+      "actionability"
+    ],
+    "n_samples": 5
+  }
+}

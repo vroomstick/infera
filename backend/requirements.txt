@@ -12,6 +12,13 @@ sentence-transformers  # For embeddings
 
 # --- LLM Integration (GPT-4o) ---
 openai
+httpx  # Async HTTP client for SDK
+tenacity  # Retry logic for production hardening
+
+# --- Agent Integration (Optional) ---
+langgraph  # LangGraph agent framework
+langchain-core  # Core LangChain tools
+langchain-openai  # OpenAI integration for LangGraph
 
 # --- Database ---
 sqlalchemy

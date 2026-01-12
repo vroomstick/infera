@@ -1,0 +1,11 @@
+No sentence-transformers model found with name ProsusAI/finbert. Creating a new one with mean pooling.
+
+======================================================================
+STATISTICAL SIGNIFICANCE TESTS
+FinBERT Embeddings vs TF-IDF Baseline
+======================================================================
+
+Dataset: 286 labeled samples
+Loading FinBERT model...
+Scoring 286 texts with FinBERT...
+Batches:   0%|          | 0/9 [00:00<?, ?it/s]Batches:  11%|█         | 1/9 [00:01<00:13,  1.70s/it]Batches:  22%|██▏       | 2/9 [00:02<00:09,  1.40s/it]Batches:  33%|███▎      | 3/9 [00:03<00:07,  1.18s/it]Batches:  44%|████▍     | 4/9 [00:04<00:05,  1.04s/it]Batches:  56%|█████▌    | 5/9 [00:05<00:03,  1.07it/s]Batches:  67%|██████▋   | 6/9 [00:05<00:02,  1.28it/s]Batches:  78%|███████▊  | 7/9 [00:06<00:01,  1.53it/s]Batches:  89%|████████▉ | 8/9 [00:06<00:00,  1.83it/s]Batches: 100%|██████████| 9/9 [00:06<00:00,  2.15it/s]Batches: 100%|██████████| 9/9 [00:06<00:00,  1.31it/s]

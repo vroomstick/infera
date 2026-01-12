@@ -1,0 +1,46 @@
+{
+  "n_samples": 286,
+  "n_bootstrap": 1000,
+  "model_name": "ProsusAI/finbert",
+  "thresholds": {
+    "high": 0.7,
+    "medium": 0.65
+  },
+  "metrics": {
+    "accuracy": {
+      "value": 0.5454545454545454,
+      "ci_lower": 0.48951048951048953,
+      "ci_upper": 0.6014860139860139,
+      "ci_width": 0.11197552447552434
+    },
+    "spearman_rho": {
+      "value": 0.5898554263676795,
+      "ci_lower": 0.5085013171348999,
+      "ci_upper": 0.6679812110962899,
+      "ci_width": 0.15947989396139006
+    },
+    "precision_at_5": {
+      "value": 1.0,
+      "ci_lower": 0.4,
+      "ci_upper": 1.0,
+      "ci_width": 0.6
+    },
+    "precision_at_10": {
+      "value": 0.8,
+      "ci_lower": 0.5,
+      "ci_upper": 1.0,
+      "ci_width": 0.5
+    },
+    "precision_at_20": {
+      "value": 0.85,
+      "ci_lower": 0.65,
+      "ci_upper": 1.0,
+      "ci_width": 0.35
+    }
+  },
+  "summary": {
+    "accuracy": "54.5% (95% CI: 49.0% - 60.1%)",
+    "spearman_rho": "0.590 (95% CI: 0.509 - 0.668)",
+    "precision_at_10": "80% (95% CI: 50% - 100%)"
+  }
+}
