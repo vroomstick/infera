@@ -140,9 +140,12 @@ def score_section_paragraphs(section_id: int, store_embeddings: bool = True) -> 
                         embedding=embedding_bytes
                     )
                     
-                    # Store in ScoreVector for pgvector
+                    # Store in ScoreVector for pgvector (delete existing first if any)
                     from data.repository import create_score_vector
+                    from data.models import ScoreVector
                     try:
+                        # Delete existing ScoreVector if it exists (for --update flag)
+                        db.query(ScoreVector).filter(ScoreVector.paragraph_id == para.id).delete()
                         create_score_vector(db, para.id, embedding.tolist())
                     except Exception as e:
                         logger.warning(f"Failed to store ScoreVector for paragraph {para.id}: {e}")
@@ -191,9 +194,12 @@ def score_section_paragraphs(section_id: int, store_embeddings: bool = True) -> 
                         embedding=embedding_bytes
                     )
                     
-                    # Store in ScoreVector for pgvector
+                    # Store in ScoreVector for pgvector (delete existing first if any)
                     from data.repository import create_score_vector
+                    from data.models import ScoreVector
                     try:
+                        # Delete existing ScoreVector if it exists (for --update flag)
+                        db.query(ScoreVector).filter(ScoreVector.paragraph_id == para.id).delete()
                         create_score_vector(db, para.id, embedding.tolist())
                     except Exception as e:
                         logger.warning(f"Failed to store ScoreVector for paragraph {para.id}: {e}")

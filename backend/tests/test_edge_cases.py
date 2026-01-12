@@ -406,11 +406,13 @@ class TestEdgeCaseIntegration:
         <a name="item1a"></a>
         <h2>ITEM 1A.</h2>
         <h3>RISK FACTORS</h3>
-        <p>Risk content paragraph one with sufficient length to pass validation.</p>
-        <p>Risk content paragraph two with sufficient length to pass validation.</p>
-        """ + " ".join(["More risk content."] * 30) + """
+        <p>Risk content paragraph one with sufficient length to pass validation and be considered a real paragraph for analysis purposes in the risk scoring system.</p>
+        <p>Risk content paragraph two with sufficient length to pass validation and be considered a real paragraph for analysis purposes in the risk scoring system.</p>
+        <p>Risk content paragraph three with sufficient length to pass validation and be considered a real paragraph for analysis purposes in the risk scoring system.</p>
+        """ + " ".join(["More risk content with sufficient length."] * 50) + """
         <a name="item1b"></a>
-        <h2>ITEM 1B.</h2>
+        <h2>ITEM 1B. Unresolved Staff Comments</h2>
+        <p>Other content here.</p>
         </body>
         </html>
         """

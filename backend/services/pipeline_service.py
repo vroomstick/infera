@@ -197,6 +197,19 @@ def run_analysis_pipeline(
                 filing = existing_filing
             elif update:
                 logger.info("--update flag: will recompute scores/embeddings...")
+                # Delete existing scores and score vectors to allow recomputation
+                from data.models import Section, Paragraph, Score, ScoreVector
+                sections = repo.get_sections_by_filing(db, existing_filing.id)
+                for section in sections:
+                    paragraphs = repo.get_paragraphs_by_section(db, section.id)
+                    for para in paragraphs:
+                        # Delete scores and score vectors (will be recomputed)
+                        db.query(Score).filter(Score.paragraph_id == para.id).delete()
+                        db.query(ScoreVector).filter(ScoreVector.paragraph_id == para.id).delete()
+                # Also delete summaries (will be recomputed if not skipped)
+                db.query(Summary).filter(Summary.filing_id == existing_filing.id).delete()
+                db.commit()
+                logger.info("Deleted existing scores/vectors/summaries, will recompute...")
                 filing = existing_filing
             else:
                 logger.info(f"Filing already exists (id={existing_filing.id}), skipping. Use --force to reprocess or --update to recompute scores.")
