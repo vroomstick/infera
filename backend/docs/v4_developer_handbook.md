@@ -644,9 +644,13 @@ After v4, we can confidently answer:
 
 ## Phase 2: De-Black-Box GPT Summarization
 
+**Context:** GPT summarization is the **human presentation layer** — an optional prose rendering of the core analysis. This phase validates and optimizes this layer for human consumption.
+
+**Architecture role:** The core engine (FinBERT scoring) is always deterministic and agent-friendly. GPT summarization adds a human-friendly narrative layer on top.
+
 ### 2.1 Prompt Comparison Evaluation
 
-**Question answered:** "Which prompt produces the best summaries?"
+**Question answered:** "Which prompt produces the best summaries for human consumption?"
 
 **Methodology:** LLM-as-judge evaluation (GPT-4o) across 4 metrics:
 1. **Faithfulness** — Are claims verifiable in source? (1-5)
@@ -966,6 +970,29 @@ If all retries fail, return:
 
 ## Technical Decisions
 
+### Architecture Overview: Core Engine + Presentation Layers
+
+**Infera uses a layered architecture:**
+
+1. **Core Engine (Always Active)**
+   - FinBERT embeddings → deterministic, fast, local
+   - Risk scoring → cosine similarity, no LLM dependency
+   - Always available, agent-friendly, explainable
+
+2. **Human Presentation Layer (Optional)**
+   - GPT-4o summarization → prose for human consumption
+   - Executive briefs, themes, narrative synthesis
+   - Validated but optional (93.9% faithfulness)
+
+3. **Agent Presentation Layer (Default)**
+   - Structured JSON → low tokens, stable schema
+   - Batch retrieval → efficient multi-paragraph queries
+   - No summaries → agents synthesize their own
+
+**Key principle:** Summarization is a view, not a feature. The core analysis is always deterministic. Summaries are a human-friendly rendering layer.
+
+---
+
 ### Why FinBERT over MiniLM?
 
 | Factor | MiniLM | FinBERT | Winner |
@@ -1029,48 +1056,99 @@ If all retries fail, return:
 3. **Documentation:** Sensitivity is now a known, documented limitation.
 4. **Future work:** "negative_impact" switch is a clear v5 improvement.
 
-### Why GPT Summarization is Disabled by Default
+### Architecture: Core Engine + Presentation Layers
 
-**Context:** Infera has two ML components:
-1. **Local embeddings (FinBERT)** — Scores and classifies paragraphs
-2. **GPT summarization (OpenAI)** — Generates readable risk summaries
+**Design Philosophy:** Infera uses a **layered architecture** with one deterministic core and two optional presentation layers.
 
-**Decision:** GPT summarization is OFF by default (`skip_summary=True`) in all operations.
+#### Core Engine (Always Active)
 
-| Use Case | Recommendation | Reason |
-|----------|----------------|--------|
-| **Agent integration** | Skip summary | Agents are LLMs — they synthesize their own summaries from structured data |
-| **Human reports** | Enable summary | Humans benefit from readable prose summaries |
-| **API for downstream apps** | Skip summary | Structured data is more composable |
+**Deterministic, fast, agent-friendly truth layer:**
 
-**Rationale for agents:**
+- **FinBERT embeddings** → 768-dim vectors for semantic understanding
+- **Risk scoring** → Cosine similarity to risk prompt (0.0-1.0)
+- **Category classification** → 8 risk categories with confidence scores
+- **Token attribution** → Explainability (what drove the score)
+- **Structured data** → Paragraphs, scores, categories, citations, metadata
 
-An agent calling Infera is already an LLM. If Infera pre-summarizes with GPT, you get:
-```
-Agent (LLM) → calls Infera → GPT summarizes → Agent summarizes GPT's summary
-```
+**Key properties:**
+- ✅ Always deterministic (no LLM dependency)
+- ✅ Fast (local model, ~38ms per paragraph)
+- ✅ Agent-friendly (structured JSON, stable schema)
+- ✅ Explainable (token-level contributions)
+- ✅ Batch-optimized (processes 50+ paragraphs efficiently)
 
-This is redundant, slow, and expensive. Instead:
-```
-Agent (LLM) → calls Infera → gets structured data → Agent synthesizes answer
-```
+**This is the foundation. It never depends on GPT.**
 
-**What agents need from Infera:**
-- Paragraph scores and risk categories (structured)
-- Token attributions (explainability)
-- Embeddings (for custom reasoning)
-- Search results (ranked matches)
+#### Human Presentation Layer (Optional)
 
-**What agents don't need:**
-- Pre-made prose summaries (they can write their own)
+**GPT-backed prose for human consumption:**
 
-**The code stays:** GPT summarization is validated (93.9% faithfulness, optimal temperature documented) and available for human-facing use cases. It's just not the right tool for agent integration.
+- **Executive brief** → High-level risk overview
+- **Top 3 themes** → Synthesized risk patterns
+- **Category highlights** → Risks grouped by type
+- **Narrative synthesis** → Human-readable prose
 
-**How to enable for humans:**
+**When to use:**
+- Human-facing reports and dashboards
+- Executive presentations
+- Client deliverables
+- Any scenario where prose > structured data
+
+**Implementation:** GPT-4o summarization (validated: 93.9% faithfulness, optimal temperature 0.0-0.2)
+
+**How to enable:**
 ```bash
 curl -X POST http://localhost:8000/analyze \
   -d '{"file_path": "data/AAPL_10K.html", "skip_summary": false}'
 ```
+
+#### Agent Presentation Layer (Default)
+
+**Strict JSON optimized for AI consumption:**
+
+- **Low tokens** → Only essential data
+- **Stable schema** → Predictable structure
+- **Batch retrieval** → Efficient multi-paragraph queries
+- **Predictable errors** → Clear error codes and fallbacks
+
+**What agents get:**
+- Paragraph IDs + text (evidence)
+- Scores + categories (structure)
+- Citations + metadata (traceability)
+- Token attributions (explainability)
+- Embeddings (for custom reasoning)
+
+**What agents don't get:**
+- Pre-made prose summaries (agents synthesize their own)
+
+**Rationale:** Agents are LLMs. They need evidence + structure, not narrative. If Infera pre-summarizes:
+```
+Agent (LLM) → calls Infera → GPT summarizes → Agent summarizes GPT's summary
+```
+This is redundant. Instead:
+```
+Agent (LLM) → calls Infera → gets structured data → Agent synthesizes answer
+```
+
+#### Key Insight: Summarization is a View, Not a Feature
+
+**Treat summarization like a UI rendering step:**
+
+- **Humans** have limited attention and no tool-calling loop → need prose
+- **Agents** have unlimited attention and tool-calling loops → need structure
+
+**The system can be "agent-only" at the API level while still being "human-friendly" in the app by layering summaries on top.**
+
+**Default behavior:**
+- **API endpoints** → Return structured data (agent-friendly)
+- **Human reports** → Can request summaries (presentation layer)
+- **Agent tools** → Always skip summaries (get raw data)
+
+**This architecture ensures:**
+1. Core analysis is always fast and deterministic
+2. Agents get what they need (structure + evidence)
+3. Humans get what they need (narrative + synthesis)
+4. One core engine, two presentation layers
 
 ---
 
