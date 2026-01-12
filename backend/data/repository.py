@@ -2,29 +2,19 @@
 """
 Repository helpers for database CRUD operations.
 
-Supports both SQLite and PostgreSQL with pgvector for vector search.
+Requires PostgreSQL with pgvector extension.
 """
 
 import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from typing import Optional, List, Tuple
+from typing import Optional, List, Tuple, Dict, Any
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 from datetime import datetime
 
-from config.settings import settings
-from .models import Company, Filing, Section, Paragraph, Score, Summary
-
-# Check if using PostgreSQL with pgvector
-USE_PGVECTOR = settings.is_postgres
-
-if USE_PGVECTOR:
-    try:
-        from .models import ScoreVector
-    except ImportError:
-        USE_PGVECTOR = False
+from .models import Company, Filing, Section, Paragraph, Score, Summary, ScoreVector
 
 
 # === Company ===

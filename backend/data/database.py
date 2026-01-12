@@ -27,15 +27,12 @@ def mask_db_url(url: str) -> str:
     # Match password in URL pattern: ://user:password@
     return re.sub(r'(://[^:]+:)[^@]+(@)', r'\1***\2', url)
 
-# Create engine with appropriate settings
-connect_args = {}
-if settings.is_sqlite:
-    # SQLite needs check_same_thread=False for FastAPI
-    connect_args["check_same_thread"] = False
-
+# Create PostgreSQL engine
 engine = create_engine(
     settings.DATABASE_URL,
-    connect_args=connect_args,
+    pool_size=5,
+    max_overflow=10,
+    pool_pre_ping=True,  # Verify connections before use
     echo=False  # Set to True for SQL debugging
 )
 

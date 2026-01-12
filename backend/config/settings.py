@@ -23,9 +23,12 @@ if backend_env.exists():
 class Settings:
     """Application settings loaded from environment variables."""
     
+    # PostgreSQL is required - no SQLite fallback
+    DEFAULT_DATABASE_URL = "postgresql://infera:infera_dev_password@localhost:5432/infera"
+    
     def __init__(self):
         self.OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
-        self.DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./infera.db")
+        self.DATABASE_URL: str = os.getenv("DATABASE_URL", self.DEFAULT_DATABASE_URL)
         self.LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")
         
         # Security settings
@@ -34,8 +37,12 @@ class Settings:
         self.RATE_LIMIT: str = os.getenv("RATE_LIMIT", "60/minute")
         self.ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
         
-        # Note: OPENAI_API_KEY is optional at load time
-        # Only required when actually using GPT summarization
+        # Validate database URL
+        if not self.DATABASE_URL.startswith("postgresql"):
+            raise ValueError(
+                "PostgreSQL is required. Set DATABASE_URL=postgresql://... "
+                "or run: docker compose up -d db"
+            )
     
     @property
     def is_production(self) -> bool:
@@ -46,16 +53,6 @@ class Settings:
     def require_api_key(self) -> bool:
         """Check if API key authentication is enabled."""
         return bool(self.API_KEY)
-    
-    @property
-    def is_sqlite(self) -> bool:
-        """Check if using SQLite database."""
-        return self.DATABASE_URL.startswith("sqlite")
-    
-    @property
-    def is_postgres(self) -> bool:
-        """Check if using PostgreSQL database."""
-        return self.DATABASE_URL.startswith("postgresql")
 
 
 # Global settings instance
