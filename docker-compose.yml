@@ -1,63 +1,53 @@
+# Infera Production Stack
+# PostgreSQL with pgvector for vector search
+
 version: '3.8'
 
 services:
-  # Backend API
-  backend:
-    build: ./backend
-    container_name: infera-backend
+  # PostgreSQL with pgvector extension
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: infera-db
+    environment:
+      POSTGRES_USER: infera
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-infera_dev_password}
+      POSTGRES_DB: infera
+    ports:
+      - "5432:5432"
+    volumes:
+      - infera_pgdata:/var/lib/postgresql/data
+      - ./backend/scripts/init_db.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U infera -d infera"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # Infera API
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      args:
+        PRELOAD_MODEL: "true"
+    container_name: infera-api
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://infera:${POSTGRES_PASSWORD:-infera_dev_password}@db:5432/infera
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      INFERA_API_KEY: ${INFERA_API_KEY:-}
+      ENVIRONMENT: production
     ports:
       - "8000:8000"
     volumes:
-      # Mount data directory for filings
       - ./backend/data:/app/data
-      # Mount reports directory for output
-      - ./reports:/app/reports
-      # Mount database (optional - can use volume instead)
-      - ./infera.db:/app/infera.db
-    environment:
-      - DATABASE_URL=sqlite:///./infera.db
-      - LOG_LEVEL=INFO
-      - CORS_ORIGINS=*
-      # OpenAI key (set in .env or pass directly)
-      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
-    env_file:
-      - .env
+      - ./backend/reports:/app/reports
+      - ./backend/.sec_cache:/app/.sec_cache
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
 
-  # Frontend (uncomment when ready)
-  # frontend:
-  #   build: ./frontend
-  #   container_name: infera-frontend
-  #   ports:
-  #     - "3000:3000"
-  #   environment:
-  #     - VITE_API_URL=http://backend:8000
-  #   depends_on:
-  #     - backend
-
-  # Optional: Run tests in container
-  test:
-    build: ./backend
-    container_name: infera-test
-    command: python -m pytest tests/ -v
-    volumes:
-      - ./backend/data:/app/data
-    profiles:
-      - testing
-
-  # Optional: Run evaluation
-  eval:
-    build: ./backend
-    container_name: infera-eval
-    command: python evaluation/eval_scorer.py
-    volumes:
-      - ./backend/data:/app/data
-      - ./backend/evaluation:/app/evaluation
-    profiles:
-      - evaluation
+volumes:
+  infera_pgdata:
+    driver: local

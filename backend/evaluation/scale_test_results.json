@@ -1,0 +1,405 @@
+{
+  "start_time": "2026-01-12T01:26:44.986261",
+  "target_count": 55,
+  "skip_existing": true,
+  "skip_summary": true,
+  "database_url": "sqlite",
+  "successes": [
+    {
+      "ticker": "AAPL",
+      "filing_id": 1,
+      "paragraph_count": 25,
+      "word_count": 1882,
+      "time_seconds": 10.34
+    },
+    {
+      "ticker": "MSFT",
+      "filing_id": 2,
+      "paragraph_count": 19,
+      "word_count": 1634,
+      "time_seconds": 2.71
+    },
+    {
+      "ticker": "GOOGL",
+      "filing_id": 3,
+      "paragraph_count": 60,
+      "word_count": 3906,
+      "time_seconds": 1.98
+    },
+    {
+      "ticker": "AMZN",
+      "filing_id": 4,
+      "paragraph_count": 22,
+      "word_count": 2394,
+      "time_seconds": 1.06
+    },
+    {
+      "ticker": "META",
+      "filing_id": 5,
+      "paragraph_count": 82,
+      "word_count": 6801,
+      "time_seconds": 1.19
+    },
+    {
+      "ticker": "NVDA",
+      "filing_id": 6,
+      "paragraph_count": 122,
+      "word_count": 16577,
+      "time_seconds": 0.99
+    },
+    {
+      "ticker": "TSLA",
+      "filing_id": 7,
+      "paragraph_count": 0,
+      "word_count": 439,
+      "time_seconds": 0.43
+    },
+    {
+      "ticker": "AMD",
+      "filing_id": 8,
+      "paragraph_count": 31,
+      "word_count": 2912,
+      "time_seconds": 1.11
+    },
+    {
+      "ticker": "INTC",
+      "filing_id": 9,
+      "paragraph_count": 2,
+      "word_count": 586,
+      "time_seconds": 1.35
+    },
+    {
+      "ticker": "CRM",
+      "filing_id": 10,
+      "paragraph_count": 70,
+      "word_count": 5704,
+      "time_seconds": 1.48
+    },
+    {
+      "ticker": "ORCL",
+      "filing_id": 11,
+      "paragraph_count": 35,
+      "word_count": 2915,
+      "time_seconds": 1.62
+    },
+    {
+      "ticker": "ADBE",
+      "filing_id": 12,
+      "paragraph_count": 24,
+      "word_count": 2167,
+      "time_seconds": 1.15
+    },
+    {
+      "ticker": "CSCO",
+      "filing_id": 13,
+      "paragraph_count": 46,
+      "word_count": 3770,
+      "time_seconds": 1.33
+    },
+    {
+      "ticker": "IBM",
+      "filing_id": 14,
+      "paragraph_count": 6,
+      "word_count": 781,
+      "time_seconds": 0.66
+    },
+    {
+      "ticker": "QCOM",
+      "filing_id": 15,
+      "paragraph_count": 85,
+      "word_count": 12406,
+      "time_seconds": 1.51
+    },
+    {
+      "ticker": "JPM",
+      "filing_id": 16,
+      "paragraph_count": 504,
+      "word_count": 67760,
+      "time_seconds": 5.78
+    },
+    {
+      "ticker": "BAC",
+      "filing_id": 17,
+      "paragraph_count": 39,
+      "word_count": 2772,
+      "time_seconds": 5.57
+    },
+    {
+      "ticker": "WFC",
+      "filing_id": 18,
+      "paragraph_count": 9,
+      "word_count": 566,
+      "time_seconds": 1.02
+    },
+    {
+      "ticker": "GS",
+      "filing_id": 19,
+      "paragraph_count": 75,
+      "word_count": 5216,
+      "time_seconds": 2.54
+    },
+    {
+      "ticker": "MS",
+      "filing_id": 20,
+      "paragraph_count": 2,
+      "word_count": 213,
+      "time_seconds": 2.2
+    },
+    {
+      "ticker": "C",
+      "filing_id": 21,
+      "paragraph_count": 3,
+      "word_count": 272,
+      "time_seconds": 3.72
+    },
+    {
+      "ticker": "AXP",
+      "filing_id": 22,
+      "paragraph_count": 38,
+      "word_count": 2284,
+      "time_seconds": 1.21
+    },
+    {
+      "ticker": "V",
+      "filing_id": 23,
+      "paragraph_count": 30,
+      "word_count": 2314,
+      "time_seconds": 0.65
+    },
+    {
+      "ticker": "MA",
+      "filing_id": 24,
+      "paragraph_count": 11,
+      "word_count": 991,
+      "time_seconds": 1.33
+    },
+    {
+      "ticker": "BLK",
+      "filing_id": 25,
+      "paragraph_count": 44,
+      "word_count": 3161,
+      "time_seconds": 2.48
+    },
+    {
+      "ticker": "JNJ",
+      "filing_id": 26,
+      "paragraph_count": 7,
+      "word_count": 889,
+      "time_seconds": 1.33
+    },
+    {
+      "ticker": "UNH",
+      "filing_id": 27,
+      "paragraph_count": 21,
+      "word_count": 1288,
+      "time_seconds": 0.74
+    },
+    {
+      "ticker": "PFE",
+      "filing_id": 28,
+      "paragraph_count": 97,
+      "word_count": 7767,
+      "time_seconds": 1.69
+    },
+    {
+      "ticker": "MRK",
+      "filing_id": 29,
+      "paragraph_count": 16,
+      "word_count": 953,
+      "time_seconds": 1.69
+    },
+    {
+      "ticker": "ABBV",
+      "filing_id": 30,
+      "paragraph_count": 27,
+      "word_count": 2014,
+      "time_seconds": 1.4
+    },
+    {
+      "ticker": "LLY",
+      "filing_id": 31,
+      "paragraph_count": 14,
+      "word_count": 895,
+      "time_seconds": 0.71
+    },
+    {
+      "ticker": "TMO",
+      "filing_id": 32,
+      "paragraph_count": 24,
+      "word_count": 2407,
+      "time_seconds": 0.97
+    },
+    {
+      "ticker": "ABT",
+      "filing_id": 33,
+      "paragraph_count": 22,
+      "word_count": 1515,
+      "time_seconds": 2.29
+    },
+    {
+      "ticker": "BMY",
+      "filing_id": 34,
+      "paragraph_count": 19,
+      "word_count": 1314,
+      "time_seconds": 1.27
+    },
+    {
+      "ticker": "AMGN",
+      "filing_id": 35,
+      "paragraph_count": 11,
+      "word_count": 585,
+      "time_seconds": 1.24
+    },
+    {
+      "ticker": "WMT",
+      "filing_id": 36,
+      "paragraph_count": 26,
+      "word_count": 1921,
+      "time_seconds": 0.58
+    },
+    {
+      "ticker": "PG",
+      "filing_id": 37,
+      "paragraph_count": 8,
+      "word_count": 716,
+      "time_seconds": 1.25
+    },
+    {
+      "ticker": "KO",
+      "filing_id": 38,
+      "paragraph_count": 17,
+      "word_count": 1578,
+      "time_seconds": 1.79
+    },
+    {
+      "ticker": "PEP",
+      "filing_id": 39,
+      "paragraph_count": 287,
+      "word_count": 31452,
+      "time_seconds": 3.87
+    },
+    {
+      "ticker": "COST",
+      "filing_id": 40,
+      "paragraph_count": 13,
+      "word_count": 894,
+      "time_seconds": 0.7
+    },
+    {
+      "ticker": "HD",
+      "filing_id": 41,
+      "paragraph_count": 41,
+      "word_count": 2772,
+      "time_seconds": 1.51
+    },
+    {
+      "ticker": "MCD",
+      "filing_id": 42,
+      "paragraph_count": 19,
+      "word_count": 1128,
+      "time_seconds": 0.61
+    },
+    {
+      "ticker": "NKE",
+      "filing_id": 43,
+      "paragraph_count": 47,
+      "word_count": 3662,
+      "time_seconds": 1.6
+    },
+    {
+      "ticker": "SBUX",
+      "filing_id": 44,
+      "paragraph_count": 34,
+      "word_count": 2658,
+      "time_seconds": 2.31
+    },
+    {
+      "ticker": "TGT",
+      "filing_id": 45,
+      "paragraph_count": 9,
+      "word_count": 918,
+      "time_seconds": 1.13
+    },
+    {
+      "ticker": "XOM",
+      "filing_id": 46,
+      "paragraph_count": 12,
+      "word_count": 881,
+      "time_seconds": 1.86
+    },
+    {
+      "ticker": "CVX",
+      "filing_id": 47,
+      "paragraph_count": 235,
+      "word_count": 36699,
+      "time_seconds": 3.68
+    },
+    {
+      "ticker": "COP",
+      "filing_id": 48,
+      "paragraph_count": 21,
+      "word_count": 1734,
+      "time_seconds": 1.06
+    },
+    {
+      "ticker": "SLB",
+      "filing_id": 49,
+      "paragraph_count": 134,
+      "word_count": 18607,
+      "time_seconds": 2.6
+    },
+    {
+      "ticker": "EOG",
+      "filing_id": 50,
+      "paragraph_count": 33,
+      "word_count": 2797,
+      "time_seconds": 1.52
+    },
+    {
+      "ticker": "CAT",
+      "filing_id": 51,
+      "paragraph_count": 28,
+      "word_count": 2288,
+      "time_seconds": 2.6
+    },
+    {
+      "ticker": "BA",
+      "filing_id": 52,
+      "paragraph_count": 21,
+      "word_count": 1723,
+      "time_seconds": 1.04
+    },
+    {
+      "ticker": "HON",
+      "filing_id": 53,
+      "paragraph_count": 15,
+      "word_count": 956,
+      "time_seconds": 1.46
+    },
+    {
+      "ticker": "UPS",
+      "filing_id": 54,
+      "paragraph_count": 19,
+      "word_count": 1331,
+      "time_seconds": 1.23
+    },
+    {
+      "ticker": "GE",
+      "filing_id": 55,
+      "paragraph_count": 7,
+      "word_count": 491,
+      "time_seconds": 1.02
+    }
+  ],
+  "failures": [],
+  "skipped": [],
+  "metrics": {
+    "total_paragraphs": 2668,
+    "total_words": 285256,
+    "total_time_seconds": 102.17,
+    "avg_time_per_filing": 1.86,
+    "avg_paragraphs_per_filing": 48.5,
+    "success_rate": 100.0
+  },
+  "end_time": "2026-01-12T01:28:27.162842"
+}

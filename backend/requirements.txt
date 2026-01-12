@@ -23,6 +23,8 @@ langchain-openai  # OpenAI integration for LangGraph
 # --- Database ---
 sqlalchemy
 python-dotenv
+psycopg2-binary  # PostgreSQL driver
+pgvector  # Vector similarity extension for Postgres
 
 # --- API ---
 fastapi

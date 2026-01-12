@@ -1,13 +1,27 @@
 # data/repository.py
 """
 Repository helpers for database CRUD operations.
+
+Supports both SQLite and PostgreSQL with pgvector for vector search.
 """
 
-from typing import Optional, List
+import os
+from typing import Optional, List, Tuple
 from sqlalchemy.orm import Session
+from sqlalchemy import text
 from datetime import datetime
 
 from .models import Company, Filing, Section, Paragraph, Score, Summary
+
+# Check if using PostgreSQL with pgvector
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./infera.db")
+USE_PGVECTOR = DATABASE_URL.startswith("postgresql")
+
+if USE_PGVECTOR:
+    try:
+        from .models import ScoreVector
+    except ImportError:
+        USE_PGVECTOR = False
 
 
 # === Company ===
@@ -220,5 +234,225 @@ def get_summary_by_filing(
         Summary.filing_id == filing_id,
         Summary.section_type == section_type
     ).first()
+
+
+# === Vector Search (PostgreSQL + pgvector) ===
+
+def create_score_vector(
+    db: Session,
+    paragraph_id: int,
+    embedding: List[float]
+) -> "ScoreVector":
+    """
+    Create a vector embedding record for pgvector search.
+    
+    Only available when using PostgreSQL with pgvector.
+    """
+    if not USE_PGVECTOR:
+        raise RuntimeError("Vector search requires PostgreSQL with pgvector")
+    
+    score_vector = ScoreVector(
+        paragraph_id=paragraph_id,
+        embedding=embedding
+    )
+    db.add(score_vector)
+    db.commit()
+    db.refresh(score_vector)
+    return score_vector
+
+
+def vector_search(
+    db: Session,
+    query_embedding: List[float],
+    limit: int = 10,
+    threshold: float = 0.30,
+    ticker: Optional[str] = None
+) -> List[Tuple[Paragraph, float]]:
+    """
+    Perform vector similarity search using pgvector.
+    
+    Args:
+        db: Database session
+        query_embedding: Query embedding vector
+        limit: Maximum results to return
+        threshold: Minimum similarity threshold
+        ticker: Optional filter by company ticker
+        
+    Returns:
+        List of (Paragraph, similarity_score) tuples
+    """
+    if not USE_PGVECTOR:
+        raise RuntimeError("Vector search requires PostgreSQL with pgvector")
+    
+    # Build the query with pgvector cosine distance
+    query_str = """
+        SELECT 
+            p.id,
+            p.text,
+            p.position,
+            p.section_id,
+            (1 - (sv.embedding <=> :query_embedding::vector)) as similarity
+        FROM score_vectors sv
+        JOIN paragraphs p ON sv.paragraph_id = p.id
+        JOIN sections s ON p.section_id = s.id
+        JOIN filings f ON s.filing_id = f.id
+        JOIN companies c ON f.company_id = c.id
+        WHERE (1 - (sv.embedding <=> :query_embedding::vector)) >= :threshold
+    """
+    
+    if ticker:
+        query_str += " AND c.ticker = :ticker"
+    
+    query_str += " ORDER BY similarity DESC LIMIT :limit"
+    
+    params = {
+        "query_embedding": query_embedding,
+        "threshold": threshold,
+        "limit": limit
+    }
+    if ticker:
+        params["ticker"] = ticker.upper()
+    
+    results = db.execute(text(query_str), params).fetchall()
+    
+    # Convert to Paragraph objects with similarity scores
+    output = []
+    for row in results:
+        para = db.query(Paragraph).filter(Paragraph.id == row[0]).first()
+        if para:
+            output.append((para, row[4]))  # (paragraph, similarity)
+    
+    return output
+
+
+def keyword_search(
+    db: Session,
+    query: str,
+    limit: int = 10,
+    ticker: Optional[str] = None
+) -> List[Tuple[Paragraph, float]]:
+    """
+    Perform full-text keyword search using PostgreSQL ts_rank.
+    
+    Args:
+        db: Database session
+        query: Search query text
+        limit: Maximum results to return
+        ticker: Optional filter by company ticker
+        
+    Returns:
+        List of (Paragraph, relevance_score) tuples
+    """
+    if not USE_PGVECTOR:
+        raise RuntimeError("Keyword search requires PostgreSQL")
+    
+    query_str = """
+        SELECT 
+            p.id,
+            ts_rank(to_tsvector('english', p.text), 
+                    websearch_to_tsquery('english', :query)) as relevance
+        FROM paragraphs p
+        JOIN sections s ON p.section_id = s.id
+        JOIN filings f ON s.filing_id = f.id
+        JOIN companies c ON f.company_id = c.id
+        WHERE to_tsvector('english', p.text) @@ websearch_to_tsquery('english', :query)
+    """
+    
+    if ticker:
+        query_str += " AND c.ticker = :ticker"
+    
+    query_str += " ORDER BY relevance DESC LIMIT :limit"
+    
+    params = {"query": query, "limit": limit}
+    if ticker:
+        params["ticker"] = ticker.upper()
+    
+    results = db.execute(text(query_str), params).fetchall()
+    
+    # Convert to Paragraph objects with relevance scores
+    output = []
+    for row in results:
+        para = db.query(Paragraph).filter(Paragraph.id == row[0]).first()
+        if para:
+            output.append((para, row[1]))  # (paragraph, relevance)
+    
+    return output
+
+
+def hybrid_search_rrf(
+    db: Session,
+    query: str,
+    query_embedding: List[float],
+    limit: int = 10,
+    k: int = 60,
+    ticker: Optional[str] = None
+) -> List[Tuple[Paragraph, float]]:
+    """
+    Hybrid search combining vector and keyword search with RRF fusion.
+    
+    Reciprocal Rank Fusion formula: RRF_score = Σ(1 / (k + rank))
+    
+    Args:
+        db: Database session
+        query: Search query text (for keyword search)
+        query_embedding: Query embedding vector (for vector search)
+        limit: Maximum results to return
+        k: RRF constant (default 60)
+        ticker: Optional filter by company ticker
+        
+    Returns:
+        List of (Paragraph, rrf_score) tuples
+    """
+    if not USE_PGVECTOR:
+        raise RuntimeError("Hybrid search requires PostgreSQL with pgvector")
+    
+    # Get vector search results
+    vector_results = vector_search(
+        db, query_embedding, 
+        limit=limit * 3,  # Get more candidates for fusion
+        threshold=0.20,
+        ticker=ticker
+    )
+    
+    # Get keyword search results
+    keyword_results = keyword_search(
+        db, query,
+        limit=limit * 3,
+        ticker=ticker
+    )
+    
+    # RRF Fusion
+    rrf_scores = {}
+    
+    # Score vector results
+    for rank, (para, _) in enumerate(vector_results):
+        rrf_score = 1.0 / (k + rank + 1)
+        rrf_scores[para.id] = {
+            "paragraph": para,
+            "rrf_score": rrf_score,
+            "vector_rank": rank + 1
+        }
+    
+    # Add keyword results (additive)
+    for rank, (para, _) in enumerate(keyword_results):
+        rrf_score = 1.0 / (k + rank + 1)
+        if para.id in rrf_scores:
+            rrf_scores[para.id]["rrf_score"] += rrf_score
+            rrf_scores[para.id]["keyword_rank"] = rank + 1
+        else:
+            rrf_scores[para.id] = {
+                "paragraph": para,
+                "rrf_score": rrf_score,
+                "keyword_rank": rank + 1
+            }
+    
+    # Sort by RRF score and return top results
+    sorted_results = sorted(
+        rrf_scores.values(),
+        key=lambda x: x["rrf_score"],
+        reverse=True
+    )
+    
+    return [(r["paragraph"], r["rrf_score"]) for r in sorted_results[:limit]]
 
 

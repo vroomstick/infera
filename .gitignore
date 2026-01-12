@@ -13,6 +13,9 @@ data/segments/
 data/summarized/
 reports/
 
+# SEC filings (too large for repo, re-fetch from SEC EDGAR)
+backend/data/*.html
+
 # 🔐 Environment & secrets
 .env
 infera_config.py
