@@ -7,7 +7,7 @@
 
 **Infera** is an AI-powered ETL pipeline that analyzes SEC 10-K filings to identify, score, and summarize corporate risk factors. It combines domain-specific embeddings (FinBERT) with LLMs (GPT-4o) to deliver explainable, actionable insights.
 
-## ✨ Key Features
+## Key Features
 
 | Category | Features |
 |----------|----------|
@@ -17,7 +17,7 @@
 | **Agent-Ready** | Python SDK, LangGraph tools, OpenAI function calling |
 | **Production** | API auth, rate limiting, retry logic, graceful fallbacks |
 
-## 📊 Evaluation Results
+## Evaluation Results
 
 Evaluated on **286 hand-labeled paragraphs** across 6 companies (AAPL, TSLA, MSFT, NVDA, AMZN, GOOGL).
 
@@ -29,9 +29,11 @@ Evaluated on **286 hand-labeled paragraphs** across 6 companies (AAPL, TSLA, MSF
 
 > "FinBERT beats TF-IDF by 16.8 points with 95% CI [49.0%, 60.1%]"
 
+**Scale tested on 55 S&P 500 companies with 100% success rate.**
+
 See [v4 Developer Handbook](backend/docs/v4_developer_handbook.md) for full methodology.
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -60,7 +62,7 @@ See [v4 Developer Handbook](backend/docs/v4_developer_handbook.md) for full meth
 
 See [Architecture Diagram](backend/docs/architecture.md) for detailed Mermaid diagrams.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component | Technology |
 |-----------|------------|
@@ -68,11 +70,11 @@ See [Architecture Diagram](backend/docs/architecture.md) for detailed Mermaid di
 | Embeddings | **FinBERT** (ProsusAI/finbert) |
 | LLM | OpenAI GPT-4o |
 | API | FastAPI + Uvicorn |
-| Database | SQLAlchemy + SQLite (Postgres-ready) |
+| Database | SQLAlchemy + SQLite / PostgreSQL + pgvector |
 | Agent Framework | LangGraph, langchain-core |
 | Testing | pytest (35 tests) |
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Option 1: Make (Recommended)
 
@@ -105,13 +107,13 @@ echo "OPENAI_API_KEY=sk-..." > ../.env
 uvicorn api.main:app --reload
 ```
 
-### Option 3: Docker
+### Option 3: Docker (Production)
 
 ```bash
 docker-compose up --build
 ```
 
-## 📡 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -142,7 +144,7 @@ curl "http://localhost:8000/explain/42"
 curl "http://localhost:8000/benchmark?tickers=AAPL,TSLA"
 ```
 
-## 🤖 Agent Integration
+## Agent Integration
 
 ### Python SDK
 
@@ -185,7 +187,7 @@ response = client.chat.completions.create(
 )
 ```
 
-## 🔬 Explainability
+## Explainability
 
 Every prediction is explainable:
 
@@ -203,7 +205,7 @@ Every prediction is explainable:
 }
 ```
 
-## 📚 Documentation
+## Documentation
 
 | Document | Description |
 |----------|-------------|
@@ -215,7 +217,7 @@ Every prediction is explainable:
 | [API Reference](backend/docs/api.md) | Endpoint documentation |
 | [Failure Modes](backend/docs/similarity_failure_modes.md) | When the model fails |
 
-## 🔒 Security
+## Security
 
 | Feature | Description |
 |---------|-------------|
@@ -225,7 +227,7 @@ Every prediction is explainable:
 | Path Traversal | Blocked |
 | Error Sanitization | Production mode hides traces |
 
-## 📈 Key Findings
+## Key Findings
 
 | Finding | Result |
 |---------|--------|
@@ -236,27 +238,32 @@ Every prediction is explainable:
 | Risk Categories | Regulatory (43%), Competitive (21%) |
 | GPT Faithfulness | 93.9% keyword overlap |
 | Optimal Temperature | 0.0 (99.5% consistency) |
+| Scale Test | 55 filings, 100% success rate |
 
-## ⚠️ Known Limitations
+## Known Limitations
 
-1. **Poor calibration** (ECE = 0.36): Score ≠ probability
+1. **Poor calibration** (ECE = 0.36): Score does not equal probability
 2. **Prompt sensitivity** (ρ = 0.41): Rankings depend on prompt wording
 3. **56.6% accuracy**: Room for improvement with fine-tuning
-4. **SQLite only**: Postgres + pgvector for production (coming soon)
 
-## 🗺️ Roadmap
+## Completed (v4)
 
 - [x] Token attribution / explainability
 - [x] FinBERT model selection (empirical comparison)
 - [x] 286-sample labeled dataset
 - [x] Bootstrap confidence intervals
 - [x] Agent tooling (SDK, LangGraph, OpenAI)
-- [ ] PostgreSQL + pgvector
+- [x] PostgreSQL + pgvector (production database)
+- [x] Scale test (55 companies, 100% success)
+
+## Future Work (v4.5+)
+
 - [ ] CI/CD pipeline
 - [ ] Integration tests
+- [ ] Idempotent pipeline
 - [ ] Streamlit dashboard
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run all tests
@@ -266,7 +273,7 @@ make test
 pytest --cov=. --cov-report=html
 ```
 
-## 📄 License
+## License
 
 MIT
 
