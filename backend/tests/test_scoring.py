@@ -27,10 +27,10 @@ class TestEmbedding:
         assert isinstance(result, np.ndarray)
     
     def test_embed_text_correct_dimension(self):
-        """Embedding should be 384-dimensional (MiniLM)."""
+        """Embedding should be 768-dimensional (FinBERT)."""
         result = embed_text("This is a test sentence.")
         
-        assert result.shape == (384,)
+        assert result.shape == (768,)
     
     def test_embed_texts_batch(self):
         """Batch embedding should work correctly."""
@@ -38,7 +38,7 @@ class TestEmbedding:
         result = embed_texts(texts)
         
         assert isinstance(result, np.ndarray)
-        assert result.shape == (3, 384)
+        assert result.shape == (3, 768)
     
     def test_embed_empty_list_returns_empty(self):
         """Empty list should return empty array."""

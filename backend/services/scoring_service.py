@@ -35,12 +35,12 @@ _model = None
 
 
 def get_model() -> SentenceTransformer:
-    """Get or load the sentence transformer model."""
+    """Get or load the sentence transformer model (FinBERT for financial domain)."""
     global _model
     if _model is None:
-        logger.info("Loading sentence-transformer model: all-MiniLM-L6-v2")
-        _model = SentenceTransformer('all-MiniLM-L6-v2')
-        logger.info("Model loaded successfully")
+        logger.info("Loading sentence-transformer model: ProsusAI/finbert")
+        _model = SentenceTransformer('ProsusAI/finbert')
+        logger.info("Model loaded successfully (768-dim embeddings)")
     return _model
 
 

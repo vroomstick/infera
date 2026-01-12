@@ -18,7 +18,7 @@ USE_PGVECTOR = DATABASE_URL.startswith("postgresql")
 if USE_PGVECTOR:
     try:
         from pgvector.sqlalchemy import Vector
-        VECTOR_DIM = 384  # all-MiniLM-L6-v2 dimension
+        VECTOR_DIM = 768  # ProsusAI/finbert dimension
     except ImportError:
         USE_PGVECTOR = False
 
