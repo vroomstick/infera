@@ -37,6 +37,17 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
+    - name: Free disk space
+      uses: jlumbroso/free-disk-space@main
+      with:
+        tool-cache: false
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: true
+        docker-images: true
+        swap-storage: true
+    
     - name: Set up Python 3.12
       uses: actions/setup-python@v5
       with:
@@ -138,6 +149,17 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
+    
+    - name: Free disk space
+      uses: jlumbroso/free-disk-space@main
+      with:
+        tool-cache: false
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: true
+        docker-images: true
+        swap-storage: true
     
     - name: Cache HuggingFace models
       uses: actions/cache@v4
