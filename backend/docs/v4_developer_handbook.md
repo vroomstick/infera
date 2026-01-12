@@ -996,6 +996,49 @@ If all retries fail, return:
 3. **Documentation:** Sensitivity is now a known, documented limitation.
 4. **Future work:** "negative_impact" switch is a clear v5 improvement.
 
+### Why GPT Summarization is Disabled by Default
+
+**Context:** Infera has two ML components:
+1. **Local embeddings (FinBERT)** — Scores and classifies paragraphs
+2. **GPT summarization (OpenAI)** — Generates readable risk summaries
+
+**Decision:** GPT summarization is OFF by default (`skip_summary=True`) in all operations.
+
+| Use Case | Recommendation | Reason |
+|----------|----------------|--------|
+| **Agent integration** | Skip summary | Agents are LLMs — they synthesize their own summaries from structured data |
+| **Human reports** | Enable summary | Humans benefit from readable prose summaries |
+| **API for downstream apps** | Skip summary | Structured data is more composable |
+
+**Rationale for agents:**
+
+An agent calling Infera is already an LLM. If Infera pre-summarizes with GPT, you get:
+```
+Agent (LLM) → calls Infera → GPT summarizes → Agent summarizes GPT's summary
+```
+
+This is redundant, slow, and expensive. Instead:
+```
+Agent (LLM) → calls Infera → gets structured data → Agent synthesizes answer
+```
+
+**What agents need from Infera:**
+- Paragraph scores and risk categories (structured)
+- Token attributions (explainability)
+- Embeddings (for custom reasoning)
+- Search results (ranked matches)
+
+**What agents don't need:**
+- Pre-made prose summaries (they can write their own)
+
+**The code stays:** GPT summarization is validated (93.9% faithfulness, optimal temperature documented) and available for human-facing use cases. It's just not the right tool for agent integration.
+
+**How to enable for humans:**
+```bash
+curl -X POST http://localhost:8000/analyze \
+  -d '{"file_path": "data/AAPL_10K.html", "skip_summary": false}'
+```
+
 ---
 
 ## How to Use Each Component
