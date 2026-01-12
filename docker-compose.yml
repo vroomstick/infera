@@ -50,6 +50,6 @@ services:
       - ./backend/.sec_cache:/app/.sec_cache
     restart: unless-stopped
 
-volumes:
+    volumes:
   infera_pgdata:
     driver: local

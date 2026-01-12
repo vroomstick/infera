@@ -572,6 +572,8 @@ class SECFetcher:
         ticker: str,
         year: Optional[int] = None,
         skip_summary: bool = True,
+        force: bool = False,
+        update: bool = False,
     ) -> Optional[Dict]:
         """
         Fetch a filing and run the analysis pipeline.
@@ -580,10 +582,48 @@ class SECFetcher:
             ticker: Stock ticker symbol
             year: Fiscal year (optional)
             skip_summary: Skip GPT summarization (default True)
+            force: Wipe derived data and reprocess even if filing exists
+            update: Recompute scores/embeddings but preserve filing metadata
             
         Returns:
             Pipeline result dict, or None if failed
         """
+        ticker = ticker.upper()
+        
+        # Get CIK
+        cik = self.client.ticker_to_cik(ticker)
+        if not cik:
+            logger.error(f"Could not find CIK for ticker: {ticker}")
+            return None
+        
+        # Get submissions
+        try:
+            submissions = self.client.get_submissions(cik)
+        except Exception as e:
+            logger.error(f"Failed to get submissions for {ticker}: {e}")
+            return None
+        
+        # Find 10-K filings
+        filings = self.client.list_filings(submissions, form="10-K", year=year)
+        
+        if not filings:
+            logger.error(f"No 10-K filings found for {ticker}" + (f" in {year}" if year else ""))
+            return None
+        
+        # Get the first (most recent) matching filing
+        filing = filings[0]
+        accession_number = filing.get("accession")
+        filing_date_str = filing.get("filing_date")
+        
+        # Parse filing date
+        filing_date = None
+        if filing_date_str:
+            from datetime import datetime
+            try:
+                filing_date = datetime.strptime(filing_date_str, "%Y-%m-%d")
+            except ValueError:
+                logger.warning(f"Could not parse filing_date: {filing_date_str}")
+        
         # Download the filing
         filepath = self.download_filing(ticker, year)
         
@@ -597,7 +637,11 @@ class SECFetcher:
         result = run_analysis_pipeline(
             filepath=filepath,
             ticker=ticker,
+            filing_date=filing_date,
+            accession_number=accession_number,
             skip_summary=skip_summary,
+            force=force,
+            update=update,
         )
         
         return result

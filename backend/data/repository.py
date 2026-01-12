@@ -15,15 +15,31 @@ from sqlalchemy import text
 from datetime import datetime
 
 from .models import Company, Filing, Section, Paragraph, Score, Summary, ScoreVector
+from config.settings import settings
+from services.validation import (
+    validate_paragraph_text,
+    validate_score,
+    validate_embedding,
+    validate_filing_date,
+    validate_ticker
+)
+from .retry import db_retry
+
+# PostgreSQL with pgvector is always used now
+USE_PGVECTOR = settings.is_postgres
 
 
 # === Company ===
 
+@db_retry()
 def get_or_create_company(db: Session, ticker: str, name: Optional[str] = None) -> Company:
     """Get existing company by ticker or create new one."""
-    company = db.query(Company).filter(Company.ticker == ticker.upper()).first()
+    # Validate ticker
+    ticker = validate_ticker(ticker)
+    
+    company = db.query(Company).filter(Company.ticker == ticker).first()
     if not company:
-        company = Company(ticker=ticker.upper(), name=name)
+        company = Company(ticker=ticker, name=name)
         db.add(company)
         db.commit()
         db.refresh(company)
@@ -37,18 +53,25 @@ def get_company_by_ticker(db: Session, ticker: str) -> Optional[Company]:
 
 # === Filing ===
 
+@db_retry()
 def create_filing(
     db: Session,
     company_id: int,
     filing_type: str = "10-K",
     filing_date: Optional[datetime] = None,
+    accession_number: Optional[str] = None,
     source_file: Optional[str] = None
 ) -> Filing:
     """Create a new filing record."""
+    # Validate filing date
+    if filing_date:
+        filing_date = validate_filing_date(filing_date)
+    
     filing = Filing(
         company_id=company_id,
         filing_type=filing_type,
         filing_date=filing_date,
+        accession_number=accession_number,
         source_file=source_file
     )
     db.add(filing)
@@ -70,8 +93,29 @@ def get_filings_by_ticker(db: Session, ticker: str) -> List[Filing]:
     return db.query(Filing).filter(Filing.company_id == company.id).all()
 
 
+def get_filing_by_accession_number(db: Session, accession_number: str) -> Optional[Filing]:
+    """Get filing by accession number (unique SEC identifier)."""
+    return db.query(Filing).filter(Filing.accession_number == accession_number).first()
+
+
+def get_filing_by_ticker_and_date(
+    db: Session,
+    ticker: str,
+    filing_date: datetime
+) -> Optional[Filing]:
+    """Get filing by ticker and filing date."""
+    company = get_company_by_ticker(db, ticker)
+    if not company:
+        return None
+    return db.query(Filing).filter(
+        Filing.company_id == company.id,
+        Filing.filing_date == filing_date
+    ).first()
+
+
 # === Section ===
 
+@db_retry()
 def create_section(
     db: Session,
     filing_id: int,
@@ -99,6 +143,7 @@ def get_sections_by_filing(db: Session, filing_id: int) -> List[Section]:
 
 # === Paragraph ===
 
+@db_retry()
 def create_paragraph(
     db: Session,
     section_id: int,
@@ -106,6 +151,9 @@ def create_paragraph(
     position: int
 ) -> Paragraph:
     """Create a new paragraph record."""
+    # Validate paragraph text
+    text = validate_paragraph_text(text)
+    
     word_count = len(text.split()) if text else 0
     paragraph = Paragraph(
         section_id=section_id,
@@ -119,6 +167,7 @@ def create_paragraph(
     return paragraph
 
 
+@db_retry()
 def create_paragraphs_bulk(
     db: Session,
     section_id: int,
@@ -127,11 +176,20 @@ def create_paragraphs_bulk(
     """Create multiple paragraphs at once."""
     paragraphs = []
     for i, text in enumerate(texts):
+        # Validate paragraph text (skip invalid ones with warning)
+        try:
+            validated_text = validate_paragraph_text(text)
+        except ValueError as e:
+            from config.settings import get_logger
+            logger = get_logger(__name__)
+            logger.warning(f"Skipping invalid paragraph at position {i}: {e}")
+            continue
+        
         p = Paragraph(
             section_id=section_id,
-            text=text,
+            text=validated_text,
             position=i,
-            word_count=len(text.split()) if text else 0
+            word_count=len(validated_text.split()) if validated_text else 0
         )
         paragraphs.append(p)
     db.add_all(paragraphs)
@@ -150,6 +208,7 @@ def get_paragraphs_by_section(db: Session, section_id: int) -> List[Paragraph]:
 
 # === Score ===
 
+@db_retry()
 def create_score(
     db: Session,
     paragraph_id: int,
@@ -159,10 +218,15 @@ def create_score(
     top_terms: Optional[str] = None
 ) -> Score:
     """Create a new score record."""
+    # Validate score
+    validated_score = validate_score(score)
+    if validated_score is None:
+        raise ValueError("Score cannot be None for Score model (use NULL handling in application layer)")
+    
     score_obj = Score(
         paragraph_id=paragraph_id,
         method=method,
-        score=score,
+        score=validated_score,
         embedding=embedding,
         top_terms=top_terms
     )
@@ -193,6 +257,7 @@ def get_top_scored_paragraphs(
 
 # === Summary ===
 
+@db_retry()
 def create_summary(
     db: Session,
     filing_id: int,
@@ -231,6 +296,7 @@ def get_summary_by_filing(
 
 # === Vector Search (PostgreSQL + pgvector) ===
 
+@db_retry()
 def create_score_vector(
     db: Session,
     paragraph_id: int,
@@ -244,9 +310,12 @@ def create_score_vector(
     if not USE_PGVECTOR:
         raise RuntimeError("Vector search requires PostgreSQL with pgvector")
     
+    # Validate embedding
+    validated_embedding = validate_embedding(embedding)
+    
     score_vector = ScoreVector(
         paragraph_id=paragraph_id,
-        embedding=embedding
+        embedding=validated_embedding
     )
     db.add(score_vector)
     db.commit()

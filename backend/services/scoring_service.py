@@ -115,39 +115,127 @@ def score_section_paragraphs(section_id: int, store_embeddings: bool = True) -> 
         # Extract texts
         texts = [p.text for p in paragraphs]
         
-        # Compute scores
-        results = compute_risk_scores(texts)
-        
-        # Store scores
+        # Compute scores with per-paragraph error handling
         scored = []
-        for para, (score, embedding) in zip(paragraphs, results):
-            # Serialize embedding if storing
-            embedding_bytes = None
-            if store_embeddings:
-                embedding_bytes = pickle.dumps(embedding)
-            
-            # Create score record
-            score_obj = repo.create_score(
-                db,
-                paragraph_id=para.id,
-                method="embedding",
-                score=float(score),
-                embedding=embedding_bytes
-            )
-            
-            scored.append({
-                "paragraph_id": para.id,
-                "position": para.position,
-                "score": float(score),
-                "text_preview": para.text[:100] + "..." if len(para.text) > 100 else para.text
-            })
+        failed_count = 0
         
-        logger.info(f"Stored {len(scored)} scores")
+        # Process in batches for efficiency, but handle individual failures
+        try:
+            results = compute_risk_scores(texts)
+            
+            # Store scores
+            for para, (score, embedding) in zip(paragraphs, results):
+                try:
+                    # Serialize embedding if storing
+                    embedding_bytes = None
+                    if store_embeddings:
+                        embedding_bytes = pickle.dumps(embedding)
+                    
+                    # Create score record
+                    score_obj = repo.create_score(
+                        db,
+                        paragraph_id=para.id,
+                        method="embedding",
+                        score=float(score),
+                        embedding=embedding_bytes
+                    )
+                    
+                    # Store in ScoreVector for pgvector
+                    from data.repository import create_score_vector
+                    try:
+                        create_score_vector(db, para.id, embedding.tolist())
+                    except Exception as e:
+                        logger.warning(f"Failed to store ScoreVector for paragraph {para.id}: {e}")
+                        # Continue - ScoreVector is optional for backward compatibility
+                    
+                    scored.append({
+                        "paragraph_id": para.id,
+                        "position": para.position,
+                        "score": float(score),
+                        "text_preview": para.text[:100] + "..." if len(para.text) > 100 else para.text
+                    })
+                except Exception as e:
+                    failed_count += 1
+                    text_preview = para.text[:100] + "..." if len(para.text) > 100 else para.text
+                    logger.error(
+                        f"Failed to score paragraph {para.id} (position {para.position}): {e}. "
+                        f"Text preview: {text_preview}"
+                    )
+                    # Store NULL score to indicate failure (Score model doesn't support NULL, so we'll skip)
+                    # In a production system, you'd want a status field, but for now we just log and continue
+                    continue
+        except Exception as e:
+            # If batch computation fails, try per-paragraph
+            logger.warning(f"Batch scoring failed: {e}. Falling back to per-paragraph processing...")
+            
+            for para in paragraphs:
+                try:
+                    # Compute score for single paragraph
+                    para_results = compute_risk_scores([para.text])
+                    if not para_results:
+                        raise ValueError("No results returned")
+                    
+                    score, embedding = para_results[0]
+                    
+                    # Serialize embedding if storing
+                    embedding_bytes = None
+                    if store_embeddings:
+                        embedding_bytes = pickle.dumps(embedding)
+                    
+                    # Create score record
+                    score_obj = repo.create_score(
+                        db,
+                        paragraph_id=para.id,
+                        method="embedding",
+                        score=float(score),
+                        embedding=embedding_bytes
+                    )
+                    
+                    # Store in ScoreVector for pgvector
+                    from data.repository import create_score_vector
+                    try:
+                        create_score_vector(db, para.id, embedding.tolist())
+                    except Exception as e:
+                        logger.warning(f"Failed to store ScoreVector for paragraph {para.id}: {e}")
+                    
+                    scored.append({
+                        "paragraph_id": para.id,
+                        "position": para.position,
+                        "score": float(score),
+                        "text_preview": para.text[:100] + "..." if len(para.text) > 100 else para.text
+                    })
+                except Exception as para_error:
+                    failed_count += 1
+                    text_preview = para.text[:100] + "..." if len(para.text) > 100 else para.text
+                    logger.error(
+                        f"Failed to score paragraph {para.id} (position {para.position}): {para_error}. "
+                        f"Text preview: {text_preview}"
+                    )
+                    continue
+        
+        success_count = len(scored)
+        total_count = len(paragraphs)
+        
+        if failed_count > 0:
+            logger.warning(
+                f"Scoring completed with {failed_count} failures. "
+                f"Success: {success_count}/{total_count} paragraphs scored successfully."
+            )
+        else:
+            logger.info(f"Stored {success_count} scores (all successful)")
         
         # Sort by score descending
         scored.sort(key=lambda x: x["score"], reverse=True)
         
-        return scored
+        # Add summary to return value
+        result = {
+            "scored": scored,
+            "success_count": success_count,
+            "failed_count": failed_count,
+            "total_count": total_count
+        }
+        
+        return result
         
     except Exception as e:
         logger.error(f"Scoring failed: {e}")

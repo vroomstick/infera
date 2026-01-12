@@ -31,6 +31,7 @@ from config.settings import settings, get_logger
 from data.database import get_db, init_db
 from data import repository as repo
 from data.models import Company, Filing, Section, Paragraph, Score, Summary
+from services.errors import InferaError, ErrorCode, APIError
 
 logger = get_logger(__name__)
 
@@ -49,10 +50,10 @@ async def verify_api_key(api_key: str = Security(api_key_header)):
         return None  # Auth disabled
     
     if not api_key or api_key != settings.API_KEY:
-        raise HTTPException(
-            status_code=401,
-            detail="Invalid or missing API key",
-            headers={"WWW-Authenticate": "API key required"}
+        raise APIError(
+            code=ErrorCode.API_002,
+            message="Invalid or missing API key",
+            status_code=401
         )
     return api_key
 
@@ -237,6 +238,30 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+# === Exception Handlers ===
+
+@app.exception_handler(InferaError)
+async def infera_error_handler(request: Request, exc: InferaError):
+    """Handle InferaError with consistent error code format."""
+    return JSONResponse(
+        status_code=exc.status_code,
+        content=exc.to_dict()
+    )
+
+@app.exception_handler(HTTPException)
+async def http_exception_handler(request: Request, exc: HTTPException):
+    """Convert HTTPException to InferaError format when possible."""
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={
+            "error": {
+                "code": "INF-API-001",
+                "message": exc.detail,
+                "details": {}
+            }
+        }
+    )
+
 # === Middleware ===
 
 # CORS middleware
@@ -252,6 +277,104 @@ app.add_middleware(
 if RATE_LIMIT_AVAILABLE and limiter:
     app.state.limiter = limiter
     app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
+# Request validation middleware
+@app.middleware("http")
+async def validate_request(request: Request, call_next):
+    """
+    Validate request path and query parameters before handlers execute.
+    
+    Prevents crashes from malformed input by catching errors early
+    and returning consistent 400 errors.
+    """
+    import re
+    
+    # Validate path parameters
+    path_params = request.path_params
+    
+    # Validate integer path parameters
+    int_path_params = ['filing_id', 'paragraph_id', 'section_id']
+    for param_name in int_path_params:
+        if param_name in path_params:
+            try:
+                value = path_params[param_name]
+                # FastAPI already validates, but we double-check for safety
+                int(value)
+            except (ValueError, TypeError):
+                raise APIError(
+                    code=ErrorCode.API_001,
+                    message=f"Invalid {param_name}: must be an integer",
+                    details={"param": param_name, "value": str(path_params.get(param_name))},
+                    status_code=400
+                )
+    
+    # Validate query parameters
+    query_params = request.query_params
+    
+    # Validate integer query parameters
+    int_query_params = ['top_n', 'limit', 'year']
+    for param_name in int_query_params:
+        if param_name in query_params:
+            try:
+                value = query_params[param_name]
+                int_value = int(value)
+                # Validate ranges
+                if param_name == 'top_n' and (int_value < 1 or int_value > 100):
+                    raise APIError(
+                        code=ErrorCode.API_001,
+                        message=f"Invalid {param_name}: must be between 1 and 100",
+                        details={"param": param_name, "value": value},
+                        status_code=400
+                    )
+                if param_name == 'limit' and (int_value < 1 or int_value > 1000):
+                    raise APIError(
+                        code=ErrorCode.API_001,
+                        message=f"Invalid {param_name}: must be between 1 and 1000",
+                        details={"param": param_name, "value": value},
+                        status_code=400
+                    )
+                if param_name == 'year' and (int_value < 1900 or int_value > 2100):
+                    raise APIError(
+                        code=ErrorCode.API_001,
+                        message=f"Invalid {param_name}: must be a valid year (1900-2100)",
+                        details={"param": param_name, "value": value},
+                        status_code=400
+                    )
+            except ValueError:
+                raise APIError(
+                    code=ErrorCode.API_001,
+                    message=f"Invalid {param_name}: must be an integer",
+                    details={"param": param_name, "value": query_params.get(param_name)},
+                    status_code=400
+                )
+    
+    # Validate boolean query parameters
+    bool_query_params = ['include_embedding', 'skip_summary', 'force', 'update']
+    for param_name in bool_query_params:
+        if param_name in query_params:
+            value = query_params[param_name].lower()
+            if value not in ('true', 'false', '1', '0', 'yes', 'no'):
+                raise APIError(
+                    code=ErrorCode.API_001,
+                    message=f"Invalid {param_name}: must be a boolean (true/false)",
+                    details={"param": param_name, "value": query_params.get(param_name)},
+                    status_code=400
+                )
+    
+    # Validate ticker format in query params (if present)
+    if 'ticker' in query_params:
+        ticker = query_params['ticker'].strip().upper()
+        if not re.match(r'^[A-Z0-9.]{1,5}$', ticker):
+            raise APIError(
+                code=ErrorCode.VALID_002,
+                message="Invalid ticker format: must be 1-5 uppercase letters, numbers, or dots",
+                details={"ticker": query_params['ticker']},
+                status_code=400
+            )
+    
+    # Continue to handler
+    response = await call_next(request)
+    return response
 
 
 # === Error Handlers ===
@@ -888,6 +1011,8 @@ class FetchRequest(BaseModel):
     year: Optional[int] = None
     analyze: bool = True
     skip_summary: bool = True
+    force: bool = False
+    update: bool = False
 
 
 class FetchResponse(BaseModel):
@@ -913,6 +1038,8 @@ async def fetch_filing(request: FetchRequest, api_key: str = Depends(verify_api_
         year: Fiscal year (e.g., 2023). If omitted, gets most recent.
         analyze: Run analysis pipeline after download (default: true)
         skip_summary: Skip GPT summarization (default: true)
+        force: Wipe derived data and reprocess even if filing exists (default: false)
+        update: Recompute scores/embeddings but preserve filing metadata (default: false)
     
     Example:
         POST /fetch {"ticker": "NVDA", "year": 2023}
@@ -928,7 +1055,9 @@ async def fetch_filing(request: FetchRequest, api_key: str = Depends(verify_api_
             result = fetcher.fetch_and_analyze(
                 ticker=ticker,
                 year=request.year,
-                skip_summary=request.skip_summary
+                skip_summary=request.skip_summary,
+                force=request.force,
+                update=request.update
             )
             
             if not result:
