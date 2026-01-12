@@ -58,6 +58,11 @@ jobs:
         pip install -r requirements.txt
         pip install pytest ruff
     
+    - name: Install PostgreSQL client
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y postgresql-client
+    
     - name: Initialize database
       run: |
         # Enable pgvector extension and create schema
@@ -154,6 +159,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install pytest
+    
+    - name: Install PostgreSQL client
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y postgresql-client
     
     - name: Initialize database
       run: |
