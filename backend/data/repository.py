@@ -59,6 +59,7 @@ def create_filing(
     company_id: int,
     filing_type: str = "10-K",
     filing_date: Optional[datetime] = None,
+    accession_number: Optional[str] = None,
     source_file: Optional[str] = None
 ) -> Filing:
     """Create a new filing record."""
@@ -70,6 +71,7 @@ def create_filing(
         company_id=company_id,
         filing_type=filing_type,
         filing_date=filing_date,
+        accession_number=accession_number,
         source_file=source_file
     )
     db.add(filing)

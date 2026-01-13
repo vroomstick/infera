@@ -61,10 +61,10 @@ def init_db() -> None:
     logger.info(f"Initializing database: {mask_db_url(settings.DATABASE_URL)}")
     
     # Create pgvector extension (required for vector search)
-    with engine.connect() as conn:
+    # Use autocommit mode for DDL statements
+    with engine.begin() as conn:
         try:
             conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
-            conn.commit()
             logger.info("pgvector extension created/enabled")
         except Exception as e:
             logger.warning(f"Could not create pgvector extension (may already exist): {e}")

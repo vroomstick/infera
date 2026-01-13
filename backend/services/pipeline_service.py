@@ -113,6 +113,7 @@ def run_analysis_pipeline(
     filepath: str,
     ticker: Optional[str] = None,
     filing_date: Optional[datetime] = None,
+    accession_number: Optional[str] = None,
     skip_summary: bool = False,
     skip_scoring: bool = False
 ) -> Dict[str, Any]:
@@ -163,6 +164,7 @@ def run_analysis_pipeline(
             company_id=company.id,
             filing_type="10-K",
             filing_date=filing_date,
+            accession_number=accession_number,
             source_file=filepath
         )
         logger.info(f"Created filing record: id={filing.id}")
