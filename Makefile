@@ -1,7 +1,7 @@
 # Infera Makefile
 # Commands for development, testing, and deployment
 
-.PHONY: install run run-full api test eval lint clean docker docker-up docker-down fetch help setup doctor demo
+.PHONY: install run run-full api test eval lint clean docker docker-up docker-down fetch help
 
 # Default target
 help:
@@ -35,11 +35,6 @@ help:
 	@echo "  docker-up-db    Start only PostgreSQL"
 	@echo "  docker-down     Stop containers"
 	@echo "  docker-logs     View container logs"
-	@echo ""
-	@echo "Setup & Verification:"
-	@echo "  setup           One-command setup (install deps, start DB)"
-	@echo "  doctor          Check system health (Python, Docker, DB, env vars)"
-	@echo "  demo            Run end-to-end demo with fixture"
 	@echo ""
 	@echo "Cleanup:"
 	@echo "  clean           Remove generated files"
@@ -147,63 +142,6 @@ clean:
 clean-all: clean
 	rm -rf backend/evaluation/plots/*.png
 	rm -f backend/evaluation/eval_results.json backend/evaluation/error_analysis.json
-
-# Setup & Verification
-setup: install-backend docker-up-db
-	@echo ""
-	@echo "✅ Setup complete!"
-	@echo "  - Dependencies installed"
-	@echo "  - PostgreSQL container started"
-	@echo ""
-	@echo "Next steps:"
-	@echo "  1. Set DATABASE_URL in .env (or use default)"
-	@echo "  2. Run 'make doctor' to verify setup"
-	@echo "  3. Run 'make demo' to test the pipeline"
-
-doctor:
-	@echo "🔍 Infera System Health Check"
-	@echo "================================"
-	@echo ""
-	@echo "Python:"
-	@python3 --version || echo "❌ Python not found"
-	@python3 -c "import sys; print(f'  Version: {sys.version}')" || echo "❌ Python not working"
-	@echo ""
-	@echo "Docker/OrbStack:"
-	@docker --version 2>/dev/null || echo "❌ Docker not found (install Docker or OrbStack)"
-	@docker ps >/dev/null 2>&1 && echo "  ✅ Docker daemon running" || echo "  ⚠️  Docker daemon not running (start Docker Desktop or OrbStack)"
-	@echo ""
-	@echo "PostgreSQL Container:"
-	@docker ps --filter "name=infera-db" --format "{{.Names}}" | grep -q infera-db && echo "  ✅ Container 'infera-db' is running" || echo "  ⚠️  Container 'infera-db' not running (run 'make docker-up-db')"
-	@echo ""
-	@echo "Database Connectivity:"
-	@cd backend && python3 -c "from data.database import SessionLocal; from sqlalchemy import text; db = SessionLocal(); db.execute(text('SELECT 1')); print('  ✅ Database connection successful')" 2>/dev/null || echo "  ❌ Database connection failed (check DATABASE_URL in .env)"
-	@echo ""
-	@echo "Environment Variables:"
-	@test -f backend/.env && echo "  ✅ .env file exists" || echo "  ⚠️  .env file not found (copy from .env.example)"
-	@cd backend && python3 -c "import os; from dotenv import load_dotenv; load_dotenv(); print(f'  DATABASE_URL: {\"✅ set\" if os.getenv(\"DATABASE_URL\") else \"❌ missing\"}'); print(f'  OPENAI_API_KEY: {\"✅ set\" if os.getenv(\"OPENAI_API_KEY\") else \"⚠️  optional (for summaries)\"}')" 2>/dev/null || echo "  ⚠️  Could not check env vars (install python-dotenv)"
-	@echo ""
-	@echo "Dependencies:"
-	@cd backend && python3 -c "import sentence_transformers; print('  ✅ sentence-transformers installed')" 2>/dev/null || echo "  ❌ sentence-transformers not installed (run 'make install-backend')"
-	@cd backend && python3 -c "import fastapi; print('  ✅ fastapi installed')" 2>/dev/null || echo "  ❌ fastapi not installed (run 'make install-backend')"
-	@cd backend && python3 -c "import sqlalchemy; print('  ✅ sqlalchemy installed')" 2>/dev/null || echo "  ❌ sqlalchemy not installed (run 'make install-backend')"
-	@echo ""
-	@echo "================================"
-	@echo "Run 'make demo' to test the pipeline"
-
-demo:
-	@echo "🚀 Running Infera Demo"
-	@echo "======================"
-	@echo ""
-	@echo "This will run the full pipeline on a test fixture..."
-	@echo ""
-	@cd backend && python3 -m pytest tests/test_integration.py::TestPipelineIntegration::test_pipeline_standard_2023 -v -s || (echo ""; echo "❌ Demo failed. Run 'make doctor' to diagnose issues."; exit 1)
-	@echo ""
-	@echo "✅ Demo completed successfully!"
-	@echo ""
-	@echo "Next steps:"
-	@echo "  - Run 'make fetch TICKER=AAPL' to analyze a real filing"
-	@echo "  - Run 'make api' to start the API server"
-	@echo "  - Check backend/reports/ for generated reports"
 
 # Dependencies
 freeze:

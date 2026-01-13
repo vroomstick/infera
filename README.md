@@ -47,9 +47,13 @@ Evaluated on **286 hand-labeled paragraphs** across 6 companies (AAPL, TSLA, MSF
 |--------|----------|----|---------|-------|
 | Zero-shot (baseline) | 62.1% | 0.65 | 0.68 | Current default |
 | **Supervised LR** | **86.2%** | **0.84** | **0.89** | Logistic regression on FinBERT embeddings |
-| **Improvement** | **+24.1 pts** | **+0.19** | **+0.21** | Model available, not integrated by default |
+| **Improvement** | **+24.1 pts** | **+0.19** | **+0.21** | Optional enhancement (requires labeled data) |
 
-**Note:** Supervised model (`supervised_scorer.pkl`) exists but requires manual integration. Zero-shot remains default for determinism.
+**Note:** The supervised model (`supervised_scorer.pkl`) is intentionally kept optional to preserve determinism and reproducibility. Zero-shot scoring requires no labeled data and produces identical outputs for identical inputs, making it ideal for agent workflows and semantic freeze compliance. The supervised model serves as a demonstrated upper bound (86.2% accuracy) showing potential performance when labeled training data is available.
+
+**Design decision:** This was evaluated as a research experiment to establish an accuracy ceiling, not as a production feature. The model artifact is preserved for reference, but integration was intentionally omitted to maintain the deterministic, zero-shot architecture that aligns with Infera's semantic freeze and agent-first design principles.
+
+See [Developer Handbook](backend/docs/developer_handbook.md#73-supervised-learning-exploration) for evaluation methodology and results.
 
 ### Retrieval Evaluation
 
@@ -70,11 +74,11 @@ Evaluated on **40 manually labeled queries** with ground truth relevance judgmen
 | **ECE** | 0.363 | **0.200** | **-44.8%** |
 | **Brier Score** | 0.42 | 0.35 | -16.7% |
 
-**Note:** Calibration model (`calibrator.pkl`) exists but requires manual integration. Current outputs use uncalibrated similarity scores.
+**Note:** Calibration was evaluated as a research experiment to establish probability accuracy. The model artifact (`calibrator.pkl`) is preserved for reference, but calibration is intentionally omitted from default outputs to maintain the deterministic, uncalibrated `similarity_score` contract that aligns with Infera's semantic freeze. Current outputs use uncalibrated similarity scores for ranking.
 
 **Scale tested on 55 S&P 500 companies with 100% success rate.**
 
-See [Developer Handbook](backend/docs/v4_developer_handbook.md#consolidated-results-phase-7) for complete results.
+See [Developer Handbook](backend/docs/developer_handbook.md#consolidated-results-phase-7) for complete results.
 
 ## Architecture
 
@@ -286,13 +290,13 @@ Every prediction is explainable with token-level attributions:
 | `confidence` | float [0,1] | Percentile rank | ❌ No | "How confident is this a top risk?" |
 | `search_default` | method | RRF fusion (k=60) | N/A | Semantic search |
 
-**Note:** `prob_high` (calibrated probability) and supervised scoring are evaluated but not integrated by default. See [Developer Handbook](backend/docs/v4_developer_handbook.md#semantic-contract-phase-7) for full contract details.
+**Note:** `prob_high` (calibrated probability) and supervised scoring were evaluated as research experiments to establish accuracy ceilings. They are intentionally omitted from default outputs to preserve determinism and semantic freeze compliance. See [Developer Handbook](backend/docs/developer_handbook.md#semantic-contract-phase-7) for full contract details.
 
 ## Documentation
 
 | Document | Description |
 |----------|-------------|
-| [Developer Handbook](backend/docs/v4_developer_handbook.md) | **Complete technical reference** (286 pages) |
+| [Developer Handbook](backend/docs/developer_handbook.md) | **Complete technical reference** |
 | [Architecture](backend/docs/architecture.md) | System diagrams (Mermaid) |
 | [Decisions & Tradeoffs](backend/docs/decisions.md) | Why we made each choice |
 | [Theoretical Background](backend/docs/theoretical_background.md) | Academic grounding |
@@ -326,9 +330,9 @@ Every prediction is explainable with token-level attributions:
 
 ## Known Limitations
 
-1. **Calibration:** ECE = 0.36 (scores ≠ probabilities). Calibration model evaluated but not integrated by default.
+1. **Calibration:** ECE = 0.36 (scores ≠ probabilities). Calibration was evaluated and shown to improve ECE to 0.20, but is intentionally omitted from default outputs to maintain deterministic similarity scores for ranking.
 2. **Prompt sensitivity** (ρ = 0.41): Rankings depend on prompt wording.
-3. **Zero-shot accuracy:** 62.1% (supervised option available at 86.2% but not integrated).
+3. **Zero-shot accuracy:** 62.1% (supervised option achieves 86.2% but requires labeled training data and is kept optional for determinism).
 
 ## Completed (v5)
 
@@ -367,4 +371,4 @@ MIT
 
 ---
 
-*Built with Python, FinBERT (ProsusAI), FastAPI, PostgreSQL, and pgvector | v5 | [Developer Handbook](backend/docs/v4_developer_handbook.md)*
+*Built with Python, FinBERT (ProsusAI), FastAPI, PostgreSQL, and pgvector | v5 | [Developer Handbook](backend/docs/developer_handbook.md)*

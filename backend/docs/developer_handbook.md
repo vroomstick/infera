@@ -1222,7 +1222,7 @@ print(summarizer.get_metrics())
 
 | File | Contents |
 |------|----------|
-| `docs/v4_developer_handbook.md` | This document (comprehensive developer guide) |
+| `docs/developer_handbook.md` | This document (comprehensive developer guide) |
 | `docs/similarity_failure_modes.md` | Detailed failure mode analysis with examples |
 
 ---

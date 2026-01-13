@@ -27,12 +27,9 @@ def mask_db_url(url: str) -> str:
     # Match password in URL pattern: ://user:password@
     return re.sub(r'(://[^:]+:)[^@]+(@)', r'\1***\2', url)
 
-# Create PostgreSQL engine
+# Create engine (PostgreSQL only - no SQLite support)
 engine = create_engine(
     settings.DATABASE_URL,
-    pool_size=5,
-    max_overflow=10,
-    pool_pre_ping=True,  # Verify connections before use
     echo=False  # Set to True for SQL debugging
 )
 
@@ -54,13 +51,26 @@ def get_db() -> Generator[Session, None, None]:
 
 def init_db() -> None:
     """
-    Initialize the database by creating all tables.
+    Initialize the database by creating all tables and pgvector extension.
     Call this once at application startup.
     """
     from .models import Base
+    from sqlalchemy import text
     
     # Log masked URL to prevent credential leakage
     logger.info(f"Initializing database: {mask_db_url(settings.DATABASE_URL)}")
+    
+    # Create pgvector extension (required for vector search)
+    with engine.connect() as conn:
+        try:
+            conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
+            conn.commit()
+            logger.info("pgvector extension created/enabled")
+        except Exception as e:
+            logger.warning(f"Could not create pgvector extension (may already exist): {e}")
+            # Continue anyway - extension might already exist
+    
+    # Create all tables
     Base.metadata.create_all(bind=engine)
     logger.info("Database tables created successfully")
 

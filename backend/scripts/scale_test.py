@@ -5,21 +5,13 @@ Scale Test: Run Infera pipeline on 50+ SEC filings
 This script:
 1. Fetches 10-K filings from SEC EDGAR for 50+ companies
 2. Runs the full analysis pipeline on each
-3. Tracks success/failure rates, failure taxonomy, and performance metrics
+3. Tracks success/failure rates and performance metrics
 4. Generates a scale test report
 
 Usage:
-    # Reliability run (50+ filings, track failures)
-    python scripts/scale_test.py --limit 55
-    
-    # Performance run (10 filings, measure p50/p95)
-    python scripts/scale_test.py --limit 10 --performance
-    
-    # Skip existing filings
+    python scripts/scale_test.py
+    python scripts/scale_test.py --limit 100
     python scripts/scale_test.py --skip-existing
-
-Note: This script should NOT be run in CI. It requires network access to SEC EDGAR
-and takes significant time. Run locally for scale testing.
 """
 
 import os
@@ -98,7 +90,7 @@ def run_scale_test(
         "target_count": len(tickers),
         "skip_existing": skip_existing,
         "skip_summary": skip_summary,
-        "database_url": "postgresql" if settings.is_postgres else "unknown",
+        "database_url": "postgresql",  # Postgres only
         "successes": [],
         "failures": [],
         "skipped": [],
@@ -167,29 +159,10 @@ def run_scale_test(
         except Exception as e:
             filing_time = time.time() - filing_start
             error_msg = str(e)[:200]  # Truncate long errors
-            error_type = type(e).__name__
-            
-            # Categorize failure
-            failure_category = "unknown"
-            if "Item 1A" in error_msg or "Risk Factors" in error_msg or "section" in error_msg.lower():
-                failure_category = "parse"
-            elif "download" in error_msg.lower() or "network" in error_msg.lower() or "timeout" in error_msg.lower():
-                failure_category = "ingest"
-            elif "embedding" in error_msg.lower() or "model" in error_msg.lower():
-                failure_category = "embed"
-            elif "database" in error_msg.lower() or "db" in error_msg.lower() or "sql" in error_msg.lower():
-                failure_category = "database"
-            elif "validation" in error_msg.lower() or "invalid" in error_msg.lower():
-                failure_category = "validation"
-            elif "CIK" in error_msg or "ticker" in error_msg.lower():
-                failure_category = "ingest"
-            
             logger.error(f"  ❌ {ticker}: {error_msg}")
             results["failures"].append({
                 "ticker": ticker,
                 "error": error_msg,
-                "error_type": error_type,
-                "failure_category": failure_category,
                 "time_seconds": round(filing_time, 2)
             })
     
@@ -234,22 +207,11 @@ def run_scale_test(
     output_path.write_text(json.dumps(results, indent=2))
     logger.info(f"\nResults saved to: {output_path}")
     
-    # Print failure summary with taxonomy
+    # Print failure summary
     if results["failures"]:
-        logger.info("\nFailure Taxonomy:")
-        failure_categories = {}
-        for f in results["failures"]:
-            category = f.get("failure_category", "unknown")
-            failure_categories[category] = failure_categories.get(category, 0) + 1
-        
-        for category, count in sorted(failure_categories.items()):
-            logger.info(f"  {category}: {count}")
-        
         logger.info("\nFailure details:")
         for f in results["failures"]:
-            logger.info(f"  {f['ticker']} ({f.get('failure_category', 'unknown')}): {f['error'][:50]}...")
-        
-        results["metrics"]["failure_taxonomy"] = failure_categories
+            logger.info(f"  {f['ticker']}: {f['error'][:50]}...")
     
     return results
 

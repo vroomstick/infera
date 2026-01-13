@@ -13,10 +13,21 @@ from datetime import datetime
 from sqlalchemy import Column, Integer, String, Text, Float, DateTime, ForeignKey, LargeBinary
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
-from pgvector.sqlalchemy import Vector
 
-# FinBERT embedding dimension
-VECTOR_DIM = 768
+from config.settings import settings
+
+# PostgreSQL with pgvector is always used now
+USE_PGVECTOR = settings.is_postgres
+
+# Import pgvector for vector search (required)
+try:
+    from pgvector.sqlalchemy import Vector
+    VECTOR_DIM = 768  # ProsusAI/finbert dimension
+except ImportError:
+    raise ImportError(
+        "pgvector is required but not installed. "
+        "Install with: pip install pgvector"
+    )
 
 Base = declarative_base()
 
@@ -116,22 +127,25 @@ class Score(Base):
         return f"<Score(paragraph_id={self.paragraph_id}, method='{self.method}', score={self.score:.3f})>"
 
 
-class ScoreVector(Base):
-    """
-    Vector embeddings for pgvector similarity search.
-    
-    Stores 768-dim FinBERT embeddings in native vector format.
-    HNSW index enables sub-millisecond nearest neighbor queries.
-    """
-    __tablename__ = "score_vectors"
-    
-    id = Column(Integer, primary_key=True, index=True)
-    paragraph_id = Column(Integer, ForeignKey("paragraphs.id"), nullable=False, unique=True)
-    embedding = Column(Vector(VECTOR_DIM), nullable=False)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    
-    def __repr__(self):
-        return f"<ScoreVector(paragraph_id={self.paragraph_id})>"
+# For PostgreSQL with pgvector, we add a separate table for vector search
+# This enables native vector similarity search while maintaining backward compatibility
+if USE_PGVECTOR:
+    class ScoreVector(Base):
+        """
+        Vector embeddings for PostgreSQL pgvector search.
+        
+        This table stores embeddings in native vector format for fast similarity search.
+        Linked to Score by paragraph_id for compatibility.
+        """
+        __tablename__ = "score_vectors"
+        
+        id = Column(Integer, primary_key=True, index=True)
+        paragraph_id = Column(Integer, ForeignKey("paragraphs.id"), nullable=False, unique=True)
+        embedding = Column(Vector(VECTOR_DIM), nullable=False)
+        created_at = Column(DateTime, default=datetime.utcnow)
+        
+        def __repr__(self):
+            return f"<ScoreVector(paragraph_id={self.paragraph_id})>"
 
 
 class Summary(Base):

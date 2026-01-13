@@ -238,30 +238,6 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# === Exception Handlers ===
-
-@app.exception_handler(InferaError)
-async def infera_error_handler(request: Request, exc: InferaError):
-    """Handle InferaError with consistent error code format."""
-    return JSONResponse(
-        status_code=exc.status_code,
-        content=exc.to_dict()
-    )
-
-@app.exception_handler(HTTPException)
-async def http_exception_handler(request: Request, exc: HTTPException):
-    """Convert HTTPException to InferaError format when possible."""
-    return JSONResponse(
-        status_code=exc.status_code,
-        content={
-            "error": {
-                "code": "INF-API-001",
-                "message": exc.detail,
-                "details": {}
-            }
-        }
-    )
-
 # === Middleware ===
 
 # CORS middleware
@@ -277,6 +253,7 @@ app.add_middleware(
 if RATE_LIMIT_AVAILABLE and limiter:
     app.state.limiter = limiter
     app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
 
 # Request validation middleware
 @app.middleware("http")
@@ -375,6 +352,31 @@ async def validate_request(request: Request, call_next):
     # Continue to handler
     response = await call_next(request)
     return response
+
+
+# === Exception Handlers ===
+
+@app.exception_handler(InferaError)
+async def infera_error_handler(request: Request, exc: InferaError):
+    """Handle InferaError with consistent error code format."""
+    return JSONResponse(
+        status_code=exc.status_code,
+        content=exc.to_dict()
+    )
+
+@app.exception_handler(HTTPException)
+async def http_exception_handler(request: Request, exc: HTTPException):
+    """Convert HTTPException to InferaError format when possible."""
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={
+            "error": {
+                "code": "INF-API-001",
+                "message": exc.detail,
+                "details": {}
+            }
+        }
+    )
 
 
 # === Error Handlers ===
@@ -1011,8 +1013,6 @@ class FetchRequest(BaseModel):
     year: Optional[int] = None
     analyze: bool = True
     skip_summary: bool = True
-    force: bool = False
-    update: bool = False
 
 
 class FetchResponse(BaseModel):
@@ -1038,8 +1038,6 @@ async def fetch_filing(request: FetchRequest, api_key: str = Depends(verify_api_
         year: Fiscal year (e.g., 2023). If omitted, gets most recent.
         analyze: Run analysis pipeline after download (default: true)
         skip_summary: Skip GPT summarization (default: true)
-        force: Wipe derived data and reprocess even if filing exists (default: false)
-        update: Recompute scores/embeddings but preserve filing metadata (default: false)
     
     Example:
         POST /fetch {"ticker": "NVDA", "year": 2023}
@@ -1055,9 +1053,7 @@ async def fetch_filing(request: FetchRequest, api_key: str = Depends(verify_api_
             result = fetcher.fetch_and_analyze(
                 ticker=ticker,
                 year=request.year,
-                skip_summary=request.skip_summary,
-                force=request.force,
-                update=request.update
+                skip_summary=request.skip_summary
             )
             
             if not result:

@@ -9,7 +9,7 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from typing import Optional, List, Tuple, Dict, Any
+from typing import Optional, List, Tuple
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 from datetime import datetime
@@ -59,7 +59,6 @@ def create_filing(
     company_id: int,
     filing_type: str = "10-K",
     filing_date: Optional[datetime] = None,
-    accession_number: Optional[str] = None,
     source_file: Optional[str] = None
 ) -> Filing:
     """Create a new filing record."""
@@ -71,7 +70,6 @@ def create_filing(
         company_id=company_id,
         filing_type=filing_type,
         filing_date=filing_date,
-        accession_number=accession_number,
         source_file=source_file
     )
     db.add(filing)
@@ -93,29 +91,8 @@ def get_filings_by_ticker(db: Session, ticker: str) -> List[Filing]:
     return db.query(Filing).filter(Filing.company_id == company.id).all()
 
 
-def get_filing_by_accession_number(db: Session, accession_number: str) -> Optional[Filing]:
-    """Get filing by accession number (unique SEC identifier)."""
-    return db.query(Filing).filter(Filing.accession_number == accession_number).first()
-
-
-def get_filing_by_ticker_and_date(
-    db: Session,
-    ticker: str,
-    filing_date: datetime
-) -> Optional[Filing]:
-    """Get filing by ticker and filing date."""
-    company = get_company_by_ticker(db, ticker)
-    if not company:
-        return None
-    return db.query(Filing).filter(
-        Filing.company_id == company.id,
-        Filing.filing_date == filing_date
-    ).first()
-
-
 # === Section ===
 
-@db_retry()
 def create_section(
     db: Session,
     filing_id: int,
@@ -143,7 +120,6 @@ def get_sections_by_filing(db: Session, filing_id: int) -> List[Section]:
 
 # === Paragraph ===
 
-@db_retry()
 def create_paragraph(
     db: Session,
     section_id: int,
@@ -167,7 +143,6 @@ def create_paragraph(
     return paragraph
 
 
-@db_retry()
 def create_paragraphs_bulk(
     db: Session,
     section_id: int,
@@ -208,7 +183,6 @@ def get_paragraphs_by_section(db: Session, section_id: int) -> List[Paragraph]:
 
 # === Score ===
 
-@db_retry()
 def create_score(
     db: Session,
     paragraph_id: int,
@@ -257,7 +231,6 @@ def get_top_scored_paragraphs(
 
 # === Summary ===
 
-@db_retry()
 def create_summary(
     db: Session,
     filing_id: int,
@@ -296,7 +269,6 @@ def get_summary_by_filing(
 
 # === Vector Search (PostgreSQL + pgvector) ===
 
-@db_retry()
 def create_score_vector(
     db: Session,
     paragraph_id: int,

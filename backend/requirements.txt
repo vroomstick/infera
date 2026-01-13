@@ -35,7 +35,8 @@ slowapi  # Rate limiting
 # --- Markdown & Report Generation ---
 markdown2
 Jinja2
-# pdfkit removed - v4 only generates Markdown reports, not PDFs
+pdfkit  # switched from weasyprint
+# wkhtmltopdf must be installed separately (binary dependency)
 
 # --- Streamlit UI (Optional but safe to include) ---
 streamlit
