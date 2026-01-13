@@ -230,21 +230,46 @@ def run_analysis_pipeline(
         
         logger.info(f"Extracted section: {len(risk_section.split())} words")
         
-        # Step 5: Store section
-        section = repo.create_section(
-            db,
-            filing_id=filing.id,
-            section_type="Item 1A",
-            raw_text=risk_section
-        )
-        logger.info(f"Created section record: id={section.id}")
+        # Step 5: Store section (reuse existing if update flag)
+        existing_sections = repo.get_sections_by_filing(db, filing.id)
+        existing_section = next((s for s in existing_sections if s.section_type == "Item 1A"), None)
         
-        # Step 6: Split into paragraphs and store
-        paragraphs = split_into_paragraphs(risk_section)
-        logger.info(f"Split into {len(paragraphs)} paragraphs")
-        
-        stored_paragraphs = repo.create_paragraphs_bulk(db, section.id, paragraphs)
-        logger.info(f"Stored {len(stored_paragraphs)} paragraphs")
+        if existing_section and update and not force:
+            # Reuse existing section for update
+            section = existing_section
+            logger.info(f"Reusing existing section record: id={section.id}")
+            
+            # Get existing paragraphs
+            existing_paragraphs = repo.get_paragraphs_by_section(db, section.id)
+            stored_paragraphs = existing_paragraphs
+            logger.info(f"Reusing {len(stored_paragraphs)} existing paragraphs")
+        else:
+            # Create new section (or force recreate)
+            if existing_section and force:
+                # Delete existing section and paragraphs for force
+                from data.models import Paragraph, Score, ScoreVector
+                existing_paragraphs = repo.get_paragraphs_by_section(db, existing_section.id)
+                for para in existing_paragraphs:
+                    db.query(ScoreVector).filter(ScoreVector.paragraph_id == para.id).delete()
+                    db.query(Score).filter(Score.paragraph_id == para.id).delete()
+                db.query(Paragraph).filter(Paragraph.section_id == existing_section.id).delete()
+                db.query(Section).filter(Section.id == existing_section.id).delete()
+                db.commit()
+            
+            section = repo.create_section(
+                db,
+                filing_id=filing.id,
+                section_type="Item 1A",
+                raw_text=risk_section
+            )
+            logger.info(f"Created section record: id={section.id}")
+            
+            # Step 6: Split into paragraphs and store
+            paragraphs = split_into_paragraphs(risk_section)
+            logger.info(f"Split into {len(paragraphs)} paragraphs")
+            
+            stored_paragraphs = repo.create_paragraphs_bulk(db, section.id, paragraphs)
+            logger.info(f"Stored {len(stored_paragraphs)} paragraphs")
         
         result = {
             "ticker": ticker,
