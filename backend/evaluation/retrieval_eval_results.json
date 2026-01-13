@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "keyword": {
+      "mean_mrr": 0.10294117647058823,
+      "std_mrr": 0.29153275884704427,
+      "mean_ndcg@10": 0.10679205157563111,
+      "std_ndcg@10": 0.297554637416334,
+      "mean_recall@10": 0.06890756302521009,
+      "std_recall@10": 0.2363302516690682,
+      "n_queries": 34
+    },
+    "vector": {
+      "mean_mrr": 0.7045284780578899,
+      "std_mrr": 0.3495726120899686,
+      "mean_ndcg@10": 0.7430752754728354,
+      "std_ndcg@10": 0.24863937882149897,
+      "mean_recall@10": 0.8255952380952382,
+      "std_recall@10": 0.23746173599921072,
+      "n_queries": 34
+    },
+    "rrf": {
+      "mean_mrr": 0.7437441643323995,
+      "std_mrr": 0.33584464630912814,
+      "mean_ndcg@10": 0.7681993078790207,
+      "std_ndcg@10": 0.21463006725341927,
+      "mean_recall@10": 0.8608893557422969,
+      "std_recall@10": 0.18577445793874373,
+      "n_queries": 34
+    }
+  },
+  "recommendation": "Use rrf method: MRR=0.74, nDCG@10=0.77, Recall@10=0.86 (best across all metrics)",
+  "best_method": "rrf",
+  "n_queries": 34
+}

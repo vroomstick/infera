@@ -1,0 +1,52 @@
+{
+  "baseline": {
+    "ece": 0.36284949906639286,
+    "n_samples": 286
+  },
+  "methods": {
+    "platt": {
+      "ece": 0.3067728104173374,
+      "ece_improvement": 0.05607668864905546,
+      "relative_improvement": 15.45453109163443,
+      "calibration_curve": {
+        "fraction_of_positives": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_predicted_value": [
+          0.18154317314001592,
+          0.26326978754333913,
+          0.3344343296787875,
+          0.4264316122654006
+        ]
+      }
+    },
+    "isotonic": {
+      "ece": 0.2003676065394368,
+      "ece_improvement": 0.16248189252695605,
+      "relative_improvement": 44.77941762218769,
+      "calibration_curve": {
+        "fraction_of_positives": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_predicted_value": [
+          0.0303030303030303,
+          0.125,
+          0.2397464779180311,
+          0.3151469025443604,
+          0.4642857142857143,
+          0.5909090909090909
+        ]
+      }
+    }
+  },
+  "recommended_method": "isotonic",
+  "recommendation": "Use isotonic calibration: ECE improved from 0.363 to 0.200 (44.8% improvement)"
+}

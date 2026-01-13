@@ -1,0 +1,398 @@
+[
+  {
+    "query": "cybersecurity threats and data breaches",
+    "relevant_paragraph_ids": [
+      203,
+      172,
+      155,
+      154
+    ],
+    "description": "Query about cybersecurity risks and data breach vulnerabilities",
+    "topic": "cybersecurity"
+  },
+  {
+    "query": "supply chain disruption and logistics risks",
+    "relevant_paragraph_ids": [
+      85,
+      32,
+      342,
+      339,
+      31
+    ],
+    "description": "Query about supply chain and logistics vulnerabilities",
+    "topic": "supply_chain"
+  },
+  {
+    "query": "regulatory compliance and legal risks",
+    "relevant_paragraph_ids": [
+      175,
+      160,
+      187,
+      222,
+      163
+    ],
+    "description": "Query about regulatory and legal compliance issues",
+    "topic": "regulatory"
+  },
+  {
+    "query": "economic downturn and market volatility",
+    "relevant_paragraph_ids": [
+      128,
+      135,
+      152,
+      337,
+      83
+    ],
+    "description": "Query about economic and market risks",
+    "topic": "financial"
+  },
+  {
+    "query": "product recalls and quality issues",
+    "relevant_paragraph_ids": [
+      146,
+      122,
+      60,
+      213,
+      34
+    ],
+    "description": "Query about product safety and quality risks",
+    "topic": "operational"
+  },
+  {
+    "query": "labor shortage and workforce challenges",
+    "relevant_paragraph_ids": [
+      151,
+      205
+    ],
+    "description": "Query about labor and workforce risks",
+    "topic": "operational"
+  },
+  {
+    "query": "inflation and cost pressures",
+    "relevant_paragraph_ids": [
+      131,
+      128,
+      118
+    ],
+    "description": "Query about inflation and cost-related risks",
+    "topic": "financial"
+  },
+  {
+    "query": "natural disasters and climate risks",
+    "relevant_paragraph_ids": [
+      131,
+      69,
+      84,
+      341,
+      31
+    ],
+    "description": "Query about climate and natural disaster risks",
+    "topic": "operational"
+  },
+  {
+    "query": "competitive pressure and market share",
+    "relevant_paragraph_ids": [
+      33,
+      86,
+      343,
+      196,
+      136,
+      53,
+      115
+    ],
+    "description": "Query about competitive and market risks",
+    "topic": "competitive"
+  },
+  {
+    "query": "fraud and financial misconduct",
+    "relevant_paragraph_ids": [
+      188,
+      150,
+      171
+    ],
+    "description": "Query about fraud and financial integrity risks",
+    "topic": "financial"
+  },
+  {
+    "query": "pandemic and health crisis impacts",
+    "relevant_paragraph_ids": [
+      31,
+      341,
+      84,
+      66,
+      128
+    ],
+    "description": "Query about pandemic and health-related risks",
+    "topic": "operational"
+  },
+  {
+    "query": "intellectual property and patent risks",
+    "relevant_paragraph_ids": [
+      165,
+      188,
+      170,
+      163,
+      63,
+      125,
+      195,
+      312
+    ],
+    "description": "Query about IP and patent-related risks",
+    "topic": "legal"
+  },
+  {
+    "query": "customer data privacy and GDPR compliance",
+    "relevant_paragraph_ids": [
+      161
+    ],
+    "description": "Query about data privacy and GDPR risks",
+    "topic": "regulatory"
+  },
+  {
+    "query": "manufacturing defects and production issues",
+    "relevant_paragraph_ids": [
+      146,
+      344,
+      87,
+      34,
+      60,
+      122,
+      169
+    ],
+    "description": "Query about manufacturing and production risks",
+    "topic": "operational"
+  },
+  {
+    "query": "currency exchange rate fluctuations",
+    "relevant_paragraph_ids": [],
+    "description": "Query about foreign exchange and currency risks",
+    "topic": "financial"
+  },
+  {
+    "query": "technology obsolescence and innovation risks",
+    "relevant_paragraph_ids": [
+      133,
+      64,
+      139,
+      126
+    ],
+    "description": "Query about technology and innovation risks",
+    "topic": "competitive"
+  },
+  {
+    "query": "environmental regulations and sustainability",
+    "relevant_paragraph_ids": [
+      210
+    ],
+    "description": "Query about environmental and sustainability risks",
+    "topic": "regulatory"
+  },
+  {
+    "query": "merger and acquisition integration risks",
+    "relevant_paragraph_ids": [
+      210,
+      207,
+      187
+    ],
+    "description": "Query about M&A and integration risks",
+    "topic": "strategic"
+  },
+  {
+    "query": "key personnel retention and talent risks",
+    "relevant_paragraph_ids": [
+      349,
+      39,
+      92,
+      127,
+      65,
+      205,
+      151
+    ],
+    "description": "Query about key personnel and talent retention risks",
+    "topic": "operational"
+  },
+  {
+    "query": "trade war and geopolitical risks",
+    "relevant_paragraph_ids": [
+      155,
+      197,
+      222,
+      84,
+      31,
+      341
+    ],
+    "description": "Query about trade and geopolitical risks",
+    "topic": "operational"
+  },
+  {
+    "query": "interest rate changes and credit risks",
+    "relevant_paragraph_ids": [
+      152,
+      282
+    ],
+    "description": "Query about interest rates and credit risks",
+    "topic": "financial"
+  },
+  {
+    "query": "vendor and supplier dependency",
+    "relevant_paragraph_ids": [
+      306,
+      40,
+      93
+    ],
+    "description": "Query about vendor and supplier risks",
+    "topic": "supply_chain"
+  },
+  {
+    "query": "litigation and legal disputes",
+    "relevant_paragraph_ids": [
+      160
+    ],
+    "description": "Query about litigation and legal dispute risks",
+    "topic": "legal"
+  },
+  {
+    "query": "brand reputation and public relations",
+    "relevant_paragraph_ids": [
+      201
+    ],
+    "description": "Query about brand and reputation risks",
+    "topic": "operational"
+  },
+  {
+    "query": "energy costs and resource availability",
+    "relevant_paragraph_ids": [
+      69,
+      131
+    ],
+    "description": "Query about energy and resource risks",
+    "topic": "operational"
+  },
+  {
+    "query": "customer concentration and dependency",
+    "relevant_paragraph_ids": [
+      328
+    ],
+    "description": "Query about customer concentration risks",
+    "topic": "financial"
+  },
+  {
+    "query": "regulatory changes and policy impacts",
+    "relevant_paragraph_ids": [
+      175,
+      131,
+      69,
+      222,
+      160,
+      62,
+      124,
+      173
+    ],
+    "description": "Query about regulatory change risks",
+    "topic": "regulatory"
+  },
+  {
+    "query": "information technology system failures",
+    "relevant_paragraph_ids": [],
+    "description": "Query about IT system and infrastructure risks",
+    "topic": "operational"
+  },
+  {
+    "query": "international expansion and foreign operations",
+    "relevant_paragraph_ids": [
+      148,
+      28,
+      81,
+      338,
+      234
+    ],
+    "description": "Query about international and foreign operation risks",
+    "topic": "operational"
+  },
+  {
+    "query": "research and development investment risks",
+    "relevant_paragraph_ids": [
+      311
+    ],
+    "description": "Query about R&D and investment risks",
+    "topic": "strategic"
+  },
+  {
+    "query": "debt levels and financial leverage",
+    "relevant_paragraph_ids": [
+      252,
+      247
+    ],
+    "description": "Query about debt and leverage risks",
+    "topic": "financial"
+  },
+  {
+    "query": "raw material price volatility",
+    "relevant_paragraph_ids": [
+      131,
+      69
+    ],
+    "description": "Query about raw material and commodity price risks",
+    "topic": "supply_chain"
+  },
+  {
+    "query": "workplace safety and employee health",
+    "relevant_paragraph_ids": [],
+    "description": "Query about workplace safety risks",
+    "topic": "operational"
+  },
+  {
+    "query": "tax law changes and tax risks",
+    "relevant_paragraph_ids": [
+      177,
+      317
+    ],
+    "description": "Query about tax and tax law risks",
+    "topic": "regulatory"
+  },
+  {
+    "query": "distribution channel disruption",
+    "relevant_paragraph_ids": [
+      40,
+      93,
+      350
+    ],
+    "description": "Query about distribution and channel risks",
+    "topic": "operational"
+  },
+  {
+    "query": "acquisition of new technologies",
+    "relevant_paragraph_ids": [
+      207,
+      290
+    ],
+    "description": "Query about technology acquisition risks",
+    "topic": "strategic"
+  },
+  {
+    "query": "seasonal demand fluctuations",
+    "relevant_paragraph_ids": [],
+    "description": "Query about seasonal and demand volatility risks",
+    "topic": "financial"
+  },
+  {
+    "query": "environmental cleanup and remediation",
+    "relevant_paragraph_ids": [],
+    "description": "Query about environmental cleanup risks",
+    "topic": "regulatory"
+  },
+  {
+    "query": "joint ventures and partnerships",
+    "relevant_paragraph_ids": [
+      207
+    ],
+    "description": "Query about joint venture and partnership risks",
+    "topic": "strategic"
+  },
+  {
+    "query": "insurance coverage and claims",
+    "relevant_paragraph_ids": [],
+    "description": "Query about insurance and claims risks",
+    "topic": "financial"
+  }
+]
