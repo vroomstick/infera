@@ -85,6 +85,13 @@ def get_filing_by_id(db: Session, filing_id: int) -> Optional[Filing]:
     return db.query(Filing).filter(Filing.id == filing_id).first()
 
 
+def get_filing_by_accession(db: Session, accession_number: str) -> Optional[Filing]:
+    """Get filing by accession number."""
+    if not accession_number:
+        return None
+    return db.query(Filing).filter(Filing.accession_number == accession_number).first()
+
+
 def get_filings_by_ticker(db: Session, ticker: str) -> List[Filing]:
     """Get all filings for a company."""
     company = get_company_by_ticker(db, ticker)

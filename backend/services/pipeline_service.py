@@ -115,7 +115,9 @@ def run_analysis_pipeline(
     filing_date: Optional[datetime] = None,
     accession_number: Optional[str] = None,
     skip_summary: bool = False,
-    skip_scoring: bool = False
+    skip_scoring: bool = False,
+    force: bool = False,
+    update: bool = False
 ) -> Dict[str, Any]:
     """
     Run the full analysis pipeline on a 10-K HTML file.
@@ -158,16 +160,61 @@ def run_analysis_pipeline(
         logger.info(f"Processing ticker: {ticker}")
         company = repo.get_or_create_company(db, ticker)
         
-        # Step 2: Create filing record
-        filing = repo.create_filing(
-            db,
-            company_id=company.id,
-            filing_type="10-K",
-            filing_date=filing_date,
-            accession_number=accession_number,
-            source_file=filepath
-        )
-        logger.info(f"Created filing record: id={filing.id}")
+        # Step 1.5: Check for existing filing (duplicate detection)
+        existing_filing = None
+        if accession_number:
+            existing_filing = repo.get_filing_by_accession(db, accession_number)
+        
+        # Handle duplicate detection
+        if existing_filing and not force and not update:
+            logger.info(f"Filing with accession {accession_number} already exists, skipping")
+            # Get existing section and paragraph count
+            sections = repo.get_sections_by_filing(db, existing_filing.id)
+            paragraph_count = 0
+            if sections:
+                paragraphs = repo.get_paragraphs_by_section(db, sections[0].id)
+                paragraph_count = len(paragraphs)
+            
+            return {
+                "ticker": ticker,
+                "filing_id": existing_filing.id,
+                "section_id": sections[0].id if sections else None,
+                "paragraph_count": paragraph_count,
+                "skipped": True
+            }
+        
+        # Step 2: Create or get filing record
+        if existing_filing:
+            filing = existing_filing
+            logger.info(f"Using existing filing record: id={filing.id}")
+            
+            # Handle force flag: delete derived data (sections, paragraphs, scores, summaries)
+            if force:
+                logger.info("Force flag set: deleting derived data")
+                from data.models import ScoreVector, Score, Paragraph, Section, Summary
+                
+                # Delete in dependency order
+                sections = repo.get_sections_by_filing(db, filing.id)
+                for section in sections:
+                    paragraphs = repo.get_paragraphs_by_section(db, section.id)
+                    for para in paragraphs:
+                        db.query(ScoreVector).filter(ScoreVector.paragraph_id == para.id).delete()
+                        db.query(Score).filter(Score.paragraph_id == para.id).delete()
+                    db.query(Paragraph).filter(Paragraph.section_id == section.id).delete()
+                db.query(Section).filter(Section.filing_id == filing.id).delete()
+                db.query(Summary).filter(Summary.filing_id == filing.id).delete()
+                db.commit()
+                logger.info("Derived data deleted, will reprocess")
+        else:
+            filing = repo.create_filing(
+                db,
+                company_id=company.id,
+                filing_type="10-K",
+                filing_date=filing_date,
+                accession_number=accession_number,
+                source_file=filepath
+            )
+            logger.info(f"Created filing record: id={filing.id}")
         
         # Step 3: Clean HTML
         logger.info("Cleaning HTML...")
@@ -208,8 +255,29 @@ def run_analysis_pipeline(
         }
         
         # Step 7: Score paragraphs with embeddings (optional)
-        if not skip_scoring:
+        # Skip if update flag is False and scores already exist
+        should_score = not skip_scoring
+        if update or force:
+            should_score = True  # Always rescore with update/force
+        
+        if should_score:
             from services.scoring_service import score_section_paragraphs, get_top_scored_paragraphs
+            from data.models import Score, Paragraph
+            
+            # Check if scores already exist (for update flag)
+            if update and not force:
+                existing_scores = db.query(Score).join(Paragraph).filter(
+                    Paragraph.section_id == section.id
+                ).first()
+                if existing_scores:
+                    # Delete existing scores and vectors for update
+                    logger.info("Update flag: deleting existing scores for recomputation")
+                    paragraphs = repo.get_paragraphs_by_section(db, section.id)
+                    for para in paragraphs:
+                        from data.models import ScoreVector
+                        db.query(ScoreVector).filter(ScoreVector.paragraph_id == para.id).delete()
+                        db.query(Score).filter(Score.paragraph_id == para.id).delete()
+                    db.commit()
             
             logger.info("Scoring paragraphs with embeddings...")
             scores = score_section_paragraphs(section.id, store_embeddings=True)

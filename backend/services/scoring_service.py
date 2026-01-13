@@ -16,6 +16,7 @@ from config.settings import get_logger
 from data.database import SessionLocal
 from data import repository as repo
 from data.models import Paragraph, Score
+from config.settings import settings
 
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -134,6 +135,22 @@ def score_section_paragraphs(section_id: int, store_embeddings: bool = True) -> 
                 score=float(score),
                 embedding=embedding_bytes
             )
+            
+            # Create ScoreVector record for pgvector search (if using Postgres)
+            if settings.is_postgres and store_embeddings:
+                try:
+                    from data.models import ScoreVector
+                    # Check if ScoreVector already exists for this paragraph
+                    existing = db.query(ScoreVector).filter(
+                        ScoreVector.paragraph_id == para.id
+                    ).first()
+                    
+                    if not existing:
+                        # Convert numpy array to list for pgvector
+                        embedding_list = embedding.tolist()
+                        repo.create_score_vector(db, para.id, embedding_list)
+                except Exception as e:
+                    logger.warning(f"Could not create ScoreVector for paragraph {para.id}: {e}")
             
             scored.append({
                 "paragraph_id": para.id,
